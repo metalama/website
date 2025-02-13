@@ -7,8 +7,15 @@ header {
   z-index: 10000001;
   overflow: hidden;
   color: white;
-  display: flex;
-  flex-direction: row;
+  
+  .wrapper 
+  {
+    @extend .desktop_box;
+
+    display: flex;
+    flex-direction: row;
+  }
+  
 
   nav{
     margin-left: 40px;
@@ -42,7 +49,6 @@ header {
 
     li {
       padding-right: 20px;
-
 
       &.has-dropdownmenu {
 
@@ -84,6 +90,7 @@ header {
 
 
         &.columns {
+          padding-top: 40px;
           display: flex;
           flex-direction: row;
           width: 100%;
@@ -118,6 +125,11 @@ header {
 
 section {
   overflow: hidden;
+}
+
+.header-spacer {
+  // This must correspond to the height of the header. The header is fixed, and without this spacer, we would display the content under the header.
+  height: 85px;
 }
 
 @media (max-width: 1200px) {

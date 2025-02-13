@@ -1,4 +1,4 @@
-.home_page {
+.blog_index_page {
   margin-top: $page_space_from_top_mobile;
   margin-bottom: 80px;
   padding: 0 rem($mobile_side_margins);
@@ -369,7 +369,7 @@
 }
 
 @media (max-width: 1210px) {
-  .home_page {
+  .blog_index_page {
     margin-bottom: 0 !important;
   }
   .latest_posts .swiper-container {
@@ -488,7 +488,7 @@
   }
 }
 @media (max-width: 559px) {
-  .home_page {
+  .blog_index_page {
     margin-top: 100px;
   }
 }

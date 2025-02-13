@@ -1,4 +1,4 @@
-{% include header.html title = page.title permalink = page.permalink image = page.image %}
+{% include header.html title=page.title permalink=page.permalink image=page.image site_title='Metalama Blog' %}
 <style type="text/css">
     section {
         overflow: visible !important;
@@ -39,7 +39,7 @@
             {% if page.image %}
             <img src="{{page.image}}" alt="{{post.title}}">
             {% else %}
-            <img src="{{site.baseurl}}/assets/images/blog/ps-no-featimg-1x1.jpg"  alt="{{ post.title }}">
+            <img src="{{site.baseurl}}/assets/images/blog/ps-no-featimg-1x1.jpg" alt="{{ post.title }}">
             {% endif %}
         </figure>
         <h1>{{page.title | strip_html | strip_newlines | truncate: 150}}</h3>

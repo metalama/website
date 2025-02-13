@@ -1,0 +1,25 @@
+.structured {
+    @extend .desktop_box;
+
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+
+    min-height: calc(100vh - 291px);
+    display: grid;
+    grid-template-columns: 3fr 10fr 3fr;
+    grid-template-rows: 1fr;
+
+    nav.left-nav {
+        grid-column: 1;
+    }
+
+    div.content {
+        grid-column: 2;
+        max-width: 1200px;
+    }
+
+    nav.right-nav {
+        grid-column: 3;
+    }
+}

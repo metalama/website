@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: PostSharp Blog
+title: Metalama
 email: hello@postsharp.net
 description: > # this means to ignore newlines until "baseurl:"
   Announcements, opinions, tips and tricks from PostSharp Technologies.
@@ -28,6 +28,7 @@ title_separator: "|"
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-toc
 # - jekyll-last-modified-at
   
 exclude: ["*.ps1", "README.md"]
@@ -45,12 +46,35 @@ defaults:
       type: "pages" 
     values:
       layout: "plain" 
+      site_title: "Metalama"
+  - scope:
+      path: "solutions" 
+      type: "pages" 
+    values:
+      layout: "structured"       
+      toc: true
+      site_title: "Metalama Applications"
+  - scope:
+      path: "contributing" 
+      type: "pages" 
+    values:
+      layout: "structured"       
+      toc: true
+  - scope:
+      path: "support" 
+      type: "pages" 
+    values:
+      layout: "structured"       
+      toc: true
       
+toc:
+  min_level: 2
+  max_level: 2
 
 markdown: kramdown
-
 kramdown:
   highlighter: rouge
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     line_numbers: false
+  

@@ -2,7 +2,6 @@
 {% assign etag = 'now' | date: "%Y%m%d%H%M" %}
 <html lang="en">
 
-
 <head>
     <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
@@ -38,8 +37,8 @@
     <link rel="canonical" href="{{site.baseurl}}{{include.permalink}}" />
 
     <link rel="alternate" type="application/rss+xml" href="{{site.baseurl}}/feed.xml" />
-    <title>{% if include.title And include.title != "" And include.title != nil %}{{include.title}} &ndash; PostSharp
-        Blog{%
+    <title>{% if include.title And include.title != "" And include.title != nil %}{{include.title}} {% if
+        include.site_title %}&nbsp;·&nbsp;{{ include.site_title }}{% endif %}{%
         else
         %}{{site.title}}{% endif %}</title>
 
@@ -135,95 +134,96 @@
 <body data-spy="scroll" data-target="#toc">
     {% if include.noheader != "true" %}
     <header>
+        <div class="wrapper">
 
-        <a href="/" class="logo">
-            <img src="/assets/images/metalama-logo.svg" width="200" alt="Metalama Home Page" />
-        </a>
+            <a href="/" class="logo">
+                <img src="/assets/images/metalama-logo.svg" width="200" alt="Metalama Home Page" />
+            </a>
 
-        <nav>
-            <ul class="level1">
+            <nav>
+                <ul class="level1">
 
-            {% assign page_url = page.url | split: '/' | join: '/' %}
-            <!-- page_url ='{{page_url}}'-->
-            {% assign entryId = 0 %}
-            {% for item in site.data.navigation.nodes %}
+                    {% assign page_url = page.url | remove: '.html' | split: '/' | join: '/' %}
+                    <!-- page_url ='{{page_url}}'-->
+                    {% assign entryId = 0 %}
+                    {% for item in site.data.navigation.nodes %}
 
-                {% assign itemId = itemId | plus: 1 %}
-                {% assign isItemActive = false %}
+                    {% assign itemId = itemId | plus: 1 %}
+                    {% assign isItemActive = false %}
 
-                {% if page_url == item.url %}
-                    {% assign isItemActive = true %}
-                {% else %}
-                {% for entry in item.nodes %}
+                    {% if page_url == item.url %}
+                      {% assign isItemActive = true %}
+                    {% else %}
+                    {% for entry in item.nodes %}
                     {% if page_url == entry.url %}
-                        {% assign isItemActive = true %}
+                    {% assign isItemActive = true %}
                     {% else %}
                     {% for subentry in entry.nodes %}
-                        {% if page_url == subentry.url %}
-                            {% assign isItemActive = true %}
-                        {% endif %}
+                    {% if page_url == subentry.url %}
+                    {% assign isItemActive = true %}
+                    {% endif %}
                     {% endfor %}
                     {% endif %}
-                {% endfor %}
-                {% endif %}
+                    {% endfor %}
+                    {% endif %}
 
-          
-                    
-            <li class="{% if item.drop_down_menu %}has-dropdownmenu{% endif %}">
-                <a 
-                    href="{{ item.url }}" 
-                    title="{{ item.description }}" 
-                    data-submenu="{% if item.drop_down_menu %}dropdown{{ itemId }}{% endif %}"
-                    class="{% if isItemActive %}active{% endif %}"
-                    >
-                    {{ item.title }}
-                </a>
 
-                {% if item.drop_down_menu == "List"%}
 
-                    <div id="dropdown{{ itemId }}" class="dropdownmenu list" style="display:none">
-                        <ul>
-                        {% for entry in item.nodes %}
-                            <li>
-                                <a href="{{ entry.url }}">
-                                    <div class="title">{{ entry.title }}</div>
-                                    <div class="description"> {{ entry.description }}</div>
-                                </a>                   
-                            </li>
-                        {% endfor %}
-                        </ul>
-                    </div>
+                    <li class="{% if item.drop_down_menu %}has-dropdownmenu{% endif %}">
+                        <a href="{{ item.url }}" title="{{ item.description }}"
+                            data-submenu="{% if item.drop_down_menu %}dropdown{{ itemId }}{% endif %}"
+                            class="{% if isItemActive %}active{% endif %}">
+                            {{ item.title }}
+                        </a>
 
-                {%  elsif  item.drop_down_menu == "Columns" %}
+                        {% if item.drop_down_menu == "List"%}
 
-                    <div id="dropdown{{ itemId }}" class="dropdownmenu columns" style="display:none">
-                        {% for column in item.nodes %}
-                            <div class="column">
-                                <div class="column-title">
-                                    <a href="{{ column.url }}">{{ column.title }}</a>               
-                                </div>    
-                                <ul>
-                                    {% for entry in column.nodes %}
+                        <div id="dropdown{{ itemId }}" class="dropdownmenu list" style="display:none">
+                            <ul class="wrapper">
+                                {% for entry in item.nodes %}
+                                <li>
+                                    <a href="{{ entry.url }}">
+                                        <div class="title">{{ entry.title }}</div>
+                                        <div class="description"> {{ entry.description }}</div>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        {% elsif item.drop_down_menu == "Columns" %}
+
+                        <div id="dropdown{{ itemId }}" class="dropdownmenu columns" style="display:none">
+                            <div class="wrapper">
+                                {% for column in item.nodes %}
+                                <div class="column">
+                                    <div class="column-title">
+                                        <a href="{{ column.url }}">{{ column.title }}</a>
+                                    </div>
+                                    <ul>
+                                        {% for entry in column.nodes %}
                                         <li>
                                             <a href="{{ entry.url }}">
                                                 <div class="title">{{ entry.title }}</div>
                                                 <div class="description"> {{ entry.description }}</div>
-                                            </a>                   
+                                            </a>
                                         </li>
-                                    {% endfor %}
-                                </ul>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                {% endfor %}
                             </div>
-                        {% endfor %}
-
-                    </div>
+                        </div>
 
 
-                {% endif %}
+                        {% endif %}
 
-            </li>
+                    </li>
 
-            {% endfor %}
-    </ul>
-        </nav>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
     </header>
+    <div class="header-spacer"></div>
     {% endif %}

@@ -16,3 +16,4 @@ gem "jekyll-feed", "~> 0.17.0"
 
 # Avoid polling for changes on Windows
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem "jekyll-toc", "~> 0.19.0"

@@ -6,3 +6,10 @@ $desktop_boxed_width: 1312px;
 $desktop_wide_width: 1600px;
 $mobile_breakpoint: 768px;
 $homepage_mobile_breakpoint: 650px;
+
+
+.desktop_box {
+    max-width: $desktop_boxed_width;
+    margin-left: auto;
+    margin-right: auto;
+}

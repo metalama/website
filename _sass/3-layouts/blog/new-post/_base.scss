@@ -98,52 +98,12 @@
     padding-top: 80px;
   }
 
-  .post_body {
+  .text_content {
 
     // The next line ensures that images do not have larger width than the content box.
     // Without this line, the TOC bar on the left overlaps with the content when there is a large image.
     overflow-x: hidden;
-    
-    h1 {
-      margin-bottom: rem(18px);
-      font-size: rem(48px, "desktop");
-      line-height: rem(56px, "desktop");
-      font-family: Monosten;
 
-      @media (max-width: 560px) {
-        font-size: 2.3rem;
-      }
-    }
-
-    h2 {
-      font-size: 28px;
-      text-align: left;
-      margin-bottom: 15px;
-      margin-top: 40px;
-
-      @media (max-width: 560px) {
-        font-size: 22px;
-      }
-    }
-
-    h3 {
-      font-weight: $fw-semi-bold;
-      font-family: $ff-texts;
-      text-align: left;
-    }
-
-    h4 {
-    
-      text-align: left;
-    }
-
-    h2, h3, h4 {
-      clear: both;
-    }
-
-    img {
-      max-width: 100%;
-    }
   }
 
   .left_sidebar_body {
@@ -212,21 +172,6 @@
     }
   }
 
-  .post_content {
-
-    ul,
-    ol {
-      line-height: 20px;
-      margin-bottom: 1rem;
-    }
-
-    ul ul,
-    ul ol,
-    ol ol,
-    ol ul {
-      margin-bottom: 20px;
-    }
-  }
 
   .post_footer_share_buttons {
     padding-top: 80px;
@@ -299,45 +244,11 @@
       }
     }
 
-  nav:not(:first-child) {
+    nav:not(:first-child) {
       margin-top: 40px;
-  }
-
-
-      p.detail {
-        font-size: 13px;
-        font-weight: 500;
-        color: #e0e0e0 !important;
-        line-height: 1.2rem !important;
-        padding: 4px 20px;
-
-        a, a:visited {
-          color: #38d5e4 !important;
-          font-weight: bold;
-        }
-      }
-
-    li {
-
-
-      a,
-      a:visited {
-        // Many of these settings are defined in bootstrap-toc.css but we need to redefine them
-        // in order to use them for non-toc navigation.
-        font-size: 13px;
-        font-weight: 500;
-        color: #e0e0e0 !important;
-        line-height: 1.2rem !important;
-        padding: 4px 20px;
-        display: inline-block;
-
-        &.timeless {
-          color: #38d5e4 !important;
-          font-weight: bold;
-        }
-
-      }
     }
+
+
 
     nav[data-toggle="toc"] {
 
@@ -449,7 +360,7 @@
             padding: 0 !important;
           }
         }
-        
+
       }
     }
   }
@@ -525,14 +436,16 @@
     }
   }
 
-  
+
   .attribution {
     height: 0;
     overflow: hidden;
     font-size: 6px;
     color: white;
 
-    a, a:visited, a:hover {
+    a,
+    a:visited,
+    a:hover {
       color: white;
     }
   }
@@ -544,7 +457,7 @@
     margin-top: 10px;
     margin-right: 20px;
     border-radius: 10px;
-}
+  }
 
   /* small screens */
   @media (max-width: 768px) {
@@ -612,7 +525,7 @@ blockquote.guest-author {
   h2 {
     margin-top: 0 !important;
   }
-  
+
   img {
     height: 100px;
     width: 100px;
@@ -638,73 +551,13 @@ ul.task-list {
       }
     }
 
-   }
-}
-
-
-@media screen and (max-width: rem($mobile_breakpoint)) {
-  .new_post_page {
-
-    body,
-    p,
-    td,
-    th,
-    li,
-    div {
-      font-size: 16px;
-      line-height: 130%;
-    }
-
-    code {
-      font-size: 14px;
-    }
-
-    pre code {
-      font-size: 12px;
-      line-height: 16px;
-    }
   }
 }
+
 
 @media screen and (min-width: rem($mobile_breakpoint)) {
   .new_post_page {
 
-    p,
-    td,
-    th {
-      font-size: 20px;
-      line-height: 30px;
-    }
-
-    h2 {
-      font-size: 26px;
-      text-align: left;
-      margin-bottom: 17px;
-      margin-top: 60px;
-    }
-
-    h3 {
-      font-size: 22px;
-
-      font-weight: $fw-semi-bold;
-      font-family: $ff-texts;
-    }
-
-    h4 {
-      font-size: 20px;
-
-      font-weight: $fw-semi-bold;
-      font-family: $ff-texts;
-    }
-
-    p+h3,
-    img+h3,
-    ol+h3,
-    ul+h3,
-    pre+h3,
-    .highlighter-rouge+h3 {
-      margin-top: 40px;
-    }
 
     .post_header {
       figure {
@@ -753,40 +606,12 @@ ul.task-list {
     .post_content {
       max-width: 100%;
 
-      ul,
-      ol {
-        font-size: rem(20px, "desktop");
-        line-height: rem(30px, "desktop");
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      a:visited {
-        color: rgb(0, 0, 238);
-      }
-
       @supports (display: grid) {
         grid-column: 1/4;
         grid-row: 2/3;
-//        justify-self: ;
+        //        justify-self: ;
       }
 
-      td,
-      th {
-        padding: 5px;
-        border: 2px solid #eeeeee;
-        border-collapse: collapse;
-      }
-
-      th {
-        background-color: #eeeeee;
-      }
-
-      table {
-        margin-bottom: 20px;
-      }
     }
 
     .post_footer_share_buttons {
