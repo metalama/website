@@ -1,0 +1,111 @@
+html {
+    font-size: $fs-base-mobile;
+    scroll-behavior: smooth;
+    @media screen and (min-width: rem($mobile_breakpoint)) {
+        font-size: $fs-base-desktop;
+    }
+}
+body {
+    font-family: LatoLatinWeb;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Monosten;
+    font-weight: $fw-normal;
+}
+* {
+    box-sizing: border-box;
+}
+h3 {
+    font-size: rem(16px);
+    line-height: rem(20px);
+    font-weight: $fw-normal;
+}
+h2 {
+    font-size: rem(12px);
+    text-align: center;
+    font-weight: $fw-normal;
+}
+p {
+    line-height: rem(20px);
+}
+
+figure {
+    margin: 0;
+}
+
+img[src*="#unzoom150"] {
+    border: lightgrey solid 1px;
+    padding: 20px;
+    zoom: 66.667%;
+ }
+
+ img[src*="#unzoom200"] {
+    border: lightgrey solid 1px;
+    padding: 20px;
+    zoom: 50%;
+ }
+
+ img[src*="#unzoom300"] {
+    border: lightgrey solid 1px;
+    padding: 20px;
+    zoom: 33.33%;
+ }
+
+ img[src*="#width75"] {
+    border: lightgrey solid 1px;
+    padding: 20px;
+    width: 75%;
+ }
+
+ html {
+    // Somehow subdomain.css sets a html border.
+    border: none !important;
+ }
+
+ 
+.note, .warning, .important, .tip, .caution {
+    border-radius: 3px;
+    padding: 1em;
+    margin-top:  20px;
+    margin-bottom: 20px;
+}
+
+.note, .tip {
+    background-color: powderblue;
+}
+
+
+    .note:before, .warning:before, .important:before, .caution:before, .tip:before {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;;
+    }
+
+    .note:before, .tip:before {
+        content: "\1f6c8\a0\a0NOTE"
+    }
+
+    .tip:before {
+        content: "\1f6c8\a0\a0TIP"
+    }
+
+.warning, .important, .caution {
+    background-color: #fddba3;
+}
+
+    .warning:before {
+        content: "\26a0\a0\a0WARNING"
+    }
+
+    .caution:before {
+        content: "\26a0\a0\a0CAUTION"
+    }
+
+    .important:before {
+        content: "\26a0\a0\a0IMPORTANT"
+    }

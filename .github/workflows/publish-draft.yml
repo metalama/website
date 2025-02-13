@@ -1,0 +1,59 @@
+name: Publish to blog-draft.postsharp.net
+
+on:
+  push:
+    branches:
+      - draft
+
+jobs:
+  build_and_deploy_job:
+    runs-on: ubuntu-22.04
+    name: Build and Deploy Job
+    steps:
+  
+      - name: Git clone
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Install fontconfig
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fontconfig
+
+      - name: Install Monosten font
+        run: |
+          mkdir -p ~/.local/share/fonts/woff2
+          cp assets/fonts/Monosten/Monosten-A.woff2 ~/.local/share/fonts/woff2
+          fc-cache -fv
+          fc-list | grep "Monosten"          
+  
+      - name: Install Node.js Dependencies
+        run: npm install
+
+      - name: Run Gulp Tasks
+        run: npx gulp
+  
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2' 
+
+      - name: Install Jekyll Dependencies
+        run: bundle install
+          
+      - name: Build Jekyll Site
+        run: bundle exec jekyll build --destination _site
+
+      - name: Copy robots.txt
+        run: cp robots.draft.txt _site/robots.txt        
+
+      - name: Deploy to Azure Static Web App
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_BLACK_MUD_04C4AA503 }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
+          app_location: "_site" 
+          skip_app_build: true # The app was built in the stop above.

@@ -1,0 +1,376 @@
+---
+layout: min
+---
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.44.0"></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/typesense-instantsearch-adapter@2/dist/typesense-instantsearch-adapter.min.js"></script>
+
+
+<script type="text/javascript" language="JavaScript">
+
+    var nextId = 0;
+
+    function toggle(id) {
+        $(`#details${id}`).toggle();
+        var button = $(`#showMore${id}`);
+
+        if (button.hasClass("expanded")) {
+            button.text("Show more");
+            button.removeClass("expanded");
+        } else {
+            button.text("Show less");
+            button.addClass("expanded");
+        }
+    }
+
+    function humanizeCount(count) {
+        if (count < 1e3) return count; // Less than 1,000
+        if (count >= 1e3 && count < 1e6) return (count / 1e3).toFixed(1) + 'K'; // Thousands
+        if (count >= 1e6 && count < 1e9) return (count / 1e6).toFixed(1) + 'M'; // Millions
+        if (count >= 1e9 && count < 1e12) return (count / 1e9).toFixed(1) + 'B'; // Billions
+        return count.toFixed(1) + 'T'; // Trillions (and beyond)
+    }
+
+
+    // Search
+
+    addEventListener("DOMContentLoaded", (event) => {
+
+        const typesenseInstantSearchAdapter = new TypesenseInstantSearchAdapter({
+            server: {
+                apiKey: '8kn384jvMx0QeP1rDfaZO1u3N21ntXOr', // Be sure to use an API key that only allows searches, in production
+                nodes: [
+                    {
+                        host: '0fpg9nu41dat6boep.a1.typesense.net',
+                        port: '443',
+                        protocol: 'https',
+                    },
+                ],
+            },
+            additionalSearchParameters: {
+                query_by: 'name,keywords,summaryText',
+                sort_by: '_text_match(buckets: 5):desc,rank:desc',
+                text_match_type: 'max_weight',
+                prioritize_exact_match: false
+            },
+        });
+
+        const searchClient = typesenseInstantSearchAdapter.searchClient;
+
+        const search = instantsearch({
+            searchClient,
+            indexName: "metalama-marketplace",
+            routing: true
+        });
+
+        function aspect(a) {
+            var output = "";
+
+            output += `
+                    <tr>
+   <th>
+                `;
+
+            if (a.hasOwnProperty('documentationUrl') && a.documentationUrl !== null && a.documentationUrl.length > 0) {
+                output += `<a href="${a.documentationUrl}" target="_blank">${a.name}</a>`;
+            } else {
+                output += a.name;
+            }
+
+
+            output +=
+                `</th>
+                            <td>
+                                ${a.description}
+                            </td>
+                        </tr>
+                        `;
+
+            return output;
+        }
+
+        function aspectGroup(g) {
+            if (g.hasOwnProperty('aspects') && g.aspects !== null && g.aspects.length > 0) {
+                return `
+        <h5>${g.name}</h5>
+        <table class="table-white">
+            ${g.aspects.reduce((reduced, a) => reduced += aspect(a), "")}
+        </table>
+    `;
+            }
+            else {
+                return ``;
+            }
+        }
+
+        function links(item) {
+            var s = "";
+
+            if (item.sourceUrl !== null && item.sourceUrl !== "") {
+                s += `<p class="source"><img class="icon" src="/images/icon/git.svg" title="Git" > <a class="source" href="${item.sourceUrl}"  target="_blank">Source code</a></p>`
+            }
+
+            if (item.documentationUrl !== null && item.documentationUrl !== "") {
+                s += `<p class="documentation" ><a href="${item.documentationUrl}"  target="_blank">Documentation</a>`
+            }
+
+            if (item.packageUrl !== null && item.packageUrl !== "") {
+                s += `<p class="package"><img class="icon" src="/images/icon/nuget.svg" title="NuGet"><a href="${item.packageUrl}"  target="_blank">Package</a></p>`
+            }
+
+            return s;
+        }
+
+        function category(c) {
+            return `<span class="category" title="Category: ${c}">${c}</span>`;
+        }
+
+        function downloads(item) {
+            if (item.downloadsCount === null || item.downloadsCount == 0) return "";
+            return `<span class="downloads">${humanizeCount(item.downloadsCount)} downloads</span>`;
+        }
+
+        search.addWidgets([
+            instantsearch.widgets.clearRefinements({
+                container: '#clear-refinements',
+                cssClasses: {
+                    button: '',
+                },
+            }),
+            instantsearch.widgets.refinementList({
+                container: '#authors-list',
+                attribute: 'author',
+                cssClasses: {
+                    list: 'list-unstyled',
+                    count: 'badge text-dark-2 ms-2',
+                    label: 'd-flex align-items-center',
+                    checkbox: 'me-2',
+                },
+            }),
+            instantsearch.widgets.refinementList({
+                container: '#categories-list',
+                attribute: 'categories',
+                cssClasses: {
+                    list: 'list-unstyled',
+                    count: 'badge text-dark-2 ms-2',
+                    label: 'd-flex align-items-center',
+                    checkbox: 'me-2',
+                },
+            }),
+            instantsearch.widgets.refinementList({
+                container: '#qualities-list',
+                attribute: 'quality',
+                cssClasses: {
+                    list: 'list-unstyled',
+                    count: 'badge text-dark-2 ms-2',
+                    label: 'd-flex align-items-center',
+                    checkbox: 'me-2',
+                },
+            }),
+
+            instantsearch.widgets.searchBox({
+                container: '#searchbox',
+                showSubmit: false,
+                showReset: false,
+                placeholder: 'Filter by keyword...',
+                autofocus: false,
+                cssClasses: {
+                    input: '',
+                    loadingIcon: 'stroke-primary',
+                },
+            }),
+            instantsearch.widgets.configure({
+                hitsPerPage: 20,
+            }),
+            instantsearch.widgets.hits({
+                container: '#hits',
+                templates: {
+                    item(item) {
+                        var id = nextId++;
+                        var output = "";
+                        var hasTable = item.aspectGroups[0].aspects.length > 0;
+                        var hasDescription = item.description.length > 0;
+                        var hasDetails = hasTable || hasDescription;
+
+                        output += `
+                        <div>
+
+                            <div class="row mt-5">
+                                <div class="col-md">
+                                    <div class="search-result-links vertical">
+                                     ${links(item)}
+                                    </div>
+                                    <div class="search-result-title">
+                                        <h4>${item._highlightResult.name.value}</h4> 
+                                        <div class="author">by ${item.author}</div>
+                                    </div>
+                                    <div class="search-result-details">
+                                        ${item.categories.reduce((reduced, c) => reduced += category(c), "")}
+                                        <span class="license ${item.license.toLowerCase()}" title="${item.license} License.">${item.license} License</span>
+                                        <span class="quality ${item.quality.toLowerCase()}" title="${item.quality} Quality">${item.quality}</span>
+                                        ${downloads(item)}
+                                    </div>
+                                    <div class="search-result-links horizontal">
+                                     ${links(item)}
+                                    </div>
+
+                                    <div class="search-result-summary">
+                                        ${item.summary}
+                                    </div>`;
+
+                        if (hasDetails) {
+                            output +=
+
+                                `
+                                    <p class="showMore">
+                                        <button id="showMore${id}" onclick="toggle('${id}')">Show more</button>
+                                     </p>`;
+                        }
+
+                        output += `
+
+                                </div>
+                            </div>`;
+
+
+                        if (hasDetails) {
+
+                            output += `
+                            <div id="details${id}" class="details" style="display:none;">`;
+
+                            if (hasDescription) {
+                                output += `
+                                    <div class="row mt-2">
+                                          <div class="col-md">
+
+                                               ${item.description}
+                                          </div>
+                                      </div>
+                                  `;
+
+                            }
+
+                            if (hasTable) {
+
+                                output += `                       
+                                    <div class="row mt-2">
+                                        <div class="col-md">
+
+                                             ${item.aspectGroups.reduce((reduced, g) => reduced += aspectGroup(g), "")}
+                                        </div>
+                                    </div>
+
+                                </div>`
+                            }
+
+                        }
+
+                        output +=
+                            `
+                        </div>
+                      `;
+
+                        return output;
+                    },
+                },
+                cssClasses: {
+                    list: 'list-unstyled grid-container',
+                    item: 'd-flex flex-column search-result-card mb-1 me-1 p-3',
+                    loadMore: 'btn btn-primary mx-auto d-block mt-4',
+                    disabledLoadMore: 'btn btn-dark mx-auto d-block mt-4',
+                }
+            }),
+            instantsearch.widgets.pagination({
+                container: '#pagination',
+                cssClasses: { list: "d-flex flex-row justify-content-end", item: "px-2 d-block", link: "text-decoration-none", disabledItem: "text-muted", selectedItem: "fw-bold text-primary" }
+            }),
+        ]);
+
+        search.start();
+
+    });
+</script>
+
+
+<main role="main" class="marketplacePage">
+    <section class="section bg-purple section--intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Metalama Marketplace</h1>
+
+                    <div class="row">
+                        <div class="col-12 col-md-8 col-lg-5 mx-auto">
+                            <div class="lines">
+                                <div class="lines__orange"></div>
+                                <div class="lines__white"></div>
+                                <div class="lines__blue"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-10 mx-auto">
+                        <div class="text-20">
+                            <p class="pt-60 mb-10 text-center">
+                                Find open-source ready-to-use aspects, sample code, and other Metalama extensions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-gray">
+        <div class="container pt-4 px-md-5">
+
+
+            <div class="mt-4 row">
+                <div class="refinements col-md-3 pr-md-5">
+
+                    <h5>Author</h5>
+                    <div id="authors-list"></div>
+                    <h5>Category</h5>
+                    <div id="categories-list"></div>
+                    <h5>Quality</h5>
+                    <div id="qualities-list"></div>
+                    <div id="clear-refinements"></div>
+
+                </div>
+                <div class="col-md">
+                    <div class="row blue-form">
+                        <div id="searchbox"></div>
+                    </div>
+
+                    <div class="mt-5 mt-md-0 row">
+                        <div class="col-md">
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="align-items-center col-md-8 d-flex justify-content-end">
+                                    <div id="stats"></div>
+                                    <div id="hits-per-page"></div>
+                                    <div id="sort-by"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-1 row">
+                        <div class="col-sm">
+                            <div id="hits"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div id="pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</main>

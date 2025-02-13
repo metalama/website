@@ -1,0 +1,231 @@
+.btn {
+  vertical-align: middle;
+  display: inline-block;
+  transition: all 500ms ease;
+  line-height: 27px;
+  padding: 7px 40px;
+  color: $white;
+  font-size: var(--font-size-text);
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: $mediumPurple1;
+  border: 2px solid $mediumPurple1;
+  text-align: center;
+  outline: none;
+  border-radius: 0;
+
+  .icon {
+    margin-right: 10px;
+  }
+
+
+  .bg-purple &, .bg-purple &:hover,
+  .bg-darkPurple &, .darkPurple &:hover,
+  .bg-darkGray &, .bg-darkGray &:hover
+  {
+    background-color: $purple;
+    border-color: $purple;
+  }
+
+  &:hover, &:active {
+    outline: none;
+    background-color: $darkPurple;
+    border-color: $darkPurple;
+    color: $white;
+  }
+
+  &--width {
+    padding: 4px 55px !important;
+  }
+
+  &--small {
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    padding: 8px 20px;
+    vertical-align: middle;
+    display: inline-block;
+    transition: all 500ms ease;
+    line-height: 27px;
+    color: $white;
+    background-color: $mediumPurple1;
+    border: 1px solid $mediumPurple1;
+    text-align: center;
+    outline: none;
+  }
+
+  /*
+  @include media-breakpoint-down(sm) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }*/
+
+  &--plus,
+  &--minus {
+    color: $purple;
+    font-size: var(--font-size-h4);
+    background: transparent;
+    border: 0;
+    position: relative;
+    padding: 0 0 0 72px;
+    text-transform: none;
+    line-height: 36px;
+
+    /*
+    @include media-breakpoint-down(sm) {
+      padding: 0 0 0 72px;
+    }*/
+
+    &:before {
+      font-size: var(--font-size-h3);
+      width: 42px;
+      height: 42px;
+      line-height: 36px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '+';
+      border-radius: 50%;
+      border: 2px solid $purple;
+    }
+  }
+
+  &--minus:before {
+    content: '-';
+  }
+
+  &--gray {
+    background-color: #e4e4e4;
+    border-color: #e4e4e4;
+    color: #271c3b;
+  }
+
+  &--dark {
+    background-color: rgba(18, 11, 29, 0.96);
+    border-color: rgba(18, 11, 29, 0.96);
+  }
+
+  &--white {
+    border-color: #fff;
+    background: white;
+    color: #271449;
+  }
+
+  &--whiteTransparent {
+    border-color: #271449;
+    background: transparent;
+    color: #271449;
+  }
+
+  &--transparent {
+    border-color: #973bfc !important;
+    background: transparent;
+    color: #fff;
+
+    &:hover {
+      border-color: #973bfc;
+      background: #973bfc;
+    }
+
+    a:hover {
+      color: #fff !important;
+    }
+  }
+
+  &--light {
+    background: transparent !important;
+    border: 2px solid $mediumPurple1;
+    color: $mediumPurple1;
+
+    &:hover {
+      background: $mediumPurple1 !important;
+      border: 2px solid $mediumPurple1;
+      color: #fff;
+    }
+  }
+
+  &--transparent-purple {
+    border-color: #973bfc;
+    background: transparent;
+    color: #fff;
+
+    &:hover {
+      border-color: #973bfc !important;
+      background: #973bfc !important;
+      color: #fff !important;
+    }
+  }
+
+  &--dark-2 {
+    background: #120b1d;
+    border: 2px solid #973eff;
+    padding: 5px 25px;
+    color: #fff;
+
+    &:hover {
+      background: #973eff !important;
+      border: 2px solid #973eff;
+    }
+  }
+
+  &--blue {
+    background-color: $lightBlue !important;
+    border-color: $lightBlue !important;
+    color: #201431;
+  }
+
+  &--md {
+    line-height: 47-4px;
+    font-size: var(--font-size-text);
+    font-weight: 800;
+    padding: 0 15px;
+  }
+
+  &--block {
+    display: block;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+  }
+}
+
+/*
+@include media-breakpoint-up(md) {
+  a.btn,
+  button.btn {
+    &:hover {
+      background-color: rgba(18, 11, 29, 0.96);
+      text-decoration: none;
+      border: 2px solid rgba(18, 11, 29, 0.96);
+      color: $white;
+    }
+
+    &--dark {
+      &:hover {
+        background-color: $mediumPurple1;
+        border-color: $purple;
+      }
+    }
+
+    &--plus,
+    &--minus {
+      &:hover {
+        background: none;
+        border: 0;
+      }
+    }
+  }
+
+  .bg-darkPurple {
+    a.btn,
+    button.btn {
+      &:hover {
+        background-color: $white;
+        border: 2px solid $white;
+        color: $darkPurple;
+      }
+    }
+  }
+}
+  */

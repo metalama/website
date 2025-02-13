@@ -1,0 +1,11 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.DS_Store
+.asset_pipeline/
+node_modules/
+*.g.*
+.DS_Store
+*.br
+*.gz

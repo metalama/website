@@ -1,0 +1,226 @@
+.marketplacePage {
+
+    #searchbox {
+      margin-bottom: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      font-size: var(--font-size-h5);
+  
+      input {
+        width: 100%;
+      }
+    }
+  
+  
+    .refinements {
+      h5 {
+        margin-top: 20px;
+      }
+    }
+  
+  
+    .search-result-card {
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      border-radius: 8px;
+      padding: 40px;
+      margin-bottom: 40px;
+  
+  
+      .search-result-title {
+        margin-bottom: 10px;
+  
+        h4 {
+          display: inline-block;
+          margin-right: 10px;
+          margin-bottom: 0;
+        }
+  
+        div.author {
+          display: inline-block;
+        }
+      }
+  
+      h5 {
+        margin-top: 40px !important;
+      }
+  
+      .search-result-details {
+        color: $gray-600;
+        margin-bottom: 20px;
+  
+        span {
+          margin-right: 20px;
+          padding-top: 3px;
+        }
+  
+        span::before {
+          display: inline-block;
+          font-size: 20px;
+          vertical-align: sub;
+          margin-right: 5px;
+          font-family: 'SegoeMDL2';
+          font-weight: bold;
+        }
+  
+        .downloads::before {
+          content: '\E118';
+        }
+  
+        .license::before {
+          content: '\E825';
+        }
+  
+        .quality.sample::before {
+          content: '\E7BE ';
+        }
+  
+        .quality.dev::before {
+          content: '\E822';
+        }
+  
+        .quality.preview::before {
+          content: '\EB67';
+        }
+  
+        .quality.stable::before {
+          content: '\E228';
+        }
+  
+        .quality.certified::before {
+          content: '\E727';
+        }
+  
+        .category::before {
+          content: "\E8EC";
+        }
+      }
+    }
+  
+    .search-result-links {
+  
+  
+      .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 13px;
+        margin-left: -2px;
+      }
+  
+      .package .icon {
+        margin-top: -5px;
+        margin-right: 17px;
+      }
+  
+      p::before {
+        display: inline-block;
+        font-size: 20px;
+        vertical-align: top;
+        margin-right: 15px;
+        margin-top: -2px;
+        font-family: 'SegoeMDL2';
+        font-weight: bold;
+      }
+  
+      p.documentation::before {
+        content: '\E82D';
+      }
+  
+  
+      &.vertical {
+        float: right;
+        width: 180px;
+        padding-left: 20px;
+        padding-bottom: 40px;
+        display: none;
+  
+        /*
+        @include media-breakpoint-up(lg) {
+          display: block;
+        }*/
+      }
+  
+      &.horizontal {
+        display: flex;
+        flex-direction: row;
+        margin-top: -10px;
+  
+        /*
+        @include media-breakpoint-up(lg) {
+          display: none;
+        }
+          */
+  
+  
+        p {
+          margin-right: 20px;
+  
+          a {
+            margin-left: -10px;
+          }
+        }
+      }
+    }
+  
+  
+    .ais-RefinementList {
+      input {
+        margin-right: 10px;
+      }
+  
+      h5 {
+        margin-top: 20px;
+      }
+  
+      .badge {
+        color: white;
+        background: $mediumPurple2;
+        border-radius: 10px;
+        padding: 5px;
+        font-weight: bold;
+        margin-left: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      }
+    }
+  
+    .ais-ClearRefinements-button {
+      margin-top: 40px;
+      padding: 0;
+      color: var(--bs-link-color);
+    }
+  
+    .ais-ClearRefinements-button:disabled {
+      display: none;
+    }
+  
+    .showMore {
+      margin-top: 20px;
+  
+      button {
+        color: var(--bs-link-color);
+        padding: 0;
+      }
+  
+      button.expanded {
+        color: $gray-600;
+      }
+  
+      button::after {
+        content: '\E972';
+        display: inline-block;
+        font-size: 20px;
+        vertical-align: top;
+        margin-left: 15px;
+        font-family: 'SegoeMDL2';
+        font-weight: bold;
+        margin-top: -3px;
+      }
+  
+      button.expanded::after {
+        content: '\E971';
+      }
+    }
+  }
+  

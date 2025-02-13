@@ -1,0 +1,756 @@
+---
+layout: min
+---
+
+<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "Organization",
+	  "address": {
+		"@type": "PostalAddress",
+		"addressLocality": "Prague, Czech Republic",
+		"postalCode": "15000",
+		"streetAddress": "October 14th Sq, 1307/2"
+	  },
+	  "email": "hello@postsharp.net",
+	  "name": "PostSharp Technologies",
+	  "legalName": "SharpCrafters s.r.o."
+	}
+	</script>
+
+
+
+<main role="main" class="productLine-home metalama">
+
+    <section id="overview" class="section bg-purple section--intro"
+        style="background-image: url(/images/icon/metalama-icon-with-gradient.svg); background-repeat: no-repeat; background-size: 750px 750px; background-position-y: 255px;">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xl-9 mx-auto my-l">
+                    <h1 class="wow fadeInUp" data-wow-duration="2s">Build Robust and Maintainable Applications
+                        <span class="c-purple">With Less Code</span>.
+                    </h1>
+                </div>
+            </div>
+
+            <div class="row pb-xl">
+                <div class="productLine">
+                    <img src="/images/icon/metalama-by-postsharp-logo-negative.svg" loading="lazy"
+                        alt="Metalama logo" />
+                    <div class="description">
+                        <p>
+                            The simplest and most powerful meta-programming framework for code generation,
+                            instrumentation and validation in C#.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="benefits">
+                    <ul>
+                        <li><b>Write and maintain less code</b> by eliminating boilerplate, generating it dynamically
+                            during compilation, and reduce code lines and bugs by 15%.</li>
+                        <li><b>Validate your codebase against your architecture</b> in real-time to enforce adherence to
+                            your design rules and conventions. No need to wait for code reviews.</li>
+                        <li><b>Excel with large, complex, or old codebases</b>. Metalama does not require you to change
+                            your architecture. Beyond <i>getting started</i>, it's at scale that it really shines.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--costs bg-darkPurple">
+        <div class="container">
+
+            <div class="vimeo-container">
+                <div class="bg-shadow">
+                    <div class="vimeo" data-id="842166595"></div>
+                </div>
+            </div>
+
+            <div style="clear: both">
+
+                <div class="text-center mx-auto">
+                    <h2>What are <span class="c-purple">boilerplate</span> and <span
+                            class="c-purple">architecture erosion</span> costing you?
+                    </h2>
+
+                </div>
+
+                <u:WhatWeFight />
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section bg-darkGray section--aspects" id="concept">
+        <div class="container">
+
+            <div class="row align-items-top aspectTechnology">
+                <div class="col-12 col-lg-7">
+
+                    <h2 class="title-h2 title-h2-withText"><span class="c-blue">Our Approach:</span> Simple, Robust
+                        Meta-Programming</h2>
+
+                    <div class="text-normal pb-lg-5 mb-40">
+                        <p>
+                            <i>Meta-programming</i> is the practice of writing code that generates, modifies, or
+                            validates other code. This approach streamlines repetitive tasks and makes code reviews more
+                            efficient.
+                        </p>
+                        <p>
+                            With a focus on <b>simplicity</b> and <b>safety</b>, we have reimagined <i>aspect-oriented
+                                programming (AOP)</i> for modern .NET applications.
+                        </p>
+                        <p>Aspects and fabrics are <i>meta</i> C# classes that execute within the compiler or the IDE
+                            and perform the following tasks:</p>
+                        <ul class="list-unstyled list-smallBlueTags">
+                            <li>
+                                <p>
+                                    <b>Generate repetitive code</b> at compile-time, ensuring your source code remains
+                                    crystal clear.
+                                </p>
+                                <p>
+                                    Unlike Roslyn generators, Metalama is not limited
+                                    to extending <code>partial</code> classes. You can add behaviors to hand-written
+                                    methods, properties, and even fields.
+                                </p>
+                            </li>
+                            <li><b>Verify source code</b> against patterns and architectural rules. Use a fluent C# API
+                                to express common rules or build
+                                your own rules. Report errors in real-time in the IDE or at build time in you CI
+                                pipeline.</li>
+                            <li><b>Suggest</b> code fixes and refactorings, and provide guidance to developers.</li>
+                        </ul>
+                        <p><b>Do it by your rules.</b> Create your own code templates and verification rules easily and
+                            safely.</p>
+
+                    </div>
+                </div>
+                <div class="col pt-md-100 pt-lg-0">
+                    <div id="graphLottie" class="lottie"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-white section--aspects howDoesItWork" id="how-it-works">
+        <div class="container-wide">
+            <div>
+                <h1 class="mb-l" style="text-align: left;">
+                    <span class="c-purple">Show Me Code!</span><br />
+                    How Does It Work?
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="col text">
+
+                    <h4>1. Add a Package to Your Project</h4>
+                    <p>
+                        Add the <code>Metalama.Framework</code> package to your project.
+                    </p>
+                    <p>
+                        Optionally, you can install Metalama Tools for Visual Studio to enhance your development
+                        experience.
+                    </p>
+
+                    <h4>2. Create an Aspect Class or Use an Open-Source One</h4>
+                    <p>
+                        Aspects are <i>meta</i> classes that transform code using simple C#-based templates. They can
+                        also report warnings and errors or suggest code fixes.
+                    </p>
+                    <p>
+                        Here is an aspect that automatically adds logging to a method:
+                    </p>
+                    <img src="/assets/images/homepage/front-example.svg" />
+
+                    <p class="mt-20">
+                        It may seem simplistic, and it is. Dozens of open-source aspects are available on <a
+                            href="/marketplace">Metalama Marketplace</a> for you to use or modify.
+                    </p>
+
+                    <h4>3a. Add Aspects to Your Business Code One at a Time</h4>
+                    <p>
+                        You can apply each aspect individually using a custom attribute.
+                    </p>
+                    <img src="/assets/images/homepage/attribute.svg" />
+
+                </div>
+
+                <div class="col text">
+
+                    <h4>3b. Apply Aspects in Bulk Using a Fabric</h4>
+                    <p>
+                        Alternatively, you can apply aspects in bulk using compile-time LINQ-like code with a fabric.
+                    </p>
+                    <p>
+                        A <i>fabric</i> is a specific kind of class that executes at build time or within the IDE.
+                        Unlike aspects, fabrics do not need to be applied to anything. They serve as their own entry
+                        points.
+                    </p>
+
+                    <img src="/assets/images/homepage/fabric.svg" />
+
+                    <h4>4. You're Done!</h4>
+                    <p>
+                        Upon compilation, Metalama seamlessly merges the aspect template with your business code. This
+                        process is executed <i>on the fly</i> to maintain the clarity of your source code.
+                    </p>
+
+                    <img src="/assets/images/homepage/aspect-diff.svg" />
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="section bg-gray section--aspects howDoesItWork" id="how-it-works">
+        <div class="container-wide">
+
+            <h1 class="mb-l mt-80" style="text-align: left;">
+                <span class="c-purple">Show Me More!</span><br />
+                How Can I Validate Architecture?
+            </h1>
+
+            <div class="row">
+                <div class="col-xl-4 text">
+                    <h4>1. Add the Architecture Package to Your Project</h4>
+                    <p>
+                        Add the <code>Metalama.Extensions.Architecture</code> package to your project.
+                    </p>
+                    <h4>2. Add a Fabric Class</h4>
+                    <p>
+                        For instance, let's verify that internal members of the current namespace are only utilized
+                        within that namespace or from a unit test.
+                    </p>
+
+                    <img src="/assets/images/homepage/validation-fabric.png" alt="Validation fabric"
+                        style="max-width: min(600px, 100%);" />
+                </div>
+                <div class="col-xl-1"></div>
+                <div class="col-xl-7 text">
+                    <h4>3. Your Code Is Now Validated In Real Time</h4>
+
+                    <p>
+                        A warning is now reported directly in the editor whenever you attempt to access an internal of
+                        a checked namespace from an unauthorized location.
+                    </p>
+
+                    <img src="/assets/images/homepage/validation-results.gif" alt="Validation results"
+                        style="max-width: min(950px,100%)" />
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section bg-white section--features" id="features">
+        <div class="container-wide">
+
+            <h1 class="mb-l">Will I Still Understand My Code?</h1>
+
+            <h4>We believe that you will comprehend the business meaning of your code even better than before since it
+                will not be cluttered with boilerplate. When the time comes to read the fine print, Metalama
+                shows you the exact generated code. You can even debug it!
+            </h4>
+
+            <ul class="lightboxSource">
+
+                <li>
+                    <img src="/assets/images/homepage/codelens.svg" alt="CodeLens Integration" />
+                    <p>
+                        <b>CodeLens</b>: Effortlessly identify applied aspects within the editor, even when it's not
+                        evident from the source code.
+                    </p>
+                </li>
+
+                <li>
+                    <img src="/assets/images/homepage/diff.svg" alt="Diff Preview" />
+                    <p>
+                        <b>Metalama Diff</b>: Conveniently compare source and transformed code directly within Visual
+                        Studio.
+                    </p>
+                </li>
+
+                <li>
+                    <img src="/assets/images/homepage/debugging.svg" alt="Debugging Flexibility" />
+                    <p>
+                        <b>Debugging Flexibility:</b> Choose whether to step into the transformed code or stick to the
+                        source code during debugging.
+                    </p>
+                </li>
+
+                <li>
+                    <img src="/assets/images/homepage/template.png" alt="Syntax Highlighting" />
+                    <p>
+                        <b>Syntax Highlighting:</b> Distinguish meta-code easily using T# syntax highlighting.
+                    </p>
+                </li>
+
+                <li>
+                    <img src="/assets/images/homepage/linqpad.svg" alt="Querying Interactively with LinqPad" />
+                    <p>
+                        <b>Interactive Querying:</b> Utilize the Linqpad driver to query your codebase interactively,
+                        similar to a database, and analyze the behavior of your aspects and fabrics.
+                    </p>
+                </li>
+
+            </ul>
+        </div>
+
+    </section>
+
+
+    <section class="section bg-gray section--features">
+        <div class="container-wide">
+
+            <h1 class="mb-l">Delight Your Development Team</h1>
+
+            <h4>By harnessing the power of aspects and fabrics, coding architects and senior developers can act as force
+                multipliers for the rest of the team.
+                Metalama provides the tools to create a delightful development experience for the team, tailored to your
+                project.
+            </h4>
+
+            <ul class="lightboxSource">
+
+                <li>
+                    <img src="/assets/images/homepage/diagnostic.svg" alt="Diagnostics" />
+                    <p>
+                        <b>Instant Diagnostics:</b> Receive immediate error and warning notifications directly within
+                        the editor, thanks to aspects.
+                    </p>
+                </li>
+
+                <li>
+                    <img src="/assets/images/homepage/codefix.svg" alt="Code Fixes" />
+                    <p>
+                        <b>Custom Fixes & Suggestions:</b> Develop team-specific code fixes associated with diagnostic
+                        notifications.
+                    </p>
+                </li>
+
+                <li>
+                    <img src="/assets/images/homepage/testing.svg" alt="Testing Framework" />
+                    <p>
+                        <b>Testing Framework:</b> Test aspects on various target declarations with ease. The framework
+                        integrates seamlessly with the Visual Studio test runner.
+                    </p>
+                </li>
+
+                <li>
+                    <img src="/assets/images/homepage/aspect-inheritance.svg" alt="Aspect Inheritance" />
+                    <p>
+                        <b>Aspect Inheritance:</b> Enable automatic propagation of aspects to child classes by
+                        annotating parent classes. This feature extends across projects.
+                    </p>
+                </li>
+
+                <li>
+                    <img src="/assets/images/homepage/intellisense.svg" alt="Intellisense" />
+                    <p>
+                        <b>Intellisense:</b> Gain real-time access to aspect-introduced code, eliminating the need for
+                        recompilation.
+                    </p>
+                </li>
+
+
+                <li>
+                    <img src="/assets/images/homepage/platforms.svg" alt="Multi-Platform Compatibility" />
+                    <p>
+                        <b>Multi-Platform Compatibility:</b> Compatible with Visual Studio, Visual Studio Code, Rider,
+                        and most build servers. Targets any .NET Standard 2.0-compatible platform.
+                    </p>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section class="section bg-white section--features">
+        <div class="container-wide">
+
+            <h1 class="mb-l">We've Got You Covered</h1>
+
+            <h4>We've been there before. Metalama has been developed by a team with over 100 years of cumulative
+                programming experience. This team has been supporting PostSharp, Metalama's predecessor, for more than
+                15 years.
+            </h4>
+
+            <ul class="lightboxSource">
+
+
+                <li>
+                    <img src="/assets/images/homepage/divorce.svg" alt="No Vendor Lock-In" />
+                    <p>
+                        <b>No Vendor Lock-In:</b> This feature allows for easy exportation of transformed code,
+                        facilitating the transition back to vanilla C# if necessary.
+                    </p>
+                </li>
+
+                <li>
+                    <img src="/assets/images/homepage/sdk.svg" alt="Roslyn Extensibility" />
+                    <p>
+                        <b>Extensibility with Roslyn:</b> Metalama's limitations can be overcome by scripting
+                        transformations directly using Roslyn.
+                    </p>
+                </li>
+
+                <li>
+                    <img src="/assets/images/homepage/extensions.svg" alt="Open-Source or Source-Available" />
+                    <p>
+                        <b>Open-Source or Source-Available:</b> It is possible to step into Metalama's code under a
+                        source-available license. Extensions and aspect libraries are open source.
+                    </p>
+                </li>
+
+                <li>
+                    <img src="/assets/images/homepage/documentation.svg" />
+                    <p>
+                        <b>Exceptional Documentation:</b> Metalama can be learned through our comprehensive
+                        documentation including commented examples. All examples are continually unit-tested for
+                        accuracy.
+                    </p>
+                </li>
+                <li>
+                    <img src="/assets/images/homepage/performance.jpg" alt="Optimal Performance" />
+                    <p>
+                        <b>Optimal Performance:</b> Experience no run-time overhead with Metalama. The code you see is
+                        precisely the code that gets executed.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section bg-purple">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xl-11 mx-auto">
+
+                    <h1 style="text-align: left;">
+                        <span class="c-purple">The Result:</span> Clean, Concise Code<br />
+                        <span class="font-size-h3">Adhering to Architectural Guidelines
+                            and&nbsp;Design&nbsp;Patterns.</span>
+                    </h1>
+
+                    <div class="problemsSolved mt-xl">
+                        <div class="row">
+                            <div class="order-1 order-lg-1 col-12 col-lg-3 wow fadeInUp">
+                                <div class="row align-items-center">
+                                    <div class="header-icon">
+                                        <div class="position-relative">
+                                            <i class="icon icon--time mb-lg-50"></i>
+                                            <i class="icon icon--remove d-none d-md-block position-absolute"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-7 col-lg-12">
+                                        <h4 class="title-18">Boosting Development Efficiency</h4>
+                                        <br />
+                                        <div class="details">
+                                            <p>
+                                                Metalama streamlines software development by reducing code by 10-50%,
+                                                thereby enabling developers to focus on meaningful tasks. It enhances
+                                                job satisfaction by eliminating repetitive low-level code and
+                                                frustrating reviews. Furthermore, it acts as a talent multiplier,
+                                                empowering architects and senior developers to tackle architectural
+                                                challenges. New team members can contribute effectively without being
+                                                overwhelmed by low-level technical details.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-2 order-lg-2 col-12 col-lg-3 wow fadeInUp">
+                                <div class="row align-items-center">
+                                    <div class="header-icon">
+                                        <div class="position-relative">
+                                            <i class="icon icon--complexity mb-lg-50"></i>
+                                            <i class="icon icon--remove d-none d-md-block position-absolute"></i>
+                                        </div>
+                                    </div>
+                                    <div class="order-1 order-lg-2 col col-lg-12">
+                                        <h4 class="title-18">Taming Code Complexity</h4>
+                                        <br />
+                                        <div class="details">
+                                            <p>
+                                                The separation of technical details from business logic results in
+                                                cleaner, more readable code, which allows team members to work more
+                                                efficiently. Strict adherence to the initial architecture and design
+                                                patterns reduces complexity, ensuring a manageable, well-structured
+                                                codebase. This approach helps to prevent excessive rules and violations,
+                                                whether unintentional or due to unwarranted creativity, thereby
+                                                maintaining overall simplicity and integrity.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-3 order-lg-3 col-12 col-lg-3 wow fadeInUp">
+                                <div class="row align-items-center">
+                                    <div class="header-icon">
+                                        <div class="position-relative">
+                                            <i class="icon icon--bug mb-lg-50"></i>
+                                            <i class="icon icon--remove d-none d-md-block position-absolute"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col col-lg-12">
+                                        <h4 class="title-18">Elevating Application Reliability</h4>
+                                        <br />
+                                        <div class="details">
+                                            <p>
+                                                Aspects enhance the readability and maintainability of the codebase by
+                                                separating technical and business logic. Meta-programming promotes
+                                                consistency and streamlines reviews, thereby reducing developer
+                                                oversights and limiting unwanted creativity. Additionally, aspects
+                                                improve software modularity, preventing duplication and enhancing
+                                                reusability, adaptability, and efficiency.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-4 order-lg-4 col-12 col-lg-3 wow fadeInUp">
+                                <div class="row align-items-center">
+                                    <div class="header-icon">
+                                        <div class="position-relative">
+                                            <i class="icon icon--unmaintainable mb-lg-50"></i>
+                                            <i class="icon icon--remove d-none d-md-block position-absolute"></i>
+                                        </div>
+                                    </div>
+                                    <div class="order-1 order-lg-2 col col-lg-12">
+                                        <h4 class="title-18">Streamlining Maintenance</h4>
+                                        <br />
+                                        <div class="details">
+                                            <p>
+                                                Metalama's ultimate advantage lies in reducing maintenance costs and
+                                                extending the lifespan of the codebase. Given that maintenance accounts
+                                                for 55%-95% of a software system's costs, maintaining low complexity is
+                                                crucial for post-release team member productivity. Considering that
+                                                developers spend approximately 70% of their time understanding code,
+                                                maintaining simplicity significantly enhances the efficiency of the
+                                                maintenance team.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section bg-darkPurple" id="compare">
+        <div class="container">
+            <div class="row section--holding-back d-none d-md-block">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="my-l">How Does It Compare?</h1>
+
+                    <table class="table compare table-hover">
+                        <thead>
+                            <tr>
+                                <th class="col-4"></th>
+                                <th class="col-1">Metalama</th>
+                                <th class="col-1">PostSharp</th>
+                                <th class="col-1">Roslyn Plug-In</th>
+                                <th class="col-1">Fody</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Technology</td>
+                                <td>Roslyn</td>
+                                <td>MSIL</td>
+                                <td>Roslyn</td>
+                                <td>MSIL</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="arrow"></div>
+                                    Transformation of the compilation using low-level APIs
+                                </td>
+                                <td class="yes">Yes</td>
+                                <td class="yes">Yes</td>
+                                <td class="no">No</td>
+                                <td class="yes">Yes</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="arrow"></div>
+                                    Addition of behaviors to source code using <i>simple</i> custom aspects or templates
+                                </td>
+                                <td class="yes">Yes</td>
+                                <td class="yes">Yes</td>
+                                <td class="no">No</td>
+                                <td class="limited">No</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="arrow"></div>
+                                    Introduction of new members or interfaces and referencing them in the source code
+                                </td>
+                                <td class="yes">Yes</td>
+                                <td class="no">No</td>
+                                <td class="limited">Complex</td>
+                                <td class="no">No</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="arrow"></div>
+                                    Analysis of the source code and reporting of warnings and errors in real-time
+                                </td>
+                                <td class="yes">Yes</td>
+                                <td class="no">Requires Rebuild</td>
+                                <td class="limited">Complex</td>
+                                <td class="no">Requires Rebuild</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="arrow"></div>
+                                    Debugging and exporting of transformed code
+                                </td>
+                                <td class="yes">Yes</td>
+                                <td class="no">No</td>
+                                <td class="limited">N/A</td>
+                                <td class="no">No</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h1 class="mb-l mt-80">What's Holding You Back?</h1>
+                    <u:FaqSection>
+                        <Items>
+                            <u:FaqItem2>
+                                <question>
+                                    Can I achieve the same results with open-source tools?
+                                </question>
+                                <answer>
+                                    <p>You might be considering Roslyn analyzers, Roslyn code generators, or open-source
+                                        IL tools.</p>
+                                    <p>
+                                    <p>
+                                        However, Metalama is in a league of its own.
+                                    </p>
+                                    <p>
+                                        <b>Metalama is Integrated</b>. Metalama stands alone as the only tool that
+                                        allows you to both <i>generate</i> code visible at design time and
+                                        <i>override</i> hand-written code. To replicate what Metalama offers, you would
+                                        need to juggle a combination of open-source tools that lack integration.
+                                    </p>
+                                    <p>
+                                        <b>Metalama is Simpler</b>. Meta-programming at the abstraction level of Roslyn
+                                        or MSIL is intricate, demanding years of experience. When approached naively,
+                                        low-level meta-programming can resemble hacking and can significantly amplify
+                                        complexity, especially after the departure of the developer who implemented the
+                                        meta-code.
+                                    </p>
+                                    <p>
+                                        <b>Metalama is Engineered for Good Architecture</b>. Metalama is designed to
+                                        <i>simplify</i> development. It avoids offering hacks that render the code less
+                                        predictable or comprehensible. Software development encompasses three cultures:
+                                        hacking, science, and engineering. We identify with the last one while remaining
+                                        mindful of the other two.
+                                    </p>
+                                    <p>
+                                        <b>Metalama is a Complete, Well-thought-out Solution</b>. Unlike alternatives
+                                        that focus on the most common use cases and cut corners – for instance, by
+                                        failing to properly implement async methods – Metalama goes the extra mile and
+                                        incorporates enough extension points to ensure you never hit a dead end.
+                                    </p>
+
+                                </answer>
+                            </u:FaqItem2>
+                            <u:FaqItem2>
+                                <question>
+                                    I'm concerned about losing control over my code.
+                                </question>
+                                <answer>
+                                    <p>
+                                        <b>Delegation is What You Actually Want</b>. You want the machine to handle
+                                        low-level, repetitive details, freeing up more of your time to focus on
+                                        meaningful tasks.
+                                    </p>
+                                    <p>
+                                        <b>You're Already Accustomed to This</b>. Initially, people were apprehensive
+                                        about losing control over performance when the industry transitioned from
+                                        assembly language to C, and then to the managed, garbage-collected memory model
+                                        of C# and Java. We've relinquished control over low-level details but have
+                                        gained enormous productivity and reliability.
+                                    </p>
+                                    <p>
+                                        <b>You're not completely losing control.</b> Metalama offers numerous mechanisms
+                                        to override default behaviors.
+                                    </p>
+                                    <p>
+                                        <b>You can revert to the source code at any time.</b> There is no vendor
+                                        lock-in.
+                                    </p>
+                                </answer>
+                            </u:FaqItem2>
+                            <u:FaqItem2>
+                                <question>
+                                    What if I am already using ReSharper, Rider, or CodeRush?
+                                </question>
+                                <answer>
+                                    <p>You can and should use both. We are also fans of refactoring tools.</p>
+                                    <p><b>Metalama reduces the amount of code.</b> While refactoring tools help
+                                        developers write code faster, they do not reduce the amount of code necessary to
+                                        implement a feature.</p>
+                                    <p><b>Metalama simplifies the writing of custom rules and code fixes.</b> Other
+                                        refactoring tools often have more complex APIs.</p>
+                                </answer>
+                            </u:FaqItem2>
+                        </Items>
+                    </u:FaqSection>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-white">
+        <div class="container">
+            <div class="row align-items-center py-xl">
+                <div class="col-12 col-lg-12 text-center">
+                    <img src="/images/tag2.svg" width="100px" class="mb-20" title="Get Started">
+                    <h2 class="title-30">Get started with Metalama.</h2>
+                </div>
+                <div class="col-12 col-lg pt-50 pt-lg-0 text-center">
+                    <a href="/metalama/free" class="btn btn-inline m-20">FREE EDITION</a>
+                    <a href="https://doc.postsharp.net/metalama" class="btn btn-inline m-20">DOCUMENTATION</a>
+                    <a href="/metalama/pricing" class="btn btn-inline m-20">PRICING</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="lightbox" style="display: none;">
+        <div id="lightboxFrame">
+            <span class="close cursor" onclick="closeLightbox()">&times;</span>
+
+            <!-- Displayed content -->
+            <div id="lightboxContent"></div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="moveLightbox(-1)">&#10094;</a>
+            <a class="next" onclick="moveLightbox(1)">&#10095;</a>
+
+            <!-- Carousel -->
+            <ul id="lightboxCarousel">
+            </ul>
+        </div>
+    </div>
+
+</main>

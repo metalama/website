@@ -1,0 +1,33 @@
+{% assign now = 'now' | date: "%Y%m%d%H%M" %}
+<footer>
+    <div class="container">
+        <div class="items_wrapper">
+            <div class="col_logo">
+                <div><img src="{{site.baseurl}}/assets/images/postsharp_logo.svg" alt="PostSharp Logo"
+                        style="width:200px;">
+                </div>
+            </div>
+            <section class="footericons">
+                <img src="{{site.baseurl}}/assets/images/icons/Microsoft Logo-Negative.svg" alt="microsoft partner">
+                <img src="{{site.baseurl}}/assets/images/icons/Visual Studio Logo-Negative.svg"
+                    alt="visual studio support">
+            </section>
+            <section class="footer_texts">
+                <p class="cr_copy">PostSharp is a registered trade name of SharpCrafters s.r.o. © 2004-2024</p>
+            </section>
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="/assets/js/swiper-bundle.js"></script>
+<script src="/assets/js/main.js?etag={{etag}}"></script>
+
+<script>
+    initializeHeader();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+    "cSpell.words": [
+        "Fraiteur",
+        "Metalama",
+        "multicasting"
+    ],
+    "markdownlint.config": {
+        "MD028": false,
+        "MD025": {
+            "front_matter_title": ""
+        }
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.formatOnSave": true
+    }
+}

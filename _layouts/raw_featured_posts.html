@@ -1,0 +1,33 @@
+<style>
+	.blog_tile.more_posts {
+		background-image: url("{{site.url}}{{site.baseurl}}/assets/images/morePosts.svg");   
+		background-size: cover;
+	}
+</style>
+{% assign countOthers = 0 %}
+{% for post in site.posts %}
+{% unless post.categories contains 'The Timeless .NET Engineer' %}
+{% assign countOthers = countOthers | plus: 1 %}
+{% if countOthers <= 5 %} 
+	<a class="blog_tile item{{countOthers}}" href="{{site.url}}{{site.baseurl}}{{ post.url }}">
+		<figure>
+			{% if post.image %}
+			<img src="{{site.url}}{{site.baseurl}}{{post.image}}" alt="{{post.title}}">
+			{% else %}
+			<img src="{{site.url}}{{site.baseurl}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{ post.title }}">
+			{% endif %}
+		</figure>
+		<div class="item_details_container">
+			<h3>{{post.title}}</h3>
+			<p class="post_excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 240 }}</p>
+		</div>
+	</a>
+{% endif %}
+{% endunless %}
+{% endfor %}
+	<a class="blog_tile more_posts" href="{{site.url}}{{site.baseurl}}/archive">
+		<figure></figure>
+		<div class="item_details_container">
+			<h3>More Products &amp; Community News...</h3>
+		</div>
+	</a>

@@ -1,0 +1,140 @@
+header {
+  background-color: #130722;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000001;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: row;
+
+  nav{
+    margin-left: 40px;
+    margin-top: 12px;
+    padding: 20px;
+    display: inline-block;
+  } 
+
+  a,
+  a:visited,
+  a:hover {
+    color: #a0a0a0;
+    text-decoration: none;
+
+    &.active {
+      color: white;
+    }
+  }
+
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul.level1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    li {
+      padding-right: 20px;
+
+
+      &.has-dropdownmenu {
+
+        position: relative;
+
+        > a:after {
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-top: 4px solid #a0a0a0;
+          content: "";
+          margin: 0 0 0 14px;
+          position: absolute;
+          text-align: right;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 0;
+        }
+      }
+
+      .dropdownmenu {
+
+        background-color: #130722;
+        padding: 20px;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          a {
+            .title {
+              font-weight: bold;
+              color: white;
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+
+
+        &.columns {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          position: fixed;
+          left: 0;
+
+          .column-title {
+
+            margin-bottom: 20px;
+
+            a {
+              font-family: Monosten;
+              color: #6527a9 !important;
+              font-weight: bold;
+            }
+          }
+
+        }
+
+        &.list {
+
+          max-width: 450px;
+          position:fixed;
+
+        }
+
+      }
+    }
+
+  }
+}
+
+section {
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .header__mobile__header {
+    height: 100px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    padding-right: 55px !important;
+  }
+
+  .header__mobile__content {
+    margin-top: 40px !important;
+  }
+
+  .header__logo.blog,
+  .header__logo.metalama {
+    z-index: 99 !important;
+  }
+}

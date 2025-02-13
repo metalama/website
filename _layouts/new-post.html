@@ -1,0 +1,209 @@
+{% include header.html title = page.title permalink = page.permalink image = page.image %}
+{% if page.mermaid %}
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({ startOnLoad: false });
+    await mermaid.run({
+        querySelector: '.language-mermaid',
+    });
+
+</script>
+{% endif %}
+
+{% if page.latex %}
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
+
+
+<div class="page_wrapper new_post_page">
+
+    <section class="post_header">
+        <div class="grid">
+            <div class="post_title">
+                <figure class="featured">
+                    {% if page.image == nil %}
+                    <img src="{{site.baseurl}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{page.title}}">
+                    {% else %}
+                    <img src="{{page.image}}" alt="{{page.title}}">
+                    {% endif %}
+                </figure>
+
+            </div>
+
+            {% if page.side_toc == yes %}
+            <div class="toc_nav">
+                <div>
+                    <div class="newsletter">
+                        <div class="when-notsubscribed">
+                            {% if page.categories contains "The Timeless .NET Engineer" %}
+                            <div class="convertKit">
+                                <p class="convertKit_header">The Timeless .NET Engineer Newsletter</p>
+                                <p class="promise timeless non_subscribers_only">Learn the art of building robust and
+                                    maintainable applications with less code
+                                    &mdash; work you will be proud of even 10 years from now.</p>
+                                {% include timeless-subscription-form.html %}
+                            </div>
+                            {% else %}
+                            <div class="convertKit">
+                                <p class="convertKit_header">Subscribe</p>
+                                <p class="promise">Subscribe to our newsletter for release news and a monthly status
+                                    report.
+                                </p>
+                                <script async data-uid="4e1383a23f"
+                                    src="https://postsharp.ck.page/4e1383a23f/index.js"></script>
+                                <p class="guarantee">You can unsubscribe at any time.</p>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+
+
+                    <nav id="toc">
+                        <p class="toc_nav_header">In this article</p>
+                    </nav>
+
+
+                    {% if page.source_url %}
+                    <nav>
+                        <p class="toc_nav_header">Source code</p>
+                        <p class="detail">Download the source code of examples in this article on <a
+                                href="{{page.source_url}}">GitHub</a>.</p>
+                    </nav>
+                    {% endif %}
+
+
+
+
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+    <section class="post_content">
+        <div class="grid">
+
+            <div class="post_body">
+
+                <main>
+                    <article>
+                        <h1>{{page.title | strip_html | strip_newlines | truncate: 150}}</h1>
+
+
+                        <div class="post_details_and_tag">
+                            <div class="post_details">{% if page.author %} by <span>{{page.author}}</span> {% endif %}
+                                on {{
+                                page.date | date_to_string }}</div>
+                            <div class="post_share_n_tag">
+                                <div class="share_buttons">
+                                    {% include share_buttons.html isPage = true %}
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="post_excerpt">
+                            {{ page.excerpt }}
+                        </div>
+
+                        {{ content | remove: page.excerpt }}
+
+
+                        <div class="attribution">
+                            This article was first published on a <a
+                                href="https://blog.postsharp.net">https://blog.postsharp.net</a>
+                            under the title <a
+                                href="{{ page.permalink | prepend: site.baseurl | prepend: site.url }}">{{
+                                page.title | xml_escape }}</a>.
+                        </div>
+
+                        {% if page.categories contains "The Timeless .NET Engineer" %}
+
+                    </article>
+                </main>
+
+                <div class="discover-metalama">
+                    <p class="title">Discover Metalama, the leading code generation and validation toolkit for C#</h2>
+                    <ul>
+                        <li><b>Write and maintain less code</b> by eliminating boilerplate, generating it dynamically
+                            during compilation, typically reducing code lines and bugs by 15%.</li>
+                        <li><b>Validate your codebase against your own rules in real-time</b> to enforce adherence to
+                            your architecture, patterns, and conventions. No need to wait for code reviews.</li>
+                        <li><b>Excel with large, complex, or old codebases.</b> Metalama does not require you to change
+                            your architecture. Beyond getting started, it's at scale that it really shines.</li>
+                    </ul>
+
+                    <p class="discover-button">
+                        <a href="https://www.postsharp.net/metalama">Discover Metalama</a>
+                        <a href="https://www.postsharp.net/metalama/free">Free Edition</a>
+                    </p>
+
+                </div>
+
+                {% endif %}
+
+                {% if page.related_articles %}
+
+                <div>
+                    <h2>Related articles</h2>
+                    <ul>
+
+                        {% for related_path in page.related_articles %}
+                        {% assign related_post = site.pages | concat: site.posts | where: "permalink", related_path
+                        | first %}
+                        {% if related_post %}
+                        <li><a href="{{ related_post.url }}">{{ related_post.title }}</a></li>
+                        {% else %}
+                        {% warn "Related article not found for path: " | append: related_path %}
+                        {% endif %}
+                        {% endfor %}
+                        {% if page.categories contains "The Timeless .NET Engineer" %}
+                        <li><a href="/timeless" class="timeless">More from the Timeless .NET Engineer series</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+                {% endif %}
+
+
+                <div class="post_footer_share_buttons">
+                    {% include share_buttons.html isPage = true %}
+                </div>
+
+                {% include disqus_comments.html %}
+
+            </div>
+
+            <div>
+                <!-- Intentionally empty -->
+            </div>
+
+        </div>
+
+
+
+    </section>
+</div>
+
+{% if page.categories contains "The Timeless .NET Engineer" %}
+
+<script async data-uid="9097b08de4" src="https://postsharp.ck.page/9097b08de4/index.js"></script>
+
+{% endif %}
+
+{% include custom.js %}
+{% include newsletter.html %}
+{% include footer.html %}

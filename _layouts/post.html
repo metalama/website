@@ -1,0 +1,114 @@
+{% include header.html title = page.title permalink = page.permalink image = page.image %}
+<style type="text/css">
+    section {
+        overflow: visible !important;
+    }
+</style>
+{% if page.mermaid %}
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({ startOnLoad: false });
+    await mermaid.run({
+        querySelector: '.language-mermaid',
+    });
+
+</script>
+{% endif %}
+
+{% if page.latex %}
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
+
+
+
+<div class="page_wrapper post_page">
+    <section class="post_header">
+        <figure>
+            {% if page.image %}
+            <img src="{{page.image}}" alt="{{post.title}}">
+            {% else %}
+            <img src="{{site.baseurl}}/assets/images/blog/ps-no-featimg-1x1.jpg"  alt="{{ post.title }}">
+            {% endif %}
+        </figure>
+        <h1>{{page.title | strip_html | strip_newlines | truncate: 150}}</h3>
+
+            <div class="post_details_and_tag">
+                <div class="post_details">{% if page.author %} by <span>{{page.author}}</span> {% endif %} on {{
+                    page.date | date_to_string }}</div>
+                <div class="post_share_n_tag">
+                    <div class="share_buttons">
+                        {% include share_buttons.html isPage = true %}
+                    </div>
+                    {% for category in page.categories %}
+                    <div class="post_category">
+                        <a href="{{site.baseurl}}/archive#{{category | downcase | replace: ' ', '-'}}">
+                            <img src="{{site.baseurl}}/assets/images/icons/tag_white.svg" alt="" />
+                            <span>{{category}}</span>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="post_excerpt">
+                {{ page.excerpt }}
+            </div>
+            <div class="share_buttons desktop">
+                {% include share_buttons.html isPage = true %}
+            </div>
+            {% include disqus_comments.html %}
+
+    </section>
+    <section class="post_content">
+        <div class="left_sidebar">
+            {% if page.side_toc == yes %}
+            <div class="toc_nav">
+                <nav id="toc">
+                    <p class="toc_nav_header">In this article</p>
+                </nav>
+            </div>
+            {% endif %}
+            {% if page.categories contains "The Timeless .NET Engineer" %}
+            <div class="convertKit">
+                <p class="convertKit_header">The Timeless .NET Engineer Newsletter</p>
+                <p class="promise timeless">Learn the art of building robust and maintainable applications with less
+                    code
+                    &mdash; stuff you will be proud of even 10 years from now.</p>
+                <script async data-uid="e622495027" src="https://postsharp.ck.page/e622495027/index.js"></script>
+                <p class="guarantee">You can unsubscribe at any time.</p>
+            </div>
+            {% else %}
+            <div class="convertKit">
+                <p class="convertKit_header">Subscribe</p>
+                <p class="promise">Subscribe to our newsletter for release news and a monthly status report.</p>
+                <script async data-uid="4e1383a23f" src="https://postsharp.ck.page/4e1383a23f/index.js"></script>
+                <p class="guarantee">You can unsubscribe at any time.</p>
+            </div>
+            {% endif %}
+        </div>
+        <div class="main_content">
+            {{ content | remove: page.excerpt }}
+        </div>
+    </section>
+
+    <div class="post_footer_share_buttons">
+        {% include share_buttons.html isPage = true %}
+    </div>
+
+
+</div>
+
+{% include custom.js %}
+{% include newsletter.html %}
+{% include footer.html %}

@@ -1,0 +1,53 @@
+{% include header.html title = page.title permalink = page.permalink %}
+
+<div class="page_wrapper home_page">
+
+
+
+    <section class="older_posts">
+
+        <div class="intro">
+
+            <h1>{{ page.title }}</h1>
+
+            {{ content }}
+
+        </div>
+
+
+        <div class="posts">
+            {% for post in site.categories[page.tag] %}
+
+
+            <a class="blog_item" href="{{site.baseurl}}{{ post.url }}">
+                <figure>
+                    {% if post.image %}
+                    <img src="{{ post.thumbnail | default: post.image }}" alt="{{ post.title }}">
+                    {% else %}
+                    <img src="{{site.baseurl}}/assets/images/blog/ps-no-featimg-16x9.jpg"  alt="{{ post.title }}">
+                    {% endif %}
+                </figure>
+                <div class="item_details_container">
+                    <h3>{{post.title}}</h3>
+                    <div class="post_details">
+                        {% if post.author %}
+                        <span>{{post.author}}</span> |
+                        {% endif %}
+                        {{ post.date | date_to_string }}
+                    </div>
+                </div>
+            </a>
+
+            {% endfor %}
+
+        </div>
+
+        <div class="sidebar_left"></div>
+        <div class="sidebar_right"></div>
+
+    </section>
+
+
+</div>
+
+{% include footer.html %}

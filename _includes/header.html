@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+{% assign etag = 'now' | date: "%Y%m%d%H%M" %}
+<html lang="en">
+
+
+<head>
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script>
+        var _mtm = window._mtm = window._mtm || [];
+        _mtm.push({ 'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start' });
+        (function () {
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.async = true; g.src = 'https://cdn.matomo.cloud/postsharp.matomo.cloud/container_XzG7YI51.js'; s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css?etag={{etag}}">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+    <link href="{{site.baseurl}}/assets/images/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" />
+    <link href="{{site.baseurl}}/assets/images/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+    <link href="{{site.baseurl}}/assets/images/icons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+    <link href="{{site.baseurl}}/assets/images/icons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+    <link href="{{site.baseurl}}/assets/images/icons/android-icon-192x192.png" rel="icon" sizes="192x192"
+        type="image/png" />
+    <link href="{{site.baseurl}}/assets/images/icons/android-icon-96x96.png" rel="icon" sizes="96x96"
+        type="image/png" />
+    <link href="{{site.baseurl}}/assets/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="{{site.baseurl}}/assets/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="{{site.baseurl}}/assets/fonts/LatoLatin/LatoLatin-Regular.woff2?etag=3cd36578026d6c12eddf9a5c671a251d"
+        rel="preload" as="font" crossorigin="anonymous" />
+    <link href="{{site.baseurl}}/assets/fonts/LatoLatin/LatoLatin-Bold.woff2?etag=3ff66ada9b57d10c17e415222486ec21"
+        rel="preload" as="font" crossorigin="anonymous" />
+    <link href="{{site.baseurl}}/assets/fonts/Monosten/Monosten-A.woff2?etag=9bdc03646207a5354c40167543f428b6"
+        rel="preload" as="font" crossorigin="anonymous" />
+    <link rel="canonical" href="{{site.baseurl}}{{include.permalink}}" />
+
+    <link rel="alternate" type="application/rss+xml" href="{{site.baseurl}}/feed.xml" />
+    <title>{% if include.title And include.title != "" And include.title != nil %}{{include.title}} &ndash; PostSharp
+        Blog{%
+        else
+        %}{{site.title}}{% endif %}</title>
+
+    <meta property="og:title" content="{{ include.title }}" />
+    <meta name="twitter:title" content="{{ include.title }}" />
+    <meta property="og:url" content="https://blog.postsharp.net{{include.permalink}}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {% if page.date %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+    {% endif %}
+    {% if page.last_modified_at %}
+    <meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}" />
+    {% endif %}
+    {% if page.summary %}
+    <meta name="description" content="{{page.summary | escape}}" />
+    <meta property="og:description" content="{{page.summary | escape}}" />
+    <meta name="twitter:description" content="{{page.summary | escape}}" />
+    {% endif %}
+    {% if include.image %}
+    {% assign image_url = include.image %}
+    {% if image_url contains '.svg' %}
+    {% assign image_url = image_url | replace: '.svg', '.svg.g.png' %}
+    {% endif %}
+    <meta property="og:image" content="{{site.url}}{{site.baseurl}}{{image_url}}" />
+    <meta property="twitter:image" content="{{site.url}}{{site.baseurl}}{{image_url}}" />
+    {% endif %}
+    {% if page.keywords %}
+    <meta name="keywords" content="{{page.keywords | join: ', ' | escape}}" />
+    {% endif %}
+
+    {% if include.noheader != "true" %}
+    <script>
+        var _paq = window._paq = window._paq || [];
+        _paq.push(["setDocumentTitle", document.title]);
+        _paq.push(["setCustomUrl", "https://www.postsharp.net/blog" + window.location.pathname])
+        _paq.push(["setCookieDomain", "*.postsharp.net"]);
+        _paq.push(["setExcludedQueryParams", ["qid", "license", "interests", "version", "vgo_ee", "conf"]]);
+        _paq.push(["setDomains", ["*.postsharp.net"]]);
+        _paq.push(['enableLinkTracking']);
+        _paq.push(["setDoNotTrack", "true"]);
+        _paq.push(['trackPageView']);
+
+        (function () {
+            var u = "https://postsharp.matomo.cloud/";
+            _paq.push(['setTrackerUrl', u + 'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.async = true; g.src = '//cdn.matomo.cloud/postsharp.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    {% endif %}
+
+    {% if page.layout == "post" or page.layout == "new-post" %}
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "headline": "{{page.title}}",
+          "datePublished": "{{page.date | date: '%Y-%m-%dT%H:%M:%S%z' }}",
+          {% if page.last_modified_at %}
+          "dateModified": "{{page.last_modified_at | date: '%Y-%m-%dT%H:%M:%S%z' }}",
+          {% endif %}
+          "author": {
+            {% if page.author == "Metalama Team" %}
+            "@type": "Organization",
+            "name": "Metalama Team",
+            "url": "https://www.postsharp.net/metalama"
+            {% else %}
+            "@type": "Person",
+            "name": "{{page.author}}" 
+            {% endif %}
+          },
+          {% if image_url %}
+            "image": "{{image_url }}",
+          {% endif %}
+
+          {% if page.source_url %}
+            "workExample": {
+                "@type": "SoftwareSourceCode",
+                "name": "Source code of examples",
+                "url": "{{page.source_url}}"
+            },
+          {% endif %}
+
+
+          {% assign word_count = content | strip_html | split: ' ' | size %}
+          "wordCount": {{ word_count }}
+        }
+    </script>
+    {% endif %}
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    {% if include.noheader != "true" %}
+    <header>
+
+        <a href="/" class="logo">
+            <img src="/assets/images/metalama-logo.svg" width="200" alt="Metalama Home Page" />
+        </a>
+
+        <nav>
+            <ul class="level1">
+
+            {% assign page_url = page.url | split: '/' | join: '/' %}
+            <!-- page_url ='{{page_url}}'-->
+            {% assign entryId = 0 %}
+            {% for item in site.data.navigation.nodes %}
+
+                {% assign itemId = itemId | plus: 1 %}
+                {% assign isItemActive = false %}
+
+                {% if page_url == item.url %}
+                    {% assign isItemActive = true %}
+                {% else %}
+                {% for entry in item.nodes %}
+                    {% if page_url == entry.url %}
+                        {% assign isItemActive = true %}
+                    {% else %}
+                    {% for subentry in entry.nodes %}
+                        {% if page_url == subentry.url %}
+                            {% assign isItemActive = true %}
+                        {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+
+          
+                    
+            <li class="{% if item.drop_down_menu %}has-dropdownmenu{% endif %}">
+                <a 
+                    href="{{ item.url }}" 
+                    title="{{ item.description }}" 
+                    data-submenu="{% if item.drop_down_menu %}dropdown{{ itemId }}{% endif %}"
+                    class="{% if isItemActive %}active{% endif %}"
+                    >
+                    {{ item.title }}
+                </a>
+
+                {% if item.drop_down_menu == "List"%}
+
+                    <div id="dropdown{{ itemId }}" class="dropdownmenu list" style="display:none">
+                        <ul>
+                        {% for entry in item.nodes %}
+                            <li>
+                                <a href="{{ entry.url }}">
+                                    <div class="title">{{ entry.title }}</div>
+                                    <div class="description"> {{ entry.description }}</div>
+                                </a>                   
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+
+                {%  elsif  item.drop_down_menu == "Columns" %}
+
+                    <div id="dropdown{{ itemId }}" class="dropdownmenu columns" style="display:none">
+                        {% for column in item.nodes %}
+                            <div class="column">
+                                <div class="column-title">
+                                    <a href="{{ column.url }}">{{ column.title }}</a>               
+                                </div>    
+                                <ul>
+                                    {% for entry in column.nodes %}
+                                        <li>
+                                            <a href="{{ entry.url }}">
+                                                <div class="title">{{ entry.title }}</div>
+                                                <div class="description"> {{ entry.description }}</div>
+                                            </a>                   
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+
+
+                {% endif %}
+
+            </li>
+
+            {% endfor %}
+    </ul>
+        </nav>
+    </header>
+    {% endif %}
