@@ -7,19 +7,23 @@ html {
 }
 body {
     font-family: LatoLatinWeb;
+    background-color: $main_background_color;
+    color: $text_color;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: Monosten;
-    font-weight: $fw-normal;
-}
 * {
     box-sizing: border-box;
 }
+
+h1 {
+    margin-bottom: 1.5rem;
+    font-size: 3.2rem;
+    line-height: 3.7333333333rem;
+    font-family: Monosten;
+    font-weight: normal;
+
+}
+
 h3 {
     font-size: rem(16px);
     line-height: rem(20px);

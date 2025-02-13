@@ -20,7 +20,6 @@ header {
   nav{
     margin-left: 40px;
     margin-top: 12px;
-    padding: 20px;
     display: inline-block;
   } 
 
@@ -47,8 +46,9 @@ header {
     flex-wrap: wrap;
     gap: 20px;
 
-    li {
-      padding-right: 20px;
+    > li {
+      // We need some large padding to make it a good enough nouse click and hover target.
+      padding: 20px;
 
       &.has-dropdownmenu {
 
@@ -59,7 +59,7 @@ header {
           border-right: 4px solid transparent;
           border-top: 4px solid #a0a0a0;
           content: "";
-          margin: 0 0 0 14px;
+          margin: 0 0 0 8px;
           position: absolute;
           text-align: right;
           top: 50%;
@@ -91,12 +91,16 @@ header {
 
         &.columns {
           padding-top: 40px;
-          display: flex;
-          flex-direction: row;
+          padding-bottom: 40px;
           width: 100%;
           position: fixed;
           left: 0;
+          
 
+          .wrapper {
+            gap: 40px;
+
+          }
           .column-title {
 
             margin-bottom: 20px;

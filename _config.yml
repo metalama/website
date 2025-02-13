@@ -48,7 +48,7 @@ defaults:
       layout: "plain" 
       site_title: "Metalama"
   - scope:
-      path: "solutions" 
+      path: "applications" 
       type: "pages" 
     values:
       layout: "structured"       

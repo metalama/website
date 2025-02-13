@@ -23,7 +23,7 @@ implement design patterns in two ways:
   to verify that handwritten code complies with the design pattern rules. And we can also use Metalama for this. See,
   for instance, the modern Singleton and Abstract Factory patterns.
 
-{ #memento }
+{: #memento }
 
 ## Memento pattern
 

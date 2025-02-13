@@ -22,4 +22,77 @@
     nav.right-nav {
         grid-column: 3;
     }
+
+    .left-nav {
+        border-right: 1px solid #130722;
+        > ul {
+            margin-right: 20px;
+        }
+    }
+
+    .right-nav {
+        border-left: 1px solid #130722;
+        > ul {
+            margin-left: 20px;
+        }
+    }
+
+    .left-nav, .right-nav {
+           
+        > ul {
+            position: sticky;
+            top: 130px;
+            width: 250px;
+            padding-inline-start: 0;
+        }
+       
+        
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            color: $text_color;
+            margin-bottom: 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 0;
+        }
+
+        a {
+            padding: 10px;
+            color:$text_color;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+
+        }
+
+        .active > a, a.active {
+           
+            background-color: #2b0f4e;
+            border-radius: 2px;
+            color: white;
+            font-weight: bold;
+            border-left: 4px solid #563d7c;
+        }
+
+        a.expandable {
+            cursor: pointer;
+        }
+
+        a.expandable:not(.hidden) {
+            display: block !important;
+        }
+    }
+
+    #toc:not(:has(*)) {
+        display: none;
+    }
+
+    .text_content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }

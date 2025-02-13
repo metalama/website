@@ -1,0 +1,110 @@
+.c {
+    &-white {
+      color: #fff;
+    }
+  
+    &-orange {
+      color: #ff5e45;
+    }
+  
+    &-purple {
+      color: $mediumPurple1;
+  
+      &:hover {
+        color: $mediumPurple1;
+        text-decoration: none;
+      }
+  
+      .bg-purple &, .bg-purple &:hover,
+      .bg-darkPurple &, .darkPurple &:hover,
+      .bg-darkGray &, .bg-darkGray &:hover {
+        color: $purple !important;
+      }
+    }
+  
+    &-lightPurple {
+      color: $purple !important;
+    }
+  
+  
+    &-blue {
+      color: $blue;
+    }
+  
+    &-darkPurple {
+      color: $mediumPurple1;
+  
+      &:hover {
+        color: $mediumPurple1;
+      }
+    }
+  
+    &-gray {
+      color: #b7b5ba;
+  
+      &:hover {
+        color: #7b18ee;
+        text-decoration: none;
+      }
+    }
+  
+    &-lightBlue {
+      color: #38d5e4;
+    }
+  
+    &-teal {
+      color: $teal;
+    }
+  
+    &-lighterBlue {
+      color: #b2f8ff;
+    }
+  
+    &-pink {
+      color: #ff51c2;
+    }
+  
+    &-black {
+      color: #271c3b;
+  
+      &:hover {
+        color: #271c3b;
+      }
+    }
+  
+    &-hover {
+      &-purple {
+        &:hover {
+          color: $purple !important;
+        }
+      }
+  
+      &-orange {
+        &:hover {
+          color: $orange !important;
+        }
+      }
+  
+      &-blue {
+        &:hover {
+          color: $blue !important;
+        }
+      }
+  
+      &-pink {
+        &:hover {
+          color: $pink !important;
+        }
+      }
+    }
+  }
+  
+  a {
+    &.c-white {
+      &:hover {
+        color: #7b18ee;
+        text-decoration: none;
+      }
+    }
+  }
+  

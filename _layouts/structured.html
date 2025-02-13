@@ -9,55 +9,54 @@
 
         <!-- page_url ='{{page_url}}'-->
         {% assign entryId = 0 %}
-        {% for item in site.data.navigation.nodes %}
+        {% for level1 in site.data.navigation.nodes %}
 
-            {% assign isItemActive = false %}
+            {% assign isLevel1Active = false %}
 
-            {% if page_url == item.url %}
-                {% assign isItemActive = true %}
+            {% if page_url == level1.url %}
+                {% assign isLevel1Active = true %}
             {% else %}
-            {% for entry in item.nodes %}
-                {% if page_url == entry.url %}
-                    {% assign isItemActive = true %}
+            {% for level2 in level1.nodes %}
+                {% if page_url == level2.url %}
+                    {% assign isLevel1Active = true %}
                 {% else %}
-                {% for subentry in entry.nodes %}
-                    {% if page_url == subentry.url %}
-                        {% assign isItemActive = true %}
+                {% for level3 in level2.nodes %}
+                    {% if page_url == level3.url %}
+                        {% assign isLevel1Active = true %}
                     {% endif %}
                 {% endfor %}
                 {% endif %}
             {% endfor %}
             {% endif %}
 
-            {% if isItemActive %}
+            {% if isLevel1Active %}
 
-                {% for entry in item.nodes %}
+                {% for level2 in level1.nodes %}
 
 
-                    {% assign isEntryActive = false %}
+                    {% assign isLevel2Active = false %}
 
-                    {% if page_url == entry.url %}
-                        {% assign isEntryActive = true %}
+                    {% if page_url == level2.url %}
+                        {% assign isLevel2Active = true %}
                     {% endif %}
 
-                    {% for subentry in entry.nodes %}
-                        {% if page_url == subentry.url %}
-                            {% assign isEntryActive = true %}
+                    {% for level3 in level2.nodes %}
+                        {% if page_url == level3.url %}
+                            {% assign isLevel2Active = true %}
                         {% endif %}
                     {% endfor %}
 
                     
-                    <li class="{% if isEntryActive %}active{% endif %}">
-                        <a href="{{ entry.url }}" title="{{ entry.description }}">{{ entry.title }}</a>
+                    <li class="{% if page_url == level2.url %}active{% endif %}">
+                        <a href="{{ level2.url }}" title="{{ level2.description }}">{{ level2.title }}</a>
 
-                        {% if isEntryActive and entry.nodes.size > 0 %}
+                        {% if isLevel2Active and level2.nodes.size > 0 %}
                             <ul class="level3">
 
-                            {% for subentry in entry.nodes %}
+                            {% for level3 in level2.nodes %}
                                     <li>
-                                        <a href="{{ subentry.url }}" title="{{ subentry.description }}">{{ subentry.title }}</a>
+                                        <a href="{{ level3.url }}" title="{{ level3.description }}" class="{% if level3.url == page_url %}active{%endif%}">{{ level3.title }}</a>
                                     </li>
-
                             {% endfor %}
 
                             </ul>
@@ -85,10 +84,10 @@
     </div>
 
     <nav class="right-nav">
-        <h2>Table of Contents</h2>
         {{ content | toc_only }}
     </nav>
 </div>
 
 
 {% include footer.html %}
+<script src="/js/page-transition.js"></script>

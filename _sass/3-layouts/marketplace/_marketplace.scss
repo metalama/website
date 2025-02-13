@@ -1,5 +1,35 @@
 .marketplacePage {
 
+  .search-result-links
+  {
+    a {
+      text-decoration: none
+    }
+  }
+
+  .search-result-links.vertical {
+    float: right;
+  }
+
+
+  .container {
+    @extend .desktop_box;
+  }
+
+    .search {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+
+      .refinements {
+        grid-column: 1;
+        margin-top: 140px;
+      }
+
+      .principal {
+        grid-column: 2;
+      }
+    }
+
     #searchbox {
       margin-bottom: 40px;
       margin-left: auto;
@@ -9,8 +39,65 @@
   
       input {
         width: 100%;
+        padding: 20px;
       }
     }
+
+    h4 {
+      margin-top: 0;
+      font-size: 25px;
+      //color: $lightBlue;
+    }
+
+    h5 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .ais-RefinementList-list, .ais-Pagination-list, .ais-Hits-list {
+      list-style: none;
+      margin-block-end: 0;
+      margin-block-start: 0;
+      padding-inline-start: 0;
+
+    }
+
+    .ais-RefinementList-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ais-RefinementList-count {
+      display: inline-block;
+      min-width: 15px;
+      text-align: center;
+      padding: 6px 10px 3px 10px;
+      border-radius: 3px;
+      background-color: $mediumPurple1;
+      color: white;
+      margin-left: 10px;
+    }
+
+    .ais-Pagination-list {
+      
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 40px;
+
+      a {
+        font-size: 20px;
+        color:white;
+        text-decoration: none;
+      }
+
+      .selected a {
+        color: $text_color;
+      }
+    }
+
   
   
     .refinements {
@@ -21,12 +108,16 @@
   
   
     .search-result-card {
-      background-color: white;
+      background-color: #1e1e1e;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 1rem;
       border-radius: 8px;
-      padding: 40px;
+      padding: 20px;
       margin-bottom: 40px;
+
+      a {
+        color: $link_color;
+      }
   
   
       .search-result-title {
@@ -134,7 +225,6 @@
         width: 180px;
         padding-left: 20px;
         padding-bottom: 40px;
-        display: none;
   
         /*
         @include media-breakpoint-up(lg) {
@@ -146,6 +236,7 @@
         display: flex;
         flex-direction: row;
         margin-top: -10px;
+        display: none;
   
         /*
         @include media-breakpoint-up(lg) {
@@ -199,14 +290,12 @@
       margin-top: 20px;
   
       button {
-        color: var(--bs-link-color);
+        color: $link_color;
+        background-color: transparent;
         padding: 0;
+        border: none;
       }
-  
-      button.expanded {
-        color: $gray-600;
-      }
-  
+    
       button::after {
         content: '\E972';
         display: inline-block;
@@ -223,4 +312,3 @@
       }
     }
   }
-  

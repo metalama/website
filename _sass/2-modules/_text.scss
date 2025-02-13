@@ -57,18 +57,16 @@
         margin-bottom: 20px;
     }
 
+    a {
+        font-weight: bold;
+        color: $link_color;
+    }
+
     p.detail {
         font-size: 13px;
         font-weight: 500;
-        color: #e0e0e0 !important;
         line-height: 1.2rem !important;
         padding: 4px 20px;
-
-        a,
-        a:visited {
-            color: #38d5e4 !important;
-            font-weight: bold;
-        }
     }
 
     
@@ -114,12 +112,12 @@
     td,
     th {
       padding: 5px;
-      border: 2px solid #eeeeee;
+      border: 2px solid #130722;
       border-collapse: collapse;
     }
 
     th {
-      background-color: #eeeeee;
+      background-color: #130722;
     }
 
     table {

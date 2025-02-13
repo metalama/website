@@ -50,6 +50,13 @@
     text-rendering:optimizeLegibility
    }
 
+   @font-face {
+    font-family: 'SegoeMDL2';
+    src: url("../fonts/SegoeMDL2/segmdl2-webfont.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
    $ff-headings: monosten;
    $ff-texts: LatoLatinWeb;
 

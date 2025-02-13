@@ -1,3 +1,10 @@
+.homepage {
+
+  section {
+    div.container {
+      @extend .desktop_box;
+    }
+  }
 
 .section--intro {
 
@@ -438,3 +445,4 @@
     vertical-align: middle;
     padding: 35px 0 0 20px;
   }
+}

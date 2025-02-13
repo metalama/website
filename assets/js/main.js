@@ -39,24 +39,63 @@ $(document).ready(function() {
 $(document).ready(function () {
   $(".has-dropdownmenu").hover(
       function () {
-          // Get the associated dropdown menu using the data-submenu attribute
+          // Mouse enter: show dropdown immediately.
           var submenuId = $(this).find("a").attr("data-submenu");
-          $("#" + submenuId).stop(true, true).slideDown(200); // Show dropdown
+          $("#" + submenuId).stop(true, true).show();
       },
-      function () {
+      function (e) {
+          // Mouse leave: hide dropdown immediately unless entering the dropdown area.
+          if ($(e.relatedTarget).closest(".has-dropdownmenu, .dropdownmenu").length) {
+            return;
+          }
           var submenuId = $(this).find("a").attr("data-submenu");
-          $("#" + submenuId).stop(true, true).slideUp(200); // Hide dropdown
+          $("#" + submenuId).stop(true, true).hide();
       }
   );
 
-  // Keep the dropdown visible when hovering over it
+  // Keep the dropdown visible when hovering over it.
   $(".dropdownmenu").hover(
-      function () {
+      function (e) {
           $(this).stop(true, true).show();
       },
-      function () {
-          $(this).stop(true, true).slideUp(200);
+      function (e) {
+          // Hide dropdown immediately unless moving into the parent menu.
+          if ($(e.relatedTarget).closest(".has-dropdownmenu, .dropdownmenu").length) {
+            return;
+          }
+          $(this).stop(true, true).hide();
       }
   );
 });
 
+// Track the active section in the right nav.
+$(document).ready(function () {
+  var $navLinks = $("nav.right-nav a");
+
+  function onScroll() {
+    var currentSectionId = "";
+    var minDistance = Infinity;
+
+    $navLinks.each(function () {
+      var $link = $(this);
+      var targetId = $link.attr("href").replace(/^#/, "");
+      var $target = $("#" + targetId);
+      if ($target.length) {
+        var rect = $target[0].getBoundingClientRect();
+        if (rect.top >= 0 && rect.top < minDistance) {
+          minDistance = rect.top;
+          currentSectionId = targetId;
+        }
+      }
+    });
+
+    $navLinks.parent().removeClass("active");
+
+    if (currentSectionId) {
+      $("nav.right-nav a[href='#" + currentSectionId + "']").parent().addClass("active");
+    }
+  }
+
+  $(window).on("scroll", onScroll);
+  onScroll();
+});

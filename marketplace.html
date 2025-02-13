@@ -108,7 +108,7 @@ layout: min
             var s = "";
 
             if (item.sourceUrl !== null && item.sourceUrl !== "") {
-                s += `<p class="source"><img class="icon" src="/images/icon/git.svg" title="Git" > <a class="source" href="${item.sourceUrl}"  target="_blank">Source code</a></p>`
+                s += `<p class="source"><img class="icon" src="/assets/images/icons/git.svg" title="Git" > <a class="source" href="${item.sourceUrl}"  target="_blank">Source code</a></p>`
             }
 
             if (item.documentationUrl !== null && item.documentationUrl !== "") {
@@ -116,7 +116,7 @@ layout: min
             }
 
             if (item.packageUrl !== null && item.packageUrl !== "") {
-                s += `<p class="package"><img class="icon" src="/images/icon/nuget.svg" title="NuGet"><a href="${item.packageUrl}"  target="_blank">Package</a></p>`
+                s += `<p class="package"><img class="icon" src="/assets/images/icons/nuget.svg" title="NuGet"><a href="${item.packageUrl}"  target="_blank">Package</a></p>`
             }
 
             return s;
@@ -142,30 +142,30 @@ layout: min
                 container: '#authors-list',
                 attribute: 'author',
                 cssClasses: {
-                    list: 'list-unstyled',
-                    count: 'badge text-dark-2 ms-2',
-                    label: 'd-flex align-items-center',
-                    checkbox: 'me-2',
+                    list: '',
+                    count: 'count',
+                    label: 'label',
+                    checkbox: '',
                 },
             }),
             instantsearch.widgets.refinementList({
                 container: '#categories-list',
                 attribute: 'categories',
                 cssClasses: {
-                    list: 'list-unstyled',
-                    count: 'badge text-dark-2 ms-2',
-                    label: 'd-flex align-items-center',
-                    checkbox: 'me-2',
+                    list: '',
+                    count: 'count',
+                    label: 'label',
+                    checkbox: '',
                 },
             }),
             instantsearch.widgets.refinementList({
                 container: '#qualities-list',
                 attribute: 'quality',
                 cssClasses: {
-                    list: 'list-unstyled',
-                    count: 'badge text-dark-2 ms-2',
-                    label: 'd-flex align-items-center',
-                    checkbox: 'me-2',
+                    list: '',
+                    count: 'count',
+                    label: 'label',
+                    checkbox: '',
                 },
             }),
 
@@ -196,8 +196,7 @@ layout: min
                         output += `
                         <div>
 
-                            <div class="row mt-5">
-                                <div class="col-md">
+                            <div class="summary">
                                     <div class="search-result-links vertical">
                                      ${links(item)}
                                     </div>
@@ -230,7 +229,6 @@ layout: min
 
                         output += `
 
-                                </div>
                             </div>`;
 
 
@@ -240,28 +238,14 @@ layout: min
                             <div id="details${id}" class="details" style="display:none;">`;
 
                             if (hasDescription) {
-                                output += `
-                                    <div class="row mt-2">
-                                          <div class="col-md">
-
-                                               ${item.description}
-                                          </div>
-                                      </div>
-                                  `;
+                                output += `${item.description}`;
 
                             }
 
                             if (hasTable) {
 
                                 output += `                       
-                                    <div class="row mt-2">
-                                        <div class="col-md">
-
-                                             ${item.aspectGroups.reduce((reduced, g) => reduced += aspectGroup(g), "")}
-                                        </div>
-                                    </div>
-
-                                </div>`
+                                             ${item.aspectGroups.reduce((reduced, g) => reduced += aspectGroup(g), "")}`
                             }
 
                         }
@@ -275,15 +259,21 @@ layout: min
                     },
                 },
                 cssClasses: {
-                    list: 'list-unstyled grid-container',
-                    item: 'd-flex flex-column search-result-card mb-1 me-1 p-3',
-                    loadMore: 'btn btn-primary mx-auto d-block mt-4',
-                    disabledLoadMore: 'btn btn-dark mx-auto d-block mt-4',
+                    list: '',
+                    item: 'search-result-card',
+                    loadMore: 'load-more',
+                    disabledLoadMore: 'load-more disabled',
                 }
             }),
             instantsearch.widgets.pagination({
                 container: '#pagination',
-                cssClasses: { list: "d-flex flex-row justify-content-end", item: "px-2 d-block", link: "text-decoration-none", disabledItem: "text-muted", selectedItem: "fw-bold text-primary" }
+                cssClasses: {
+                    list: "",
+                    item: "",
+                    link: "",
+                    disabledItem: "disabled",
+                    selectedItem: "selected"
+                }
             }),
         ]);
 
@@ -294,43 +284,14 @@ layout: min
 
 
 <main role="main" class="marketplacePage">
-    <section class="section bg-purple section--intro">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Metalama Marketplace</h1>
 
-                    <div class="row">
-                        <div class="col-12 col-md-8 col-lg-5 mx-auto">
-                            <div class="lines">
-                                <div class="lines__orange"></div>
-                                <div class="lines__white"></div>
-                                <div class="lines__blue"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-10 mx-auto">
-                        <div class="text-20">
-                            <p class="pt-60 mb-10 text-center">
-                                Find open-source ready-to-use aspects, sample code, and other Metalama extensions.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <section class="section bg-gray">
-        <div class="container pt-4 px-md-5">
+    <section>
+        <div class="container">
 
-
-            <div class="mt-4 row">
-                <div class="refinements col-md-3 pr-md-5">
-
+            <div class="search">
+                <div class="refinements">
                     <h5>Author</h5>
                     <div id="authors-list"></div>
                     <h5>Category</h5>
@@ -338,37 +299,21 @@ layout: min
                     <h5>Quality</h5>
                     <div id="qualities-list"></div>
                     <div id="clear-refinements"></div>
-
                 </div>
-                <div class="col-md">
-                    <div class="row blue-form">
-                        <div id="searchbox"></div>
-                    </div>
-
-                    <div class="mt-5 mt-md-0 row">
-                        <div class="col-md">
-                            <div class="row">
-                                <div class="col-md-4"></div>
-                                <div class="align-items-center col-md-8 d-flex justify-content-end">
-                                    <div id="stats"></div>
-                                    <div id="hits-per-page"></div>
-                                    <div id="sort-by"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-1 row">
-                        <div class="col-sm">
-                            <div id="hits"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm">
-                            <div id="pagination"></div>
-                        </div>
-                    </div>
+                <div class="principal">
+                    <h1>Metalama Marketplace</h1>
+                    <p>
+                        Don't reinvent the wheel. Find open-source extensions and aspect libraries.
+                    </p>
+                    <div id="searchbox"></div>
+                    <div id="stats"></div>
+                    <div id="hits-per-page"></div>
+                    <div id="sort-by"></div>
+                    <div id="hits"></div>
+                    <div id="pagination"></div>
                 </div>
             </div>
+        </div>
         </div>
 
     </section>
