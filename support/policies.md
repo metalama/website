@@ -52,7 +52,7 @@ Before we tag a new release as RC quality, the following criteria must be fulfil
 5.  All public APIs have undergone extensive critical review.
 6.  Code analysis warnings have been addressed for public APIs.
 7.  Integration with new features and old features has been tested.
-8.  All bugs with a higher priority than Later have been fixed.
+8.  All bugs with a higher priority than those marked as "later" have been fixed.
 
 ## Security Standards
 

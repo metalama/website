@@ -31,9 +31,6 @@ jobs:
       - name: Install Node.js Dependencies
         run: npm install
 
-      - name: Run Gulp Tasks
-        run: npx gulp
-  
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -44,6 +41,9 @@ jobs:
           
       - name: Build Jekyll Site
         run: bundle exec jekyll build --destination _site
+
+      - name: Run Gulp Tasks
+        run: npx gulp 
 
       - name: Copy robots.txt
         run: cp robots.draft.txt _site/robots.txt        

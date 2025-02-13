@@ -31,9 +31,6 @@ jobs:
       - name: Install Node.js Dependencies
         run: npm install
 
-      - name: Run Gulp Tasks
-        run: npx gulp  
-
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -47,6 +44,9 @@ jobs:
 
       - name: Copy robots.txt
         run: cp robots.draft.txt _site/robots.txt        
+
+      - name: Run Gulp Tasks
+        run: npx gulp  
 
       - name: Create compressed images
         run: find . -type f -name "*.svg" -exec sh -c 'brotli --best --output="{}.br" "{}"' \;

@@ -39,8 +39,9 @@ $(document).ready(function() {
 $(document).ready(function () {
   $(".has-dropdownmenu").hover(
       function () {
-          // Mouse enter: show dropdown immediately.
+          // Mouse enter: hide other dropdowns then show the current one.
           var submenuId = $(this).find("a").attr("data-submenu");
+          $(".dropdownmenu").not("#" + submenuId).stop(true, true).hide();
           $("#" + submenuId).stop(true, true).show();
       },
       function (e) {

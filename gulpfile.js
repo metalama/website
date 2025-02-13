@@ -3,6 +3,7 @@ const svg2png = require('gulp-svg2png');
 const rename = require('gulp-rename');
 const brotli = require('gulp-brotli');
 const gzip = require('gulp-gzip');
+const htmlmin = require('gulp-htmlmin');
 
 
 gulp.task('svg-to-png', function () {
@@ -41,4 +42,11 @@ gulp.task('gzip-svg', function () {
         }));
 });
 
-gulp.task('default', gulp.parallel('svg-to-png', 'brotli-svg', 'gzip-svg'));
+// Task to minify HTML files produced by Jekyll
+gulp.task('minify-html', () => {
+    return gulp.src('_site/**/*.html')
+      .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(gulp.dest('_site'));
+});
+
+gulp.task('default', gulp.parallel('svg-to-png', 'brotli-svg', 'gzip-svg', 'minify-html'));

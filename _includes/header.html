@@ -42,9 +42,9 @@
         else
         %}{{site.title}}{% endif %}</title>
 
-    <meta property="og:title" content="{{ include.title }}" />
-    <meta name="twitter:title" content="{{ include.title }}" />
-    <meta property="og:url" content="https://blog.postsharp.net{{include.permalink}}" />
+    <meta property="og:title" content="{{ include.title | escape }}" />
+    <meta name="twitter:title" content="{{ include.title | escape }}" />
+    <meta property="og:url" content="https://blog.postsharp.net{{ include.permalink }}" />
     <meta name="twitter:card" content="summary_large_image" />
     {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
@@ -62,8 +62,8 @@
     {% if image_url contains '.svg' %}
     {% assign image_url = image_url | replace: '.svg', '.svg.g.png' %}
     {% endif %}
-    <meta property="og:image" content="{{site.url}}{{site.baseurl}}{{image_url}}" />
-    <meta property="twitter:image" content="{{site.url}}{{site.baseurl}}{{image_url}}" />
+    <meta property="og:image" content="{{ site.url | escape }}{{ site.baseurl | escape }}{{ image_url | escape }}" />
+    <meta property="twitter:image" content="{{ site.url | escape }}{{ site.baseurl | escape }}{{ image_url | escape }}" />
     {% endif %}
     {% if page.keywords %}
     <meta name="keywords" content="{{page.keywords | join: ', ' | escape}}" />
@@ -96,10 +96,10 @@
         {
           "@context": "https://schema.org",
           "@type": "TechArticle",
-          "headline": "{{page.title}}",
-          "datePublished": "{{page.date | date: '%Y-%m-%dT%H:%M:%S%z' }}",
+          "headline": "{{ page.title | escape }}",
+          "datePublished": "{{ page.date | date: '%Y-%m-%dT%H:%M:%S%z' }}",
           {% if page.last_modified_at %}
-          "dateModified": "{{page.last_modified_at | date: '%Y-%m-%dT%H:%M:%S%z' }}",
+          "dateModified": "{{ page.last_modified_at | date: '%Y-%m-%dT%H:%M:%S%z' }}",
           {% endif %}
           "author": {
             {% if page.author == "Metalama Team" %}
@@ -108,18 +108,18 @@
             "url": "https://www.postsharp.net/metalama"
             {% else %}
             "@type": "Person",
-            "name": "{{page.author}}" 
+            "name": "{{ page.author | escape }}"
             {% endif %}
           },
           {% if image_url %}
-            "image": "{{image_url }}",
+            "image": "{{ image_url | escape }}",
           {% endif %}
 
           {% if page.source_url %}
             "workExample": {
                 "@type": "SoftwareSourceCode",
                 "name": "Source code of examples",
-                "url": "{{page.source_url}}"
+                "url": "{{ page.source_url | escape }}"
             },
           {% endif %}
 
