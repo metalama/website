@@ -3,7 +3,7 @@ name: Publish to blog-draft.postsharp.net
 on:
   push:
     branches:
-      - draft
+      - main
 
 jobs:
   build_and_deploy_job:
