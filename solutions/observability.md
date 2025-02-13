@@ -1,4 +1,4 @@
-﻿---
+---
 summary: "This article details how Metalama can help instrument C# applications to make them more observable in production by adding logging, tracing, exception handling, and metrics"
 keywords:
 - .net instrumentation
@@ -277,5 +277,4 @@ public static class MetricRegistrations
 
 ### Resources
 
--
-Example: [Metalama.Samples.Metrics](https://github.com/postsharp/Metalama.Samples/tree/develop/2025.0/examples/metrics)
+- Example: [Metalama.Samples.Metrics](https://github.com/postsharp/Metalama.Samples/tree/develop/2025.0/examples/metrics)

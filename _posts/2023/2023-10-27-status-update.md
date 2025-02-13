@@ -5,7 +5,6 @@ title: "Metalama Status Update, October 2023"
 date: 2023-10-30 08:00:01 +01:00
 categories: [Metalama]
 permalink: /blog/metalama-status-update-2023-10
-
 author: "Gael Fraiteur"
 image: /assets/images/2023/2023-10-20-open-sourcing/october.png
 summary: "Metalama released updates for its software, including the significant feature leap in Metalama 2023.3 and the first RC of Metalama 2023.4. The company also unveiled the Metalama Marketplace for open-source aspects, extensions, and examples."

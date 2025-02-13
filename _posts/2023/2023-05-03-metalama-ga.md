@@ -5,7 +5,6 @@ title: "Metalama is Available Today"
 date: 2023-05-04 08:00:01 +01:00
 categories: [Metalama]
 permalink: /blog/metalama-2023.0
-
 author: "Gael Fraiteur"
 image: /assets/images/2023/2023-05-03-metalama-ga/title.jpeg
 tag: featured

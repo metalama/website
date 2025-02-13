@@ -166,7 +166,7 @@
                         {% if related_post %}
                         <li><a href="{{ related_post.url }}">{{ related_post.title }}</a></li>
                         {% else %}
-                        {% warn "Related article not found for path: " | append: related_path %}
+                        {% warn "Related article not found." %}
                         {% endif %}
                         {% endfor %}
                         {% if page.categories contains "The Timeless .NET Engineer" %}

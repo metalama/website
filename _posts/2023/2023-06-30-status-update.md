@@ -5,7 +5,6 @@ title: "Metalama Status Update, June 2023"
 date: 2023-06-30 08:00:01 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2023-06
-
 author: "Gael Fraiteur"
 image: /assets/images/2023/2023-06-30-status-update/llama.png
 tag: featured

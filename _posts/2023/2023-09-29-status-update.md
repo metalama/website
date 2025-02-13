@@ -5,7 +5,6 @@ title: "Metalama Status Update, September 2023"
 date: 2023-09-29 07:00:01 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2023-98
-
 author: "Gael Fraiteur"
 image: /assets/images/2023/2023-09-29-status/llama.png
 summary: "The blog post provides updates on Metalama's software development, including a new logo, simplified licensing for open-source projects, and the anticipated release of Metalama 2023.3. Future plans include compatibility with .NET 8 and C# 12. "

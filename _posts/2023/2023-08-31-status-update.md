@@ -5,7 +5,6 @@ title: "Metalama Status Update, July-August 2023"
 date: 2023-08-31 08:00:01 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2023-08
-
 author: "Gael Fraiteur"
 image: /assets/images/2023/2023-08-31-status-update/llama.png
 summary: "The blog post provides an update on Metalama's developments from July-August 2023, including the release of Metalama 2023.2, the upcoming launch of Metalama 2023.3, the open-sourcing of Code Contracts and Caching libraries, enhancements to T#, and new video tutorials."

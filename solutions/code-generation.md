@@ -1,4 +1,4 @@
-﻿---
+---
 summary: "This article presents different code generation techniques for C# and compares them to Metalama."
 keywords:
 - c# code generator

@@ -5,7 +5,6 @@ title: "Metalama Status Update (February 2023)"
 date: 2023-02-28 09:00:00 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2023-02
-
 author: "Gael Fraiteur"
 image: /assets/images/blog/metalama-status-updates/2.jpg
 tag: 

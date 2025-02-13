@@ -5,7 +5,6 @@ title: "Metalama Source Code Available"
 date: 2023-10-23 08:00:01 +01:00
 categories: [Metalama]
 permalink: /blog/source-available
-
 author: "Gael Fraiteur"
 image: /assets/images/2023/2023-10-20-open-sourcing/source-available.png
 mermaid: true

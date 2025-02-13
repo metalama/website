@@ -5,7 +5,6 @@ title: "Reflecting on 2023 and Embracing 2024: Metalama's Journey"
 date: 2023-11-30 08:00:01 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2023-12
-
 author: "Gael Fraiteur"
 image: /assets/images/2023/2023-12-29-status/llama.png
 summary: "This post summarizes the achievements of the Metalama team in 2023. Reminding the context in which the project was born in the middle of the pandemic, it concludes that 2024 will see a different focus, with a shift on marketing instead of on features."

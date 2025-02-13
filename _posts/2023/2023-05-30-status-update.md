@@ -5,7 +5,6 @@ title: "Metalama Status Update, May 2023"
 date: 2023-05-30 08:00:01 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2023-05
-
 author: "Gael Fraiteur"
 image: /assets/images/blog/metalama-status-updates/4.jpg
 summary: "Metalama, a Roslyn-based meta-programming framework, was successfully launched in May 2023. The team is now focused on bug-fixing for Metalama 2023.1 and 2023.2, and enhancing community platforms and website."

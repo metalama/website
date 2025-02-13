@@ -1,4 +1,4 @@
-﻿---
+---
 summary: "Metalama is a tool for architecture verification, ensuring that your C# codebase complies to the intended software architecture."
 keywords:
 - architecture verification

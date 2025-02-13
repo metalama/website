@@ -5,7 +5,6 @@ title: "Webinar Recording: Metalama, the new Roslyn-based meta-programming frame
 date: 2022-03-08 09:00:00 +01:00
 categories: [Webinars]
 permalink: /blog/webinar-introducing-metalama
-
 author: "Andrea Brezinova"
 image: /assets/images/2022/2022-03-08-webinar-metalama/webinar-lama-square.png
 side_toc: yes

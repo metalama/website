@@ -55,8 +55,7 @@ title: "MemoryCache in C#: A Practical Guide"
 date: 2024-04-23 08:00:01 +01:00
 categories:
     - The Timeless .NET Engineer
-permalink: /blog/memorycache
-author: "Metalama Team"
+permalink: /blog/memorycacheauthor: "Metalama Team"
 image: /assets/images/2024/2024-05-memorycache/memorycache.svg
 thumbnail: /assets/images/2024/2024-05-memorycache/memorycache.light.svg
 summary: "What is MemoryCache? When should we use it? When to prefer distributed caching? How to integrate caching into your code without boilerplate and without making it too brittle? This Practical Guide answers all these questions."

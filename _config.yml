@@ -19,6 +19,8 @@ linkedin_username: postsharp
 
 main_website_url: https://metalama.net
 
+strict_front_matter: true
+
 title_separator: "|"
 
 #excerpt_separator: "<!-- readmore -->"
@@ -28,9 +30,13 @@ plugins:
   - jekyll-redirect-from
 # - jekyll-last-modified-at
   
+exclude: ["*.ps1", "README.md"]
+include: ["solutions/*.md"]
+
 sass:
   style: compressed
   sourcemap: always
+  silence_deprecations: ["import", "slash-div"]
 
 
 defaults: 
@@ -42,9 +48,9 @@ defaults:
       
 
 markdown: kramdown
+
 kramdown:
   highlighter: rouge
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     line_numbers: false
-  

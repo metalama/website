@@ -1,4 +1,4 @@
-﻿---
+---
 toc: true
 summary: "Shows how to use Metalama to follow industry best practices"
 keywords:

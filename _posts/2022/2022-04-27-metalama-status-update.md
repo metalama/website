@@ -5,7 +5,6 @@ title: "Metalama Status Update (April 2022)"
 date: 2022-04-27 09:00:00 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2022-04
-
 author: "Gael Fraiteur"
 image: /assets/images/2022/2022-02-23-metalama/metalama-2.svg
 summary: "The blog post provides an update on the development of Metalama, highlighting bug fixes, new features, and future plans, with an expected general release in September."

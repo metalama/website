@@ -5,7 +5,6 @@ title: "Metalama Status Update, February 2024"
 date: 2024-02-28 08:00:01 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2024-02
-
 author: "Gael Fraiteur"
 image: /assets/images/2024/2024-02-29-status/llama.png
 summary: "In this month's status update, we address the recent .NET SDK update glitch, share our latest bug fixes and improvements in Metalama 2023.4 and 2024.0, and give a sneak peek into our upcoming unified Visual Studio extensions in Metalama 2024.1."
