@@ -4,7 +4,7 @@ comments: false
 title: "Metalama Office Hours"
 date: 2023-06-06 08:00:01 +01:00
 categories: [Community]
-permalink: /blog/metalama-status-update-2023-05
+permalink: /blog/metalama-office-hours-2023-06
 
 author: "Gael Fraiteur"
 image: /assets/images/2023/2023-06-06-office-hours/0_0.png

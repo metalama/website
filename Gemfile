@@ -1,17 +1,18 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-#gem "jekyll", "~> 4.1.0"
-gem "github-pages", group: :jekyll_plugin
+
+# gem "rails"
+
+gem "jekyll", "~> 4.4"
+
+gem "jekyll-redirect-from", "~> 0.16.0"
+
+gem "jekyll-last-modified-at", "~> 1.3"
+
+gem "activesupport", "~> 8.0"
+
+gem "jekyll-feed", "~> 0.17.0"
+
+# Avoid polling for changes on Windows
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-gem 'jekyll-redirect-from'
-gem 'jekyll-last-modified-at'
-
-
-gem "webrick", "~> 1.8"
