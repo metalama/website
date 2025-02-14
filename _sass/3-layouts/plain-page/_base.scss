@@ -1,5 +1,5 @@
 section.plain {
-    min-height: calc(100vh - 291px);
+    min-height: calc(100vh - $header_height);
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;

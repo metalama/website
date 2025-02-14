@@ -1,8 +1,6 @@
 .new_post_page {
-  margin-top: 130px;
 
   @media (max-width: 1200px) {
-    margin-top: 88px;
 
     .featured {
       height: 100%;
@@ -42,6 +40,8 @@
   }
 
   .post_content {
+    background-color: white;
+    color: black;
     .grid {
       width: 100%;
       max-width: 1600px;

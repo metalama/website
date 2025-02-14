@@ -292,8 +292,7 @@
     }
 
     max-width: $desktop_boxed_width;
-    margin: $page_space_from_top_desktop auto 0;
-
+    
     @supports (display: grid) {
       display: grid;
       grid-template-columns: 2fr 2fr 0.5fr 50px;

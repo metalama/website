@@ -21,7 +21,7 @@
                 a {
                     display: block;
                     text-decoration: none;
-                    color: $bright_texts_color;
+                    color: $bright_text_color;
                     background-color: $accent_color01;
                     padding: 0.3em 1em;                    
                     font-size: rem(10px);
@@ -111,7 +111,6 @@
 
 @media screen and (min-width: rem($mobile_breakpoint , "desktop")) {
     .archive_page {        
-        margin: rem($page_space_from_top_desktop) auto;
         padding: 0 $desktop_side_margins;
         h1 {
             text-align: left;

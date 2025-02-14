@@ -91,7 +91,7 @@ nodes:
     nodes:
       - url: "/blog"
         title: "Blog"
-        description: ""
+        description: "Official announcements, opinions, showcases, and tips from the Metalama team and contributors."
       - url: "/newsletter"
         title: "Newsletter"
         description: "Receive important announcements and monthly updates straight to your inbox."

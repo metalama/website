@@ -1,11 +1,13 @@
 $page_space_from_top_mobile: 75px;
-$page_space_from_top_desktop: 240px;
 $mobile_side_margins: 37px;
-$desktop_side_margins: 137px;
-$desktop_boxed_width: 1312px;
-$desktop_wide_width: 1600px;
+$desktop_side_margins: 20px;
+$desktop_wide_width: 1512px;
+$desktop_boxed_width: calc( $desktop_wide_width - ( 2 *  $desktop_side_margins ) );
+
 $mobile_breakpoint: 768px;
 $homepage_mobile_breakpoint: 650px;
+
+$header_height: 85px;
 
 
 .desktop_box {

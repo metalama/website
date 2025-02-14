@@ -1,25 +1,15 @@
 .blog_index_page {
-  margin-top: $page_space_from_top_mobile;
-  margin-bottom: 80px;
-  padding: 0 rem($mobile_side_margins);
-  @media screen and (min-width: rem($mobile_breakpoint, "desktop")) {
-    margin-top: $page_space_from_top_desktop;
-    padding: 0 rem($desktop_side_margins, "desktop") / 3;
-  }
-  @media screen and (min-width: $mobile_breakpoint) and (max-width: 1400px) {
-    padding: 0 rem($desktop_side_margins, "desktop") / 3;
-  }
-  @media screen and (min-width: $mobile_breakpoint) and (max-width: 1280px) {
-    margin-top: $page_space_from_top_desktop/1.5;
-  }
-  @media screen and (min-width: $mobile_breakpoint) and (max-width: 1580px) {
-  }
+  background: white;
+  color: black;
+  padding-top: 40px;
+
+  
 }
 .latest_posts {
   display: block;
+  @extend .desktop_box;
   margin-bottom: 70px;
   max-width: $desktop_wide_width;
-  margin: $page_space_from_top_mobile auto rem(70px, "desktop") auto;
   //    padding:0 $desktop_side_margins;
   .post_data {
     overflow: hidden;
@@ -43,7 +33,7 @@
     display: block;
     width: 100%;
     background-color: $accent_color01;
-    color: $bright_texts_color;
+    color: $bright_text_color;
     text-align: center;
     padding: 0.7em 0px;
     text-decoration: none;
@@ -108,7 +98,7 @@
       width: 15px;
     }
     a {
-      color: $bright_texts_color;
+      color: $bright_text_color;
       text-decoration: none;
     }
   }

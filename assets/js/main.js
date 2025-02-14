@@ -1,3 +1,4 @@
+/*
 var swiper = new Swiper('.swiper-container', {
   navigation: {
     nextEl: '.swiper-button-next',
@@ -11,7 +12,7 @@ var swiper = new Swiper('.swiper-container', {
     },
   },
 });
-
+*/
 // Manage the pinned TOC.
 $(document).ready(function() {
 
