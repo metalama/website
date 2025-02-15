@@ -44,16 +44,16 @@ nodes:
         description: "Empower your clean coding journey by enforcing SOLID and DRY principles and see how Aspect-Oriented Programming has evolved."
         nodes:
           - title: "Clean Code"
-            url: "/applications/clean-code"
+            url: "/applications/principles/clean-code"
             description: "Maintain a streamlined, concise codebase devoid of redundant boilerplate."
           - title: "SOLID & DRY Principles"
-            url: "/applications/solid"
+            url: "/applications/principles/solid"
             description: "Take SOLID and DRY principles to the next level with aspects and code verification."
           - title: "Aspect-Oriented Programming"
-            url: "/applications/aspect-oriented-programming"
+            url: "/applications/principles/aspect-oriented-programming"
             description: "Experience the post-AOP revolution with Metalama’s next-generation aspect capabilities."
           - title: Defensive Programming
-            url: /applications/contracts
+            url: /applications/principles/contracts
             description: "Enforce preconditions, postconditions and invariants with ease, ensuring robust code and reliable behavior."
                        
       - title: "Applications"
@@ -100,16 +100,16 @@ nodes:
         description: "Boost performance and resilience while maintaining top-tier code quality with Metalama’s dynamic metaprogramming."
         nodes:
           - title: "Logging & Tracing"
-            url: "/applications/logging"
+            url: "/applications/devops/logging"
             description: "Automatically infuse comprehensive logging across your codebase with a single line."
           - title: "Instrumentation & Observability"
-            url: "/applications/observability"
+            url: "/applications/devops/observability"
             description: "Gain deep operational insights with enriched exception details and critical performance metrics."
           - title: "Caching"
-            url: "/applications/caching"
+            url: "/applications/devops/caching"
             description: "Implement robust caching across diverse topologies, including seamless Redis integration."
           - title: "Exception Handling & Resilience"
-            url: "/applications/exception-handling"
+            url: "/applications/devops/exception-handling"
             description: "Streamline exception management with a zero-boilerplate approach that integrates seamlessly with Polly."
 
       - url: "/alternatives"
