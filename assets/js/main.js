@@ -74,6 +74,17 @@ $(document).ready(function () {
 $(document).ready(function () {
   var $navLinks = $("nav.right-nav a");
 
+  // Scroll 100px under the clicked target instantly to cope with the fixed header.
+  $navLinks.on("click", function(e) {
+    e.preventDefault();
+    var targetId = $(this).attr("href");
+    var $target = $(targetId);
+    if ($target.length) {
+      // Removed animation; perform instant scroll
+      $("html, body").scrollTop($target.offset().top - 100);
+    }
+  });
+
   function onScroll() {
     var currentSectionId = "";
     var minDistance = Infinity;
@@ -100,4 +111,26 @@ $(document).ready(function () {
 
   $(window).on("scroll", onScroll);
   onScroll();
+});
+
+ // Handle the 'show-more' magic.
+$(document).ready(function () {
+  $('p.show-more').each(function () {
+    var $showMorePara = $(this);
+    var $nextHeader = $showMorePara.nextUntil('h2, h3, h4'); // All blocks until the next header
+    var $link = $('<a class="show-more-link">' + $showMorePara.text() + '</a>'); // Create the hyperlink
+
+    // Hide the blocks
+    $nextHeader.addClass('hidden');
+
+    // Replace the paragraph with the hyperlink
+    $showMorePara.replaceWith($link);
+
+    // Add a click event to the hyperlink
+    $link.on('click', function (e) {
+        e.preventDefault();
+        $link.hide(); // Hide the link
+        $nextHeader.removeClass('hidden'); // Show all hidden blocks
+    });
+  });
 });

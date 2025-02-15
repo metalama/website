@@ -3,89 +3,136 @@
 
 <div class="structured">
     <nav class="left-nav">
-        <ul class="level2">
+        <div>
+            {% assign page_url = page.url  | remove: '.html' | split: '/' | join: '/' %}
 
-        {% assign page_url = page.url  | remove: '.html' | split: '/' | join: '/' %}
+            <!-- page_url ='{{page_url}}'-->
+            {% assign entryId = 0 %}
+            {% for level1 in site.data.navigation.nodes %}
 
-        <!-- page_url ='{{page_url}}'-->
-        {% assign entryId = 0 %}
-        {% for level1 in site.data.navigation.nodes %}
+                {% assign isLevel1Active = false %}
+                {% assign navRoot = level1 %}
 
-            {% assign isLevel1Active = false %}
-
-            {% if page_url == level1.url %}
-                {% assign isLevel1Active = true %}
-            {% else %}
-            {% for level2 in level1.nodes %}
-                {% if page_url == level2.url %}
+                {% if page_url == level1.url %}
                     {% assign isLevel1Active = true %}
                 {% else %}
-                {% for level3 in level2.nodes %}
-                    {% if page_url == level3.url %}
+                {% for level2 in level1.nodes %}
+                    {% if page_url == level2.url %}
                         {% assign isLevel1Active = true %}
+                    {% else %}
+                    {% for level3 in level2.nodes %}
+                        {% if page_url == level3.url %}
+                            {% assign isLevel1Active = true %}
+                        {% endif %}
+                        {% for level4 in level3.nodes %}
+                            {% if page_url == level4.url %}
+                                {% assign isLevel1Active = true %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                    {% endif %}
+
+                    {% if isLevel1Active and level2.is_left_nav_root %}
+                    {% assign navRoot = level2 %} 
                     {% endif %}
                 {% endfor %}
                 {% endif %}
-            {% endfor %}
-            {% endif %}
 
-            {% if isLevel1Active %}
+                {% if isLevel1Active %}
 
-                {% for level2 in level1.nodes %}
+                    <div class="header {% if page_url == navRoot.url %}active{% endif %}">
+                        <a href="{{ navRoot.url }}" title="{{ navRoot.description }}">{{ navRoot.title }}</a>
+                    </div>
+
+                    <ul class="level2">
 
 
-                    {% assign isLevel2Active = false %}
+                        {% for level2 in navRoot.nodes %}
 
-                    {% if page_url == level2.url %}
-                        {% assign isLevel2Active = true %}
-                    {% endif %}
 
-                    {% for level3 in level2.nodes %}
-                        {% if page_url == level3.url %}
-                            {% assign isLevel2Active = true %}
-                        {% endif %}
-                    {% endfor %}
+                            {% assign isLevel2Active = false %}
 
-                    
-                    <li class="{% if page_url == level2.url %}active{% endif %}">
-                        <a href="{{ level2.url }}" title="{{ level2.description }}">{{ level2.title }}</a>
-
-                        {% if isLevel2Active and level2.nodes.size > 0 %}
-                            <ul class="level3">
+                            {% if page_url == level2.url %}
+                                {% assign isLevel2Active = true %}
+                            {% endif %}
 
                             {% for level3 in level2.nodes %}
-                                    <li>
-                                        <a href="{{ level3.url }}" title="{{ level3.description }}" class="{% if level3.url == page_url %}active{%endif%}">{{ level3.title }}</a>
-                                    </li>
+                                {% if page_url == level3.url %}
+                                    {% assign isLevel2Active = true %}
+                                {% endif %}
+                                {% for level4 in level3.nodes %}
+                                    {% if page_url == level4.url %}
+                                        {% assign isLevel2Active = true %}
+                                    {% endif %}
+                                {% endfor %}
                             {% endfor %}
 
-                            </ul>
+                            
+                            <li  class="{% if page_url == level2.url %}active{% endif %}">
 
-                        {% endif %}
+                                <a href="{{ level2.url | default: level2.shortcut_url }}" title="{{ level2.description }}">{{ level2.title }}</a>
 
-                                
+                                {% if isLevel2Active and level2.nodes.size > 0 %}
+                                    <ul class="level3">
 
-                    </li>
-                {% endfor %}
+                                        {% for level3 in level2.nodes %}
 
-            {% endif %}
-      
+                                            {% assign isLevel3Active = false %}
+                                            {% if page_url == level3.url %}
+                                                {% assign isLevel3Active = true %}
+                                            {% endif %}
+                                            {% for level4 in level3.nodes %}
+                                                {% if page_url == level4.url %}
+                                                    {% assign isLevel3Active = true %}
+                                                {% endif %}
+                                            {% endfor %}
 
+                                            <li  class="{% if page_url == level3.url %}active{% endif %}">
+                                                <a href="{{ level3.url }}" title="{{ level3.description }}">{{ level3.title }}</a>
+                                                {% if isLevel3Active and level3.nodes.size > 0 %}
+                                                    <ul class="level4">
+                                                        {% for level4 in level3.nodes %}
+                                                            <li class="{% if page_url == level4.url %}active{% endif %}">
+                                                                <a href="{{ level4.url }}" title="{{ level4.description }}">{{ level4.title }}</a>
+                                                            </li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                {% endif %}
+                                            </li>
+                                        {% endfor %}
 
-        </li>
+                                    </ul>
 
-        {% endfor %}
-</ul>
+                                {% endif %}
+
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+
+                {% endif %}
+
+            {% endfor %}
+
+        </div>
     </nav>
 
     <div class="text_content">
-        <h1>{{ page.title }}</h1>
+        <h1>{{ page.short_title | default: page.title }}</h1>
         {{ content | inject_anchors }}
     </div>
 
+    {% if page.toc %}
     <nav class="right-nav">
+        <div>
+            <div class="header">
+                {{ page.short_title | default: page.title }}
+            </div>
+
         {{ content | toc_only }}
+        </div>
     </nav>
+    {% endif %}
 </div>
 
 

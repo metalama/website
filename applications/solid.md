@@ -1,5 +1,6 @@
 ---
 title: "SOLID & DRY Principles in C#"
+short_title: "SOLID & DRY Principles"
 summary: "This article explains how Metalama can help improve SOLID and DRY principles in .NET and C# codebases."
 keywords:
 - solid principles c#

@@ -45,27 +45,24 @@ defaults:
       path: "" 
       type: "pages" 
     values:
-      layout: "plain" 
+      layout: "structured" 
+      toc: true
       site_title: "Metalama"
   - scope:
       path: "applications" 
       type: "pages" 
     values:
-      layout: "structured"       
-      toc: true
       site_title: "Metalama Applications"
   - scope:
-      path: "contributing" 
+      path: "premium" 
       type: "pages" 
     values:
-      layout: "structured"       
-      toc: true
+       site_title: "Metalama Premium"  
   - scope:
-      path: "support" 
+      path: "alternatives" 
       type: "pages" 
     values:
-      layout: "structured"       
-      toc: true
+       site_title: "Metalama Alternatives"        
       
 toc:
   min_level: 2

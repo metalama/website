@@ -18,13 +18,13 @@ This approach is user-friendly and integrates seamlessly into the .NET ecosystem
 its limitations. These libraries offer a somewhat limited perspective on the capabilities of AOP, especially when
 compared to what is achievable with compiler-based AOP methods.
 
-#### Implementations
+## Implementations
 
 * [AspectCore](https://github.com/dotnetcore/AspectCore-Framework) is a basic but popular aspect-oriented framework
   based on dynamic proxies. It integrates with the `Microsoft.Extensions.DependencyInjection` namespace and Autofac.
   Some documentation is available in Chinese.
 
-#### Strengths
+## Strengths
 
 - **Simplified learning curve**: Middleware-based AOP frameworks align well with concepts like dependency injection and
   application server architectures. Their configuration mechanisms are intuitive, often mirroring the underlying
@@ -48,7 +48,7 @@ compared to what is achievable with compiler-based AOP methods.
   representing several man-years of development effort. This complexity can make them less serviceable by application
   developers, who may find it challenging to understand and modify such intricate systems.
 
-#### Limitations
+## Limitations
 
 Compared to statically-weaved AOP (whether implemented as MSIL or AST rewriting), middleware-based AOP presents the
 following limitations:
@@ -70,7 +70,7 @@ following limitations:
   code is being executed and comprehend the impact of aspects without executing or debugging the program. See Unique
   Qualities | Traceable and intelligible.
 
-#### Conclusion
+## Conclusion
 
 In conclusion, middleware-based AOP frameworks in .NET provide user-friendly integration, runtime flexibility, and
 simplified serviceability without needing special compilation. However, they are limited in their transformation

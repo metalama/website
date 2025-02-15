@@ -2,8 +2,8 @@
 $main_background_color:#191321;
 // $main_background_color:#222222;
 $text_color: #bdbdbd;
-$code_color: #c6c6c6;
-$link_color: #c6c6c6;
+$code_color: white;
+$link_color: white;
 $bright_text_color:#FFF;
 $dark_text_color:#000;
 $heading01_color:#000;
@@ -13,6 +13,7 @@ $gray: #9A9A9A;
 $light_gray: #C8C8C8;
 $header_newsletter_bg_color: #2E1C47;
 $footer_bg_color: #120B1D;
+
 
 $gray-100: #f8f8f8 !default;
 $gray-200: #e9e9e9 !default;
@@ -41,3 +42,5 @@ $cyan: #17a2b8 !default;
 $lightBlue: #37d2e1 !default;
 $white: white !default;
 $blue: #38d5e4;
+
+$text_table_color: $gray-800;

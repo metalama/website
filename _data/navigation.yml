@@ -2,24 +2,44 @@ nodes:
   - title: "Overview"
     url: "/"
     
+  - url: "/features"
+    title: "Features"
+    drop_down_menu: "List"
+    nodes:
+    - url: "/features/code-generation"
+      title: "Code Generation"
+      description: "Dynamically generate C# code and seamlessly integrate it with handcrafted logic."    
+      nodes:
+        - url: "/features/templates"
+          title: "Simple, Strongly-Typed Template"
+        - url: "/features/override"
+          title: "Mix With Hand-Written Code"
+        - url: "/features/reference-from-source-code"
+          title: "Reference Generated Code"
+        - url: "/features/dependency-injection"
+          title: "Dependency Injection"
+
+    - url: "/features/report-warnings"
+      title: "Report Errors and Warnings"
+      description: "Report errors and warnings at design time directly into the editor, or as part of the build process."
+    - url: "/features/design-time-feedback"
+      title: "Design-Time Feedback"
+      description: "Get immediate feedback on your code as you type. No need to recompile your code."
+    - url: "/features/fabrics"
+      title: "Compile-Time Fabrics"
+      description: "Add and configure aspects programmatically using a LINQ-like syntax."
+    - url: "/features/aspect-libraries"
+      title: "Ready-to-Use Aspect Libraries"
+      description: "Accelerate development with open-source extensions and ready-to-use aspects that let you avoid reinventing the wheel."
+    - url: "/features/how-it-works"
+      title: "How It Works"
+      description: "Understand the inner workings of Metalama and how it transforms your code."
+
   - title: "When to Use"
     url: "/applications"
     drop_down_menu: "Columns"
     nodes:
-      - title: "Metalama Fundamentals"
-        url: "/applications/fundamentals"
-        description: "Metalama empowers you to dynamically generate code, enforce architectural standards, and refactor C# applications with ease."
-        nodes:
-          - url: "/applications/code-generation"
-            title: "Code Generation"
-            description: "Dynamically generate C# code and seamlessly integrate it with handcrafted logic."
-          - title: "Architecture Verification"
-            url: "/applications/architecture-verification"
-            description: "Ensure that both manually written and AI-assisted code adhere to strict architectural standards."
-          - title: "Refactoring"
-            url: "/applications/refactoring"
-            description: "Enhance developer productivity with intelligent tooling and built-in safety nets."
-      - title: "Development Principles"
+      - title: "Principles at Work"
         url: "/applications/principles"
         description: "Empower your clean coding journey by enforcing SOLID and DRY principles and see how Aspect-Oriented Programming has evolved."
         nodes:
@@ -31,27 +51,51 @@ nodes:
             description: "Take SOLID and DRY principles to the next level with aspects and code verification."
           - title: "Aspect-Oriented Programming"
             url: "/applications/aspect-oriented-programming"
-            short_title: "AOP"
             description: "Experience the post-AOP revolution with Metalama’s next-generation aspect capabilities."
-            nodes:
-              - url: "/applications/msil-rewriting"
-                title: "MSIL-based"
-              - url: "/applications/middleware"
-                title: "Middleware-based"
-      - title: "Classic Uses"
+          - title: Defensive Programming
+            url: /applications/contracts
+            description: "Enforce preconditions, postconditions and invariants with ease, ensuring robust code and reliable behavior."
+                       
+      - title: "Applications"
         url: "/applications/classics"
         description: "Discover Metalams's core use cases for general application development."
         nodes:
-          - title: "Classic Design Patterns"
+          - title: "Classic Patterns"
             url: "/applications/design-patterns"
             description: "Implement time-tested design patterns like Singleton, Memento, Abstract Factory, and Builder with ease."
-          - title: "User Interface"
+            nodes:
+              - title: "Classic Singleton"
+                url: "/applications/design-patterns/classic-singleton"
+              - title: "Modern Singleton"
+                url: "/applications/design-patterns/modern-singleton"
+              - title: "Memento"
+                url: "/applications/design-patterns/memento"
+              - title: "Factory"
+                url: "/applications/design-patterns/factory"
+              - title: "Builder"
+                url: "/applications/design-patterns/builder"
+              - title: "Decorator"
+                url: "/applications/design-patterns/decorator"
+              - title: "Proxy"
+                url: "/applications/design-patterns/proxy"
+          - title: "UI Patterns"
             url: "/applications/ui"
             description: "Enhance UI development with features such as INotifyPropertyChanged, robust code contracts, dependency properties, and efficient undo/redo mechanisms."
+            nodes:
+              - title: INotifyPropertyChanged
+                url: /applications/ui/inotifypropertychanged
+              - title: Command
+                url: /applications/ui/command
+              - title: Change Tracking
+                url: /applications/ui/change-tracking
+              - title: Undo-Redo
+                url: /applications/ui/undo-redo
+              - title: Memoization
+                url: /applications/ui/memoization
           - title: "Classic Object Services"
             url: "/applications/object-services"
             description: "Stop writing boilerplate for ToString methods, equality contracts, cloning, and more."
-      - title: "DevOps Uses"
+      - title: "DevOps"
         url: "/applications/devops"
         description: "Boost performance and resilience while maintaining top-tier code quality with Metalama’s dynamic metaprogramming."
         nodes:
@@ -68,9 +112,32 @@ nodes:
             url: "/applications/exception-handling"
             description: "Streamline exception management with a zero-boilerplate approach that integrates seamlessly with Polly."
 
-  - url: "/marketplace"
-    title: "Libraries & Extensions"
-    description: "Accelerate development with open-source extensions and ready-to-use aspects that let you avoid reinventing the wheel."
+      - url: "/alternatives"
+        title: "Alternatives"
+        hidden: true
+        description: "Explore alternative tools and libraries and compare them with Metalama."
+        nodes:
+          - url: "/alternatives/aspect-oriented-programming"
+            title: "Aspect-Oriented Programming"
+            description: "Discover how Metalama compares to other MSIL weaving tools and middleware-based solutions."
+            nodes:
+              - url: "/alternatives/msil-rewriting"
+                title: "MSIL-based"
+                nodes:
+                - url: "/alternatives/postsharp"
+                  title: "PostSharp"
+                - url: "/alternatives/fody"
+                  title: "Fody"
+              -  url: "/alternatives/middleware"
+                 title: "Middleware-based"
+          - url: "/alternatives/code-generation"
+            title: "Code Generation"
+            description: "Compare Metalama with Roslyn code generators, T4 and custom build tasks."
+          - url: "/alternatives/architecture-verification"
+            title: "Architecture Verification"        
+            description: "Compare Metalama with ArchUnitTest and other architecture verification tools."
+        
+        
 
   - title: "Docs"
     description: "Access comprehensive documentation, detailed examples, and engaging video tutorials to master Metalama."
@@ -89,6 +156,9 @@ nodes:
   - title: "Community"
     drop_down_menu: "List"
     nodes:
+      - url: "/marketplace"
+        title: "Libraries & Extensions"
+        description: "Accelerate development with open-source extensions and ready-to-use aspects that let you avoid reinventing the wheel."
       - url: "/blog"
         title: "Blog"
         description: "Official announcements, opinions, showcases, and tips from the Metalama team and contributors."
@@ -98,6 +168,7 @@ nodes:
       - url: "/contributing"
         title: "Contributing"
         description: "Learn how to shape the future of Metalama with your contributions."
+        is_left_nav_root: true
         nodes:
           - url: "/contributing/how-to-contribute-code"
             title: "How to Contribute Code"
@@ -111,9 +182,6 @@ nodes:
         title: "Slack Community"
         external: "true"
         description: "Join real-time discussions with Metalama experts and fellow developers."
-      - url: "/support/policies"
-        title: "Support & Lifecycle Policies"
-        description: "Stay informed about our prioritization, release cycles, and rigorous quality standards."
 
   - url: "/premium"
     title: "Premium"
@@ -122,12 +190,17 @@ nodes:
       - url: "/premium/tooling"
         title: "Visual Studio Tooling"
         description: "Boost productivity with advanced syntax highlighting, integrated CodeLens, and intuitive diff views of transformed code."
-      - url: "/premium/architecture-verification"
-        title: "Architecture Verification"
-        description: "Achieve real-time compliance with architectural standards and project conventions effortlessly."
-      - url: "/premium/code-fixes"
-        title: "Code Fixes"
-        description: "Convert warnings into one-click fixes to streamline your development workflow."
+      - title: "Architecture Verification"
+        url: "/premium/architecture-verification"
+        description: "Ensure that both manually written and AI-assisted code adhere to strict architectural standards."
+        nodes:
+          - url: "/premium/architecture-erosion"
+            title: "What is Architecture Erosion?"
+      - title: "Refactoring Assistance"
+        url: "/premium/refactoring"
+        description: "Enhance developer productivity with intelligent tooling and built-in safety nets."
       - url: "/premium/enterprise-support"
         title: "Enterprise Support"
         description: "Benefit from high-priority support, direct access to core developers, and dependable long-term maintenance."
+
+

@@ -147,25 +147,27 @@
                     <!-- page_url ='{{page_url}}'-->
                     {% assign entryId = 0 %}
                     {% for item in site.data.navigation.nodes %}
+                        {% unless item.hidden %}
 
-                    {% assign itemId = itemId | plus: 1 %}
-                    {% assign isItemActive = false %}
 
-                    {% if page_url == item.url %}
-                      {% assign isItemActive = true %}
-                    {% else %}
-                    {% for entry in item.nodes %}
-                    {% if page_url == entry.url %}
-                    {% assign isItemActive = true %}
-                    {% else %}
-                    {% for subentry in entry.nodes %}
-                    {% if page_url == subentry.url %}
-                    {% assign isItemActive = true %}
-                    {% endif %}
-                    {% endfor %}
-                    {% endif %}
-                    {% endfor %}
-                    {% endif %}
+                        {% assign itemId = itemId | plus: 1 %}
+                        {% assign isItemActive = false %}
+
+                        {% if page_url == item.url %}
+                        {% assign isItemActive = true %}
+                        {% else %}
+                        {% for entry in item.nodes %}
+                        {% if page_url == entry.url %}
+                        {% assign isItemActive = true %}
+                        {% else %}
+                        {% for subentry in entry.nodes %}
+                        {% if page_url == subentry.url %}
+                        {% assign isItemActive = true %}
+                        {% endif %}
+                        {% endfor %}
+                        {% endif %}
+                        {% endfor %}
+                        {% endif %}
 
 
 
@@ -220,6 +222,7 @@
 
                     </li>
 
+                    {% endunless %}
                     {% endfor %}
                 </ul>
             </nav>

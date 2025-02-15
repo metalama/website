@@ -7,10 +7,6 @@ keywords:
 - fody .net
 ---
 
-# Fody
-
-## What is Fody?
-
 [Fody](https://github.com/Fody/Fody) is an extensible tool for weaving .NET assemblies. Manipulating the IL of an
 assembly as part of a build requires a significant amount of plumbing code. This plumbing code involves knowledge of
 both the MSBuild and Visual Studio APIs. Fody aims to eliminate that plumbing code through an extensible add-in model.

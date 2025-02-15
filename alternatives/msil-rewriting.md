@@ -3,6 +3,7 @@ title: "MSIL Rewriting"
 keywords: 
 - MSIL rewriting
 summary: "MSIL Rewriting modifies binary assemblies post-C# compilation. Tools like PostSharp, Mono.Cecil, Fody, AspectInjector, and Rougamo use this approach."
+toc: false
 ---
 
 {: .intro }

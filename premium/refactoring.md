@@ -1,5 +1,5 @@
 ---
-title: "C# Code Refactoring"
+title: "Refactoring Assistance"
 summary: "This article covers how Metalama can help with code refactoring in C# projects."
 keywords:
 - c# refactoring
@@ -10,6 +10,9 @@ keywords:
 Refactoring is a broad topic that ranges from limited code changes that can be automated (such as making a field
 read-only) to large efforts that take several days. Metalama complements mainstream refactoring tools with the ability
 to create your own custom coding rules and transformations.
+
+{: .note }
+You will need Metalama Professional to use the approaches described in this article.
 
 ## Add your own one-click refactorings
 

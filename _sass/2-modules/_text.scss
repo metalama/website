@@ -54,16 +54,31 @@
         margin-bottom: 1rem;
     }
 
+    ul, ol {
+      margin-bottom: 40px;
+    }
+
+
     ul ul,
     ul ol,
     ol ol,
     ol ul {
+        margin-top: 10px;
         margin-bottom: 20px;
     }
 
     a {
         font-weight: bold;
         color: $link_color;
+    }
+
+    li + li {
+        margin-top: 20px;
+    }
+
+    .intro {
+      font-size: 20px;
+      line-height: 1.5rem !important;
     }
 
     p.detail {
@@ -78,8 +93,8 @@
     p,
     td,
     th {
-      font-size: 20px;
-      line-height: 30px;
+      font-size: 18px;
+      line-height: 20px;
     }
 
     h2 {
@@ -115,13 +130,32 @@
     
     td,
     th {
-      padding: 5px;
-      border: 2px solid #130722;
+      padding: 10px;
+      border: $text_table_color 2px solid;
       border-collapse: collapse;
+
+      > ul {
+        padding-inline-start: 20px;
+      }
+
+      > p:first-child, > ul:first-child {
+        margin-top: 0;
+      }
+  
+      > p:last-child, > ul:last-child {
+        margin-bottom: 0;
+      }
+
+
+    }
+
+    td {
+      vertical-align: top; // align text at the top of the cell
     }
 
     th {
-      background-color: #130722;
+      background-color: $text_table_color;
+      color: white;
     }
 
     table {
@@ -155,4 +189,3 @@
       }
     }
   }
-  

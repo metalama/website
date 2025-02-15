@@ -12,7 +12,31 @@ footer .items_wrapper {
  
   .footer_texts {
     vertical-align: middle;
-    display: flex;
     align-items: center;
+    display: flex;
+  }
+
+  .improve-page {
+    vertical-align: middle;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+
+    a {
+      color: $lightBlue;
+      text-decoration: none;
+    }
+
+    a:after {
+      content: "";
+
+      display: inline-block;
+      background-image: url("/assets/images/icons/github.svg");
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-left: 5px;
+    }
   }
 }

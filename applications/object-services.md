@@ -16,3 +16,5 @@ https://doc.postsharp.net/metalama/examples/clone
 ## ToString
 
 https://doc.postsharp.net/metalama/examples/tostring
+
+## Comparison

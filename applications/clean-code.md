@@ -5,16 +5,12 @@ keywords:
 summary: "This page lists several criteria of clean code and shows how Metalama can help improving many of them."
 ---
 
-## Writing clean code with Metalama
+{: .intro }
+*Clean Code*, as defined by Robert C. Martin, emphasizes the importance of writing code that is easy to understand, maintain, and modify.
 
-*Clean Code*, as defined by Robert C. Martin, emphasizes the importance of writing code that is easy to understand,
-maintain, and modify.
+There has been much discussion around the importance of writing clean code, a skill every developer should strive to acquire.
 
-There has been much discussion around the importance of writing clean code, a skill every developer should strive to
-acquire.
-
-It's crucial to understand that clean code matters most _at scale_, when the application reaches thousands of lines of
-code.
+It's crucial to understand that clean code matters most _at scale_, when the application reaches thousands of lines of code.
 
 ## Clean code tools
 
@@ -148,7 +144,6 @@ According to Martin, clean code possesses several characteristics. Let's see how
     </tr>
     <tr>
       <td>
-
         <p><b>Lack of Duplication</b></p>
         <p>Avoid repetition of code (DRY Principle).</p>
         </td>
@@ -206,7 +201,7 @@ According to Martin, clean code possesses several characteristics. Let's see how
         </td>
         <td>
         <ul>
-          <li>Dependencies on technical services such as the logger or cache will be moved to aspects. Your source code will be free of these dependencies. During the build, Metalama will <a href="https://doc.postsharp.net/metalama/conceptual/aspects/dependency-injection">pull them into your code</a>, making them runtime dependencies, but not source-code ones.
+          <li>Dependencies on technical services such as the logger or cache will be moved to aspects. Your source code will be free of these dependencies. During the build, Metalama will <a href="https://doc.postsharp.net/metalama/conceptual/aspects/dependency-injection">pull them into your code</a>, making them runtime dependencies, but not source-code ones.</li>
         </ul>
         </td>
         <td>
@@ -228,6 +223,4 @@ According to Martin, clean code possesses several characteristics. Let's see how
         </td>
         </tr>
         </tbody>
-
 </table>
-```
