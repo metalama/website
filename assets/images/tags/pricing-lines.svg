@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="299">
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g fill="none">
+        <g>
+            <g>
+                <g>
+                    <g fill="#38D5E4">
+                        <path id="Rectangle-Copy-7" d="M553.12 86.2h473.05v42.3H553.12z"/>
+                    </g>
+                    <g>
+                        <path id="Rectangle-Copy-9" fill="#973EFF" d="M336 142.2h478.06v42.3H336z"/>
+                        <path fill="#FF5E45" d="M827.67 142.2H1254v42.3H827.67z"/>
+                    </g>
+                    <g fill="#973EFF">
+                        <path id="Rectangle-Copy-11" d="M185 199h178v42H185z"/>
+                        <path d="M378 199h876v42H378z"/>
+                    </g>
+                    <g>
+                        <path id="Rectangle-Copy-13" fill="#973EFF" d="M354 256h137v42H354z"/>
+                        <path fill="#FF5FBF" d="M1021 256h232v42h-232z"/>
+                    </g>
+                </g>
+                <path fill="#FF5FBF" d="M233 0h473v42H233z"/>
+                <path fill="#38D5E4" d="M67 142h254v43H67z"/>
+                <path fill="#FF5E45" d="M0 199h170v43H0z"/>
+                <path fill="#FF5FBF" d="M85 256h133v43H85z"/>
+            </g>
+        </g>
+    </g>
+</svg>

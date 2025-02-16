@@ -2,24 +2,15 @@
 
     h1 {
         margin-bottom: rem(18px);
-        font-size: rem(48px, "desktop");
         line-height: rem(56px, "desktop");
         font-family: Monosten;
 
-        @media (max-width: 560px) {
-            font-size: 2.3rem;
-        }
     }
 
     h2 {
-        font-size: 28px;
         text-align: left;
         margin-bottom: 15px;
         margin-top: 40px;
-
-        @media (max-width: 560px) {
-            font-size: 22px;
-        }
     }
 
     h3 {
@@ -29,9 +20,9 @@
     }
 
     h4 {
-
         text-align: left;
     }
+
 
     h2,
     h3,
@@ -77,12 +68,12 @@
     }
 
     .intro {
-      font-size: 20px;
+      font-size: $font-size-lg;
       line-height: 1.5rem !important;
     }
 
     p.detail {
-        font-size: 13px;
+        font-size: $font-size-sm;
         font-weight: 500;
         line-height: 1.2rem !important;
         padding: 4px 20px;
@@ -93,27 +84,22 @@
     p,
     td,
     th {
-      font-size: 18px;
+      font-size: $font-size-base;
       line-height: 20px;
     }
 
     h2 {
-      font-size: 26px;
       text-align: left;
       margin-bottom: 17px;
       margin-top: 60px;
     }
 
     h3 {
-      font-size: 22px;
-
       font-weight: $fw-semi-bold;
       font-family: $ff-texts;
     }
 
     h4 {
-      font-size: 20px;
-
       font-weight: $fw-semi-bold;
       font-family: $ff-texts;
     }
@@ -166,26 +152,3 @@
  
 }
 
-@media screen and (max-width: rem($mobile_breakpoint)) {
-    .text_content {
-  
-      body,
-      p,
-      td,
-      th,
-      li,
-      div {
-        font-size: 16px;
-        line-height: 130%;
-      }
-  
-      code {
-        font-size: 14px;
-      }
-  
-      pre code {
-        font-size: 12px;
-        line-height: 16px;
-      }
-    }
-  }

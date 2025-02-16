@@ -1,11 +1,23 @@
 .bg {
 
+  &-white {
+    background-color: $white !important;
+
+    code {
+      color: $darkPurple
+    }
+  }
   &-gray {
     background-color: $gray !important;
   }
 
   &-darkGray {
     background-color: $gray-700 !important;
+    color: $gray-100;
+
+    h1, h2, h3, h4 {
+      color: white;
+    }
   }
 
 
@@ -96,7 +108,7 @@
     transition: all 500ms ease;
 
     &:before {
-      background: url("/images/tag2.svg") no-repeat center center;
+      background: url("/assets/images/tags/tag2.svg") no-repeat center center;
       width: 99px;
       height: 51px;
       line-height: 51px;
@@ -114,12 +126,6 @@
         top: -20px;
       }
     }
-  }
-
-
-  &-gray {
-    background-color: $gray;
-    color: $darkPurple;
   }
 
   &-graywhite {
@@ -159,10 +165,18 @@
 
   &-darkPurple {
     background: $darkPurple;
+
+    h1, h2, h3, h4 {
+      color: white;
+    }
   }
 
   &-purple {
     background: $mediumPurple2;
+
+    h1, h2, h3, h4 {
+      color: white;
+    }
   }
 
 

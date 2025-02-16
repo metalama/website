@@ -1,0 +1,629 @@
+.icon {
+  vertical-align: middle;
+  display: inline-block;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &--tag {
+    width: 29px;
+    height: 15px;
+    background-image: url("/assets/images/lists/tag.svg");
+  }
+
+  &--application {
+    width: 100%;
+    height: 71px;
+    background-image: url("/assets/images/icons/application.svg");
+    background-size: auto 100%;
+    background-position: left center;
+  }
+
+  &--review {
+    width: 100%;
+    height: 71px;
+    background-image: url("/assets/images/icons/review.svg");
+    background-size: auto 100%;
+    background-position: left center;
+  }
+
+  &--lines {
+    background-image: url("/assets/images/icons/lines.svg");
+    height: 66px;
+    width: 100%;
+    background-size: 100% 66px;
+  }
+
+  &--lines2 {
+    background-image: url("/assets/images/icons/lines3.svg");
+    height: 28px;
+    width: 100%;
+    background-size: 100% 28px;
+  }
+
+  &--interview {
+    width: 100%;
+    height: 71px;
+    background-image: url("/assets/images/icons/interview.svg");
+    background-size: auto 100%;
+    background-position: left center;
+  }
+
+  &--user {
+    width: 16px;
+    height: 16px;
+    background-image: url("/assets/images/icons/user.svg");
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.18);
+    }
+  }
+
+  &--asessment {
+    width: 100%;
+    height: 71px;
+    background-image: url("/assets/images/icons/asessment.svg");
+    background-size: auto 100%;
+    background-position: left center;
+  }
+
+  &--bestValue {
+    background-image: url("/assets/images/icons/best-value.svg");
+    width: 58px;
+    height: 58px;
+  }
+
+  &--remove {
+    width: 130px;
+    height: 34px;
+    background-image: url("/assets/images/tags/tag-orange-remove-big.svg");
+    background-size: 100% 100%;
+
+    &--smaller {
+      width: 87px;
+      height: 40px;
+      background-size: 100% 100%;
+    }
+
+  
+    @include media-breakpoint-down(sm) {
+      width: 40px;
+      background-size: 100% 100%;
+    }
+  
+    &.position-absolute {
+      bottom: 50px;
+      right: 0;
+
+      @include media-breakpoint-down(md) {
+        bottom: -30px;
+      }
+    }
+  }
+
+  &--searchWhite {
+    width: 27px;
+    height: 29px;
+    background-image: url("/assets/images/icons/search-white.svg");
+  }
+
+  &--close {
+    background-image: url("/assets/images/icons/close.svg");
+    width: 19px;
+    height: 19px;
+    background-size: 100% 100%;
+  }
+
+  &--searchMobile {
+    background-image: url("/assets/images/icons/search.svg");
+    width: 19px;
+    height: 19px;
+    background-size: 100% 100%;
+  }
+
+  &--search {
+    width: 16px;
+    height: 16px;
+    background-image: url("/assets/images/icons/icon/menu-search.svg");
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.18);
+    }
+  }
+
+  &--search {
+    width: 16px;
+    height: 16px;
+    background-image: url("/assets/images/icons/icon/menu-search.svg");
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.18);
+    }
+  }
+
+  &--slack {
+    width: 16px;
+    height: 16px;
+    background-image: url("/assets/images/icons/icon/menu-slack.svg");
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.18);
+    }
+  }
+
+  &--discord {
+    width: 16px;
+    height: 16px;
+    background-image: url("/assets/images/icons/icon/menu-discord.svg");
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.18);
+    }
+  }
+
+  &--github {
+    width: 16px;
+    height: 16px;
+    background-image: url("/assets/images/icons/icon/menu-github.svg");
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.18);
+    }
+  }
+
+  &--cart {
+    width: 16px;
+    height: 16px;
+    background-image: url("/assets/images/icons/cart.svg");
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.18);
+    }
+  }
+
+  &--codebase {
+    width: 100%;
+    height: 253px;
+    background-image: url("/assets/images/icons/codebase.svg");
+    background-size: auto 100%;
+
+    @include media-breakpoint-down(sm) {
+      width: 85px;
+      height: 90px;
+    }
+  }
+
+  &--reliable {
+    width: 100%;
+    height: 253px;
+    background-image: url("/assets/images/icons/reliable.svg");
+    background-size: auto 100%;
+
+    @include media-breakpoint-down(sm) {
+      width: 85px;
+      height: 90px;
+    }
+  }
+
+  &--clock {
+    width: 100%;
+    height: 253px;
+    background-image: url("/assets/images/icons/clock.svg");
+    background-size: auto 100%;
+
+    @include media-breakpoint-down(sm) {
+      width: 85px;
+      height: 90px;
+    }
+  }
+
+  &--time {
+    width: 116px;
+    height: 87px;
+    background-image: url("/assets/images/icons/time.svg");
+    background-size: auto 100%;
+
+    @include media-breakpoint-down(sm) {
+      width: 85px;
+      height: 90px;
+    }
+  }
+
+  &--bug {
+    width: 110px;
+    height: 87px;
+    background-image: url("/assets/images/icons/bug.svg");
+    background-size: auto 100%;
+
+    @include media-breakpoint-down(sm) {
+      width: 85px;
+      height: 90px;
+    }
+  }
+
+  &--unmaintainable {
+    width: 110px;
+    height: 87px;
+    background-image: url("/assets/images/icons/app-unmaintainable.svg");
+    background-size: auto 100%;
+
+    @include media-breakpoint-down(sm) {
+      width: 90px;
+      height: 80px;
+    }
+  }
+
+
+  &--complexity {
+    width: 110px;
+    height: 87px;
+    background: url("/assets/images/icons/complexity.svg") no-repeat left center;
+    background-size: auto 100%;
+
+    @include media-breakpoint-down(sm) {
+      width: 90px;
+      height: 80px;
+    }
+  }
+
+  &--faster,
+  &--enable,
+  &--gc,
+  &--download,
+  &--choose,
+  &--rocket {
+    width: 100%;
+    height: 97px;
+    background-image: url("/assets/images/icons/faster.svg");
+    background-size: auto 100%;
+    background-position: left center;
+  }
+
+  &--download {
+    background-image: url("/assets/images/icons/download.svg");
+    background-size: auto 84px;
+  }
+
+  &--rocket {
+    background-image: url("/assets/images/icons/rocket.svg");
+    background-size: auto 91px;
+  }
+
+  &--choose {
+    background-image: url("/assets/images/icons/choose.svg");
+  }
+
+  &--detailed,
+  &--customizable,
+  &--logging {
+    height: 72px;
+    width: 100%;
+    background-image: url("/assets/images/icons/detailed.svg");
+    background-size: auto 100%;
+    background-position: left center;
+  }
+
+  &--detailed {
+    background-size: auto 45px;
+  }
+
+  &--plus {
+    height: 72px;
+    width: 100%;
+    background-image: url("/assets/images/icons/plus.svg");
+    background-size: auto 100%;
+    background-position: left center;
+  }
+
+  &--logging {
+    background-image: url("/assets/images/icons/logging.svg");
+  }
+
+  &--customizable {
+    background-image: url("/assets/images/icons/customizable.svg");
+  }
+
+
+  &--enable {
+    background-image: url("/assets/images/icons/enable.svg");
+    background-size: auto 61px;
+  }
+
+  &--gc {
+    background-image: url("/assets/images/icons/gc.svg");
+    background-size: auto 91px;
+  }
+
+  &--tagBlack {
+    width: 103px;
+    height: 104px;
+    background-image: url("/assets/images/icons/tag3.svg");
+    background-size: 100% auto;
+
+    @include media-breakpoint-down(sm) {
+      width: 63px;
+      height: 31px;
+    }
+  }
+
+  &--csharp {
+    width: 103px;
+    height: 104px;
+    background-image: url("/assets/images/icons/csharp.svg");
+    background-size: auto 100%;
+
+    @include media-breakpoint-down(sm) {
+      width: 53px;
+      height: 58px;
+    }
+  }
+
+  &--inject {
+    width: 92px;
+    height: 104px;
+    background-image: url("/assets/images/icons/inject.svg");
+    background-size: 100% auto;
+
+    @include media-breakpoint-down(md) {
+      width: 59px;
+      height: 50px;
+    }
+  }
+
+  &--tag-purple-with-hash {
+    background: url("/assets/images/icons/tag-purple-with-hash.svg") no-repeat center center;
+    width: 45px;
+    height: 22px;
+
+    &.position-absolute {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &--refresh {
+    background: url("/assets/images/icons/refresh.svg") no-repeat center center;
+    width: 47px;
+    height: 52px;
+  }
+
+  &--calc {
+    background: url("/assets/images/icons/calc.svg") no-repeat center center;
+    width: 39px;
+    height: 52px;
+  }
+
+  &--tagCommon {
+    background: url("/assets/images/tags/tag2.svg") no-repeat center center;
+    line-height: 37px;
+    padding-left: 10px;
+    color: $white;
+    font-weight: 700;
+    font-size: var(--font-size-h4);
+    width: 70px;
+    height: 37px;
+    background-size: 100% auto;
+
+    &--big {
+      width: 107px;
+      height: 53px;
+    }
+
+    &--small {
+      width: 38px;
+      height: 19px;
+    }
+  }
+
+  &--subscribe {
+    background-image: url("/assets/images/icons/subscribe.svg");
+    width: 79px;
+    height: 100px;
+  }
+
+
+  &--follow--ps {
+    &--linked {
+      background-image: url("/assets/images/icons/follow-ps-linked.svg");
+      width: 50px;
+      height: 50px;
+
+      &:hover {
+        filter: brightness(2);
+      }
+    }
+
+    &--rss {
+      background-image: url("/assets/images/icons/follow-ps-rss.svg");
+      width: 50px;
+      height: 50px;
+
+      &:hover {
+        filter: brightness(2);
+      }
+    }
+
+    &--twitter {
+      background-image: url("/assets/images/icons/follow-ps-twttr.svg");
+      width: 50px;
+      height: 50px;
+
+      &:hover {
+        filter: brightness(2);
+      }
+    }
+
+    &--discord {
+      background-image: url("/assets/images/icons/follow-ps-discord.svg");
+      width: 50px;
+      height: 50px;
+
+      &:hover {
+        filter: brightness(2);
+      }
+    }
+
+    &--github {
+      background-image: url("/assets/images/icons/follow-ps-github.svg");
+      width: 50px;
+      height: 50px;
+
+      &:hover {
+        filter: brightness(2);
+      }
+    }
+
+    &--slack {
+      background-image: url("/assets/images/icons/follow-ps-slack.svg");
+      width: 50px;
+      height: 50px;
+
+      &:hover {
+        filter: brightness(2);
+      }
+    }
+  }
+
+  &--community {
+
+    &--discord {
+      background-image: url("/assets/images/icons/community-discord.svg");
+      width: 50px;
+      height: 50px;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+
+    &--github {
+      background-image: url("/assets/images/icons/community-github.svg");
+      width: 50px;
+      height: 50px;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+
+    &--slack {
+      background-image: url("/assets/images/icons/community-slack.svg");
+      width: 50px;
+      height: 50px;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+
+    &--calendar {
+      background-image: url("/assets/images/icons/community-calendar.svg");
+      width: 50px;
+      height: 50px;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+  }
+
+
+  &--tagHuge {
+    background-image: url("/assets/images/icons/tag-huge.svg");
+    width: 322px;
+    height: 158px;
+  }
+
+  &--menu {
+    background-image: url("/assets/images/icons/menu.svg");
+    width: 34px;
+    height: 12px;
+  }
+
+  &--tagWhite {
+    background-image: url("/assets/images/icons/tag-white.svg");
+    width: 89px;
+    height: 44px;
+  }
+
+  &--users {
+    background-image: url("/assets/images/icons/users.svg");
+    width: 100%;
+    height: 97px;
+    background-size: auto 100%;
+    background-position: left center;
+  }
+
+  &--support {
+    background-image: url("/assets/images/icons/support.svg");
+    width: 100%;
+    height: 114px;
+    background-size: auto 100%;
+    background-position: left center;
+  }
+
+  &--award {
+    background-image: url("/assets/images/icons/award.svg");
+    width: 100%;
+    height: 110px;
+    background-size: auto 100%;
+    background-position: center center;
+  }
+
+  &--checkPurple {
+    background-image: url("/assets/images/icons/check-purple.svg");
+    width: 100%;
+    height: 34px;
+    background-size: auto 100%;
+    background-position: center center;
+  }
+
+  &--checkLightPurple {
+    background-image: url("/assets/images/icons/check-purple.svg");
+    width: 100%;
+    height: 34px;
+    background-size: auto 100%;
+    background-position: center center;
+    opacity: 0.5;
+  }
+
+  &--checkEmpty {
+    background-image: url("/assets/images/icons/check-empty.svg");
+    width: 100%;
+    height: 34px;
+    background-size: auto 100%;
+    background-position: center center;
+  }
+
+  &--money {
+    background: url("/assets/images/icons/money.svg") no-repeat left center;
+    width: 100%;
+    height: 59px;
+  }
+
+  &--voice {
+    background: url("/assets/images/icons/voice.svg") no-repeat left center;
+    width: 100%;
+    height: 59px;
+  }
+
+  &--previous {
+    background: url("/assets/images/icons/previous.svg") no-repeat left center;
+    width: 100%;
+    height: 59px;
+  }
+}
+
+a.icon {
+  // Make the text invisible.
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}

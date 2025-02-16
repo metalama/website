@@ -1,0 +1,188 @@
+.list {
+
+  &-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &-purpleTags,
+  &-whiteTags,
+  &-grayTags {
+
+    @extend .list-unstyled !optional;
+    font-size: $font-size-h5;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    > li {
+      padding-bottom: 30px !important;
+      padding-left: 69px;
+      background: url("/assets/images/tags/tag-dark-purple.svg") no-repeat top left;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+
+  &-grayTags-normal,
+  &-whiteTags-normal,
+  &-purpleTags-normal {
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: $font-size-base;
+    padding-bottom: 24px;
+
+    li {
+      background-size: auto 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+  &-whiteTags {
+    > li {
+      background: url("/assets/images/tags/tag-dark-white.svg") no-repeat top left;
+    }
+  }
+
+  &-grayTags {
+    > li {
+      background: url("/assets/images/tags/tag-dark-gray.svg") no-repeat top left;
+    }
+  }
+
+  &-smallPurpleTags,
+  &-smallRedTags,
+  &-smallBlueTags {
+    @extend .list-unstyled !optional;
+    // color: #181124;
+    font-size: $font-size-base;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 1.5em !important;
+
+    > li {
+      background: url("/assets/images/tags/pricing-fialovasipka.svg") no-repeat top left;
+      background-size: 31px 22px;
+      padding-left: 48px;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-smallRedTags > li {
+    background: url("/assets/images/tags/pricing-oranzovasipka.svg") no-repeat top left;
+    background-size: 31px 22px;
+  }
+
+  &-smallBlueTags > li {
+    background: url("/assets/images/tags/pricing-modrasipka.svg") no-repeat top left;
+    background-size: 31px 22px;
+  }
+
+  //after rafactoring
+  &-listGrayTags18 {
+    font-size: $font-size-h5;
+    font-weight: 500;
+    line-height: 1.1;
+
+    > li {
+      background: url("/assets/images/tags/tag-dark-gray.svg") no-repeat center left;
+      background-size: 61px 30px;
+      padding-left: 81px;
+      margin-bottom: 5px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+
+      /*
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 13px;
+        background-size: 33px 16px;
+        padding-left: 18+33px;
+        min-height: 0;
+      }
+        */
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-listWhiteTags18 {
+    @extend .list-unstyled !optional;
+    color: #181124;
+    font-size: $font-size-h5;
+    font-weight: 500;
+    line-height: 1.5;
+
+    > li {
+      background: url("/assets/images/tags/tag-dark-white.svg") no-repeat top 7px left;
+      background-size: 45px 22px;
+      padding-left: 73px;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-listPurpleTags16 {
+    @extend .list-unstyled !optional;
+    font-size: $font-size-base;
+    font-weight: 400;
+    line-height: 1.5;
+
+    > li {
+      background: url("/assets/images/tags/tag-dark-purple.svg") no-repeat center left;
+      background-size: 31px 15px;
+      padding-left: 72px;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        @extend .c-white !optional;
+      }
+    }
+
+    &Dark {
+      > li a {
+        @extend .c-purple !optional;
+      }
+    }
+  }
+
+  &-listWhiteTags16 {
+    @extend .list-unstyled !optional;
+    font-size: $font-size-base;
+    font-weight: 400;
+    line-height: 1.5;
+
+    > li {
+      background: url("/assets/images/tags/tag-white.svg") no-repeat center left;
+      background-size: 31px 15px;
+      padding-left: 72px;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        @extend .c-purple !optional;
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ const rename = require('gulp-rename');
 const brotli = require('gulp-brotli');
 const gzip = require('gulp-gzip');
 const htmlmin = require('gulp-htmlmin');
+var cachebust = require('gulp-cache-bust');
 
 
 gulp.task('svg-to-png', function () {
@@ -42,11 +43,12 @@ gulp.task('gzip-svg', function () {
         }));
 });
 
-// Task to minify HTML files produced by Jekyll
-gulp.task('minify-html', () => {
+// Task to (1) add a cache timestamp to asset paths and (2) minify HTML files produced by Jekyll
+gulp.task('html', () => {
     return gulp.src('_site/**/*.html')
+      .pipe(cachebust({ type: 'timestamp' }))
       .pipe(htmlmin({ collapseWhitespace: true }))
       .pipe(gulp.dest('_site'));
 });
 
-gulp.task('default', gulp.parallel('svg-to-png', 'brotli-svg', 'gzip-svg', 'minify-html'));
+gulp.task('default', gulp.parallel('svg-to-png', 'brotli-svg', 'gzip-svg', 'html'));

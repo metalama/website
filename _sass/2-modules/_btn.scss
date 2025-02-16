@@ -5,7 +5,7 @@
   line-height: 27px;
   padding: 7px 40px;
   color: $white;
-  font-size: var(--font-size-text);
+  font-size: $font-size-base;
   font-weight: 800;
   text-transform: uppercase;
   background-color: $mediumPurple1;
@@ -13,9 +13,14 @@
   text-align: center;
   outline: none;
   border-radius: 0;
+  text-decoration: none;
 
   .icon {
     margin-right: 10px;
+  }
+
+  a {
+    text-decoration: none;
   }
 
 
@@ -39,7 +44,7 @@
   }
 
   &--small {
-    font-size: var(--font-size-small);
+    font-size: $font-size-sm;
     font-weight: 500;
     padding: 8px 20px;
     vertical-align: middle;
@@ -62,7 +67,7 @@
   &--plus,
   &--minus {
     color: $purple;
-    font-size: var(--font-size-h4);
+    font-size: $font-size-h4;
     background: transparent;
     border: 0;
     position: relative;
@@ -176,7 +181,7 @@
 
   &--md {
     line-height: 47-4px;
-    font-size: var(--font-size-text);
+    font-size: $font-size-base;
     font-weight: 800;
     padding: 0 15px;
   }
@@ -190,7 +195,7 @@
   }
 }
 
-/*
+
 @include media-breakpoint-up(md) {
   a.btn,
   button.btn {
@@ -228,4 +233,4 @@
     }
   }
 }
-  */
+  

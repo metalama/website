@@ -134,3 +134,40 @@ $(document).ready(function () {
     });
   });
 });
+
+// Home page.
+$(document).ready(function () {
+  // Handle the FAQ section
+  $('.faq-section .question').click(function () {
+    // Inactivate other questions
+    $('.faq-section .question').not(this).removeClass('active');
+    $('.faq-section .arrow').not($(this).parent().find('.arrow')).removeClass('arrow-animate');
+    $('.faq-section .answer').not($(this).parent().find('.answer')).slideUp(280);
+
+    // Toggle the clicked question
+    $(this).toggleClass('active');
+    $(this).parent().find('.arrow').toggleClass('arrow-animate');
+    $(this).parent().find('.answer').slideToggle(280);
+  });
+
+  // Handles the Lottie animation
+  if ($('#graphLottie').length) {
+    var graphLottieHasStarted = false;
+  
+    $(window).scroll(function () {
+        var top = $('#approach').offset().top;
+  
+        if ($(window).scrollTop() > (top - 600) && $(window).scrollTop() < (top + 500) && graphLottieHasStarted == false) {
+            lottie.loadAnimation({
+                container: document.getElementById('graphLottie'),
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: '/assets/animations/graph/data.json'
+            });
+            graphLottieHasStarted = true;
+        }
+    }).scroll();
+  }
+});
+
