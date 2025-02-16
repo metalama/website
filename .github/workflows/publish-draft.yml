@@ -21,6 +21,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y fontconfig
 
+      # Monosten is used in SVGs and must be installed before we to the svg-to-png conversion.
       - name: Install Monosten font
         run: |
           mkdir -p ~/.local/share/fonts/woff2
