@@ -53,12 +53,11 @@
     .positioning {
       display: flex;
       flex-direction: row;
+      gap: 80px;
 
       .productLine {
         flex: 1;
         text-align: center;
-        margin-left: 10%;
-        margin-right: 10%;
 
         .description {
           font-size: $font-size-lg ;
@@ -68,7 +67,6 @@
 
       .benefits {
         flex: 1;
-        margin-right: 10%;
 
         b {
           color: white;

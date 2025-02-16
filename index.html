@@ -27,36 +27,38 @@ append_site_title: false
     <section id="overview" class="section bg-purple section--intro"
         style="background-image: url(/assets/images/icons/metalama-icon-with-gradient.svg); background-repeat: no-repeat; background-size: 750px 750px; background-position-y: 0;">
 
-        <div class="tagline">
-            <h1 class="wow fadeInUp" data-wow-duration="2s">
-                <span class="c-purple">Eradicate</span> Boilerplate Code <br />
-                and Architecture Erosion.
+        <div class="container">
+            <div class="tagline">
+                <h1 class="wow fadeInUp" data-wow-duration="2s">
+                    <span class="c-purple">Eradicate</span> Boilerplate Code <br />
+                    and Architecture Erosion.
 
-            </h1>
-        </div>
+                </h1>
+            </div>
 
-        <div class="positioning">
-            <div class="productLine">
-                <img src="/assets/images/metalama-logo-no-gutter.svg" loading="lazy" alt="Metalama logo" />
-                <div class="description">
-                    <p>
-                        A modern, open-source meta-programming framework for code generation,
-                        aspect-oriented programming, and architecture verification in large C# codebases.
-                    </p>
+            <div class="positioning">
+                <div class="productLine">
+                    <img src="/assets/images/metalama-logo-no-gutter.svg" loading="lazy" alt="Metalama logo" />
+                    <div class="description">
+                        <p>
+                            A modern open-source meta-programming framework for code generation,
+                            aspect-oriented programming, and architecture verification in large C# codebases.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="benefits">
+                    <ul class="list-purpleTags">
+                        <li><b>Write and maintain less code</b> by eliminating boilerplate, generating it dynamically
+                            during compilation, and reduce code lines and bugs by 15%.</li>
+                        <li><b>Validate your codebase against your architecture</b> in real-time to enforce adherence to
+                            your design rules and conventions. No need to wait for code reviews.</li>
+                        <li><b>Excel with large, complex, or old codebases</b>. Metalama does not require you to change
+                            your architecture. Beyond <i>getting started</i>, it's at scale that it really shines.</li>
+                    </ul>
                 </div>
 
             </div>
-            <div class="benefits">
-                <ul class="list-purpleTags">
-                    <li><b>Write and maintain less code</b> by eliminating boilerplate, generating it dynamically
-                        during compilation, and reduce code lines and bugs by 15%.</li>
-                    <li><b>Validate your codebase against your architecture</b> in real-time to enforce adherence to
-                        your design rules and conventions. No need to wait for code reviews.</li>
-                    <li><b>Excel with large, complex, or old codebases</b>. Metalama does not require you to change
-                        your architecture. Beyond <i>getting started</i>, it's at scale that it really shines.</li>
-                </ul>
-            </div>
-
         </div>
     </section>
 
@@ -65,8 +67,8 @@ append_site_title: false
 
             <div>
 
-                <h2>What Are <span class="c-purple">Boilerplate</span> and <br/>
-                <span class="c-purple">Architecture Erosion</span> Costing You?
+                <h2>What Are <span class="c-purple">Boilerplate</span> and <br />
+                    <span class="c-purple">Architecture Erosion</span> Costing You?
                 </h2>
 
 
@@ -184,55 +186,57 @@ append_site_title: false
     <section class="section bg-darkGray section--approach" id="approach">
         <div class="container">
 
-                
-                    
-                        <div class="row">
-                    <div class="approach">
-                        <h2 class=""><span class="c-blue">Our Approach:</span> <br/>
-                         Simple, Robust Meta-Programming</h2>
 
 
-                        <p>
-                            <i>Meta-programming</i> is the practice of writing code that generates, modifies, or
-                            validates other code. This approach streamlines repetitive tasks and makes code reviews more
-                            efficient.
-                        </p>
-                        <p>
-                            With a focus on <b>simplicity</b> and <b>safety</b>, we have reimagined <i>aspect-oriented
-                                programming (AOP)</i> for modern .NET applications.
-                        </p>
-                        <p>Aspects and fabrics are <i>meta</i> C# classes that execute within the compiler or the IDE
-                            and perform the following tasks:</p>
-                        <ul class="list-smallBlueTags">
-                            <li>
-                                <p>
-                                    <b>Generate repetitive code</b> at compile-time, ensuring your source code remains
-                                    crystal clear.
-                                </p>
-                                <p>
-                                    Unlike Roslyn generators, Metalama is not limited
-                                    to extending <code>partial</code> classes. You can add behaviors to hand-written
-                                    methods, properties, and even fields.
-                                </p>
-                            </li>
-                            <li><b>Verify source code</b> against patterns and architectural rules. Use a fluent C# API
-                                to express common rules or build
-                                your own rules. Report errors in real-time in the IDE or at build time in you CI
-                                pipeline.</li>
-                            <li><b>Suggest</b> code fixes and refactorings, and provide guidance to developers.</li>
-                        </ul>
-                        <p><b>Do it by your rules.</b> Create your own code templates and verification rules easily and
-                            safely.</p>
+            <div class="row">
+                <div class="approach">
+                    <h2 class=""><span class="c-blue">Our Approach:</span> <br />
+                        Simple, Robust Meta-Programming</h2>
 
-                    </div>
-               
+
+                    <p>
+                        <i>Meta-programming</i> is the practice of writing code that generates, modifies, or
+                        validates other code. This approach streamlines repetitive tasks and makes code reviews more
+                        efficient.
+                    </p>
+                    <p>
+                        With a focus on <b>simplicity</b> and <b>safety</b>, we have reimagined <i>aspect-oriented
+                            programming (AOP)</i> for modern .NET applications.
+                    </p>
+                    <p>Aspects and fabrics are <i>meta</i> C# classes that execute within the compiler or the IDE
+                        and perform the following tasks:</p>
+                    <ul class="list-smallBlueTags">
+                        <li>
+                            <p>
+                                <b>Generate repetitive code</b> at compile-time, ensuring your source code remains
+                                crystal clear.
+                            </p>
+                            <p>
+                                Unlike Roslyn generators, Metalama is not limited
+                                to extending <code>partial</code> classes. You can add behaviors to hand-written
+                                methods, properties, and even fields.
+                            </p>
+                        </li>
+                        <li><b>Verify source code</b> against patterns and architectural rules. Use a fluent C# API
+                            to express common rules or build
+                            your own rules. Report errors in real-time in the IDE or at build time in you CI
+                            pipeline.</li>
+                        <li><b>Suggest</b> code fixes and refactorings, and provide guidance to developers.</li>
+                    </ul>
+                    <p><b>Do it by your rules.</b> Create your own code templates and verification rules easily and
+                        safely.</p>
+
+                </div>
+
                 <div class="illustration">
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"
+                        integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg=="
+                        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
                     <div id="graphLottie" class="lottie"></div>
                 </div>
-                </div>
             </div>
-        
+        </div>
+
     </section>
 
     <section class="section bg-white section--show-code" id="how-it-works">
@@ -318,7 +322,8 @@ append_site_title: false
                 <div class="col">
                     <h4>1. Add the Architecture Package to Your Project</h4>
                     <p>
-                        Add the <code>Metalama.Extensions.Architecture</code> package to your project. <i class="premium"></i>
+                        Add the <code>Metalama.Extensions.Architecture</code> package to your project. <i
+                            class="premium"></i>
                     </p>
                     <h4>2. Add a Fabric Class</h4>
                     <p>
@@ -718,10 +723,12 @@ append_site_title: false
                         Can I achieve the same results with classic C# and Roslyn API?
                     </div>
                     <div class="answer">
-                        <p>You might be considering using directly Roslyn's low-level APIs such as analyzers, generators and interceptors.</p>
+                        <p>You might be considering using directly Roslyn's low-level APIs such as analyzers, generators
+                            and interceptors.</p>
                         <p>
                         <p>
-                            Not only does Metalama provide a simpler and more integrated solution _on the top_ of Roslyn,
+                            Not only does Metalama provide a simpler and more integrated solution _on the top_ of
+                            Roslyn,
                             but it also adds features Roslyn simply don't offer.
                         </p>
                         <p>
@@ -801,17 +808,22 @@ append_site_title: false
                         <div class="answer">
                             <p>While metaprogramming and AOP can introduce new concepts, Metalama is designed for a
                                 gradual learning curve.</p>
-                            <p><b>Start simply, grow gently.</b> Metalama's simple APIs can get you started in minutes. 
-                            As you start understanding the technology and want to implement more complex rules, between 4 and 16
-                            hours of learning might be necessary to master the framework.  </p>
-                            
-                            <p><b>Leverage ready-to-use aspects.</b> Don't reinvent the wheel. Leverage the dozens supported and open-source aspects
-                            that cover the most common requirements.</p>
+                            <p><b>Start simply, grow gently.</b> Metalama's simple APIs can get you started in minutes.
+                                As you start understanding the technology and want to implement more complex rules,
+                                between 4 and 16
+                                hours of learning might be necessary to master the framework. </p>
+
+                            <p><b>Leverage ready-to-use aspects.</b> Don't reinvent the wheel. Leverage the dozens
+                                supported and open-source aspects
+                                that cover the most common requirements.</p>
                             <p>
                                 <b>Comprehensive documentation</b>. It offers clear documentation, tutorials, and API
                                 references to help developers onboard quickly.
                             </p>
-                            <p><b>Team Learning</b>. Not everyone on the team needs to learn Metalama in detail. Only architects or senior developers writing aspects will need a detailed understanding. For other team members only <i>using</i> aspects, a simple 1-hour training will be enough to get started.</p>
+                            <p><b>Team Learning</b>. Not everyone on the team needs to learn Metalama in detail. Only
+                                architects or senior developers writing aspects will need a detailed understanding. For
+                                other team members only <i>using</i> aspects, a simple 1-hour training will be enough to
+                                get started.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -829,7 +841,7 @@ append_site_title: false
                                 <b>Code Preview</b>. You can compare transformed code to source code before compilation,
                                 improving transparency. <i class="premium"></i>
                             </p>
-                                                      
+
                         </div>
                     </div>
                     <div class="faq-item">
@@ -860,20 +872,24 @@ append_site_title: false
                                 We believe that you will comprehend the business meaning of your code even better than
                                 before since it
                                 will not be cluttered with boilerplate. When the time comes to read the fine print,
-                                Metalama shows you the exact generated code. 
+                                Metalama shows you the exact generated code.
                             </p>
                             <p>
-                                <b>Show or Debug Generated Code</b>. Switch to the <code>LamaDebug</code> build configuration
+                                <b>Show or Debug Generated Code</b>. Switch to the <code>LamaDebug</code> build
+                                configuration
                                 to see exactly the code generated by Metalama. You can even debug it!
                             </p>
                             <p>
-                                <b>Diff Preview.</b> Compare source and transformed code directly within Visual Studio. <i class="premium"></i>
+                                <b>Diff Preview.</b> Compare source and transformed code directly within Visual Studio.
+                                <i class="premium"></i>
                             </p>
                             <p>
-                                <b>CodeLens Integration.</b> See which aspects are applied to a method directly in the editor. <i class="premium"></i>
+                                <b>CodeLens Integration.</b> See which aspects are applied to a method directly in the
+                                editor. <i class="premium"></i>
                             </p>
                             <p>
-                                <b>Aspect Explorer.</b> See which aspects are present in the solution and how they affect the code. <i class="premium"></i>
+                                <b>Aspect Explorer.</b> See which aspects are present in the solution and how they
+                                affect the code. <i class="premium"></i>
                             </p>
                         </div>
                     </div>
@@ -884,9 +900,12 @@ append_site_title: false
                         <div class="answer">
                             <p>Metalama is built on Roslyn and is designed to work seamlessly with .NET development
                                 environments.</p>
-                                <p><i>At design time</i>, all editors that support Roslyn automatically support Metalama.</p>
-                                <p><i>At build time</i>, Metalama integrates with MSBuild and can be used in any build server.</p>
-                                <p>Visual Studio Tools for Metalama <i class="premium"></i> are designed to enhance developers productivity but are not <i>required</i> for development.</p>
+                            <p><i>At design time</i>, all editors that support Roslyn automatically support Metalama.
+                            </p>
+                            <p><i>At build time</i>, Metalama integrates with MSBuild and can be used in any build
+                                server.</p>
+                            <p>Visual Studio Tools for Metalama <i class="premium"></i> are designed to enhance
+                                developers productivity but are not <i>required</i> for development.</p>
 
                         </div>
                     </div>
@@ -904,7 +923,7 @@ append_site_title: false
                             <p>
                                 <b>Fallback Strategy</b>. Since Metalama generates regular C# code, applications can
                                 transition to manual implementations if necessary thanks to the Metalama Divorce
-                                feature.  <i class="premium"></i>
+                                feature. <i class="premium"></i>
                             </p>
                         </div>
                     </div>

@@ -138,6 +138,9 @@
                 <ul class="level1">
 
                     {% assign page_url = page.url | remove: '.html' | split: '/' | join: '/' %}
+                    {% if page_url == "" %}
+                    {% assign page_url = "/" %}
+                    {% endif %}
                     <!-- page_url ='{{page_url}}'-->
                     {% assign entryId = 0 %}
                     {% for item in site.data.navigation.nodes %}
