@@ -132,6 +132,32 @@ header {
   }
 }
 
+
+.btn--github {
+  display: flex;
+  flex-direction: row;
+  
+  img {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 5px;
+    margin-top: -5px;
+  }
+  border: none;
+  background: transparent;
+  color: #fff;
+  text-transform: none;
+
+  &:hover {
+    border: none !important;
+  }
+
+  a:hover {
+    color: #fff !important;
+  }  
+}
+
 section {
   overflow: hidden;
 }
