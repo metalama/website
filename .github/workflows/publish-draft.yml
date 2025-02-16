@@ -46,7 +46,7 @@ jobs:
         run: npx gulp 
 
       - name: Copy robots.txt
-        run: cp robots.draft.txt _site/robots.txt        
+        run: cp robots.draft.txt _cdn/robots.txt        
 
       - name: Deploy to Azure Static Web App
         uses: Azure/static-web-apps-deploy@v1
@@ -54,5 +54,5 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GRAY_MEADOW_0B191EF03 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
-          app_location: "_site" 
-          skip_app_build: true # The app was built in the stop above.
+          app_location: "_cdn" 
+          skip_app_build: true # The app was built in the steps above.
