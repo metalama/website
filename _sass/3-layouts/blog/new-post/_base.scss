@@ -40,8 +40,7 @@
   }
 
   .post_content {
-    background-color: white;
-    color: black;
+    
     .grid {
       width: 100%;
       max-width: 1600px;
@@ -216,7 +215,7 @@
     color: #e0e0e0;
     margin-top: 80px;
     position: relative;
-
+    
     @media (max-width: 1360px) {
       &.pinned {
         display: none;
@@ -232,32 +231,41 @@
     }
 
     p.toc_nav_header {
-      padding-left: 20px;
 
-      @media (max-width: 992px) {
-        font-size: 42px !important;
-        margin-bottom: 25px;
-      }
+      color: white;
+      font-weight: bold;
+      margin-bottom: 10px;
 
-      @media (max-width: 560px) {
-        font-size: 28px !important;
+    }
+
+    ul {
+      margin-top: 0;
+      list-style: none;
+      padding-inline-start: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    p.detail {
+      line-height: 1rem;
+      a {
+        color: #fff;
       }
     }
 
-    nav:not(:first-child) {
-      margin-top: 40px;
+
+    li a {
+      text-decoration: none;
+      color: $text_color;
     }
 
 
-
-    nav[data-toggle="toc"] {
-
-      a.active:visited,
-      a.active:visited {
-        color:$text_color !important;
-        font-weight: bold !important;
-        margin-left: -20px;
-      }
+    a.active:visited,
+    a.active:visited {
+      color:$text_color !important;
+      font-weight: bold !important;
+      margin-left: -20px;
     }
 
     #related {
@@ -282,7 +290,7 @@
         max-width: 360px;
         background-color: rgb(37, 13, 69);
         border-radius: 10px;
-        padding: 20px 10px;
+        padding: 20px 20px;
 
         max-height: calc(100vh - 200px);
         overflow-y: auto;

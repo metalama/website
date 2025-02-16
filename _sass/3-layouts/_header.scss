@@ -15,14 +15,18 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+  
   }
   
 
   nav{
     margin-left: 40px;
     margin-top: 12px;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 80px;
   } 
 
   a,
@@ -63,7 +67,7 @@ header {
           margin: 0 0 0 8px;
           position: absolute;
           text-align: right;
-          top: 50%;
+          top: 40%;
           transform: translateY(-50%);
           width: 0;
         }

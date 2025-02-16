@@ -69,11 +69,12 @@
                         </div>
                     </div>
 
-
-
-                    <nav id="toc">
+                    {% if page.toc %}
+                    <nav>
                         <p class="toc_nav_header">In this article</p>
+                        {{ content | toc_only }}
                     </nav>
+                    {% endif %}
 
 
                     {% if page.source_url %}
@@ -92,7 +93,7 @@
             {% endif %}
         </div>
     </section>
-    <section class="post_content">
+    <section class="post_content bg-white">
         <div class="grid">
 
             <div class="text_content">
@@ -118,7 +119,7 @@
                             {{ page.excerpt }}
                         </div>
 
-                        {{ content | remove: page.excerpt }}
+                        {{ content | inject_anchors | remove: page.excerpt }}
 
 
                         <div class="attribution">
@@ -204,6 +205,5 @@
 
 {% endif %}
 
-{% include custom.js %}
 {% include newsletter.html %}
 {% include footer.html %}

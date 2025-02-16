@@ -135,7 +135,7 @@
             </a>
 
             <nav>
-                <ul class="level1">
+                <ul class="level1 left">
 
                     {% assign page_url = page.url | remove: '.html' | split: '/' | join: '/' %}
                     {% if page_url == "" %}
@@ -222,16 +222,20 @@
                     {% endunless %}
                     {% endfor %}
 
+
+
+                </ul>
+
+                <ul class="level1 right">
                     <li>
-                        <a href="https://www.github.com/TODO" data-submenu="" class="btn--github"
+                        <a href="https://www.github.com/metalama" data-submenu="" class="btn--github"
                             title="Access the source code on GitHub.">
                             <img src="/assets/images/icons/github.svg" alt="Open Source" />
-                            <span>Open Source</span>
+                            <!--<span>Open Source</span>-->
                         </a>
 
 
                     </li>
-
                 </ul>
 
 

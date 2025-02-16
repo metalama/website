@@ -63,6 +63,12 @@ defaults:
       type: "pages" 
     values:
        site_title: "Metalama Alternatives"        
+  - scope:
+      path: "" 
+      type: "posts" 
+    values:
+      toc: true
+      site_title: "Metalama Blog"
       
 toc:
   min_level: 2
@@ -74,4 +80,3 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     line_numbers: false
-  

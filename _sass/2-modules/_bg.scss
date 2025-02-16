@@ -3,10 +3,33 @@
   &-white {
     background-color: $white !important;
 
+    color: black;
+
+    .text_content {
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      b,
+      strong {
+        color: black
+      }
+
+      ;
+
+      a {
+        color: $mediumPurple3;
+      }
+    }
+
+
     code {
       color: $darkPurple
     }
   }
+
   &-gray {
     background-color: $gray !important;
   }
@@ -15,7 +38,10 @@
     background-color: $gray-700 !important;
     color: $gray-100;
 
-    h1, h2, h3, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
       color: white;
     }
   }
@@ -159,14 +185,17 @@
       }
     }
       */
-    
+
   }
 
 
   &-darkPurple {
     background: $darkPurple;
 
-    h1, h2, h3, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
       color: white;
     }
   }
@@ -174,7 +203,10 @@
   &-purple {
     background: $mediumPurple2;
 
-    h1, h2, h3, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
       color: white;
     }
   }
