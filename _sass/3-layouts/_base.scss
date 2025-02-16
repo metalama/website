@@ -17,7 +17,6 @@ body {
 
 h1 {
     margin-bottom: 1.5rem;
-    font-size: 3.2rem;
     line-height: 3.7333333333rem;
     font-family: Monosten;
     font-weight: normal;
@@ -25,12 +24,11 @@ h1 {
 }
 
 h3 {
-    font-size: rem(16px);
     line-height: rem(20px);
     font-weight: $fw-normal;
 }
+
 h2 {
-    font-size: rem(12px);
     text-align: center;
     font-weight: $fw-normal;
 }

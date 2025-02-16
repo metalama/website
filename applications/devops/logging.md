@@ -133,7 +133,4 @@ You probably don't want to write this code by hand, ever!
 * Example: [Implementing logging without boilerplate](https://doc.postsharp.net/metalama/examples/log)
 * Blog article: [Serilog log levels, and how to use them](https://blog.postsharp.net/serilog-log-levels)
 * Blog article: [Adding Serilog to ASP.NET Core: a practical guide](https://blog.postsharp.net/serilog-aspnetcore)
-* Blog
-  article: [Fast and Compact Structured Logging in C# Using String Interpolation](https://blog.postsharp.net/structured-logging-with-string-interpolation)
-
----
+* Blog article: [Fast and Compact Structured Logging in C# Using String Interpolation](https://blog.postsharp.net/structured-logging-with-string-interpolation)
