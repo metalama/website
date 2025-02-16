@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% assign etag = 'now' | date: "%Y%m%d%H%M" %}
 <html lang="en">
 
 <head>
@@ -16,7 +15,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css?etag={{etag}}">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
     <link href="{{site.baseurl}}/assets/images/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" />
     <link href="{{site.baseurl}}/assets/images/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
@@ -28,12 +27,6 @@
         type="image/png" />
     <link href="{{site.baseurl}}/assets/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
     <link href="{{site.baseurl}}/assets/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
-    <link href="{{site.baseurl}}/assets/fonts/LatoLatin/LatoLatin-Regular.woff2?etag=3cd36578026d6c12eddf9a5c671a251d"
-        rel="preload" as="font" crossorigin="anonymous" />
-    <link href="{{site.baseurl}}/assets/fonts/LatoLatin/LatoLatin-Bold.woff2?etag=3ff66ada9b57d10c17e415222486ec21"
-        rel="preload" as="font" crossorigin="anonymous" />
-    <link href="{{site.baseurl}}/assets/fonts/Monosten/Monosten-A.woff2?etag=9bdc03646207a5354c40167543f428b6"
-        rel="preload" as="font" crossorigin="anonymous" />
     <link rel="canonical" href="{{site.baseurl}}{{include.permalink}}" />
 
     <link rel="alternate" type="application/rss+xml" href="{{site.baseurl}}/feed.xml" />
@@ -63,7 +56,8 @@
     {% assign image_url = image_url | replace: '.svg', '.svg.g.png' %}
     {% endif %}
     <meta property="og:image" content="{{ site.url | escape }}{{ site.baseurl | escape }}{{ image_url | escape }}" />
-    <meta property="twitter:image" content="{{ site.url | escape }}{{ site.baseurl | escape }}{{ image_url | escape }}" />
+    <meta property="twitter:image"
+        content="{{ site.url | escape }}{{ site.baseurl | escape }}{{ image_url | escape }}" />
     {% endif %}
     {% if page.keywords %}
     <meta name="keywords" content="{{page.keywords | join: ', ' | escape}}" />
@@ -147,27 +141,27 @@
                     <!-- page_url ='{{page_url}}'-->
                     {% assign entryId = 0 %}
                     {% for item in site.data.navigation.nodes %}
-                        {% unless item.hidden %}
+                    {% unless item.hidden %}
 
 
-                        {% assign itemId = itemId | plus: 1 %}
-                        {% assign isItemActive = false %}
+                    {% assign itemId = itemId | plus: 1 %}
+                    {% assign isItemActive = false %}
 
-                        {% if page_url == item.url %}
-                        {% assign isItemActive = true %}
-                        {% else %}
-                        {% for entry in item.nodes %}
-                        {% if page_url == entry.url %}
-                        {% assign isItemActive = true %}
-                        {% else %}
-                        {% for subentry in entry.nodes %}
-                        {% if page_url == subentry.url %}
-                        {% assign isItemActive = true %}
-                        {% endif %}
-                        {% endfor %}
-                        {% endif %}
-                        {% endfor %}
-                        {% endif %}
+                    {% if page_url == item.url %}
+                    {% assign isItemActive = true %}
+                    {% else %}
+                    {% for entry in item.nodes %}
+                    {% if page_url == entry.url %}
+                    {% assign isItemActive = true %}
+                    {% else %}
+                    {% for subentry in entry.nodes %}
+                    {% if page_url == subentry.url %}
+                    {% assign isItemActive = true %}
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
 
 
 

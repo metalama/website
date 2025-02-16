@@ -21,9 +21,9 @@ gulp.task('svg-to-png', function () {
         }));
 });
 
-// Task to create Brotli-compressed SVG and JSON files
-gulp.task('brotli-svg', function () {
-    return gulp.src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json'])
+// Task to create Brotli-compressed assets and pages.
+gulp.task('brotli', function () {
+    return gulp.src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json',  './_cdn/assets/fonts/**/*.{woff,woff2,ttf,eot}', './_cdn/**/*.html' ])
         .pipe(brotli.compress({
             extension: 'br',
             quality: 11
@@ -33,9 +33,9 @@ gulp.task('brotli-svg', function () {
         }));
 });
 
-// Task to create Gzip-compressed SVG and JSON files
-gulp.task('gzip-svg', function () {
-    return gulp.src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json'])
+// Task to create Gzip-compressed assets and pages.
+gulp.task('gzip', function () {
+    return gulp.src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json', './_cdn/assets/fonts/**/*.{woff,woff2,ttf,eot}', './_cdn/**/*.html' ])
         .pipe(gzip())
         .pipe(gulp.dest(function (file) {
             return file.base;
@@ -52,34 +52,14 @@ gulp.task('htmlmin', () => {
 gulp.task("rev-all", function () {
     return gulp.src("_site/**")
         .pipe(revall.revision({
-            dontRenameFile: ['.html', '.txt', '.xml', 'staticwebapp.config']
+            dontRenameFile: ['.html', '.txt', '.xml', 'staticwebapp.config', '.woff', '.woff2', '.ttf', '.eot']
         }))
         .pipe(gulp.dest("_cdn"));
 });
 
-// Task to create Brotli-compressed HTML files
-gulp.task('brotli-html', function () {
-    return gulp.src('./_cdn/**/*.html')
-        .pipe(brotli.compress({
-            extension: 'br',
-            quality: 11
-        }))
-        .pipe(gulp.dest(function (file) {
-            return file.base;
-        }));
-});
-
-// Task to create gzip-compressed HTML files
-gulp.task('gzip-html', function () {
-    return gulp.src('./_cdn/**/*.html')
-        .pipe(gzip())
-        .pipe(gulp.dest(function (file) {
-            return file.base;
-        }));
-});
 
 gulp.task('default', gulp.series(
     'htmlmin',
     'rev-all',
-    gulp.parallel('brotli-html', 'gzip-html', 'brotli-svg', 'gzip-svg', 'svg-to-png' )
+    gulp.parallel('brotli', 'gzip', 'svg-to-png' )
 ));
