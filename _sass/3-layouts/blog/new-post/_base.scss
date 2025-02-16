@@ -230,7 +230,7 @@
       display: none;
     }
 
-    p.toc_nav_header {
+    p.toc_nav_header, .convertKit_header {
 
       color: white;
       font-weight: bold;
@@ -306,7 +306,6 @@
         .newsletter {
           display: block;
           background-color: transparent;
-          padding-left: 20px;
           margin-top: -40px;
           min-height: 40px; // Necessary to cancel the top margin when there is no content.
 

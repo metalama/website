@@ -33,7 +33,7 @@
 
 
 
-<div class="page_wrapper post_page">
+<div class="page_wrapper post_page  bg-white">
     <section class="post_header">
         <figure>
             {% if page.image %}
@@ -53,7 +53,7 @@
                     </div>
                     {% for category in page.categories %}
                     <div class="post_category">
-                        <a href="{{site.baseurl}}/archive#{{category | downcase | replace: ' ', '-'}}">
+                        <a href="{{site.baseurl}}/blog/archive#{{category | downcase | replace: ' ', '-'}}">
                             <img src="{{site.baseurl}}/assets/images/icons/tag_white.svg" alt="" />
                             <span>{{category}}</span>
                         </a>

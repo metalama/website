@@ -96,7 +96,7 @@ layout: min
 		<h2>Categories</h2>
 		<ul>
 			{% for category in site.categories %}
-			<li><a href="{{site.baseurl}}/archive#{{category[0] | downcase}}">{{ category[0] }}</a></li>
+			<li><a href="{{site.baseurl}}/blog/archive#{{category[0] | downcase}}">{{ category[0] }}</a></li>
 			{% endfor %}
 		</ul>
 	</section>
@@ -170,7 +170,7 @@ layout: min
 				{% endif %}
 				{%endunless%}
 				{% endfor %}
-				<a class="blog_item more_posts" href="/archive">
+				<a class="blog_item more_posts" href="/blog/archive">
 					<div class="post_details">
 						<figure></figure>
 
@@ -184,7 +184,7 @@ layout: min
 				<h2>Categories</h2>
 				<ul>
 					{% for category in site.categories %}
-					<li><a href="{{site.baseurl}}/archive#{{category[0] | downcase}}">{{ category[0] }}</a></li>
+					<li><a href="{{site.baseurl}}/blog/archive#{{category[0] | downcase}}">{{ category[0] }}</a></li>
 					{% endfor %}
 				</ul>
 			</div>
