@@ -58,7 +58,7 @@ gulp.task('jsmin', function () {
 });
 
 gulp.task("rev-all", function () {
-    return gulp.src("_site/**")
+    return gulp.src(["_site/**", "!_site/assets/fonts/**/*"])
         .pipe(revall.revision({
             dontGlobal: ['.woff', '.woff2', '.ttf', '.eot'],
             dontRenameFile: ['.html', '.txt', '.xml', 'staticwebapp.config']
@@ -66,15 +66,9 @@ gulp.task("rev-all", function () {
         .pipe(gulp.dest("_cdn"));
 });
 
-// Task to copy fonts to _cdn directory because rev-all might modify them in a bad way.
-gulp.task('copy-fonts', function () {
-    return gulp.src('_site/assets/fonts/**/*')
-        .pipe(gulp.dest('_cdn/assets/fonts'));
-});
-
 gulp.task('default', gulp.series(
     'htmlmin',
     'rev-all',
-    gulp.parallel('jsmin', 'copy-fonts'),
+    'jsmin',
     gulp.parallel('brotli', 'gzip', 'svg-to-png')
 ));

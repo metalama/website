@@ -46,6 +46,10 @@ jobs:
       - name: Run Gulp Tasks
         run: npx gulp 
 
+        # For some reason fonts are corrupted by Gulp. We need to copy them again.
+      - name: Copy fonts to _cdn directory
+        run: cp -r assets/fonts _cdn/assets/fonts
+
       - name: Copy robots.txt
         run: cp robots.draft.txt _cdn/robots.txt        
 
