@@ -9,6 +9,7 @@
     "gulp-svg2png": "^2.0.2"
   },
   "dependencies": {
-    "gulp-htmlmin": "^5.0.1"
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-terser": "^2.1.0"
   }
 }

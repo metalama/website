@@ -5,6 +5,7 @@ import brotli from 'gulp-brotli';
 import gzip from 'gulp-gzip';
 import htmlmin from 'gulp-htmlmin';
 import revall from 'gulp-rev-all';
+import terser from 'gulp-terser';
 
 gulp.task('svg-to-png', function () {
     return gulp.src('./_cdn/assets/images/**/*.svg') // Adjust to match SVG files in all subdirectories
@@ -23,7 +24,7 @@ gulp.task('svg-to-png', function () {
 
 // Task to create Brotli-compressed assets and pages.
 gulp.task('brotli', function () {
-    return gulp.src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json',  './_cdn/assets/fonts/**/*.{woff,woff2,ttf,eot}', './_cdn/**/*.html' ])
+    return gulp.src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json', './_cdn/**/*.html' ])
         .pipe(brotli.compress({
             extension: 'br',
             quality: 11
@@ -35,7 +36,7 @@ gulp.task('brotli', function () {
 
 // Task to create Gzip-compressed assets and pages.
 gulp.task('gzip', function () {
-    return gulp.src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json', './_cdn/assets/fonts/**/*.{woff,woff2,ttf,eot}', './_cdn/**/*.html' ])
+    return gulp.src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json', './_cdn/**/*.html' ])
         .pipe(gzip())
         .pipe(gulp.dest(function (file) {
             return file.base;
@@ -49,10 +50,18 @@ gulp.task('htmlmin', () => {
       .pipe(gulp.dest('_site'));
 });
 
+// Task to minify JavaScript files
+gulp.task('jsmin', function () {
+    return gulp.src('_cdn/**/*.js')
+        .pipe(terser())
+        .pipe(gulp.dest('_cdn'));
+});
+
 gulp.task("rev-all", function () {
     return gulp.src("_site/**")
         .pipe(revall.revision({
-            dontRenameFile: ['.html', '.txt', '.xml', 'staticwebapp.config', '.woff', '.woff2', '.ttf', '.eot']
+            dontRenameFile: ['.html', '.txt', '.xml', 'staticwebapp.config', '.woff', '.woff2', '.ttf', '.eot'],
+            dontUpdateReference: ['.woff', '.woff2', '.ttf', '.eot']
         }))
         .pipe(gulp.dest("_cdn"));
 });
@@ -61,5 +70,6 @@ gulp.task("rev-all", function () {
 gulp.task('default', gulp.series(
     'htmlmin',
     'rev-all',
-    gulp.parallel('brotli', 'gzip', 'svg-to-png' )
+    'jsmin',
+    gulp.parallel('brotli', 'gzip', 'svg-to-png'  )
 ));
