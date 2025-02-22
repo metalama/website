@@ -172,6 +172,10 @@
                         <a href="{{ item.url }}" title="{{ item.description }}"
                             data-submenu="{% if item.drop_down_menu %}dropdown{{ itemId }}{% endif %}"
                             class="{% if isItemActive %}active{% endif %}">
+                            {% if item.premium %}
+                                <i class="premium no-tooltip"></i>
+                            {% endif %}
+
                             {{ item.title }}
                         </a>
 

@@ -138,4 +138,11 @@ You receive feedback in seconds. No need to wait for a build or the CI/CD pipeli
 Other verification tools may fail to understand the code after it has been enhanced by aspects. Metalama Architecture
 Validation is, of course, fully integrated with the Metalama Aspect Framework.
 
-## Alternatives
+## Resources
+
+- Reference documentation: [Validating architecture](https://doc.postsharp.net/metalama/conceptual/architecture).
+- Source
+  code: [Metalama.Extensions.Architecture](https://github.com/postsharp/Metalama.Extensions/tree/release/2024.2/src/Metalama.Extensions.Architecture)
+- NuGet package: [Metalama.Extensions.Architecture](https://www.nuget.org/packages/Metalama.Extensions.Architecture)
+
+

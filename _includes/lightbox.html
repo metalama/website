@@ -1,0 +1,18 @@
+<div id="lightbox" style="display: none;">
+    <div id="lightboxFrame">
+        <span class="close cursor" onclick="closeLightbox()">&times;</span>
+
+        <!-- Displayed content -->
+        <div id="lightboxContent"></div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="moveLightbox(-1)">&#10094;</a>
+        <a class="next" onclick="moveLightbox(1)">&#10095;</a>
+
+        <!-- Carousel -->
+        <ul id="lightboxCarousel">
+        </ul>
+    </div>
+</div>
+
+<script src="/assets/js/lightbox.js"></script>
