@@ -18,20 +18,9 @@ Suppose you have this source code:
 ```cs
 public class HatShop
 {
-    private int _executionCount;
-
     public void PlaceOrder()
     {
-        this._executionCount++;
-
-        if ( this._executionCount % 10 == 0 )
-        {
-            throw new Exception();
-        }
-        else
-        {
-            Console.WriteLine( "Ordering a hat." );
-        }
+        Console.WriteLine( "Ordering a hat." );
     }
 }
 ```
@@ -56,9 +45,10 @@ The `[MeasureExecutionCount]` will transform the `HatShop` class into this:
 ```csharp
 public class HatShop
 {
+  // This field is added by the aspect.
   private HatShopMetrics _hatShopMetrics;
-  private int _executionCount;
 
+  // This constructor is added by the aspect. It pulls the dependency.
   public HatShop(HatShopMetrics hatShopMetrics = null)
   {
     this._hatShopMetrics = hatShopMetrics;
@@ -66,17 +56,12 @@ public class HatShop
 
   public void PlaceOrder()
   {
+    // This line of code is added by the aspect.
     this._hatShopMetrics?.PlaceOrderExecutionCount.Add(1);
 
-    this._executionCount++;
-    if (this._executionCount % 10 == 0)
-    {
-        throw new Exception();
-    }
-    else
-    {
-        Console.WriteLine("Ordering a hat.");
-    }
+    // This is the original source code.
+    Console.WriteLine("Ordering a hat.");
+  }
 }
 ```
 

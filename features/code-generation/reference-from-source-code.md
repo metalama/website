@@ -46,7 +46,7 @@ var fish = new Fish() { Name = "Hannibal", Species = "Tilapia" };
 var memento = fish.SaveToMemento();
 
 // Change
-fish.Tilapia = "Shark";
+fish.Name = "Shark";
 
 // Undo change by using the generated RestoreMemento method.
 fish.RestoreMemento(memento);
