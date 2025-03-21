@@ -1,0 +1,40 @@
+main.download {
+
+    .section--intro {
+        text-align: center;
+    }
+
+    .section--top {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+
+        > * {
+            flex: 1;
+        }
+
+    }
+
+    .section--get-started {
+        .row {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            align-items: stretch;
+            margin-bottom: 40px;
+            
+            > * {
+                flex: 1;
+                padding: 20px;
+
+                i.icon {
+                    margin-top: 40px;
+                }
+
+                code { 
+                    color: black;
+                }
+            }
+        }
+    }
+}

@@ -52,8 +52,13 @@ header {
     flex-wrap: wrap;
 
     > li {
-      // We need some large padding to make it a good enough nouse click and hover target.
+      // We need some large padding to make it a good enough mouse click and hover target.
       padding: 20px;
+
+      &:has(.btn) {
+        padding: 0px;
+        padding-top: 2px;
+      }
 
       &.has-dropdownmenu {
 

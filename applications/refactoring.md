@@ -1,5 +1,5 @@
 ---
-title: "Refactoring Assistance"
+title: "Refactoring"
 summary: "This article covers how Metalama can help with code refactoring in C# projects."
 keywords:
 - c# refactoring

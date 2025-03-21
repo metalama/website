@@ -186,7 +186,13 @@
                                 {% for entry in item.nodes %}
                                 <li>
                                     <a href="{{ entry.url }}">
-                                        <div class="title">{{ entry.title }}</div>
+                                        <div class="title">
+                                            {{ entry.title }}
+
+                                            {% if entry.premium %}
+                                                <i class="premium no-tooltip"></i>
+                                            {% endif %}
+                                        </div>
                                         <div class="description"> {{ entry.description }}</div>
                                     </a>
                                 </li>
@@ -207,7 +213,13 @@
                                         {% for entry in column.nodes %}
                                         <li>
                                             <a href="{{ entry.url }}">
-                                                <div class="title">{{ entry.title }}</div>
+                                                <div class="title">
+                                                    {{ entry.title }}
+                                                
+                                                    {% if entry.premium %}
+                                                        <i class="premium no-tooltip"></i>
+                                                    {% endif %}
+                                                </div>
                                                 <div class="description"> {{ entry.description }}</div>
                                             </a>
                                         </li>
@@ -226,20 +238,24 @@
                     {% endunless %}
                     {% endfor %}
 
-
-
+               
                 </ul>
 
-                <ul class="level1 right">
-                    <li>
+                <ul class="level1 right" role="menu">
+                    <li role="menuitem">
                         <a href="https://www.github.com/metalama" data-submenu="" class="btn--github"
                             title="Access the source code on GitHub.">
                             <img src="/assets/images/icons/github.svg" alt="Open Source" />
                             <!--<span>Open Source</span>-->
                         </a>
-
-
                     </li>
+
+                    <li role="menuitem">
+                        <a href="/get" data-submenu="" class="btn btn--transparent" title="">
+                            GET METALAMA
+                        </a>
+                    </li>
+
                 </ul>
 
 
@@ -250,7 +266,3 @@
     </header>
     <div class="header-spacer"></div>
     {% endif %}
-
-</body>
-
-</html>

@@ -22,7 +22,13 @@ nodes:
     - url: "/features/code-verification"
       title: "Code Verification"
       description: "Report errors and warnings at design time directly into the editor, or as part of the build process."
-
+      nodes:
+        - url: "/features/code-verification/architecture"
+          title: "Architecture Validation"
+          premium: true
+        - url: "/features/code-verification/eligibility"
+          title: "Aspect Eligibility"
+   
     - url: "/features/applying"
       title: "Applying Aspects"
       description: "Add aspects to code using custom attributes or compile-time fabrics. Leverage aspect inheritance and cross-project transitivity."
@@ -35,8 +41,6 @@ nodes:
         title: "Fabrics"
       - url: "/features/applying/cross-project"
         title: "Cross-Project"
-      - url: "/features/applying/eligibility"
-        title: "Aspect Eligibility"
 
     - url: "/features/design-time-feedback"
       title: "Design-Time Feedback"
@@ -48,9 +52,16 @@ nodes:
       title: "LINQPad Driver"
       description: "Query your code and dependencies directly in LINQPad."
 
-    - url: "/features/how-it-works"
-      title: "How It Works"
-      description: "Understand the inner workings of Metalama and how it transforms your code."
+    - url: "/features/tooling"
+      title: "Visual Studio Tooling"
+      premium: true
+      description: "Boost productivity with advanced syntax highlighting, integrated CodeLens, and intuitive diff views of transformed code."
+
+    - url: "/features/code-fixes"
+      title: "Code Fix Toolkit"
+      premium: true
+      description: "Leverage custom code fixes and code factorings to your team using Metalama's simple API."
+   
 
   - title: "When to Use"
     url: "/applications"
@@ -72,7 +83,17 @@ nodes:
           - title: Defensive Programming
             url: /applications/principles/contracts
             description: "Enforce preconditions, postconditions and invariants with ease, ensuring robust code and reliable behavior."
-                       
+          - title: "Architecture Verification"
+            url: "/applications/architecture-verification"
+            description: "Ensure that both manually written and AI-assisted code adhere to strict architectural standards."
+            premium: true
+            nodes:
+              - url: "/applications/architecture-erosion"
+                title: "Architecture Erosion"            
+          - title: "Refactoring"
+            url: "/applications/refactoring"
+            premium: true
+            description: "Enhance developer productivity with intelligent tooling and built-in safety nets."                       
       - title: "Applications"
         url: "/applications/classics"
         description: "Discover Metalams's core use cases for general application development."
@@ -208,18 +229,7 @@ nodes:
     drop_down_menu: "List"
     premium: true
     nodes:
-      - url: "/premium/tooling"
-        title: "Visual Studio Tooling"
-        description: "Boost productivity with advanced syntax highlighting, integrated CodeLens, and intuitive diff views of transformed code."
-      - title: "Architecture Verification"
-        url: "/premium/architecture-verification"
-        description: "Ensure that both manually written and AI-assisted code adhere to strict architectural standards."
-        nodes:
-          - url: "/premium/architecture-erosion"
-            title: "Architecture Erosion"
-      - title: "Refactoring Assistance"
-        url: "/premium/refactoring"
-        description: "Enhance developer productivity with intelligent tooling and built-in safety nets."
+    
       - url: "/premium/enterprise-support"
         title: "Enterprise Support"
         description: "Benefit from high-priority support, direct access to core developers, and dependable long-term maintenance."

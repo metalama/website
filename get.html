@@ -1,0 +1,170 @@
+---
+layout: min
+---
+
+
+<style>
+    .packages p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .packages p.comment {
+        margin-top: 10px;
+        color: green;
+    }
+</style>
+
+
+<style>
+    .wrap {
+        color: #973eff;
+        animation: caret 1s steps(1) infinite;
+        border-right: 0.08em solid #fff;
+        padding-right: 1px;
+    }
+
+    @keyframes caret {
+        50% {
+            border-color: transparent;
+        }
+    }
+</style>
+<script>
+    function TxtType(el, toRotate, period) {
+        var obj = {};
+        obj.toRotate = toRotate;
+        obj.el = el;
+        obj.loopNum = 0;
+        obj.period = parseInt(period, 10) || 2000;
+        obj.txt = '';
+        tick(obj);
+        obj.isDeleting = false;
+
+    };
+
+    function tick(obj) {
+        var i = obj.loopNum % obj.toRotate.length;
+        var fullTxt = obj.toRotate[i];
+
+        if (obj.isDeleting) {
+            //obj.txt = fullTxt.substring(0, obj.txt.length - 1);
+            obj.txt = '';
+        } else {
+            obj.txt = fullTxt.substring(0, obj.txt.length + 1);
+        }
+
+        obj.el.innerHTML = '<span class="wrap">' + obj.txt + '</span>';
+
+
+        var delta = 0.5 * (200 - Math.random() * 100);
+
+        if (obj.isDeleting) { delta /= 2; }
+
+        if (!obj.isDeleting && obj.txt === fullTxt) {
+            delta = obj.period;
+            obj.isDeleting = obj;
+        } else if (obj.isDeleting && obj.txt === '') {
+            obj.isDeleting = false;
+            obj.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function () {
+            tick(obj);
+        }, delta);
+    }
+
+
+    window.onload = function () {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+    };
+</script>
+
+
+<main role="main" class="download">
+    <section class="section bg-purple section--intro">
+        <div class="container">
+            <h1>Download Metalama</h1>
+        </div>
+    </section>
+
+    <section class="section bg-gray section--get-started">
+        <div class="container">
+
+            <div class="row">
+                <div class="bg-whiteBox bg-purpleHashTag wow fadeInUp">
+                    <i class="icon icon--nuget"></i>
+                    <h3>1. Add the NuGet packages</h3>
+                    <p>Add the Metalama packages to your project.</p>
+
+                    <code>
+                        dotnet add package
+                        <span class="typewrite" data-period="2000" data-type='[ "Metalama.Framework", "Metalama.Extensions.Architecture", "Metalama.Patterns.Contracts", "Metalama.Patterns.Observability" ]'>
+                            <span class="wrap"></span>
+                        </span>
+                    </code>
+
+                    <div class="details">
+                        <a class="btn btn--md" style="width: 160px;"
+                            href="https://doc.postsharp.net/metalama/conceptual/configuration/packages">Package
+                            List</a>
+                    </div>
+
+                </div>
+
+
+                <div class="bg-whiteBox bg-purpleHashTag wow fadeInUp">
+                    <i class="icon icon--download"></i>
+                    <h3>2. Install the IDE Tooling</h3>
+                    <p>
+                        Optionally, install the Visual Studio extension to get the best coding experience.
+                    </p>
+
+                    <ul class="list-unstyled list-grayTags list-grayTags-normal">
+                        <li>Diff source code with transformed code.</li>
+                        <li>Code Lens with aspect info.</li>
+                        <li>Syntax highlighting of aspect code.</li>
+                        <li>Aspect Explorer.</li>
+                    </ul>
+
+                    <div class="details">
+                        <a class="btn btn--md" style="width: 140px;"
+                            href="https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp">Download</a>
+
+                    </div>
+
+
+                    <p>
+                        The extension is free for individuals, non-commercial use, open-source contributors, and
+                        companies with 3 or fewer Metalama users under the Metalama Community license.
+                    </p>
+                    <p>For others, a 45-day trial is available.</p>
+
+
+                </div>
+
+                <div class="bg-whiteBox bg-purpleHashTag wow fadeInUp">
+                    <i class="icon icon--rocket"></i>
+                    <h3>3. Start Hacking</h3>
+                    <p>You can start building aspects and adding them to your application.</p>
+                    <p> Don't know where to start? Try first to <a
+                            href="https://doc.postsharp.net/metalama/aspects/simple-aspects/overriding-methods">override
+                            a method</a>.</p>
+                    <p>Don't want to reinvent the wheel? Check <a href="/marketplace">Metalama Marketplace</a> for
+                        ready-made aspects and examples.
+                    </p>
+
+                </div>
+
+            </div>
+    </section>
+
+</main>
