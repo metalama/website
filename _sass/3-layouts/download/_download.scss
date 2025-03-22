@@ -1,5 +1,9 @@
 main.download {
 
+    .container {
+        @extend .desktop_box;
+      }
+    
     .section--intro {
         text-align: center;
     }
@@ -16,6 +20,7 @@ main.download {
     }
 
     .section--get-started {
+        padding-top: 80px;
         .row {
             display: flex;
             flex-direction: row;

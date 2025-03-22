@@ -1,0 +1,68 @@
+main.premium {
+    .container {
+        @extend .desktop_box;
+      }    
+
+      .editions {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        align-items: stretch;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        
+        > * {
+            flex: 1 1 0; 
+            padding: 20px;
+            display: flex;
+            flex-direction: column; // Ensure column layout
+        }
+
+        .price {
+          text-align: center;
+          font-weight: bold;
+          font-size: $font-size-lg;
+        }
+
+        p {
+          line-height: normal;
+        }
+
+        h2, h3, h4, h5, code {
+          color: black;
+        }
+
+        ul {
+          padding-left: 20px;
+          li {
+            position: relative;
+            .info-icon {
+                cursor: pointer;
+                margin-left: 5px;
+                font-size: 0.9em;
+                color: #666;
+                &:hover::after {
+                    content: attr(title);
+                    position: absolute;
+                    left: 20px;
+                    top: 0;
+                    background: #fff;
+                    border: 1px solid #ccc;
+                    padding: 5px;
+                    border-radius: 3px;
+                    white-space: nowrap;
+                    z-index: 10;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+            }
+          }
+        }
+
+        .buttons {
+          margin-top: auto; // Push buttons to the bottom
+          padding-top: 40px;
+          text-align: center;
+        }
+      }
+      
+}

@@ -30,7 +30,7 @@ Your clean code pipeline will need _all_ of these tools.
 
 According to Martin, clean code possesses several characteristics. Let's see how Metalama can help improve each of them.
 
-<table class="left-aligned">
+<table>
   <thead>
       <tr>
         <th>

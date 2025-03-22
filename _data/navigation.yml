@@ -180,7 +180,7 @@ nodes:
         
         
 
-  - title: "Docs"
+  - title: "Docs & Support"
     description: "Access comprehensive documentation, detailed examples, and engaging video tutorials to master Metalama."
     drop_down_menu: "List"
     nodes:
@@ -193,6 +193,13 @@ nodes:
       - url: "https://doc.metalama.net/examples"
         title: "Commented Examples"
         description: "Explore a range of Metalama examples from basic to advanced."
+      - url: "https://github.com/metalama/Metalama/issues"
+        title: "Issue Tracker"
+        description: "Report bugs and feature requests on GitHub, and check their status."        
+      - url: "/premium/enterprise-support"
+        title: "Enterprise Support"
+        description: "Benefit from high-priority support, direct access to core developers, and dependable long-term maintenance."        
+        premium: true
 
   - title: "Community"
     drop_down_menu: "List"
@@ -200,12 +207,6 @@ nodes:
       - url: "/marketplace"
         title: "Libraries & Extensions"
         description: "Accelerate development with open-source extensions and ready-to-use aspects that let you avoid reinventing the wheel."
-      - url: "/blog"
-        title: "Blog"
-        description: "Official announcements, opinions, showcases, and tips from the Metalama team and contributors."
-      - url: "/newsletter"
-        title: "Newsletter"
-        description: "Receive important announcements and monthly updates straight to your inbox."
       - url: "/contributing"
         title: "Contributing"
         description: "Learn how to shape the future of Metalama with your contributions."
@@ -219,19 +220,22 @@ nodes:
             title: "How to File an Issue"
           - url: "/contributing/how-to-run-and-write-tests"
             title: "How to Run and Write Tests"
-      - url: "/slack"
-        title: "Slack Community"
-        external: "true"
-        description: "Join real-time discussions with Metalama experts and fellow developers."
+
+      - url: "/blog"
+        title: "Blog"
+        description: "Official announcements, opinions, showcases, and tips from the Metalama team and contributors."
+      - url: "/newsletter"
+        title: "Newsletter"
+        description: "Receive important announcements and monthly updates straight to your inbox."
+      - url: "https://github.com/orgs/metalama/discussions"
+        title: "GitHub Forums"
+        description: "Ask anything and showcase your aspects on GitHub Discussions."                
+
 
   - url: "/premium"
     title: "Premium"
-    drop_down_menu: "List"
     premium: true
-    nodes:
     
-      - url: "/premium/enterprise-support"
-        title: "Enterprise Support"
-        description: "Benefit from high-priority support, direct access to core developers, and dependable long-term maintenance."
+    
 
 
