@@ -3,6 +3,10 @@ main.premium {
         @extend .desktop_box;
       }    
 
+      .section--intro {
+        font-size: $font-size-lg;
+      }
+
       .editions {
         display: flex;
         flex-direction: row;
@@ -32,6 +36,10 @@ main.premium {
           color: black;
         }
 
+        h2{
+          font-size: $font-size-h3;
+        }
+
         ul {
           padding-left: 20px;
           li {
@@ -41,21 +49,14 @@ main.premium {
                 margin-left: 5px;
                 font-size: 0.9em;
                 color: #666;
-                &:hover::after {
-                    content: attr(title);
-                    position: absolute;
-                    left: 20px;
-                    top: 0;
-                    background: #fff;
-                    border: 1px solid #ccc;
-                    padding: 5px;
-                    border-radius: 3px;
-                    white-space: nowrap;
-                    z-index: 10;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                }
+
             }
+           
           }
+        }
+
+        ul, ul code {
+          color: $gray-700;
         }
 
         .buttons {
