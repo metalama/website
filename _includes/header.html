@@ -182,7 +182,7 @@
                         {% if item.drop_down_menu == "List"%}
 
                         <div id="dropdown{{ itemId }}" class="dropdownmenu list" style="display:none">
-                            <ul class="wrapper">
+                            <ul class="dropdown-wrapper">
                                 {% for entry in item.nodes %}
                                 <li>
                                     <a href="{{ entry.url }}">
@@ -203,7 +203,7 @@
                         {% elsif item.drop_down_menu == "Columns" %}
 
                         <div id="dropdown{{ itemId }}" class="dropdownmenu columns" style="display:none">
-                            <div class="wrapper">
+                            <div class="dropdown-wrapper">
                                 {% for column in item.nodes %}
                                 <div class="column">
                                     <div class="column-title">
