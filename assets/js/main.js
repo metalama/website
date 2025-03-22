@@ -36,6 +36,26 @@ $(document).ready(function() {
   
 });
 
+// Pin the header when scrolling up and unpin it when scrolling down.
+$(document).ready(function() {
+  var lastScrollTop = 0;
+  var $header = $('header');
+
+  $(window).scroll(function() {
+    var scrollTop = $(this).scrollTop();
+
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      $header.removeClass('pinned');
+    } else {
+      // Scrolling up
+      $header.addClass('pinned');
+    }
+
+    lastScrollTop = scrollTop;
+  });
+});
+
 // Manages the drop-down menu in the header.
 $(document).ready(function () {
   $(".has-dropdownmenu").hover(
