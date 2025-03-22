@@ -40,6 +40,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   var lastScrollTop = 0;
   var $header = $('header');
+  var $spacer = $('.header-spacer');
 
   $(window).scroll(function() {
     var scrollTop = $(this).scrollTop();
@@ -47,9 +48,11 @@ $(document).ready(function() {
     if (scrollTop > lastScrollTop) {
       // Scrolling down
       $header.removeClass('pinned');
+      $spacer.hide();
     } else {
       // Scrolling up
       $header.addClass('pinned');
+      $spacer.show();
     }
 
     lastScrollTop = scrollTop;
