@@ -1,4 +1,8 @@
 main.premium {
+
+  @extend .min_height;
+
+  
     .container {
         @extend .desktop_box;
       }    

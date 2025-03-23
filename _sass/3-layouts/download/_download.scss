@@ -1,5 +1,7 @@
 main.download {
 
+    @extend .min_height;
+
     .container {
         @extend .desktop_box;
       }

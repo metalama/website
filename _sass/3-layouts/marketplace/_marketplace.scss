@@ -1,6 +1,6 @@
 .marketplacePage {
 
-  min-height: calc(100vh - $header_height);
+  @extend .min_height;
 
   .search-result-links
   {

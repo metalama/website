@@ -80,9 +80,6 @@ nodes:
           - title: "Aspect-Oriented Programming"
             url: "/applications/principles/aspect-oriented-programming"
             description: "Experience the post-AOP revolution with Metalama’s next-generation aspect capabilities."
-          - title: Defensive Programming
-            url: /applications/principles/contracts
-            description: "Enforce preconditions, postconditions and invariants with ease, ensuring robust code and reliable behavior."
           - title: "Architecture Verification"
             url: "/applications/architecture-verification"
             description: "Ensure that both manually written and AI-assisted code adhere to strict architectural standards."
@@ -133,6 +130,10 @@ nodes:
           - title: "Classic Object Services"
             url: "/applications/object-services"
             description: "Stop writing boilerplate for ToString methods, equality contracts, cloning, and more."
+          - title: Defensive Programming
+            url: /applications/contracts
+            description: "Enforce preconditions, postconditions and invariants with ease, ensuring robust code and reliable behavior."
+
       - title: "DevOps"
         url: "/applications/devops"
         description: "Boost performance and resilience while maintaining top-tier code quality with Metalama’s dynamic metaprogramming."
