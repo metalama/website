@@ -1,6 +1,7 @@
 nodes:
   - title: "Overview"
     url: "/"
+    hidden: true
     
   - url: "/features"
     title: "Features"
@@ -131,7 +132,7 @@ nodes:
             url: "/applications/object-services"
             description: "Stop writing boilerplate for ToString methods, equality contracts, cloning, and more."
           - title: Defensive Programming
-            url: /applications/contracts
+            url: /applications/principles/contracts
             description: "Enforce preconditions, postconditions and invariants with ease, ensuring robust code and reliable behavior."
 
       - title: "DevOps"

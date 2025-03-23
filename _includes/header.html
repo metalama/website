@@ -205,12 +205,14 @@
                         <div id="dropdown{{ itemId }}" class="dropdownmenu columns" style="display:none">
                             <div class="dropdown-wrapper">
                                 {% for column in item.nodes %}
+                                    {%  unless column.hidden %} 
                                 <div class="column">
                                     <div class="column-title">
                                         <a href="{{ column.url }}">{{ column.title }}</a>
                                     </div>
                                     <ul>
                                         {% for entry in column.nodes %}
+                                            {%  unless entry.hidden %} 
                                         <li>
                                             <a href="{{ entry.url }}">
                                                 <div class="title">
@@ -223,9 +225,11 @@
                                                 <div class="description"> {{ entry.description }}</div>
                                             </a>
                                         </li>
+                                    {% endunless %}
                                         {% endfor %}
                                     </ul>
                                 </div>
+                                {% endunless %}
                                 {% endfor %}
                             </div>
                         </div>
@@ -251,8 +255,8 @@
                     </li>
 
                     <li role="menuitem">
-                        <a href="/get" data-submenu="" class="btn btn--transparent" title="">
-                            DOWNLOAD
+                        <a href="/get" data-submenu="" title="How to add Metalama to your projects." class="btn--download">
+                            <img src="/assets/images/icons/download-white.svg" alt="Download" />
                         </a>
                     </li>
 

@@ -23,8 +23,7 @@ header {
   
 
   nav{
-    margin-left: 40px;
-    margin-top: 12px;
+    margin-top: 13px;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -50,6 +49,7 @@ header {
     margin: 0;
   }
 
+  
   ul.level1 {
     display: flex;
     flex-wrap: wrap;
@@ -148,10 +148,17 @@ header {
     }
 
   }
-}
+
+  ul.right > li { 
+    padding-left: 0; 
+    padding-right: 0; 
+  }
 
 
-.btn--github {
+
+
+
+.btn--github, .btn--download {
   display: flex;
   flex-direction: row;
   margin-left: 20px;
@@ -177,9 +184,14 @@ header {
   }  
 }
 
+}
+
+
 section {
   overflow: hidden;
 }
+
+
 
 .header-spacer {
   // This must correspond to the height of the header. The header is fixed, and without this spacer, we would display the content under the header.

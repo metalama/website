@@ -166,13 +166,13 @@
   }
 
   &-whiteBox-nz {
-    box-shadow: 5px 15px 40px rgba(0, 0, 0, 0.13);
+    box-shadow: 5px 15px 40px rgba(0, 0, 0, 0.4);
     background-color: $white;
     color: $darkPurple;
   }
 
   &-whiteBox {
-    box-shadow: 5px 15px 40px rgba(0, 0, 0, 0.13);
+    box-shadow: 5px 15px 40px rgba(0, 0, 0, 0.4);
     background-color: $white;
     color: $darkPurple;
     transition: all 500ms ease;
