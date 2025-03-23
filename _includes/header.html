@@ -169,9 +169,11 @@
 
 
                     <li class="{% if item.drop_down_menu %}has-dropdownmenu{% endif %}">
-                        <a href="{{ item.url }}" title="{{ item.description }}"
-                            data-submenu="{% if item.drop_down_menu %}dropdown{{ itemId }}{% endif %}"
-                            class="{% if isItemActive %}active{% endif %}">
+                        <a href="{{ item.url }}" 
+                            {% unless item.drop_down_menu %}title="{{ item.description }}"{% endunless %}
+                            {% if item.drop_down_menu %}data-submenu="dropdown{{ itemId }}"{% endif %}
+                            {% if isItemActive %}class="active"{% endif %}
+                        >
                             {% if item.premium %}
                             <i class="premium no-tooltip"></i>
                             {% endif %}
@@ -255,7 +257,7 @@
                     </li>
 
                     <li role="menuitem">
-                        <a href="/get" data-submenu="" title="How to add Metalama to your projects." class="btn--download">
+                        <a href="/get" data-submenu="" title="Add Metalama to your projects and install the IDE tooling." class="btn--download">
                             <img src="/assets/images/icons/download-white.svg" alt="Download" />
                         </a>
                     </li>

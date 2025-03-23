@@ -96,23 +96,26 @@ layout: min
         </div>
     </section>
 
-    <section class="section bg-gray section--get-started">
+    <section class="section bg-purple section--get-started">
         <div class="container">
 
             <div class="row">
                 <div class="bg-whiteBox bg-purpleHashTag wow fadeInUp">
                     <i class="icon icon--nuget"></i>
-                    <h3>1. Add the NuGet packages</h3>
-                    <p>Add the Metalama packages to your project.</p>
+                    <div class="body">
+                        <h3>1. Add the NuGet packages</h3>
+                        <p>Add the Metalama packages to your project.</p>
 
-                    <code>
+                        <code>
                         dotnet add package
                         <span class="typewrite" data-period="2000" data-type='[ "Metalama.Framework", "Metalama.Extensions.Architecture", "Metalama.Patterns.Contracts", "Metalama.Patterns.Observability" ]'>
                             <span class="wrap"></span>
                         </span>
                     </code>
 
-                    <div class="details">
+                    </div>
+
+                    <div class="buttons">
                         <a class="btn btn--md" style="width: 160px;"
                             href="https://doc.postsharp.net/metalama/conceptual/configuration/packages">Package
                             List</a>
@@ -123,44 +126,53 @@ layout: min
 
                 <div class="bg-whiteBox bg-purpleHashTag wow fadeInUp">
                     <i class="icon icon--download"></i>
-                    <h3>2. Install the IDE Tooling</h3>
-                    <p>
-                        Optionally, install the Visual Studio extension to get the best coding experience.
-                    </p>
+                    <div class="body">
+                        <h3>2. Install the IDE Tooling</h3>
+                        <p>
+                            Optionally, install the Visual Studio extension to get the best coding experience.
+                        </p>
 
-                    <ul class="list-unstyled list-grayTags list-grayTags-normal">
-                        <li>Diff source code with transformed code.</li>
-                        <li>Code Lens with aspect info.</li>
-                        <li>Syntax highlighting of aspect code.</li>
-                        <li>Aspect Explorer.</li>
-                    </ul>
+                        <ul class="list-unstyled list-grayTags list-grayTags-normal">
+                            <li>Diff source code with transformed code.</li>
+                            <li>Code Lens with aspect info.</li>
+                            <li>Syntax highlighting of aspect code.</li>
+                            <li>Aspect Explorer.</li>
+                        </ul>
 
-                    <div class="details">
+
+                        <p>
+                            The extension is free for individuals, non-commercial use, open-source contributors, and
+                            companies with 3 or fewer Metalama users under the Metalama Community license.
+                        </p>
+
+                        <p>For others, a 45-day trial is available.</p>
+                    </div>
+                    <div class="buttons">
                         <a class="btn btn--md" style="width: 140px;"
                             href="https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp">Download</a>
 
                     </div>
 
 
-                    <p>
-                        The extension is free for individuals, non-commercial use, open-source contributors, and
-                        companies with 3 or fewer Metalama users under the Metalama Community license.
-                    </p>
-                    <p>For others, a 45-day trial is available.</p>
-
-
                 </div>
 
                 <div class="bg-whiteBox bg-purpleHashTag wow fadeInUp">
                     <i class="icon icon--rocket"></i>
-                    <h3>3. Start Hacking</h3>
-                    <p>You can start building aspects and adding them to your application.</p>
-                    <p> Don't know where to start? Try first to <a
-                            href="https://doc.postsharp.net/metalama/aspects/simple-aspects/overriding-methods">override
-                            a method</a>.</p>
-                    <p>Don't want to reinvent the wheel? Check <a href="/marketplace">Metalama Marketplace</a> for
-                        ready-made aspects and examples.
-                    </p>
+                    <div class="body">
+                        <h3>3. Start Hacking</h3>
+                        <p>You can start building aspects and adding them to your application.</p>
+                        <p> Don't know where to start? Try first to <a
+                                href="https://doc.postsharp.net/metalama/aspects/simple-aspects/overriding-methods">override
+                                a method</a>.</p>
+                        <p>Don't want to reinvent the wheel? Check <a href="/marketplace">Metalama Marketplace</a> for
+                            ready-made aspects and examples.
+                        </p>
+                    </div>
+
+                    <div class="buttons">
+                        <a class="btn btn--md" style="width: 160px;" href="/marketplace">Marketplace</a>
+                        <a class="btn btn--md" style="width: 160px;" href="TODO">Documentation</a>
+                    </div>
 
                 </div>
 

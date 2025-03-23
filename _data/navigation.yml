@@ -236,6 +236,7 @@ nodes:
 
   - url: "/premium"
     title: "Premium"
+    description: "Unlock advanced features and enterprise support with Metalama premium editions."
     premium: true
     
     

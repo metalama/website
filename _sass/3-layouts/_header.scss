@@ -10,26 +10,25 @@ header {
     top: 0;
     left: 0;
   }
-  
-  .wrapper 
-  {
+
+  .wrapper {
     @extend .desktop_box;
 
     display: flex;
     flex-direction: row;
     width: 100%;
-  
-  }
-  
 
-  nav{
+  }
+
+
+  nav {
     margin-top: 13px;
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
     margin-right: 80px;
-  } 
+  }
 
   a,
   a:visited,
@@ -49,12 +48,12 @@ header {
     margin: 0;
   }
 
-  
+
   ul.level1 {
     display: flex;
     flex-wrap: wrap;
 
-    > li {
+    >li {
       // We need some large padding to make it a good enough mouse click and hover target.
       padding: 20px;
 
@@ -67,7 +66,7 @@ header {
 
         position: relative;
 
-        > a:after {
+        >a:after {
           border-left: 4px solid transparent;
           border-right: 4px solid transparent;
           border-top: 4px solid #a0a0a0;
@@ -85,6 +84,7 @@ header {
 
         background-color: #130722;
         margin-top: 10px;
+        z-index: 10000002;
 
         ul {
           display: flex;
@@ -108,8 +108,7 @@ header {
           width: 100%;
           position: fixed;
           left: 0;
-          border-bottom: $purple 1px solid;
-          
+
 
           .dropdown-wrapper {
             gap: 40px;
@@ -120,9 +119,10 @@ header {
 
             .column {
               flex: 1; // Ensure all columns have equal width
-          }
+            }
 
           }
+
           .column-title {
 
             margin-bottom: 20px;
@@ -140,7 +140,7 @@ header {
 
           padding: 30px;
           max-width: 450px;
-          position:fixed;
+          position: fixed;
 
         }
 
@@ -149,40 +149,39 @@ header {
 
   }
 
-  ul.right > li { 
-    padding-left: 0; 
-    padding-right: 0; 
+  ul.right>li {
+    padding-left: 0;
+    padding-right: 0;
   }
 
 
+  .btn--github,
+  .btn--download {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
 
+    img {
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: 5px;
+      margin-top: -5px;
+    }
 
+    border: none;
+    background: transparent;
+    color: #fff;
+    text-transform: none;
 
-.btn--github, .btn--download {
-  display: flex;
-  flex-direction: row;
-  margin-left: 20px;
-  
-  img {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    margin-right: 5px;
-    margin-top: -5px;
+    &:hover {
+      border: none !important;
+    }
+
+    a:hover {
+      color: #fff !important;
+    }
   }
-  border: none;
-  background: transparent;
-  color: #fff;
-  text-transform: none;
-
-  &:hover {
-    border: none !important;
-  }
-
-  a:hover {
-    color: #fff !important;
-  }  
-}
 
 }
 

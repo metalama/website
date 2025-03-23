@@ -2,6 +2,8 @@ main.download {
 
     @extend .min_height;
 
+    h1 { text-align: center; }
+
     .container {
         @extend .desktop_box;
       }
@@ -33,6 +35,9 @@ main.download {
             > * {
                 flex: 1;
                 padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
 
                 i.icon {
                     margin-top: 40px;
@@ -40,6 +45,24 @@ main.download {
 
                 code { 
                     color: black;
+                }
+
+                .list-grayTags-normal {
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+
+                .body {
+                    margin-bottom: 40px;
+                }
+
+                .buttons {
+                    align-items: center;
+                    margin-top: auto;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    justify-content: center;
                 }
             }
         }
