@@ -116,7 +116,7 @@ nodes:
                 url: "/applications/design-patterns/proxy"
           - title: "UI Patterns"
             url: "/applications/ui"
-            description: "Enhance UI development with features such as INotifyPropertyChanged, robust code contracts, dependency properties, and efficient undo/redo mechanisms."
+            description: "Streamline UI features such as INotifyPropertyChanged, dependency properties, commands, and undo/redo."
             nodes:
               - title: INotifyPropertyChanged
                 url: /applications/ui/inotifypropertychanged

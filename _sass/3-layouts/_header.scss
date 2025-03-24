@@ -87,9 +87,11 @@ header {
         z-index: 10000002;
 
         ul {
-          display: flex;
-          flex-direction: column;
+          display: grid;
+          grid-auto-flow: column; /* fills down then adds new columns */
+          grid-template-rows: repeat(6, auto); /* max 6 rows, auto-sized to content */
           gap: 20px;
+          grid-template-columns: repeat(auto-fit, 400px); /* Set grid width to 250px */
 
           a {
             .title {
@@ -139,7 +141,6 @@ header {
         &.list {
 
           padding: 30px;
-          max-width: 450px;
           position: fixed;
 
         }
