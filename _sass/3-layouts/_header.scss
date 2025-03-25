@@ -110,12 +110,14 @@ header {
           width: 100%;
           position: fixed;
           left: 0;
-
+          
 
           .dropdown-wrapper {
             gap: 40px;
             display: flex;
             flex-direction: row;
+            @extend .desktop_box;
+
             padding-left: 40px;
             padding-right: 40px;
 

@@ -14,7 +14,7 @@ Thanks to Metalama's [Observable](https://doc.postsharp.net/metalama/patterns/ob
 automatically. The plumbing code is generated on-the-fly when you compile, so your source code remains clean and
 concise.
 
-### Example
+## Example
 
 In the following code, the `[Observable]` aspect is applied to two classes: `Customer` (the Model class) and
 `CustomerViewModel`.
@@ -42,14 +42,14 @@ public partial class CustomerViewModel
 }
 ```
 
-### Benefits
+## Benefits
 
 * **Boost your productivity**. Eliminate 95% of the `INotifyPropertyChanged` repetitive code, as most cases are handled
   automatically.
 * **Avoid errors**. Never forget to call `OnPropertyChanged` again.
 * **Keep your code clean and concise**. Your business logic is no longer hidden behind the observability plumbing.
 
-### Features
+## Features
 
 * Idiomatically C#: Metalama works _with_ your code, not against it.
 * Recursive code analysis algorithm that detects dependencies of properties on fields and other properties within.
@@ -58,7 +58,7 @@ public partial class CustomerViewModel
 * Compatible with MVVM frameworks.
 * Open source (MIT).
 
-### Resources
+## Resources
 
 * Blog
   post: [Implementing INotifyPropertyChanged with Metalama](https://blog.postsharp.net/inotifypropertychanged-metalama).

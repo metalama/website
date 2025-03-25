@@ -14,7 +14,7 @@ Instead, you can use [Metalama Architecture Verification](https://doc.postsharp.
 verify that no code except the factories directly calls the constructor. By doing this, you're making the design intent
 _explicit_ and _executable_, reporting warnings in real-time in case of violation.
 
-### Example
+## Example
 
 Suppose we have a base interface `IShape` and want to verify that only the `ShapeFactory` class can create instances of
 the interface. We can add a `[UseFactory]` aspect to it.
@@ -82,13 +82,13 @@ internal class UseFactoryAttribute : TypeAspect
 }
 ```
 
-### Metalama benefits
+## Metalama benefits
 
 * **Reduce human errors**. You can be confident that no rogue code is calling the constructor directly instead of
   getting an instance from the DI container.
 
 ![](images/factory-validation.png)
 
-### Resources
+## Resources
 
 * Blog post: [The Factory design pattern in C#](https://blog.postsharp.net/factory-pattern)

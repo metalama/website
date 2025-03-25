@@ -52,17 +52,21 @@ nodes:
     - url: "/features/linqpad"
       title: "LINQPad Driver"
       description: "Query your code and dependencies directly in LINQPad."
-
     - url: "/features/tooling"
       title: "Visual Studio Tooling"
       premium: true
       description: "Boost productivity with advanced syntax highlighting, integrated CodeLens, and intuitive diff views of transformed code."
-
     - url: "/features/code-fixes"
       title: "Code Fix Toolkit"
       premium: true
       description: "Leverage custom code fixes and code factorings to your team using Metalama's simple API."
-   
+    - url: "/features/debugging"
+      title: "Flexible Debugging"
+      description: "Choose whether to step into the transformed code or stick to the source code during debugging."
+    - url: "/features/divorce"
+      title: "Divorce"
+      description: "Metalama gracefully accepts when it's time to part ways and makes the breakup process as smooth as possible."
+  
 
   - title: "When to Use"
     url: "/applications"
@@ -122,6 +126,8 @@ nodes:
                 url: /applications/ui/inotifypropertychanged
               - title: Command
                 url: /applications/ui/command
+              - title: Dependency Property
+                url: /applications/ui/dependency-property                
               - title: Change Tracking
                 url: /applications/ui/change-tracking
               - title: Undo-Redo
@@ -132,7 +138,7 @@ nodes:
             url: "/applications/object-services"
             description: "Stop writing boilerplate for ToString methods, equality contracts, cloning, and more."
           - title: Defensive Programming
-            url: /applications/principles/contracts
+            url: /applications/contracts
             description: "Enforce preconditions, postconditions and invariants with ease, ensuring robust code and reliable behavior."
 
       - title: "DevOps"

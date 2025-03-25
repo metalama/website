@@ -2,8 +2,6 @@
 title: "Alternatives for AOP"
 ---
 
-## Alternatives
-
 Today's aspect-oriented frameworks all rely on one of the following approaches:
 
 * [MSIL Rewriting](msil-rewriting) is the process of modifying the binary assembly during the build process. An
@@ -23,7 +21,7 @@ Today's aspect-oriented frameworks all rely on one of the following approaches:
 Here is an overview of the main aspect-oriented frameworks available for .NET in 2024. This list is followed by a table
 comparing their features.
 
-### PostSharp
+## PostSharp
 
 [PostSharp](/il), first launched in 2008, was the first complete implementation of AOP concepts in .NET. It is based
 on [MSIL rewriting](msil-rewriting). PostSharp became a source of inspiration for several MSIL-based AOP frameworks.
@@ -32,7 +30,7 @@ PostSharp includes a broad set of ready-made aspects. It has complete documentat
 
 It comes with a Visual Studio extension that provides visibility into the transformations performed by aspects.
 
-### Metalama
+## Metalama
 
 [Metalama](/metalama), built by the same team as PostSharp and first launched in 2023, is PostSharp's successor. Based
 on Roslyn, Metalama works both at design time (within the IDE) and at compile time. It is today's most complete
@@ -45,7 +43,7 @@ Since Metalama generates C# and not MSIL, you can preview and even debug the cod
 
 Metalama shares the same Visual Studio extension as PostSharp.
 
-### AspectInjector
+## AspectInjector
 
 Like PostSharp, [AspectInjector](https://github.com/pamidur/aspect-injector) is based
 on [MSIL rewriting](msil-rewriting).
@@ -53,19 +51,19 @@ on [MSIL rewriting](msil-rewriting).
 While far from PostSharp in terms of features, AspectInjector supports most code overriding and introduction features
 expected from an AOP framework.
 
-### Rougamo
+## Rougamo
 
 [Rougamo](https://github.com/inversionhourglass/Rougamo) is another compile-time AOP framework based
 on [MSIL rewriting](msil-rewriting). Its code transformation abilities are limited. It implements an AspectJ-inspired
 pointcut mechanism to select code to be modified.
 
-### AspectCore
+## AspectCore
 
 [AspectCore](https://github.com/dotnetcore/AspectCore-Framework) is an aspect-oriented framework based
 on [dynamic proxies](middleware). This approach operates at runtime by generating a _proxy_ type between the consumer
 and the implementation of an interface. It works only with components served by a dependency injection framework.
 
-### Fody
+## Fody
 
 [Fody](https://github.com/Fody/Fody) is an extensible tool for weaving .NET assemblies. It is not an aspect framework in
 itself,
@@ -76,7 +74,7 @@ Fody has a long list of [plug-ins](https://github.com/Fody/Home/blob/master/page
 code transformations. Because these transformations must be coded directly in MSIL and not in C#, Fody does not fully
 qualify as an aspect-oriented framework.
 
-### Comparison
+## Comparison
 
 |                                               | Metalama | PostSharp | AspectInjector | Rougamo | AspectCore      |
 |-----------------------------------------------|----------|-----------|----------------|---------|-----------------|

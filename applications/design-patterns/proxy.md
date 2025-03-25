@@ -18,7 +18,7 @@ There are three ways to generate proxy classes:
   startup time and is not compatible with ahead-of-time compilation.
 * Statically at build time using Roslyn source generators or Metalama.
 
-### Example
+## Example
 
 Let's see how a proxy aspect could work in practice. This example is a slightly simplified version
 of [this sample aspect](https://github.com/postsharp/Metalama.Samples/tree/release/2025.0/examples/Metalama.Samples.Proxy).
@@ -129,14 +129,14 @@ public interface LoggingInterceptor : IInterceptor
 }
 ```
 
-### Metalama benefits
+## Metalama benefits
 
 * **Fast application startup.** Static proxies are generated at compile time instead of at runtime, so your application
   starts faster.
 * **Compatible with AoT compilation.** No reflection is necessary at runtime.
 * **No boilerplate code.** Unlike with the handwritten approach, you just have to write a single line of code.
 
-### Resources
+## Resources
 
 * Source
   code: [Metalama.Samples.Proxy](https://github.com/postsharp/Metalama.Samples/tree/release/2025.0/examples/Metalama.Samples.Proxy)

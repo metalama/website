@@ -30,7 +30,7 @@ Generating code in properties and fields is exactly where Metalama excels.
 You can create an aspect that adds the `IChangeTracking` or `IRevertibleChangeTracking` interface to the target type and
 instruments all fields and properties to set the `IsChanged` property.
 
-### Example
+## Example
 
 Implementing `IChangeTracking` or even `IRevertibleChangeTracking` in the following classes can be as easy as adding a
 `[TrackChanges]` custom attribute. We made a slight modification to the .NET pattern: we require an `IsTrackingChanges`
@@ -142,8 +142,10 @@ public partial class Comment : ISwitchableChangeTracking, IChangeTracking
 A [more complex variant](https://doc.postsharp.net/metalama/examples/change-tracking/change-tracking-3) of the aspect
 can integrate with the `INotifyPropertyChanged` interface or implement the `RejectChanges` functionality.
 
-### Metalama benefits
+## Metalama benefits
 
-### Resources
+TODO
+
+## Resources
 
 * Example: [Change tracking](https://doc.postsharp.net/metalama/examples/change-tracking)

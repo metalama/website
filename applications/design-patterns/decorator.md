@@ -13,7 +13,7 @@ according to what you want to decorate.
 
 If you want to _dynamically_ apply decorators at runtime, see the Proxy pattern.
 
-### Example
+## Example
 
 The `Retry` aspect can be applied to a method as a custom attribute:
 
@@ -71,7 +71,7 @@ internal class RetryAttribute : OverrideMethodAspect
 }
 ```
 
-### Metalama benefits
+## Metalama benefits
 
 * **Use decorators everywhere**: With Metalama, we’re not limited to virtual or interface methods (such as with the
   Proxy pattern); we can intercept anything, even static private fields. This allows you to use the Decorator pattern
@@ -81,6 +81,6 @@ internal class RetryAttribute : OverrideMethodAspect
 * **Improve your code quality**: The generated code is always consistent with the design pattern rules. Every time you
   apply the aspect, you can be sure that the code is compliant with the Decorator pattern.
 
-### Resources
+## Resources
 
 * Blog post: [The Decorator Pattern in Modern C#](https://blog.postsharp.net/decorator-pattern)

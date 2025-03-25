@@ -13,7 +13,7 @@ context, typically from the `Startup` code and from unit tests. Metalama can hel
 you [enforce architectural constraints](https://doc.postsharp.net/metalama/conceptual/architecture) and report
 violations right in the code editor as warnings.
 
-### Example
+## Example
 
 The following `PerformanceCounterManager` class is a modern Singleton example. It has a public constructor, but it's
 registered as a Singleton in the DI container.
@@ -65,12 +65,12 @@ public class SingletonAttribute : TypeAspect
 }
 ```
 
-### Metalama benefits
+## Metalama benefits
 
 * **Reduce human errors**. You can be confident that no improper code is calling the constructor directly instead of
   getting an instance from the DI container.
 
-### Resources
+## Resources
 
 * Blog post: [The Singleton Pattern in C# Today Is Not Your Dad's One!](https://blog.postsharp.net/singleton)
 * Example: [Validating the modern Singleton](https://doc.postsharp.net/metalama/examples/singleton/singleton-2)

@@ -10,7 +10,7 @@ state of an object, or saving the state of an object to a file.
 As the Memento pattern has a lot of boilerplate code, it is a good candidate for being created automatically by
 Metalama.
 
-### Example
+## Example
 
 In the following example, the `[Memento]` custom attribute is all you need to implement the Memento pattern on the
 `Fish` class.
@@ -81,7 +81,7 @@ public partial class Fish : IMementoable
 You can find the complete `Memento` aspect source
 code [here](https://doc.postsharp.net/metalama/preview/examples/memento/memento-1#complete-aspect).
 
-### Metalama benefits
+## Metalama benefits
 
 * **Increase your productivity**: The pattern requires a lot of boilerplate code. Instead of writing it manually, an
   aspect can handle it for you so you can focus exclusively on your business logic.
@@ -89,7 +89,7 @@ code [here](https://doc.postsharp.net/metalama/preview/examples/memento/memento-
 * **Enhance maintainability**: The generated code will always be up-to-date; you'll never forget to update the Memento
   class when you add a new property to the *Mementoable* class.
 
-### Resources
+## Resources
 
 * Blog post: [The Memento Design Pattern in C#, Practically With Examples [2024]](https://blog.postsharp.net/memento)
 * Example: [Implementing the Memento pattern without boilerplate](https://doc.postsharp.net/metalama/examples/memento)

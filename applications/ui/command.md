@@ -17,7 +17,7 @@ package solves this problem by automatically generating the plumbing code. It in
 the [Observable](https://doc.postsharp.net/metalama/patterns/observability) aspect to provide support for the
 `CanExecute` logic.
 
-### Example
+## Example
 
 In the following example, the `[Command]` aspect will generate an `ExecuteSaveCommand` property based on the
 `ExecuteSave` method and the `CanExecuteSave` property.
@@ -38,19 +38,19 @@ public partial class MainWindow : Window
 }
 ```
 
-### Benefits
+## Benefits
 
 * **Boost your productivity**. Minimize boilerplate code to implement ICommand properties.
 * **Keep your code clean and concise**. Your business logic is easier to read and less entangled.
 
-### Features
+## Features
 
 * Idiomatically C#: Metalama works _with_ your code, not against it.
 * Supports simple, parameterized, async, and background commands.
 * Integrates with the `[Observable]` aspect to handle the `CanExecute` functionality without boilerplate.
 * Open source (MIT).
 
-### Resources
+## Resources
 
 * Blog post: [Implementing WPF Commands with Metalama](https://blog.postsharp.net/wpf-command-metalama).
 * Reference documentation: [WPF Commands](https://doc.postsharp.net/metalama/patterns/wpf/command).
@@ -58,49 +58,3 @@ public partial class MainWindow : Window
   code: [Metalama.Patterns.Wpf](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Wpf).
 * NuGet package: [Metalama.Patterns.Wpf](https://www.nuget.org/packages/Metalama.Patterns.Wpf).
 
-## Dependency property
-
-{: .note }
-Available for WPF only
-
-### Example
-
-```csharp
-public partial class FancyTextBlock : UserControl
-{
-    public FancyTextBlock()
-    {
-        InitializeComponent();
-    }
-
-    [Required]
-    [DependencyProperty]
-    public string Text { get; set; } = "Hello, world.";
-
-    [DependencyProperty]
-    public Brush FancyBorderBrush { get; set; }
-
-    public void OnFancyBorderBrushChanged() { /* Handle changes here. */}
-}
-```
-
-### Benefits
-
-* **Boost your productivity**. Generate dependency properties from C# automatic properties without boilerplate code.
-
-### Features
-
-* Integrates with [Metalama.Patterns.Contracts](https://doc.postsharp.net/metalama/patterns/contracts) to set validation
-  rules without reinventing the wheel.
-* Fully customizable: add your own validation or `OnPropertyChanged` callbacks.
-* Open source (MIT).
-
-### Resources
-
-* Blog
-  post: [Implementing WPF Dependency Properties with Metalama](https://blog.postsharp.net/wpf-dependency-property-metalama).
-* Reference
-  documentation: [WPF Dependency Properties](https://doc.postsharp.net/metalama/patterns/wpf/dependency-property).
-* Source
-  code: [Metalama.Patterns.Wpf](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Wpf).
-* NuGet package: [Metalama.Patterns.Wpf](https://www.nuget.org/packages/Metalama.Patterns.Wpf).

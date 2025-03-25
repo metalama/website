@@ -9,7 +9,7 @@ this pattern, the Abstract Builder, allows adding abstraction to the constructio
 The inconvenience of the Builder pattern is the sheer amount of repetitive code required to implement it. This can be
 all but eliminated thanks to a Metalama aspect.
 
-### Example
+## Example
 
 In the following example, we will use the `Song` class for the Builder pattern. The `Song` class has two required
 properties (`Artist` and `Title`) and two optional properties (`Duration` and `Genre`).
@@ -77,7 +77,7 @@ public partial class Song
 
 That's a lot of boilerplate you want to avoid!
 
-### Metalama benefits
+## Metalama benefits
 
 * **Improve productivity**: Any generated code is code you don't have to write and maintain.
 * **Reduce human errors**: Whenever you have to add new optional (or required) properties to the `Song` class, the
@@ -85,7 +85,7 @@ That's a lot of boilerplate you want to avoid!
   adding new fields, properties, and the necessary mappings to move the value of that new Builder property to the Song
   class).
 
-### Resources
+## Resources
 
 * Blog post: [Implementing the Builder pattern with Metalama](https://blog.postsharp.net/builder-pattern-with-metalama)
 * Example: [Implementing the Builder pattern without boilerplate](https://doc.postsharp.net/metalama/examples/builder)

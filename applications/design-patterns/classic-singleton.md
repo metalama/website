@@ -6,7 +6,7 @@ title: "Classic Singleton Pattern"
 It's arguably one of the most famous creational design patterns. It focuses on ensuring that a class has only one
 instance and provides a global point of access to that instance.
 
-### Example
+## Example
 
 The following `PerformanceCounterManager` class is a classic Singleton example; it should consistently gather
 performance counters across an entire application. The `[Singleton]` class attribute that indicates it's a Singleton
@@ -41,7 +41,7 @@ public partial class PerformanceCounterManager
 }
 ```
 
-### Metalama benefits
+## Metalama benefits
 
 * **Better expressiveness**. The `[Singleton]` attribute makes the intent of the class clear and explicit. It's easier
   to understand the code and to maintain it.
@@ -51,6 +51,6 @@ public partial class PerformanceCounterManager
 * **Less code**. You're just saving two lines of code thanks to this aspect, so boilerplate reduction will not be your
   main motivation.
 
-### Resources
+## Resources
 
 * Example: [Classic Singleton](https://doc.postsharp.net/metalama/examples/singleton/singleton-1)

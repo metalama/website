@@ -1,5 +1,6 @@
 ---
 title: Undo-Redo
+toc: false
 ---
 
 Undo/redo is always a popular feature, especially in UIs that do not rely on pushing the _Ok_ button. A common way to

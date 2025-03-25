@@ -14,7 +14,7 @@ High-performance implementations of the memoization pattern can be tricky to imp
 Metalama's [Memoize](https://doc.postsharp.net/metalama/patterns/memoization) aspect makes this process trivial,
 effectively turning a standard read-only property into a memoized one without any boilerplate.
 
-### Example
+## Example
 
 In the following snippet, the `PatternBrush` property is memoized, ensuring it is created only once.
 
@@ -44,13 +44,13 @@ public class ExpensiveResourceViewModel : DependencyObject
 }
 ```
 
-### Benefits
+## Benefits
 
 * Improve your application's performance.
 * Avoid common mistakes in implementing the memoization code pattern.
 * Keep your code clean and concise.
 
-### Resources
+## Resources
 
 * Reference documentation: [Memoization](https://doc.postsharp.net/metalama/patterns/memoization).
 * Source

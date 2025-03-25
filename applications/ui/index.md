@@ -1,6 +1,7 @@
 ---
 title: "Metalama for UI Apps"
 summary: "Shows different use cases of Metalama in writing UI apps (like WPF)."
+toc: false
 keywords:
 - inotifypropertychanged
 - c# code contracts
@@ -25,3 +26,4 @@ WPF.
 | [Memoization](memoization) | Turns standard read-only properties into memoized ones without boilerplate, improving performance. |
 | [Undo-Redo](undo-redo) | Implements the Memento pattern to support undo/redo functionality. |
 | [Command](command) | Generates plumbing code for WPF commands, integrating with `Observable` aspect for `CanExecute` logic. |
+| [Dependency Properties](dependency-property) | Turn C# auto properties into WPF dependency properties. Compatible with [Code Contracts](../contracts).|
