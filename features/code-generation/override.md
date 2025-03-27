@@ -3,10 +3,9 @@ title: Add Behaviors to Hand-Written Code
 toc: false
 ---
 
-Most code generation techniques allow you to _add new classes_ to a project or to _extend partial classes_. However,
-they don't let you inject new behaviors into existing methods, properties, or fields.
-
-Metalama is the only on-the-fly tool that also allows you to add behaviors to existing hand-written code.
+{: .intro }
+Metalama is the only on-the-fly tool that also allows you to add behaviors to existing hand-written code. Other C# generators  allow you to _add new classes_ to a project or to _extend partial classes_, but 
+ don't let you inject new behaviors into existing methods, properties, or fields. 
 
 This ability is essential to implement features like instrumentation (logging, metrics), exception handling (retry,
 throttling), observability (`INotifyPropertyChanged`), thread synchronization (locking), and so on.

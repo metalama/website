@@ -33,3 +33,14 @@ Here are four reasons why you _must_ consider suppressing repetitive code with a
   lifespan of the codebase. Given that maintenance accounts for 55%–95% of a software system's costs, keeping complexity
   low is crucial for post-release team member productivity.
 
+## Metalama's unique features
+
+Metalama is the only framework for .NET that
+
+| Feature | Description |
+|----------|----------|
+| [Simple, Strongly-Typed Templates](templates) | Classic code generators are actually text generators and don’t offer you syntax highlighting, code completion, or error checking for generated code. Metalama is a true, strongly-typed object-oriented code generator featuring T#, a unique C#-to-C# template language. |
+| [Add Behaviors to Hand-Written Code](override) | Metalama is the only on-the-fly tool that also allows you to add behaviors to existing hand-written code. Other C# generators  allow you to _add new classes_ to a project or to _extend partial classes_, but don't let you inject new behaviors into existing methods, properties, or fields. |
+| [Reference Generated Code From Source Code](reference-from-source-code) | With Metalama, your source code can reference generated code as if it were itself source code. This is a significant advancement from the previous MSIL-based generation, whose code additions were not visible from source code. |
+
+

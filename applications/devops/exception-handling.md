@@ -1,5 +1,5 @@
 ---
-title: "Exception Handling & Resilience"
+title: "Exception Handling"
 summary: "This article shows how to use Metalama to improve the resilience and performance of .NET/C# apps by adding exception handling, caching, and other policies."
 keywords:
 - .net resilience
@@ -18,7 +18,7 @@ error-prone.
 
 Let's see how Metalama helps.
 
-## With Polly
+## Resilience with Polly
 
 Polly is the go-to library for implementing resilience in .NET. It implements the most-used policies, is actively
 maintained, and there is probably no need to reinvent the wheel.
@@ -103,7 +103,108 @@ internal class CalculatorService
 * Example: [Implementing an auto-retry aspect that uses Polly](https://doc.postsharp.net/metalama/examples/exception-handling/retry/retry-5)
 * Blog: [5 practical ways to add Polly to your application](https://blog.postsharp.net/polly)
 
-## Without Polly
+## Resilience without Polly
 
 You can, of course, create exception-handling aspects without Polly.
 See [these examples](https://doc.postsharp.net/metalama/examples/exception-handling) to get some inspiration.
+
+
+## Enriching exception stacks
+
+In diagnosing software problems, context is everything. Exception call stacks are a good example of this context, but
+they are not enough: they lack parameter values that give you an idea of the application state.
+
+You can use an aspect to **append the parameter values** to any `Exception` flying through your method. When reporting
+the exception, you can add the parameter values to the call stack.
+
+### Example
+
+Suppose we have the following exception:
+
+```text
+System.NullReferenceException: Object reference not set to an instance of an object
+   at CustomerService.GetCustomerCreationDate(Int32)
+   at HomeController.Index()
+   ...
+```
+
+To continue your investigation, you would need to know for which value of `customerId` the `GetCustomer` method returns
+`null`.
+
+You create an `EnrichExceptionAttribute` aspect that automatically wraps the whole method body in a try-catch block and
+enriches the exception with the parameter values. You
+can [see the full code of that aspect here](https://doc.postsharp.net/metalama/examples/exception-handling/enrich-exception#aspect-code).
+
+However, solely defining an aspect is not enough. You need to apply it to all your methods, so you add this class to
+your project:
+
+```csharp
+internal class Fabric : ProjectFabric
+{
+    public override void AmendProject(IProjectAmender amender) =>
+        amender
+            .SelectTypes()
+            .SelectMany(type => type.Methods)
+            .AddAspectIfEligible<EnrichExceptionAttribute>();
+}
+```
+
+Now, instead of just reporting `exception.ToString()`, you can append the result of `exception.GetContextInfo()` to get
+the following exception stack:
+
+```text
+System.NullReferenceException: Object reference not set to an instance of an object
+   at CustomerService.GetCustomerCreationDate(Int32)
+   at HomeController.Index()
+   ...
+with
+  CustomerService.GetCustomerCreationDate(123)
+```
+
+Now you see (at the bottom of the block) for which value of `customerId` your code fails.
+
+{: .show-more }
+Show me how it works!
+
+The problematic code is the following:
+
+```csharp
+public string GetCustomerCreationDate( int customerId )
+    => _customerDb.GetCustomer( customerId ).CreationData;
+```
+
+When you build the project, the fabric added
+the [EnrichException](https://doc.postsharp.net/metalama/examples/exception-handling/enrich-exception#aspect-code)
+aspect to any public method, including this one. Therefore, instead of your source code, the following code is executed:
+
+```cs
+public string GetCustomerCreationDate( int customerId )
+{
+  try
+  {
+    return _customerService.GetCustomer( customerId ).CreationData;
+  }
+  catch (Exception e)
+  {
+    e.AppendContextFrame($"CustomerService.GetCustomerCreationDate({customerId})");
+    throw;
+  }
+}
+```
+
+In this example, the `AppendContextFrame` is just a method that appends the parameter values to the exception message,
+providing additional context information that can help developers quickly identify the cause of the error.
+
+### Metalama benefits
+
+- **You can just do it!** You would probably not be willing to implement this trick if it were not _free_. With
+  Metalama, you can just do it.
+- **Clean code.** The exception handling code is generated on-the-fly during compilation, so your code remains crystal
+  clear and is easier to maintain.
+- **Easily add or remove.** You can add or remove the feature at any time. You can also enable logging only in select
+  build configurations.
+
+### Resources
+
+*
+Example: [Enriching exceptions with parameter values](https://doc.postsharp.net/metalama/examples/exception-handling/enrich-exception)

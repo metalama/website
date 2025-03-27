@@ -23,3 +23,12 @@ Conversely, *avoid* using Metalama if:
 
 * **Run-time performance.** Your code will run as fast or faster with Metalama than without it. Why faster? Since Metalama generates C# code automatically, it can use optimized, faster patterns that would be cumbersome to implement by hand.
 * **Compilation time.** Metalama typically adds 25% to your `dotnet build` time, which is probably not a big difference for most projects. If it does seem important, it might mean the Metalama's benefits won't outweight the added complexity.
+
+## What are the principal use cases?
+
+| Category | Description |
+|----------|----------|
+| [Principles At Work](principles) | See how Metalama can help implement fundamental software development principles like Clean Code, SOLID, DRY, Aspect-Oriented Programming, Architecture Verification, or Refactoring.|
+| [Applications](applications) | See typical and concrete use cases of Metalama in software application development. |
+| [DevOps](devops) | Learn how can Metalama can help moving from a prototype to a production-ready application with technical features like logging, metrics, caching, exception handling, and resilience. |
+| [Alternatives](alternatives) | See alternatives of Metalama is different areas of application. |

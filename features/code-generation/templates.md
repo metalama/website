@@ -1,11 +1,9 @@
 ---
 title: Simple, Strongly-Typed Templates
-toc: false
 ---
 
-Classic code generators are actually _text_ generators and don't offer you syntax highlighting, code completion, or error checking for generated code.
-
-Metalama is a true, strongly-typed _object-oriented code generator_ featuring T#, a unique C#-to-C# template language. 
+{: .intro }
+Classic code generators are actually _text_ generators and don't offer you syntax highlighting, code completion, or error checking for generated code. Metalama is a true, strongly-typed _object-oriented code generator_ featuring T#, a unique C#-to-C# template language. 
 
 T# templates are pure C# methods and expressions and are 100% compatible with any C# editor. They only differ from normal C# methods in the way that they are compiled.
 
