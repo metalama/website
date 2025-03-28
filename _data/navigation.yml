@@ -12,26 +12,25 @@ nodes:
       description: "Dynamically generate C# code and seamlessly integrate it with handcrafted logic."    
       nodes:
         - url: "/features/code-generation/templates"
-          title: "Simple, Strongly-Typed Template"
+          title: "C#-to-C# Templates"
         - url: "/features/code-generation/override"
-          title: "Add Behaviors to Hand-Written Code"
+          title: "Enhance Hand-Written Code"
         - url: "/features/code-generation/reference-from-source-code"
           title: "Reference Generated Code"
         - url: "/features/code-generation/dependency-injection"
           title: "Dependency Injection"
 
-    - url: "/features/code-verification"
-      title: "Code Verification"
+    - url: "/features/code-validation"
+      title: "Code Validation"
       description: "Report errors and warnings at design time directly into the editor, or as part of the build process."
-      nodes:
-        - url: "/features/code-verification/architecture"
-          title: "Architecture Validation"
-          premium: true
-        - url: "/features/code-verification/eligibility"
-          title: "Aspect Eligibility"
+
+    - url: "/features/dependencies-validation"
+      title: "Dependencies Validation"
+      description: "Validate that types and members are used only from intended projects, namespaces, or types."
+      premium: true
    
     - url: "/features/applying"
-      title: "Applying Aspects"
+      title: "Flexible Targeting of Aspects"
       description: "Add aspects to code using custom attributes, compile-time code queries, aspect inheritance, or cross-project transitivity."
       nodes:
       - url: "/features/applying/custom-attributes"
@@ -44,7 +43,7 @@ nodes:
         title: "Cross-Project"
 
     - url: "/features/design-time-feedback"
-      title: "Design-Time Feedback"
+      title: "Real-Time Editor Feedback"
       description: "Get immediate feedback on your code as you type. No need to recompile your code."
     - url: "/features/aspect-libraries"
       title: "Ready-to-Use Aspect Libraries"
@@ -60,8 +59,11 @@ nodes:
       title: "Code Fix Toolkit"
       premium: true
       description: "Leverage custom code fixes and code factorings to your team using Metalama's simple API."
+    - url: "/features/testing"
+      title: "Test Framework"
+      description: "Test that your aspects generate code and report warnings as expected using our xUnit-compatible test framework."      
     - url: "/features/debugging"
-      title: "Flexible Debugging"
+      title: "Deep Debugging"
       description: "Choose whether to step into the transformed code or stick to the source code during debugging."
     - url: "/features/roslyn-extensibility"
       title: "Roslyn Extensibility"

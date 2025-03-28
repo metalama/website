@@ -1,5 +1,5 @@
 ---
-title: Report Warnings and Errors
+title: Code Validation
 toc: false
 ---
 

@@ -6,6 +6,11 @@ toc: false
 {: .intro }
 With Metalama, your source code can reference generated code as if it were itself source code. This is a significant advancement from the previous MSIL-based generation, whose code additions were not visible from source code.
 
+## Benefits
+
+* **Idiomatically C#**. No need for cumbersome constructs like in MSIL-based approaches.
+* **IntelliSense**. Code completion just works with generated code.
+
 
 ## Example
 

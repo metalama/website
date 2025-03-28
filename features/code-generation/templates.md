@@ -1,5 +1,5 @@
 ---
-title: Simple, Strongly-Typed Templates
+title: C#-to-C# Templates
 ---
 
 {: .intro }
@@ -14,6 +14,8 @@ Benefits of T# include:
 - **Full Intellisense support**. Includes syntax highlighting, code completion, member list, and error detection.
 - **100% C# compatible**. You can use any C# editor.
 - **High performance.** Generate high-performance code without any run-time overhead.
+- **No need to learn MSIL.** It's just the C# you already know.
+- **Completely debuggable.** You can step into code you generate. [Learn more](../debugging).
 - Additional syntax highlighting is available as premium feature thanks to Visual Studio Tools for Metalama.
 
 ## Example
