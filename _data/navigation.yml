@@ -24,26 +24,21 @@ nodes:
       title: "Code Validation"
       description: "Report errors and warnings at design time directly into the editor, or as part of the build process."
 
-    - url: "/features/dependencies-validation"
-      title: "Dependencies Validation"
-      description: "Validate that types and members are used only from intended projects, namespaces, or types."
+    - title: "Architecture Verification"
+      url: "/features/architecture-verification"
+      description: "Ensure that both manually written and AI-assisted code adhere to strict architectural standards."
       premium: true
-   
+#      nodes:
+#        - url: "/applications/architecture-erosion"
+#          title: "Architecture Erosion"
+          
     - url: "/features/applying"
-      title: "Flexible Targeting of Aspects"
+      title: "Powerful Code Selection Mechanisms"
       description: "Add aspects to code using custom attributes, compile-time code queries, aspect inheritance, or cross-project transitivity."
       nodes:
-      - url: "/features/applying/custom-attributes"
-        title: "Custom Attributes"
-      - url: "/features/applying/inheritance"
-        title: "Aspect Inheritance"
-      - url: "/features/applying/fabrics"
-        title: "Fabrics"
-      - url: "/features/applying/cross-project"
-        title: "Cross-Project"
 
     - url: "/features/design-time-feedback"
-      title: "Real-Time Editor Feedback"
+      title: "Immediate Editor Feedback"
       description: "Get immediate feedback on your code as you type. No need to recompile your code."
     - url: "/features/aspect-libraries"
       title: "Ready-to-Use Aspect Libraries"
@@ -89,14 +84,7 @@ nodes:
             description: "Take SOLID and DRY principles to the next level with aspects and code verification."
           - title: "Aspect-Oriented Programming"
             url: "/applications/principles/aspect-oriented-programming"
-            description: "Experience the post-AOP revolution with Metalama’s next-generation aspect capabilities."
-          - title: "Architecture Verification"
-            url: "/applications/architecture-verification"
-            description: "Ensure that both manually written and AI-assisted code adhere to strict architectural standards."
-            premium: true
-            nodes:
-              - url: "/applications/architecture-erosion"
-                title: "Architecture Erosion"            
+            description: "Experience the post-AOP revolution with Metalama’s next-generation aspect capabilities."            
           - title: "Refactoring"
             url: "/applications/refactoring"
             premium: true

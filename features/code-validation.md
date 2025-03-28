@@ -3,27 +3,27 @@ title: Code Validation
 toc: false
 ---
 
-Metalama is not just a code generation tool. It is a comprehensive meta-programming framework where units of behavior
-are called _aspects_. Examples of aspects are `[Retry]`, `[Memento]`, or `[MeasureExecutionCount]`. Aspects don't only
-encapsulate code generation but also code _validation_. For instance, the `[MeasureExecutionCount]` aspect relies on
-dependency injection to pull the metrics object. Therefore, it can only be applied to non-static methods. Aspects in
-Metalama also have the ability to validate code and report errors and warnings.
+{: .intro }
+When enhancing a class or method, it is crucial to validate that the target code meets your assumptions. If it does not, a clear and appropriate error message should be reported. In Metalama, aspects not only have the ability to generate code but also to _validate_ it. You can even create aspects that serve purely as validators without any code generation logic.
 
-There are two validation mechanisms in Metalama. You can:
+Metalama provides two mechanisms for validation:
 
-- _Define eligibility conditions_ on which declarations the aspect can be applied. When eligibility conditions are
-  violated, an error is reported, and the aspect is not applied. Also, the refactoring menu in the IDE would only
-  suggest adding eligible aspects.
-- _Programmatically report warnings and errors_ when any situation occurs.
+- _Define eligibility conditions_ to specify which declarations the aspect can be applied to. If eligibility conditions are violated, an error is reported, and the aspect is not applied. Additionally, the refactoring menu in the IDE will only suggest adding eligible aspects.
+- _Programmatically report warnings and errors_ when specific conditions are encountered.
 
-Both approaches can report warnings and errors immediately as you type or at the build.
+Both approaches can report warnings and errors in real-time as you type or during the build process.
+
+## Benefits
+
+- **Least Astonishment.** As an aspect author, it is your responsibility to ensure that users of your aspects receive clear and meaningful error messages.
+- **Fail Fast, Early.** Avoid exceptions in your aspect logic or confusing C# errors due to invalid generated code.
 
 ## Example
 
-The following aspect makes two assumptions about the method to which it is applied:
+The following aspect makes two assumptions about the method it is applied to:
 
-- It assumes the method to be non-static, which is an eligibility condition.
-- It requires the class to contain a field named `_logger` and will report an error if it does not.
+- The method must be non-static. This is an eligibility condition because the aspect should not appear in the lightbulb menu for static methods.
+- The containing class must have a field named `_logger`. If this condition is not met, an error will be reported.
 
 ```cs
 internal class LogAttribute : OverrideMethodAspect
@@ -37,6 +37,9 @@ internal class LogAttribute : OverrideMethodAspect
     {
         base.BuildEligibility( builder );
 
+        // Ensure the target method is non-static; otherwise, do not
+        // suggest the aspect in the lightbulb menu.
+
         builder.MustNotBeStatic();
     }
 
@@ -46,6 +49,7 @@ internal class LogAttribute : OverrideMethodAspect
 
         if ( !builder.Target.DeclaringType.Fields.OfName( "_logger" ).Any() )
         {
+            // Report an error if the '_logger' field is missing.
             builder.Diagnostics.Report(
               _error.WithArguments( builder.Target.DeclaringType ) );
         }
@@ -59,3 +63,9 @@ internal class LogAttribute : OverrideMethodAspect
     }
 }
 ```
+
+## Resources
+
+* Reference documentation:
+    - [Reporting and suppressing diagnostics](https://doc.metalama.net/conceptual/aspects/diagnostics)
+    - [Defining the aspect eligibility](https://doc.metalama.net/conceptual/aspects/eligibility)

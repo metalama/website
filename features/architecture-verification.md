@@ -2,10 +2,10 @@
 summary: "Metalama is a tool for architecture verification, ensuring that your C# codebase complies to the intended software architecture."
 title: "Architecture Verification for .NET"
 short_title: "Architecture Verification"
+toc: false
 keywords:
 - architecture verification
 - software architecture verification
-- ArchUnitNET
 ---
 
 {: .intro }
@@ -28,7 +28,7 @@ Typically, the following rules can be automatically enforced in a codebase:
 - Ensure that code is implemented according to pattern guidelines.
  
 {: .note }
-You will need Metalama Professional to use the approaches described in this article.
+This feature requires a Metalama Professional license.
 
 
 ## Benefits
@@ -49,20 +49,9 @@ Here are four reasons why you _must_ consider automatically verifying your codeb
 - **Streamline code reviews.** With fewer trivial violations to address, code reviews become more efficient and less
   frustrating. By addressing most minor issues in real time, code reviews can focus on essential aspects.
 
-## Key features
+## Features
 
-### Simple and extensible architecture verification API
-
-Metalama includes a highly usable API to help you verify your code against your architectural rules.
-
-There are two ways to define rules:
-
-- Declaratively using custom attributes, and
-- Programmatically using fabrics.
-
-Both the declarative and the programmatic API can be extended to enforce virtually any rule.
-
-#### Custom attributes: hand-pick declarations
+### Custom attributes: hand-pick declarations
 
 Here is how to enforce a naming convention where all classes implementing `IDocumentFactory` must be suffixed `Factory`:
 
@@ -85,7 +74,7 @@ public class Invoice
 }
 ```
 
-#### Fabrics: select in bulk
+### Fabrics: select in bulk
 
 The following code enforces that `internal` members of the current namespace are not used by a different namespace.
 
@@ -127,22 +116,21 @@ This has several benefits:
 - They can be suppressed or escalated using `#pragma warning`, `.editorconfig`, or `WarnAsError`.
 - They can be managed by tools like Sonar or Qodana.
 
-### Immediate feedback while editing
+### Immediate editor feedback
 
 Metalama runs within the IDE and verifies your code as you type.
 
 You receive feedback in seconds. No need to wait for a build or the CI/CD pipeline to complete.
 
-### Understand aspects
+### Understands aspects
 
 Other verification tools may fail to understand the code after it has been enhanced by aspects. Metalama Architecture
 Validation is, of course, fully integrated with the Metalama Aspect Framework.
 
 ## Resources
 
-- Reference documentation: [Validating architecture](https://doc.postsharp.net/metalama/conceptual/architecture).
-- Source
-  code: [Metalama.Extensions.Architecture](https://github.com/postsharp/Metalama.Extensions/tree/release/2024.2/src/Metalama.Extensions.Architecture)
+- Reference documentation: [Verifying  architecture](https://doc.postsharp.net/metalama/conceptual/architecture).
+- Source code: [Metalama.Extensions.Architecture](https://github.com/postsharp/Metalama.Extensions/tree/release/2024.2/src/Metalama.Extensions.Architecture)
 - NuGet package: [Metalama.Extensions.Architecture](https://www.nuget.org/packages/Metalama.Extensions.Architecture)
 
 
