@@ -1,4 +1,4 @@
 ---
-title: Flexible Debugging
+title: Debugging
 toc: false
 ---

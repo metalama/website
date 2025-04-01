@@ -70,8 +70,8 @@
 
                 <li class="{% if page_url == level2.url %}active{% endif %}">
 
-                    <a href="{{ level2.url | default: level2.shortcut_url }}" title="{{ level2.description }}">
-                        {{ level2.title }}
+                    <a href="{{ level2.url | default: level2.shortcut_url }}" >
+                        <span title="{{ level2.description }}">{{ level2.title }}</span>
 
                         {% if level2.premium %}
                         <i class="premium"></i>
@@ -97,8 +97,8 @@
                         {% endfor %}
 
                         <li class="{% if page_url == level3.url %}active{% endif %}">
-                            <a href="{{ level3.url }}" title="{{ level3.description }}">
-                                {{ level3.title }}
+                            <a href="{{ level3.url }}">
+                                <span  title="{{ level3.description }}">{{ level3.title }}</span>
 
                                 {% if level3.premium %}
                                 <i class="premium"></i>
@@ -111,8 +111,8 @@
                             <ul class="level4">
                                 {% for level4 in level3.nodes %}
                                 <li class="{% if page_url == level4.url %}active{% endif %}">
-                                    <a href="{{ level4.url }}" title="{{ level4.description }}">
-                                        {{ level4.title }}
+                                    <a href="{{ level4.url }}">
+                                        <span title="{{ level4.description }}">{{ level4.title }}</span>
 
                                         {% if level4.premium %}
                                         <i class="premium"></i>

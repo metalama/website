@@ -62,3 +62,8 @@ Turn C# automatic properties into WPF dependency properties and methods into WPF
 [Learn more](http://localhost:8080/applications/ui/dependency-property)
 
 </div>
+</div>
+
+## Resources
+
+* Source code on [GitHub](https://github.com/metalama/Metalama/tree/HEAD/Metalama.Patterns)

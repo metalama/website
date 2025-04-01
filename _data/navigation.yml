@@ -61,10 +61,10 @@ nodes:
         description: "Boost productivity with T# syntax highlighting, CodeLens, Aspect Explorer, and Aspect Diff."
 
       - url: "/features/productivity/testing"
-        title: "Test Framework"
+        title: "Test Frameworks"
         description: "Test that your aspects generate code and report warnings as expected using our xUnit-compatible test framework."      
       - url: "/features/productivity/debugging"
-        title: "Deep Debugging"
+        title: "Debugging"
         description: "Choose whether to step into the transformed code or stick to the source code during debugging."
 
     - url: "/features/extensibility"
