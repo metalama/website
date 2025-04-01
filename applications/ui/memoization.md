@@ -1,9 +1,12 @@
 ---
 title: Memoization
+toc: false
 ---
 
 {: .note }
 Available for all UI frameworks
+
+{: .intro }
 In high-performance apps or components, [memoization](https://doc.postsharp.net/metalama/patterns/memoization) is the
 technique of "remembering" the value of a read-only property of an object to avoid subsequent evaluations. Memoization
 is helpful when a property always returns the same value for the same object. Unlike caching, memoization does not rely
@@ -11,8 +14,12 @@ on an external caching component or a string-based key but is implemented direct
 
 High-performance implementations of the memoization pattern can be tricky to implement due to multi-threading issues.
 
-Metalama's [Memoize](https://doc.postsharp.net/metalama/patterns/memoization) aspect makes this process trivial,
+The [Memoize](https://doc.postsharp.net/metalama/patterns/memoization) aspect from the ``Metalama.Patterns.Memoization` package makes this process trivial,
 effectively turning a standard read-only property into a memoized one without any boilerplate.
+
+{: .note }
+`Metalama.Patterns.Memoization` is a production-ready, professionally-supported and open-source aspect library. <i class="supported no-tooltip"></i>
+
 
 ## Example
 

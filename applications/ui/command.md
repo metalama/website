@@ -2,9 +2,6 @@
 title: Command
 ---
 
-{: .note }
-Available for WPF only
-
 One of the [best practices](https://blog.postsharp.net/wpf-best-practices-2024) in WPF is to implement the logic behind
 buttons and menu items as a Command (`ICommand`) instead of a simple event handler. This keeps the command logic
 separate from the UI code, achieving a better separation of concerns. It also allows the button or menu item to render
@@ -16,6 +13,13 @@ The [Command](https://doc.postsharp.net/metalama/patterns/wpf/command) aspect of
 package solves this problem by automatically generating the plumbing code. It integrates with
 the [Observable](https://doc.postsharp.net/metalama/patterns/observability) aspect to provide support for the
 `CanExecute` logic.
+
+{: .note }
+`Metalama.Patterns.Wpf` is a production-ready, professionally-supported and open-source aspect library. <i class="supported no-tooltip"></i>
+
+{: .note }
+Available for WPF only
+
 
 ## Example
 

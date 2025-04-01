@@ -74,7 +74,10 @@
                         {{ level2.title }}
 
                         {% if level2.premium %}
-                        <i class="premium no-tooltip"></i>
+                        <i class="premium"></i>
+                        {% endif %}
+                        {% if level2.supported %}
+                            <i class="supported"></i>
                         {% endif %}
                     </a>
 
@@ -98,7 +101,10 @@
                                 {{ level3.title }}
 
                                 {% if level3.premium %}
-                                <i class="premium no-tooltip"></i>
+                                <i class="premium"></i>
+                                {% endif %}
+                                {% if level3.supported %}
+                                    <i class="supported"></i>
                                 {% endif %}
                             </a>
                             {% if isLevel3Active and level3.nodes.size > 0 %}
@@ -109,7 +115,10 @@
                                         {{ level4.title }}
 
                                         {% if level4.premium %}
-                                        <i class="premium no-tooltip"></i>
+                                        <i class="premium"></i>
+                                        {% endif %}
+                                        {% if level4.supported %}
+                                            <i class="supported"></i>
                                         {% endif %}
                                     </a>
                                 </li>

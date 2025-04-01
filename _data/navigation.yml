@@ -133,21 +133,26 @@ nodes:
             nodes:
               - title: INotifyPropertyChanged
                 url: /applications/ui/inotifypropertychanged
+                supported: true
               - title: Command
                 url: /applications/ui/command
+                supported: true
               - title: Dependency Property
                 url: /applications/ui/dependency-property                
+                supported: true
               - title: Change Tracking
                 url: /applications/ui/change-tracking
               - title: Undo-Redo
                 url: /applications/ui/undo-redo
               - title: Memoization
                 url: /applications/ui/memoization
+                supported: true
           - title: "Classic Object Services"
             url: "/applications/object-services"
             description: "Stop writing boilerplate for ToString methods, equality contracts, cloning, and more."
           - title: Defensive Programming
             url: /applications/contracts
+            supported: true
             description: "Enforce preconditions, postconditions and invariants with ease, ensuring robust code and reliable behavior."
 
       - title: "DevOps"
@@ -162,6 +167,7 @@ nodes:
             description: "Gain deep operational insights with method-level performance metrics."
           - title: "Caching"
             url: "/applications/devops/caching"
+            supported: true
             description: "Implement robust caching across diverse topologies, including seamless Redis integration."
           - title: "Exception Handling"
             url: "/applications/devops/exception-handling"

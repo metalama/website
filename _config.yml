@@ -46,7 +46,7 @@ defaults:
       type: "pages" 
     values:
       layout: "structured" 
-      toc: true
+      toc: false
       site_title: "Metalama"
   - scope:
       path: "applications" 

@@ -19,6 +19,9 @@ development.
 With [Metalama Caching](https://www.nuget.org/packages/Metalama.Patterns.Caching), an open-source caching library based
 on Metalama, adding caching to a method can be as simple as adding a custom attribute.
 
+{: .note }
+`Metalama.Patterns.Caching` is a production-ready, professionally-supported and open-source aspect library. <i class="supported no-tooltip"></i>
+
 ## Benefits
 
 * **Reduced boilerplate**: Metalama Caching enables you to cache the return value of a method as a function of its

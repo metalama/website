@@ -9,8 +9,10 @@ keywords:
 ---
 
 {: .intro }
-Metalama is the only code verification tool for C# that can enforce _custom_ rules in real time, providing feedback as
-you type.
+Metalama lets you validate code **usages**, **references**, and **dependencies**, enabling you to enforce architectural rules directly in code — a concept we call **Architecture as Code**. It’s the only C# tool that lets you define rules tailored to your architecture and business domain, and enforce them in the IDE with real-time feedback.
+ 
+{: .note }
+This feature requires a Metalama Professional license.
 
 Architecture is often defined in non-executable forms, such as text and diagrams. Since it cannot be automatically
 enforced, it is verified during _code reviews_, which can be slow and frustrating for both sides.
@@ -26,14 +28,11 @@ Typically, the following rules can be automatically enforced in a codebase:
 - Restrict dependencies between classes, class families, and namespaces.
 - Verify naming conventions based on the base class or implemented interface.
 - Ensure that code is implemented according to pattern guidelines.
- 
-{: .note }
-This feature requires a Metalama Professional license.
 
 
 ## Benefits
 
-Here are four reasons why you _must_ consider automatically verifying your codebase against your design:
+Here are five reasons why you _must_ consider automatically verifying your codebase against your design:
 
 - **Stop architecture decay.** The code remains aligned with the defined blueprints. Your codebase retains its initial
   architectural qualities, allowing for low maintenance costs and the ability to implement new requirements. The _broken
@@ -43,11 +42,16 @@ Here are four reasons why you _must_ consider automatically verifying your codeb
   and other coding conventions, you further reduce the complexity of your codebase, making it easier for software
   developers to understand.
 
+- **Scale expertise**: Instead of repeatedly pointing out the same issues in code reviews, architects can codify their guidance once and apply it everywhere, instantly.
+
 - **Get immediate feedback.** Developers receive real-time notifications of issues while typing, eliminating the need to
   wait for the next build or code review.
 
 - **Streamline code reviews.** With fewer trivial violations to address, code reviews become more efficient and less
   frustrating. By addressing most minor issues in real time, code reviews can focus on essential aspects.
+
+
+If they can author your architecture as executable code, architects stop being gatekeepers and start accelerating the entire team.
 
 ## Features
 

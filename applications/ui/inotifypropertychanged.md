@@ -2,9 +2,6 @@
 title: INotifyPropertyChanged
 ---
 
-{: .note }
-Available for all UI frameworks
-
 Most modern UI applications rely on binding data classes to UI classes. The `INotifyPropertyChanged` interface is the
 standard way to achieve this. However, implementing this interface manually can be cumbersome and error-prone,
 particularly when dealing with a large number of properties.
@@ -13,6 +10,13 @@ Thanks to Metalama's [Observable](https://doc.postsharp.net/metalama/patterns/ob
 `Metalama.Patterns.Observability` open-source package, you can implement the `INotifyPropertyChanged` interface
 automatically. The plumbing code is generated on-the-fly when you compile, so your source code remains clean and
 concise.
+
+{: .note }
+`Metalama.Patterns.Observability` is a production-ready, professionally-supported and open-source aspect library. <i class="supported no-tooltip"></i>
+
+{: .note }
+Available for all UI frameworks
+
 
 ## Example
 

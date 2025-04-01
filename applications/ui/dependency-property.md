@@ -2,9 +2,15 @@
 title: Dependency Properties
 ---
 
+TODO
+
+{: .note }
+`Metalama.Patterns.Wpf` is a production-ready, professionally-supported and open-source aspect library. <i class="supported no-tooltip"></i>
+
 
 {: .note }
 Available for WPF only
+
 
 ## Example
 
