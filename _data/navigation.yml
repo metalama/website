@@ -5,67 +5,83 @@ nodes:
     
   - url: "/features"
     title: "Features"
-    drop_down_menu: "List"
+    drop_down_menu: "Columns"
     nodes:
-    - url: "/features/code-generation"
-      title: "Code Generation"
-      description: "Dynamically generate C# code and seamlessly integrate it with handcrafted logic."    
+    - url: "/features/core"
+      title: "Core"
       nodes:
-        - url: "/features/code-generation/templates"
-          title: "C#-to-C# Templates"
-        - url: "/features/code-generation/override"
-          title: "Enhance Hand-Written Code"
-        - url: "/features/code-generation/reference-from-source-code"
-          title: "Reference Generated Code"
-        - url: "/features/code-generation/dependency-injection"
-          title: "Dependency Injection"
+      - url: "/features/core/code-generation"
+        title: "Code Generation"
+        description: "Dynamically generate C# code and seamlessly integrate it with handcrafted logic."    
+        nodes:
+          - url: "/features/core/code-generation/templates"
+            title: "C#-to-C# Templates"
+          - url: "/features/core/code-generation/override"
+            title: "Enhance Hand-Written Code"
+          - url: "/features/core/code-generation/reference-from-source-code"
+            title: "Reference Generated Code"
+          - url: "/features/core/code-generation/dependency-injection"
+            title: "Dependency Injection"
+          - url: "/features/core/code-generation/applying"
+            title: "Powerful Code Selection Mechanisms"
+            description: "Add aspects to code using custom attributes, compile-time code queries, aspect inheritance, or cross-project transitivity."
+            nodes:
 
-    - url: "/features/code-validation"
-      title: "Code Validation"
-      description: "Report errors and warnings at design time directly into the editor, or as part of the build process."
+      - url: "/features/core/code-validation"
+        title: "Code Validation"
+        description: "Report errors and warnings at design time directly into the editor, or as part of the build process."
 
-    - title: "Architecture Verification"
-      url: "/features/architecture-verification"
-      description: "Ensure that both manually written and AI-assisted code adhere to strict architectural standards."
-      premium: true
-#      nodes:
-#        - url: "/applications/architecture-erosion"
-#          title: "Architecture Erosion"
-          
-    - url: "/features/applying"
-      title: "Powerful Code Selection Mechanisms"
-      description: "Add aspects to code using custom attributes, compile-time code queries, aspect inheritance, or cross-project transitivity."
+      - url: "/features/core/design-time-feedback"
+        title: "Immediate Editor Feedback"
+        description: "Get immediate feedback on your code as you type. No need to recompile your code."
+
+      - title: "Architecture Verification"
+        url: "/features/core/architecture-verification"
+        description: "Ensure that both manually written and AI-assisted code adhere to strict architectural standards."
+        premium: true
+
+      - url: "/features/core/code-fixes"
+        title: "Code Fix Toolkit"
+        premium: true
+        description: "Leverage custom code fixes and code factorings to your team using Metalama's simple API."
+
+
+
+    - url: "/features/productivity"
+      title: "Productivity"
       nodes:
 
-    - url: "/features/design-time-feedback"
-      title: "Immediate Editor Feedback"
-      description: "Get immediate feedback on your code as you type. No need to recompile your code."
-    - url: "/features/aspect-libraries"
-      title: "Ready-to-Use Aspect Libraries"
-      description: "Accelerate development with open-source extensions and ready-to-use aspects and avoid reinventing the wheel."
-    - url: "/features/linqpad"
-      title: "LINQPad Driver"
-      description: "Query your code and dependencies directly in LINQPad."
-    - url: "/features/tooling"
-      title: "Visual Studio Tooling"
-      premium: true
-      description: "Boost productivity with T# syntax highlighting, CodeLens, Aspect Explorer, and Aspect Diff."
-    - url: "/features/code-fixes"
-      title: "Code Fix Toolkit"
-      premium: true
-      description: "Leverage custom code fixes and code factorings to your team using Metalama's simple API."
-    - url: "/features/testing"
-      title: "Test Framework"
-      description: "Test that your aspects generate code and report warnings as expected using our xUnit-compatible test framework."      
-    - url: "/features/debugging"
-      title: "Deep Debugging"
-      description: "Choose whether to step into the transformed code or stick to the source code during debugging."
-    - url: "/features/roslyn-extensibility"
-      title: "Roslyn Extensibility"
-      description: "Overcome Metalama's limitations with the full power of Roslyn."      
-    - url: "/features/divorce"
-      title: "Divorce"
-      description: "Metalama gracefully accepts when it's time to part ways and makes the breakup process as smooth as possible."
+      - url: "/features/productivity/aspect-libraries"
+        title: "Ready-to-Use Aspect Libraries"
+        description: "Accelerate development with open-source extensions and ready-to-use aspects and avoid reinventing the wheel."
+  
+      - url: "/features/productivity/tooling"
+        title: "Visual Studio Tooling"
+        premium: true
+        description: "Boost productivity with T# syntax highlighting, CodeLens, Aspect Explorer, and Aspect Diff."
+
+      - url: "/features/productivity/testing"
+        title: "Test Framework"
+        description: "Test that your aspects generate code and report warnings as expected using our xUnit-compatible test framework."      
+      - url: "/features/productivity/debugging"
+        title: "Deep Debugging"
+        description: "Choose whether to step into the transformed code or stick to the source code during debugging."
+
+    - url: "/features/extensibility"
+      title: Extensibility
+      nodes:
+
+      - url: "/features/extensibility/roslyn"
+        title: "Roslyn Extensibility"
+        description: "Overcome Metalama's limitations with the full power of Roslyn."      
+
+      - url: "/features/extensibility/linqpad"
+        title: "LINQPad Driver"
+        description: "Query your code and dependencies directly in LINQPad."
+
+      - url: "/features/extensibility/divorce"
+        title: "Divorce"
+        description: "Metalama gracefully accepts when it's time to part ways and makes the breakup process as smooth as possible."
   
 
   - title: "When to Use"

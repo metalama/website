@@ -210,7 +210,11 @@
                                     {%  unless column.hidden %} 
                                 <div class="column">
                                     <div class="column-title">
+                                        {% if column.url %}
                                         <a href="{{ column.url }}">{{ column.title }}</a>
+                                        {% else %}
+                                        <span>{{ column.title }}</span>
+                                        {% endif %}
                                     </div>
                                     <ul>
                                         {% for entry in column.nodes %}

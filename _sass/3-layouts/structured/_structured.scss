@@ -3,8 +3,16 @@
     @extend .min_height;
     
     display: grid;
-    grid-template-columns: 2fr 10fr 1fr;
+
     grid-template-rows: 1fr;
+
+    &:has(.right-nav) {
+        grid-template-columns: 2fr 10fr 1fr;
+    }
+
+    &:not(:has(.right-nav)) {
+        grid-template-columns: 2fr 11fr;
+    }
 
     nav.left-nav {
         grid-column: 1;

@@ -40,5 +40,6 @@ Metalama is the only framework for .NET that offers:
 | [Enhance Hand-Written Code](override) | Metalama is the only on-the-fly tool that allows you to add behaviors to existing hand-written code. Other C# generators let you _add new classes_ to a project or _extend partial classes_, but they don't allow injecting new behaviors into existing methods, properties, or fields. |
 | [Reference Generated Code From Source Code](reference-from-source-code) | With Metalama, your source code can reference generated code as if it were itself source code. This is a significant advancement over previous MSIL-based generation, where code additions were not visible from source code. |
 | [Dependency Injection Support](dependency-injection) | You can use dependency injection concepts in your aspects to make both the aspects and the target code more testable. |
+| [Powerful Code Selection Mechanisms](applying) | Metalama offers several mechanisms to add aspects (which encapsulate code generation and validation) to target code: custom attributes for selective application, and fabrics for a bulk, programmatic approach. Also, explore cross-project options. |
 
 
