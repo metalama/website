@@ -1,7 +1,6 @@
 ---
 title: "DevOps"
 summary: "Shows how Metalama can help making your C# application production-ready, an important aspect of DevOps."
-toc: false
 keywords:
 - c# devops
 - c# production ready

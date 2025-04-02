@@ -1,6 +1,5 @@
 ---
 title: Immediate Editor Feedback
-toc: false
 ---
 
 {: .intro }

@@ -1,8 +1,9 @@
 ---
 title: Core Features
-toc: false
 ---
 
+| Feature | Description |
+|----------|----------|
 | [Code Generation](code-generation) | Metalama is the most powerful and the simplest code generation framework for C#. Inspired by aspect-oriented programming, it is the only Roslyn-based approach that seamlessly integrates generated code with hand-written code, making it possible to implement most code patterns. |
 | [Code Verification](code-verification) | Metalama makes it easy to validate hand-written or AI-generated code in real time, reporting errors and warnings when rules are violated. Thanks to the architecture validation package, you can also verify dependencies between classes and namespaces. |
 | [Immediate Editor Feedback](design-time-feedback) | Metalama provides real-time feedback as you type, eliminating the need to rebuild constantly to refresh your IDE. Unlike MSIL-based approaches, and thanks to its integration with Roslyn source generators, Metalama allows you to reference generated declarations from hand-written code. |

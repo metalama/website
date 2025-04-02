@@ -1,7 +1,6 @@
 ---
 title: "Metalama for UI Apps"
 summary: "Shows different use cases of Metalama in writing UI apps (like WPF)."
-toc: false
 keywords:
 - inotifypropertychanged
 - c# code contracts

@@ -1,6 +1,5 @@
 ---
 title: Memoization
-toc: false
 ---
 
 {: .note }

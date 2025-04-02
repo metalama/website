@@ -6,7 +6,6 @@ keywords:
 - c# code generator
 - c# code generation
 - c# generate code
-toc: false
 ---
 
 {: .intro }
@@ -30,7 +29,7 @@ Here are four reasons why you _must_ consider suppressing repetitive code with a
   lifespan of the codebase. Since maintenance accounts for 55%–95% of a software system's costs, keeping complexity
   low is crucial for post-release team productivity.
 
-## Metalama's Unique Features
+## Features
 
 Metalama is the only framework for .NET that offers:
 

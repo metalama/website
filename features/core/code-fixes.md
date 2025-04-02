@@ -1,6 +1,5 @@
 ---
 title: Code Fix Toolkit
-toc: false
 ---
 
 {: .intro }

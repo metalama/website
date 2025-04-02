@@ -1,6 +1,5 @@
 ---
 title: Dependency Injection
-toc: false
 ---
 
 {: .intro }

@@ -1,6 +1,5 @@
 ---
 title: "Classic Applications"
-toc: false
 ---
 
 {: .intro }

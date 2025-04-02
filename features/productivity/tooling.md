@@ -1,6 +1,5 @@
 ---
 title: Visual Studio Tools for Metalama
-toc: false
 ---
 
 {: .intro }

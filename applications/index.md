@@ -1,6 +1,5 @@
 ---
 title: "When to Use Metalama"
-toc: false
 keywords:
 - metalama use cases
 summary: "This web section lists different use cases of Metalama."

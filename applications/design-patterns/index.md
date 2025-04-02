@@ -1,7 +1,6 @@
 ---
 title: "Design Patterns"
 summary: "This article details how Metalama can help implementing design patterns in C# including the Memento, Singleton, Factory, Builder, Decorator, and Proxy patterns."
-toc: false
 keywords:
 - c# design patterns
 - c# memento pattern

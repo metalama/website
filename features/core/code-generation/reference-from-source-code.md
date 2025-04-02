@@ -1,6 +1,5 @@
 ---
 title: Reference Generated Code From Source Code
-toc: false
 ---
 
 {: .intro }

@@ -1,6 +1,5 @@
 ---
 title: Enhance Hand-Written Code
-toc: false
 ---
 
 {: .intro }

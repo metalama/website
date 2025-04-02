@@ -3,7 +3,6 @@ title: "Principles at Work"
 summary: "Shows how to use Metalama to follow industry best practices."
 keywords:
 - c# best practices
-toc: false
 ---
 
 {: .intro }

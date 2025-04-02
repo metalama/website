@@ -8,7 +8,7 @@ nodes:
     drop_down_menu: "Columns"
     nodes:
     - url: "/features/core"
-      title: "Core"
+      title: "Core Features"
       nodes:
       - url: "/features/core/code-generation"
         title: "Code Generation"
@@ -48,7 +48,7 @@ nodes:
 
 
     - url: "/features/productivity"
-      title: "Productivity"
+      title: "Productivity Features"
       nodes:
 
       - url: "/features/productivity/aspect-libraries"
@@ -64,20 +64,20 @@ nodes:
         title: "Test Frameworks"
         description: "Test that your aspects generate code and report warnings as expected using our xUnit-compatible test framework."      
       - url: "/features/productivity/debugging"
-        title: "Debugging"
+        title: "Transformed Code Debugging"
         description: "Choose whether to step into the transformed code or stick to the source code during debugging."
 
     - url: "/features/extensibility"
-      title: Extensibility
+      title: Extensibility Features
       nodes:
 
       - url: "/features/extensibility/roslyn"
         title: "Roslyn Extensibility"
         description: "Overcome Metalama's limitations with the full power of Roslyn."      
 
-      - url: "/features/extensibility/linqpad"
-        title: "LINQPad Driver"
-        description: "Query your code and dependencies directly in LINQPad."
+      - url: "/features/extensibility/code-query"
+        title: "Code Query API"
+        description: "Query your code and dependencies in application. Includes a LINQPad driver."
 
       - url: "/features/extensibility/divorce"
         title: "Divorce"

@@ -1,6 +1,5 @@
 ---
 title: Ready-to-Use Aspect Libraries
-toc: false
 ---
 
 {: .intro }
@@ -67,3 +66,4 @@ Turn C# automatic properties into WPF dependency properties and methods into WPF
 ## Resources
 
 * Source code on [GitHub](https://github.com/metalama/Metalama/tree/HEAD/Metalama.Patterns)
+* [Metalama Marketplace](/marketplace) indexes all aspect libraries and extensions
