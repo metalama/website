@@ -5,7 +5,7 @@ title: Contribution License Agreement
 {: .intro }
 When you submit your first pull request to a repository under the Metalama organization on GitHub, you'll be asked to sign the Contributor License Agreement (CLA) shown below. This agreement is based on the same text used by the .NET Foundation, with the only difference being that the recipient is SharpCrafters s.r.o., the core maintainer of the project. Signing the CLA is a standard requirement that ensures all contributions can be legally used and redistributed as part of the project.
 
----
+## Full text
 
 This Contribution License Agreement (“Agreement”) is between SharpCrafters s.r.o. with its registered office at Prague 5, nám. 11. října 1307/2, Postal Code 150 00, the Czech Republic, ID 28953690 (“Maintainer”), and the person or entity signing below (“You”).
 

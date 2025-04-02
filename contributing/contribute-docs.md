@@ -1,5 +1,6 @@
 ---
 title: How to Contribute Docs
+toc: true
 ---
 
 Metalama uses [DocFx](https://dotnet.github.io/docfx/index.html) to build its documentation.
