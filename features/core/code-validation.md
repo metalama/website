@@ -3,22 +3,21 @@ title: Code Validation
 ---
 
 {: .intro }
-When enhancing a class or method, it is crucial to validate that the target code meets your assumptions. If it does not, a clear and appropriate error message should be reported. In Metalama, aspects not only have the ability to generate code but also to _validate_ it. You can even create aspects that serve purely as validators without any code generation logic.
+When enhancing a class or method, it's crucial to validate that the target code meets your assumptions. If it doesn't, a clear and appropriate error message should be reported. In Metalama, aspects not only have the ability to generate code but also to _validate_ it. You can even create aspects that serve purely as validators without any code generation logic.
 
 ## Benefits
 
-- **Least astonishment.** As an aspect author, it is your responsibility to ensure that users of your aspects receive clear and meaningful error messages.
+- **Least astonishment.** As an aspect author, it's your responsibility to ensure users of your aspects receive clear and meaningful error messages.
 - **Fail fast, early.** Avoid exceptions in your aspect logic or confusing C# errors due to invalid generated code.
 
 ## Features
 
-- **Warnings and errors reporting.** Your aspect aspects or fabrics can report custom errors, warnings, or messages.
+- **Warnings and errors reporting.** Your aspects or fabrics can report custom errors, warnings, or messages.
 - **Warnings suppress.** Your aspects or fabrics can suppress warnings reported by the compiler or other analyzers.
 - **Aspect eligibility.** Your aspects can specify which declarations the aspect can be applied to. If eligibility conditions are violated, an error is reported, and the aspect is not applied. Additionally, the refactoring menu in the IDE will only suggest adding eligible aspects.
-- **Metrics.** You can query code metrics such as the number of nodes or statements in a method, and define custom metrics.
+- **Metrics.** You can query code metrics such as the number of nodes or statements in a method and define custom metrics.
 
-All features work both real-time as you type or during the build process.
-
+All features work both in real-time as you type or during the build process.
 
 ## Example
 

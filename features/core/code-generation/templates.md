@@ -3,24 +3,24 @@ title: C#-to-C# Templates
 ---
 
 {: .intro }
-Classic code generators are actually _text_ generators and don't offer you syntax highlighting, code completion, or error checking for generated code. Metalama is a true, strongly-typed _object-oriented code generator_ featuring T#, a unique C#-to-C# template language. 
+Classic code generators are just _text_ generators. They don't offer syntax highlighting, code completion, or error checking for generated code. Metalama is a true, strongly-typed _object-oriented code generator_ that features T#, a unique C#-to-C# template language.
 
-T# templates are pure C# methods and expressions and are 100% compatible with any C# editor. They only differ from normal C# methods in the way that they are compiled.
+T# templates are pure C# methods and expressions, 100% compatible with any C# editor. They differ from regular C# methods solely in how they are compiled.
 
-Thanks to T#, you can blend generated code with hand-written code.
+With T#, you can seamlessly blend generated code with hand-written code.
 
 Benefits of T# include:
 
-- **Full Intellisense support**. Includes syntax highlighting, code completion, member list, and error detection.
-- **100% C# compatible**. You can use any C# editor.
-- **High performance.** Generate high-performance code without any run-time overhead.
+- **Full Intellisense support.** Enjoy syntax highlighting, code completion, member list, and error detection.
+- **100% C# compatible.** Use any C# editor of your choice.
+- **High performance.** Generate high-performance code without any runtime overhead.
 - **No need to learn MSIL.** It's just the C# you already know.
-- **Completely debuggable.** You can step into code you generate. [Learn more](../debugging).
-- Additional syntax highlighting is available as premium feature thanks to Visual Studio Tools for Metalama.
+- **Completely debuggable.** Step into the code you generate. [Learn more](../debugging).
+- Additional syntax highlighting is available as a premium feature via Visual Studio Tools for Metalama.
 
 ## Example
 
-For instance, let's consider this aspect:
+Consider this aspect:
 
 ```csharp
 public class RetryAttribute : OverrideMethodAspect
@@ -46,14 +46,13 @@ public class RetryAttribute : OverrideMethodAspect
 The `OverrideMethod` is a T# template:
 
 - `meta.Proceed()` is replaced by the implementation of the method being overridden.
-- `meta.Target.Method` is the object model of the method being overridden. In this case, we are calling the `ToString`
-  method.
+- `meta.Target.Method` is the object model of the method being overridden. Here, we are calling the `ToString` method.
 
 Now let's apply this template to a method:
 
-```cs
+```csharp
 [Retry]
-public decimal GetExchangeRate()
+public async Task<decimal> GetExchangeRate()
 {
     using var client = new HttpClient();
     var url = $"https://api.example.com/exchange?base=CZK&target=USD";
@@ -66,17 +65,16 @@ public decimal GetExchangeRate()
 }
 ```
 
-During compilation, Metalama will apply the `[Retry]` template to the `GetExchangeRate` method and generate the
-following code:
+During compilation, Metalama will apply the `[Retry]` template to the `GetExchangeRate` method and generate the following code:
 
-```cs
+```csharp
 [Retry]
-public decimal GetExchangeRate()
+public async Task<decimal> GetExchangeRate()
 {
     for ( var i = 0;; i++ )
     {
-       try
-       {
+        try
+        {
             using var client = new HttpClient();
             var url = $"https://api.example.com/exchange?base=CZK&target=USD";
 
@@ -88,30 +86,31 @@ public decimal GetExchangeRate()
         }
         catch ( Exception e ) when ( i < 3 )
         {
-           Console.WriteLine( $"CurrencyService.GetExchangeRate() failed: {e.Message}" );
-           Thread.Sleep( 100 );
+            Console.WriteLine( $"CurrencyService.GetExchangeRate() failed: {e.Message}" );
+            Thread.Sleep( 100 );
         }
     }
 }
 ```
+
 ## How does it work?
 
 {% raw %}
-T# templates differentiate between *compile-time* and *run-time* code execution. Since there is no tag like `{% %}` or `<% %>` to distinguish compile-time C# from run-time C#, Metalama relies on inference rules to determine which statements and expressions are compile-time code, and which ones are run-time code. 
+T# templates differentiate between *compile-time* and *run-time* code execution. Since there are no tags like `{% %}` or `<% %>` to distinguish compile-time C# from run-time C#, Metalama relies on inference rules to determine which statements and expressions are compile-time and which ones are run-time.
 {% endraw %}
 
-By default, all APIs are considered run-time. Compile-time APIs (for instance the `meta` class) must be tagged with the `[CompileTime]` custom attribute. When Metalama finds a compile-time API call in your template, it uses complex inference rules to determine which parts of the template should be executed at compile-time.
+By default, all APIs are considered run-time. Compile-time APIs (like the `meta` class) must be tagged with the `[CompileTime]` custom attribute. When Metalama encounters a compile-time API call in your template, it uses complex inference rules to determine which parts of the template should execute at compile-time.
 
-For instance, in the following snippet, `meta.Target` is tagged as compile-time. By inference, `meta.Target.Method.Parameters` is compile-time, the `parameters` variable also, and therefore also for `foreach` loop. In `$"{p.Name} = '{p.Value}'"`, `p.Name` is compile-time but `p.Value` is a compile-time expression returning a run-time expression
+For example, in the snippet below, `meta.Target` is tagged as compile-time. By inference, `meta.Target.Method.Parameters` is compile-time, making the `parameters` variable and the `foreach` loop compile-time as well. In `$"{p.Name} = '{p.Value}'"`, `p.Name` is compile-time, but `p.Value` is a compile-time expression returning a run-time expression.
 
-```cs
+```csharp
 public override dynamic? OverrideMethod()
 {
     var parameters = meta.Target.Method.Parameters;
 
     foreach ( var p in parameters )
     {
-        Console.WriteLine( $"{p.Name} = '{p.Value}'")
+        Console.WriteLine( $"{p.Name} = '{p.Value}'");
     }
 
     return meta.Proceed();
@@ -125,7 +124,7 @@ Most of the `Metalama.Framework` namespace is compile-time. You can extend T# wi
 - Compile-time local variables, `foreach`, `if`, `switch`.
 - Access unknown members through C# `dynamic` typing.
 - Template parameters.
-- Calling a templace from another template (including virtual calls).
+- Call a template from another template (including virtual calls).
 - Complete API to reflect on the code being compiled.
 - APIs to dynamically build interpolated strings, `switch` statements.
 - Serialization from compile-time objects to run-time expressions.

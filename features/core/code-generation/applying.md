@@ -12,9 +12,9 @@ These mechanisms include:
 * **Aspect inheritance** for automatic propagation of aspects.
 * **Cross-project fabrics** for applying aspects across multiple projects.
 
-## Custom Attributes
+## Custom attributes
 
-The simplest way to add an aspect to a class, member, or parameter is by using a custom attribute. 
+The simplest way to add an aspect to a class, member, or parameter is by using a custom attribute.
 
 By default, aspects derive from the `System.Attribute` class.
 

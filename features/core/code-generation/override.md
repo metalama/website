@@ -3,12 +3,12 @@ title: Enhance Hand-Written Code
 ---
 
 {: .intro }
-Metalama is the only C# generator that also allows you to add behaviors to existing hand-written code. Other tools allow you to _add new classes_ to a project or to _extend partial classes_, but don't let you inject new behaviors into existing methods, properties, or fields. 
+Metalama is the only C# generator that lets you add behaviors to existing hand-written code. While other tools allow you to add new classes to a project or extend partial classes, they don't let you inject new behaviors into existing methods, properties, or fields.
 
 ## Benefits
 
-* It's the only way to implement features like instrumentation (logging, metrics), exception handling (retry, throttling), observability (`INotifyPropertyChanged`), thread synchronization (locking), and so on.
-* Transparent. No need for the `partial` keyword.
+* It's the only way to implement features like instrumentation (logging, metrics), exception handling (retry, throttling), observability (`INotifyPropertyChanged`), thread synchronization (locking), and more.
+* It's transparent. No need for the `partial` keyword.
 
 ## Example
 
@@ -39,7 +39,7 @@ internal class Fabric : ProjectFabric
 }
 ```
 
-The `[MeasureExecutionCount]` will transform the `HatShop` class into this:
+The `[MeasureExecutionCount]` attribute will transform the `HatShop` class into this:
 
 ```csharp
 public class HatShop
@@ -64,8 +64,7 @@ public class HatShop
 }
 ```
 
-As you can see, not only does it add new members like the `HatShopMetrics` class and field, but it also has to inject
-logic into the `PlaceOrder` method.
+As you can see, it not only adds new members like the `HatShopMetrics` class and field, but also injects logic into the `PlaceOrder` method.
 
 ## Resources
 

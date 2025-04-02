@@ -3,21 +3,18 @@ title: Reference Generated Code From Source Code
 ---
 
 {: .intro }
-With Metalama, your source code can reference generated code as if it were itself source code. This is a significant advancement from the previous MSIL-based generation, whose code additions were not visible from source code.
+With Metalama, your source code can reference generated code as if it were part of the original source. This marks a significant step forward from previous MSIL-based generation methods, where code additions remained invisible to the source code.
 
 ## Benefits
 
-* **Idiomatically C#**. No need for cumbersome constructs like in MSIL-based approaches.
-* **IntelliSense**. Code completion just works with generated code.
-
+* **Idiomatically C#.** No need for cumbersome constructs like in MSIL-based approaches.
+* **IntelliSense.** Code completion works seamlessly with generated code.
 
 ## Example
 
-For instance, if an aspect implements the Memento pattern for the `Fish` class, source code will "see" that the class
-implements the `IMementoable` interface and will be able to invoke the generated `SaveToMemento` and `RestoreMemento`
-methods. Intellisense and design-time code verification will work normally.
+Consider a scenario where an aspect implements the Memento pattern for the `Fish` class. In this case, the source code will "recognize" that the class implements the `IMementoable` interface, allowing you to invoke the generated `SaveToMemento` and `RestoreMemento` methods. IntelliSense and design-time code verification will function as expected.
 
-Suppose we have the following class in source code:
+Suppose we have the following class in the source code:
 
 ```cs
 [Memento]
@@ -39,8 +36,7 @@ public interface IMementoable
 }
 ```
 
-Another part of the source code can use the `IMementoable` interface and its two methods as if they were defined in
-source code:
+Another part of the source can use the `IMementoable` interface and its methods as if they were defined directly in the source code:
 
 ```cs
 var fish = new Fish() { Name = "Hannibal", Species = "Tilapia" };
@@ -54,4 +50,3 @@ fish.Name = "Shark";
 // Undo change by using the generated RestoreMemento method.
 fish.RestoreMemento(memento);
 ```
-
