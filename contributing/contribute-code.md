@@ -1,5 +1,6 @@
 ---
 title: How to Contribute Code
+toc: true
 ---
 
 ## 1. Choose your repository
