@@ -210,15 +210,19 @@ nodes:
       - url: "https://doc.metalama.net/conceptual/getting-started"
         title: "Getting Started"
         description: "Learn how to install Metalama and jumpstart your projects."
+        extern: true
       - url: "https://doc.metalama.net/conceptual"
         title: "Conceptual Documentation"
         description: "Deep dive into the principles and concepts behind Metalama."
+        extern: true
       - url: "https://doc.metalama.net/examples"
         title: "Commented Examples"
         description: "Explore a range of Metalama examples from basic to advanced."
+        extern: true
       - url: "https://github.com/metalama/Metalama/issues"
         title: "Issue Tracker"
         description: "Report bugs and feature requests on GitHub, and check their status."        
+        extern: true
       - url: "/premium/enterprise-support"
         title: "Enterprise Support"
         description: "Benefit from high-priority support, direct access to core developers, and dependable long-term maintenance."        
@@ -256,7 +260,8 @@ nodes:
         description: "Receive important announcements and monthly updates straight to your inbox."
       - url: "https://github.com/orgs/metalama/discussions"
         title: "GitHub Forums"
-        description: "Ask anything and showcase your aspects on GitHub Discussions."                
+        description: "Ask anything and showcase your aspects on GitHub Discussions."          
+        extern: true      
 
 
   - url: "/premium"

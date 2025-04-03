@@ -49,4 +49,32 @@ layout: null
         <priority>{{priority}}</priority>
       </url>
     {% endfor %}
+
+    {% for item1 in site.data.navigation.nodes %}
+      {% unless item1.extern %}
+      <url>
+        <loc>{{ item1.url | prepend: site.baseurl | prepend: site.url }}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+    {% endunless %}
+      {% for item2 in item1.nodes %}
+        {% unless item2.extern %}
+        <url>
+        <loc>{{ item2.url | prepend: site.baseurl | prepend: site.url }}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+    {% endunless %}
+      {% for item3 in item2.nodes %}
+        {% unless item3.extern %}
+        <url>
+        <loc>{{ item3.url | prepend: site.baseurl | prepend: site.url }}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+    {% endunless %}
+      {% endfor %}
+      {% endfor %}     
+    {% endfor %}
 </urlset>
