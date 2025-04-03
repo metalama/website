@@ -166,4 +166,10 @@
         margin-bottom: 40px;
         cursor: pointer;
     }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
 }
