@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+    <!-- Set the default version -->
+    <Import Project="MainVersion.props" />
+    
+    <PropertyGroup>
+        <PostSharpDocumentationVersion>$(MainVersion)$(PackageVersionSuffix)</PostSharpDocumentationVersion>
+        <PostSharpDocumentationAssemblyVersion>$(MainVersion)</PostSharpDocumentationAssemblyVersion>
+    </PropertyGroup>
+
+    <!-- Set the deafult versions of auto-updated dependencies -->
+    <Import Project="AutoUpdatedVersions.props" />
+
+    <!-- Import overrides for the local build -->
+    <Import Project="Versions.g.props" Condition="Exists('Versions.g.props')" />
+
+    <!-- Other properties dependent on the versions set above. -->
+    <PropertyGroup>
+        <AssemblyVersion>$(PostSharpDocumentationAssemblyVersion)</AssemblyVersion>
+        <Version>$(PostSharpDocumentationVersion)</Version>
+    </PropertyGroup>
+
+</Project>

@@ -11,3 +11,26 @@ node_modules/
 *.br
 *.gz
 .env
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+*.nupkg
+
+*.log
+*.testlog
+.vs/
+
+artifacts/
+/PostSharp.Documentation.Import.props
+*.g.props
+eng/tools
