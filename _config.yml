@@ -11,13 +11,15 @@ email: hello@postsharp.net
 description: > # this means to ignore newlines until "baseurl:"
   Announcements, opinions, tips and tricks from PostSharp Technologies.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://metalama.net" # the base hostname & protocol for your site
+#url: "https://metalama.net" # the base hostname & protocol for your site
+url: https://gray-meadow-0b191ef03.4.azurestaticapps.net 
 twitter_username: postsharp
 github_username:  postsharp
 facebook_username: postsharp
 linkedin_username: postsharp
 
-main_website_url: https://metalama.net
+# main_website_url: https://metalama.net
+main_website_url: https://gray-meadow-0b191ef03.4.azurestaticapps.net
 
 strict_front_matter: true
 
