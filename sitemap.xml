@@ -9,76 +9,62 @@ layout: null
    
     {% for post in sorted_posts %}
       <url>
-        {% comment %}Calculate the last change date. It can be tweaked manually when a change is made to the template.{% endcomment %}
+        {% comment %} Calculate the last change date. {% endcomment %}
         {% assign post_lastmod = post.last_modified_at | default: post.date | date: "%Y-%m-%dT%H:%M:%S%:z" %}
-        {% if post_lastmod < min_date %}
-        {% assign lastmod = min_date %}
-        {% else %}
-        {% assign lastmod = post_lastmod %}
-        {% endif %}
-        {% comment %}Calculate the change frequency based on post creation date.{% endcomment %}
-        {% assign post_date = post.date | date: "%s" | plus: 0%}
-        {% assign today = "now" | date: "%s" | plus: 0 %}
-        {% assign one_week_ago = today | minus: 604800 %}  
-        {% assign two_months_ago = today | minus: 5259487 %}
-        {% if post_date >= one_week_ago %}
-          {% assign changefreq = "daily" %}
-        {% elsif post_date >= two_months_ago %}
-          {% assign changefreq = "weekly" %}
-        {% else %}
-          {% assign changefreq = "monthly" %}
-        {% endif %}
-        <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>      
-        <lastmod>{{lastmod}}</lastmod>
-        <changefreq>{{changefreq}}</changefreq>
+        {% assign lastmod = post_lastmod < min_date ? min_date : post_lastmod %}
 
-        {% comment %}Determine the priority.{% endcomment %}
+        {% comment %} Calculate the change frequency based on post creation date. {% endcomment %}
+        {% assign post_date = post.date | date: "%s" | plus: 0 %}
+        {% assign today = "now" | date: "%s" | plus: 0 %}
+        {% assign one_week_ago = today | minus: 604800 %}
+        {% assign two_months_ago = today | minus: 5259487 %}
+        {% assign changefreq = post_date >= one_week_ago ? "daily" : post_date >= two_months_ago ? "weekly" : "monthly" %}
+
+        <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
+        <lastmod>{{ lastmod }}</lastmod>
+        <changefreq>{{ changefreq }}</changefreq>
+
+        {% comment %} Determine the priority. {% endcomment %}
         {% assign post_year = post.date | date: "%Y" | plus: 0 %}
-        {% if post_year < 2018 %}
-          {% assign priority = "0.1" %}
-        {% elsif post_year >= 2024 %}
-          {% assign priority = "0.8" %}
-        {% else %}
-          {% assign priority = "0.6" %}
-        {% endif %}
-        <priority>{{priority}}</priority>
+        {% assign priority = post_year < 2018 ? "0.1" : post_year >= 2024 ? "0.8" : "0.6" %}
+        <priority>{{ priority }}</priority>
       </url>
     {% endfor %}
 
     {% for item1 in site.data.navigation.nodes %}
-      {% unless item1.extern %}
+      {% if item1.url and item1.extern != true %}
       <url>
         <loc>{{ item1.url | prepend: site.baseurl | prepend: site.url }}</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
-    {% endunless %}
+      {% endif %}
       {% for item2 in item1.nodes %}
-        {% unless item2.extern %}
+        {% if item2.url and item2.extern != true %}
         <url>
-        <loc>{{ item2.url | prepend: site.baseurl | prepend: site.url }}</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-      </url>
-    {% endunless %}
-      {% for item3 in item2.nodes %}
-        {% unless item3.extern %}
-        <url>
-        <loc>{{ item3.url | prepend: site.baseurl | prepend: site.url }}</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-      </url>
-    {% endunless %}
-    {% for item4 in item3.nodes %}
-      {% unless item4.extern %}
-      <url>
-      <loc>{{ item4.url | prepend: site.baseurl | prepend: site.url }}</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-      </url>
-  {% endunless %}
+          <loc>{{ item2.url | prepend: site.baseurl | prepend: site.url }}</loc>
+          <changefreq>monthly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        {% endif %}
+        {% for item3 in item2.nodes %}
+          {% if item3.url and item3.extern != true %}
+          <url>
+            <loc>{{ item3.url | prepend: site.baseurl | prepend: site.url }}</loc>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+          </url>
+          {% endif %}
+          {% for item4 in item3.nodes %}
+            {% if item4.url and item4.extern != true %}
+            <url>
+              <loc>{{ item4.url | prepend: site.baseurl | prepend: site.url }}</loc>
+              <changefreq>monthly</changefreq>
+              <priority>0.8</priority>
+            </url>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
       {% endfor %}
-      {% endfor %}     
     {% endfor %}
-  {% endfor %}
 </urlset>
