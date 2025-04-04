@@ -2,35 +2,11 @@
 layout: min
 ---
 
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.44.0"></script>
-<script
-    src="https://cdn.jsdelivr.net/npm/typesense-instantsearch-adapter@2/dist/typesense-instantsearch-adapter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.78.1/dist/instantsearch.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typesense-instantsearch-adapter@2.9.0/dist/typesense-instantsearch-adapter.min.js"></script>
 
 
 <script type="text/javascript" language="JavaScript">
-
-    var nextId = 0;
-
-    function toggle(id) {
-        $(`#details${id}`).toggle();
-        var button = $(`#showMore${id}`);
-
-        if (button.hasClass("expanded")) {
-            button.text("Show more");
-            button.removeClass("expanded");
-        } else {
-            button.text("Show less");
-            button.addClass("expanded");
-        }
-    }
-
-    function humanizeCount(count) {
-        if (count < 1e3) return count; // Less than 1,000
-        if (count >= 1e3 && count < 1e6) return (count / 1e3).toFixed(1) + 'K'; // Thousands
-        if (count >= 1e6 && count < 1e9) return (count / 1e6).toFixed(1) + 'M'; // Millions
-        if (count >= 1e9 && count < 1e12) return (count / 1e9).toFixed(1) + 'B'; // Billions
-        return count.toFixed(1) + 'T'; // Trillions (and beyond)
-    }
 
     function unescapeHtml(text) {
         const map = {
@@ -60,11 +36,25 @@ layout: min
                 ],
             },
             additionalSearchParameters: {
-            query_by: 'title,h1,summary,keywords,h2,h3,h4,h5,h6,text',
-            sort_by: '_text_match(buckets: 10):desc',
-            text_match_type: 'max_weight',
-            prioritize_exact_match: false
-           },
+                query_by: 'title,h1,summary,keywords,h2,h3,h4,h5,h6,text',
+                sort_by: '_text_match(buckets: 10):desc',
+                text_match_type: 'max_weight',
+                prioritize_exact_match: false
+            },
+            collectionSpecificSearchParameters: {
+                metalamawebA: {
+                    query_by: 'title,h1,summary,keywords,h2,h3,h4,h5,h6,text',
+                    sort_by: '_text_match(buckets: 10):desc',
+                    text_match_type: 'max_weight',
+                    prioritize_exact_match: false
+                },
+                metalamadocA: {
+                    query_by: 'title,h1,summary,keywords,h2,h3,h4,h5,h6,text',
+                    sort_by: '_text_match(buckets: 10):desc',
+                    text_match_type: 'max_weight',
+                    prioritize_exact_match: false
+                },
+            },
         });
 
         const searchClient = typesenseInstantSearchAdapter.searchClient;
@@ -95,7 +85,7 @@ layout: min
                 hitsPerPage: 20,
             }),
             instantsearch.widgets.hits({
-                container: '#hits',
+                container: '#hits-web',
                 templates: {
                     item(item) {
                         return `
@@ -109,16 +99,10 @@ layout: min
                             </div>
                         `;
                     },
-            },
-                cssClasses: {
-                    list: '',
-                    item: 'search-result-card',
-                    loadMore: 'load-more',
-                    disabledLoadMore: 'load-more disabled',
-                }
+              }
             }),
             instantsearch.widgets.pagination({
-                container: '#pagination',
+                container: '#pagination-web',
                 cssClasses: {
                     list: "",
                     item: "",
@@ -127,8 +111,38 @@ layout: min
                     selectedItem: "selected"
                 }
             }),
+            instantsearch.widgets.index({ indexName: "metalamadocA" }).addWidgets([
+                instantsearch.widgets.hits({
+                    container: '#hits-doc',
+                    templates: {
+                        item(item) {
+                            return `
+                                <div>
+                                    <div class="hit-title">
+                                        <a href="${unescapeHtml(item.link)}">${unescapeHtml(item._highlightResult.title.value)}</a>
+                                    </div>
+                                    <div class="hit-summary">
+                                        ${unescapeHtml(item._highlightResult.summary.value)}
+                                    </div>
+                                </div>
+                            `;
+                        },
+                    }
+                }),
+                instantsearch.widgets.pagination({
+                    container: '#pagination-doc',
+                    cssClasses: {
+                        list: "",
+                        item: "",
+                        link: "",
+                        disabledItem: "disabled",
+                        selectedItem: "selected"
+                    }
+                }),
+        ])
         ]);
 
+        
         search.start();
 
     });
@@ -144,10 +158,19 @@ layout: min
                     <h1>Metalama Search</h1>
                     <div id="searchbox"></div>
                     <div id="stats"></div>
-                    <div id="hits-per-page"></div>
-                    <div id="sort-by"></div>
-                    <div id="hits"></div>
-                    <div id="pagination"></div>
+                    <div id="hits">
+                        <div>
+                            <h2>Web</h2>
+                            <div id="hits-web"></div>
+                            <div id="pagination-web"></div>
+                        </div>
+                        <div>
+                            <h2>Documentation</h2>
+                            <div id="hits-doc"></div>
+                            <div id="pagination-doc"></div>
+                    </div>
+                    
+
                 </div>
             </div>
         </div>
