@@ -1,6 +1,7 @@
 ---
 title: Branching Strategy
 mermaid: true
+summary: "The document outlines Metalama's Git flow strategy involving concurrent version branches, continuous integration, and specific branch naming conventions."
 ---
 
 ## Our Git flow
@@ -63,3 +64,4 @@ gitGraph:
     merge develop/2023.4
     commit
 ```
+

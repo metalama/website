@@ -1,5 +1,6 @@
 ---
 title: "Classic Applications"
+summary: "Metalama aids in implementing features for mobile, desktop, or web apps using design patterns, UI code patterns, and defensive programming."
 ---
 
 {: .intro }

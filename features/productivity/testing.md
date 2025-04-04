@@ -1,5 +1,6 @@
 ---
 title: Test Frameworks
+summary: "Metalama provides testing libraries for code generation and diagnostics, supporting xUnit and integrating with diff tools for efficient testing."
 ---
 
 {: .intro }
@@ -32,3 +33,4 @@ Metalama includes two testing libraries:
 ## Resources
 
 - **Reference documentation.** [Testing the aspect's code generation and error reporting](https://doc.metalama.net/conceptual/aspects/testing/aspect-testing).
+

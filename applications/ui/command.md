@@ -1,5 +1,6 @@
 ---
 title: Command
+summary: "Metalama.Patterns.Wpf automates WPF command implementation, enhancing productivity by reducing boilerplate code and supporting `CanExecute` logic."
 ---
 
 One of the [best practices](https://blog.postsharp.net/wpf-best-practices-2024) in WPF is to implement the logic behind
@@ -61,4 +62,5 @@ public partial class MainWindow : Window
 * Source
   code: [Metalama.Patterns.Wpf](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Wpf).
 * NuGet package: [Metalama.Patterns.Wpf](https://www.nuget.org/packages/Metalama.Patterns.Wpf).
+
 

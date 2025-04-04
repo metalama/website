@@ -1,5 +1,6 @@
 ---
 title: Transformed Code Debugging
+summary: "Metalama's `LamaDebug` configuration enables debugging of transformed code, allowing breakpoint setting and inspection in any IDE."
 ---
 
 {: .intro }
@@ -13,3 +14,4 @@ When you build with the `LamaDebug` configuration, the transformed code is store
 * Works with all IDEs.
 * Produces readable, well-formatted code.
 * Allows you to set breakpoints in the generated code.
+

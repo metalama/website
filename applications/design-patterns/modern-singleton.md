@@ -1,5 +1,6 @@
 ---
 title: "Modern Singleton Pattern"
+summary: "The modern Singleton pattern uses Dependency Injection to manage instances, improving testability. Use Metalama to enforce architectural constraints."
 ---
 
 The Classic Singleton pattern didn't age well. Indeed, it's considered an anti-pattern because it's hard to test and

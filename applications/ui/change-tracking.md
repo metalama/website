@@ -1,5 +1,6 @@
 ---
 title: Change Tracking
+summary: "The document explains implementing change tracking in .NET UIs using `IChangeTracking` and `IRevertibleChangeTracking` interfaces with Metalama."
 ---
 
 When programming UIs, especially "transactional" UIs with _Ok_ buttons, it's necessary to detect whether a data object

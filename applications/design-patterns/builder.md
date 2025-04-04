@@ -1,5 +1,6 @@
 ---
 title: "Builder Pattern"
+summary: "The Builder pattern constructs complex objects step by step but requires much boilerplate code, which Metalama can help reduce."
 ---
 
 The Builder pattern is a creational design pattern that allows you to construct complex objects step by step. It is
@@ -89,3 +90,4 @@ That's a lot of boilerplate you want to avoid!
 
 * Blog post: [Implementing the Builder pattern with Metalama](https://blog.postsharp.net/builder-pattern-with-metalama)
 * Example: [Implementing the Builder pattern without boilerplate](https://doc.postsharp.net/metalama/examples/builder)
+

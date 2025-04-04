@@ -1,5 +1,6 @@
 ---
 title: Code Fix Toolkit
+summary: "Metalama's Code Fix Toolkit enhances productivity by automating code fixes, improving API discoverability, and reducing developer errors."
 ---
 
 {: .intro }
@@ -49,3 +50,4 @@ foreach ( var property in GetIncludedProperties( builder.Target ) )
 
 * Examples:
     - [ToString: adding code fixes and refactorings](https://doc.metalama.net/examples/tostring/tostring-2)
+

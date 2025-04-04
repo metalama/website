@@ -1,5 +1,6 @@
 ---
 title: C#-to-C# Templates
+summary: "Metalama's T# offers a C#-to-C# template language with syntax highlighting, code completion, and no runtime overhead for seamless code generation."
 ---
 
 {: .intro }
@@ -128,3 +129,4 @@ Most of the `Metalama.Framework` namespace is compile-time. You can extend T# wi
 - Complete API to reflect on the code being compiled.
 - APIs to dynamically build interpolated strings, `switch` statements.
 - Serialization from compile-time objects to run-time expressions.
+

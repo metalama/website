@@ -1,5 +1,6 @@
 ---
 title: Ready-to-Use Aspect Libraries
+summary: "Metalama offers open-source, professionally built aspect libraries for caching, code contracts, memoization, observability, and WPF integration."
 ---
 
 {: .intro }
@@ -67,3 +68,4 @@ Transform C# automatic properties into WPF dependency properties and methods int
 
 * Source code on [GitHub](https://github.com/metalama/Metalama/tree/HEAD/Metalama.Patterns)
 * [Metalama Marketplace](/marketplace) indexes all aspect libraries and extensions
+

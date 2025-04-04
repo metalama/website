@@ -1,5 +1,6 @@
 ---
 title: Reference Generated Code From Source Code
+summary: "Metalama allows source code to reference generated code, enabling seamless integration and IntelliSense support, enhancing code completion and design-time verification."
 ---
 
 {: .intro }
@@ -50,3 +51,4 @@ fish.Name = "Shark";
 // Undo change by using the generated RestoreMemento method.
 fish.RestoreMemento(memento);
 ```
+

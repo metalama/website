@@ -1,5 +1,6 @@
 ---
 title: INotifyPropertyChanged
+summary: "Metalama's `Observable` aspect automates `INotifyPropertyChanged` implementation, enhancing productivity and reducing errors in UI applications."
 ---
 
 Most modern UI applications rely on binding data classes to UI classes. The `INotifyPropertyChanged` interface is the

@@ -1,5 +1,6 @@
 ---
 title: Alternatives for Architecture Verification
+summary: "The document discusses various methods for architecture verification, including code style analyzers, architectural unit tests, custom Roslyn analyzers, and custom scripts."
 ---
 
 ## Code style analyzers and linters
@@ -192,3 +193,4 @@ the [Metalama.Framework.Workspaces]() namespace.
 | Understands aspects | Yes | No | No | No | Yes[^1]
 
 [^1]: Possible using `Metalama.Framework.Workspaces`.
+

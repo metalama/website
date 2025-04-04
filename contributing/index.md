@@ -1,5 +1,6 @@
 ---
 title: Contributing Overview
+summary: "Contribute to Metalama by spreading awareness, answering questions, sharing aspects, building libraries, and improving documentation and core projects."
 ---
 
 First off, thanks for your interest in contributing to Metalama — we appreciate the support. Whether you're fixing bugs, improving docs, sharing aspects, or proposing features, your input helps make Metalama better for everyone.
@@ -47,3 +48,4 @@ Let’s build something powerful.
 6. **Contribute to the core projects.**
 
     You're welcome to fix bugs (either new ones or already-reported ones) directly in the core projects. See [how to contribute code](contribute-code) for instructions. For new features, please first create a proposal and discuss it with the core maintainers.
+

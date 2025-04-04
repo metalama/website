@@ -1,5 +1,6 @@
 ---
 title: Extensible with Roslyn
+summary: "Metalama, built on Roslyn, allows advanced analysis and code transformations using the `Metalama.Framework.Sdk` package for enhanced functionality."
 ---
 
 {: .intro }
@@ -14,3 +15,4 @@ You can use `Metalama.Framework.Sdk` in the following scenarios:
 ## Resources
 
 * Reference documentation: [Extending Metalama](https://doc.metalama.net/conceptual/sdk)
+

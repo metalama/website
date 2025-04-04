@@ -1,5 +1,6 @@
 ---
 title: "Factory Patterns"
+summary: "Factory and Abstract Factory patterns create objects without exposing logic, using Metalama for architecture verification."
 ---
 
 The Factory and Abstract Factory are creational design patterns used to create objects without exposing the creation
@@ -92,3 +93,4 @@ internal class UseFactoryAttribute : TypeAspect
 ## Resources
 
 * Blog post: [The Factory design pattern in C#](https://blog.postsharp.net/factory-pattern)
+

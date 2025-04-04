@@ -1,5 +1,6 @@
 ---
 title: Immediate Editor Feedback
+summary: "Metalama provides immediate error notifications and real-time access to code changes within the IDE without recompilation."
 ---
 
 {: .intro }
@@ -25,3 +26,4 @@ This means you don't have to build your project to see warnings and errors, or t
 </ul>
 
 {% include lightbox.html %}
+

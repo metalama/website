@@ -1,5 +1,6 @@
 ---
 title: Code Validation
+summary: "Metalama aspects validate code, ensuring assumptions are met, providing error messages, and defining eligibility."
 ---
 
 {: .intro }
@@ -70,3 +71,4 @@ internal class LogAttribute : OverrideMethodAspect
 * Reference documentation:
     - [Reporting and suppressing diagnostics](https://doc.metalama.net/conceptual/aspects/diagnostics)
     - [Defining the aspect eligibility](https://doc.metalama.net/conceptual/aspects/eligibility)
+

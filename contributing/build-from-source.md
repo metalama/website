@@ -1,6 +1,7 @@
 ---
 title: How to Build from Source
 toc: true
+summary: "This document provides instructions for building Metalama from source, including environment setup, cloning, building, testing, and using Docker."
 ---
 
 ## Requirements
@@ -164,3 +165,4 @@ Follow these steps:
     ```
 
 The packages are then placed into the `artifacts/publish/private` directory.
+

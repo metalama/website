@@ -1,5 +1,6 @@
 ---
 title: Divorcing from Metalama
+summary: "Metalama provides tools and procedures for removing its dependency, allowing projects to revert to the standard C# compiler."
 ---
 
 {: .intro }
@@ -17,3 +18,4 @@ Metalama Divorce is not designed for regular execution. Like any divorce, breaki
 ## Resources
 
 * Reference documentation: [Divorcing from Metalama](https://doc.metalama.net/conceptual/divorcing)
+

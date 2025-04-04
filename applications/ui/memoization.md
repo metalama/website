@@ -1,5 +1,6 @@
 ---
 title: Memoization
+summary: "Memoization improves app performance by storing read-only property values, avoiding re-evaluation. Use Metalama.Patterns.Memoization for easy implementation."
 ---
 
 {: .note }

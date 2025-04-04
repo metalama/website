@@ -1,5 +1,6 @@
 ---
 title: "Alternatives for Code Generation"
+summary: "This document discusses various approaches for code generation in .NET, highlighting benefits, inconveniences, and use cases for each method."
 ---
 
 There are many approaches to code generation in .NET, and Metalama is not necessarily the best choice for all use cases.
@@ -229,3 +230,4 @@ a replacement for code generation tools, but rather for handwriting code.
 
 GenAI is a wonderful way to get a quick and dirty solution in a language or area you don't master, but it is not a
 replacement for code generation tools.
+

@@ -1,5 +1,6 @@
 ---
 title: "Decorator Pattern"
+summary: "The Decorator pattern adds behaviors to objects without altering their structure, using Metalama for static implementation."
 ---
 
 The Decorator pattern is a structural design pattern that allows you to add new behaviors to objects. It is a good
@@ -84,3 +85,4 @@ internal class RetryAttribute : OverrideMethodAspect
 ## Resources
 
 * Blog post: [The Decorator Pattern in Modern C#](https://blog.postsharp.net/decorator-pattern)
+

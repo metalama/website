@@ -1,5 +1,6 @@
 ---
 title: Enhance Hand-Written Code
+summary: "Metalama uniquely allows adding behaviors to existing C# code, enabling features like logging and exception handling without altering original methods."
 ---
 
 {: .intro }
@@ -69,3 +70,4 @@ As you can see, it not only adds new members like the `HatShopMetrics` class and
 ## Resources
 
 * Reference documentation: [Creating simple aspects](https://doc.metalama.net/conceptual/aspects/simple-aspects)
+

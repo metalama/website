@@ -1,5 +1,6 @@
 ---
 title: "Classic Singleton Pattern"
+summary: "The document explains the Singleton pattern, highlighting its implementation and benefits using the Metalama framework."
 ---
 
 
@@ -54,3 +55,4 @@ public partial class PerformanceCounterManager
 ## Resources
 
 * Example: [Classic Singleton](https://doc.postsharp.net/metalama/examples/singleton/singleton-1)
+

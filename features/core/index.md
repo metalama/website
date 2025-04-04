@@ -1,5 +1,6 @@
 ---
 title: Core Features
+summary: "Metalama offers features like code generation, verification, real-time feedback, architecture validation, and a code fix toolkit for C#."
 ---
 
 | Feature | Description |
@@ -9,3 +10,4 @@ title: Core Features
 | [Immediate Editor Feedback](design-time-feedback) | Metalama provides real-time feedback as you type, eliminating the need to constantly rebuild to refresh your IDE. Unlike MSIL-based approaches, and thanks to its integration with Roslyn source generators, Metalama allows you to reference generated declarations from hand-written code. |
 | [Architecture Validation](architecture-verification) <i class="premium"></i> | Validate code usages, references, and dependencies, and enforce your architecture straight from the IDE with Architecture As Code. |
 | [Code Fix Toolkit](codefixes) <i class="premium"></i> | Boost your team's productivity by suggesting custom code fixes for any errors or warnings reported by your code verification logic. |
+

@@ -1,5 +1,6 @@
 ---
 title: "Alternatives for AOP"
+summary: "The document compares aspect-oriented programming frameworks for .NET, detailing approaches like MSIL rewriting, Roslyn-based, and middleware."
 ---
 
 Today's aspect-oriented frameworks all rely on one of the following approaches:
@@ -89,3 +90,4 @@ qualify as an aspect-oriented framework.
 | IDE: CodeLens                                 | Yes      | Yes       | No             | No      | No              |
 | View/Debug Generated C#                       | Yes      | No        | No             | No      | No              |
 | Large library of pre-built aspects            | Yes      | Yes       | No             | No      | No              |
+

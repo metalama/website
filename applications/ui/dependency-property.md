@@ -1,5 +1,6 @@
 ---
 title: Dependency Properties
+summary: "Metalama.Patterns.Wpf is an open-source library for WPF, enhancing productivity by generating dependency properties without boilerplate code."
 ---
 
 TODO
