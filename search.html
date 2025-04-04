@@ -1,5 +1,6 @@
 ---
 layout: min
+title: "Search"
 ---
 
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.78.1/dist/instantsearch.production.min.js"></script>
@@ -77,6 +78,18 @@ layout: min
         const searchClient = {
             ...originalSearchClient,
             search: async (requests) => {
+                if (requests.every(request => !request.params.query)) {
+                    return {
+                        results: requests.map(() => ({
+                            hits: [],
+                            nbHits: 0,
+                            nbPages: 0,
+                            processingTimeMS: 0,
+                            hitsPerPage: 20,
+                            page: 0,
+                        })),
+                    };
+                }
                 const collections = [
                     { indexName: 'metalamawebA', priority: 1 },
                     { indexName: 'metalamadoc', priority: 2 },
