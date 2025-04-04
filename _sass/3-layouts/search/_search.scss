@@ -43,6 +43,14 @@
         }
       }
 
+      .hit-breadcrumb {
+        color: $purple;
+      }
+
+      .hit-title {
+        font-size: $font-size-h5;
+      }
+
       .ais-Hits {
 
         ol {
@@ -51,6 +59,12 @@
             flex-direction: column;
             gap: 20px;
             padding: 0;
+
+            li > div {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
 
             a {
                 color: white;
