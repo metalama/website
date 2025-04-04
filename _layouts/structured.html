@@ -145,8 +145,10 @@
     </nav>
 
     <div class="text_content">
-        <h1>{{ page.short_title | default: page.title }}</h1>
-        {{ content | inject_anchors }}
+        <main>
+            <h1>{{ page.short_title | default: page.title }}</h1>
+            {{ content | inject_anchors }}
+        </main>
     </div>
 
     {% if page.toc %}

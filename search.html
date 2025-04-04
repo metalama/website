@@ -32,6 +32,17 @@ layout: min
         return count.toFixed(1) + 'T'; // Trillions (and beyond)
     }
 
+    function unescapeHtml(text) {
+        const map = {
+            '&amp;': '&',
+            '&lt;': '<',
+            '&gt;': '>',
+            '&quot;': '"',
+            '&#39;': "'",
+        };
+        return text.replace(/&(amp|lt|gt|quot|#39);/g, (entity) => map[entity]);
+    }
+
 
     // Search
 
@@ -73,7 +84,7 @@ layout: min
                 container: '#searchbox',
                 showSubmit: false,
                 showReset: false,
-                placeholder: 'Filter by keyword...',
+                placeholder: 'Search by keyword...',
                 autofocus: false,
                 cssClasses: {
                     input: '',
@@ -90,10 +101,10 @@ layout: min
                         return `
                             <div>
                                 <div class="hit-title">
-                                    <a href="${item.link}">${item._highlightResult.title.value}</a>
+                                    <a href="${unescapeHtml(item.link)}">${unescapeHtml(item._highlightResult.title.value)}</a>
                                 </div>
                                 <div class="hit-summary">
-                                    ${item._highlightResult.summary.value}
+                                    ${unescapeHtml(item._highlightResult.summary.value)}
                                 </div>
                             </div>
                         `;
