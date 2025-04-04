@@ -9,6 +9,9 @@ layout: min
 <script type="text/javascript" language="JavaScript">
 
     function unescapeHtml(text) {
+        if (text === undefined) {
+            return '';
+        }
         const map = {
             '&amp;': '&',
             '&lt;': '<',
@@ -23,6 +26,7 @@ layout: min
         const sourceMap = {
             'metalamaweb': '',
             'metalamadoc': '',
+            'metalama-marketplace': 'Marketplace',
         };
         return sourceMap[source];
     }
@@ -44,9 +48,6 @@ layout: min
                 ],
             },
             additionalSearchParameters: {
-                query_by: 'title,h1,keywords,summary,h2,h3,h4,h5,h6,text',
-                query_by_weights: '20,20,20,10,6,5,3,2,1,1',
-         //       sort_by: '_text_match(buckets: 10):desc',
                 text_match_type: 'max_weight',
                 prioritize_exact_match: false
             },
@@ -79,7 +80,7 @@ layout: min
                 const collections = [
                     { indexName: 'metalamawebA', priority: 1 },
                     { indexName: 'metalamadoc', priority: 2 },
-                    { indexName: 'marketplace', priority: 2 },
+                    { indexName: 'metalama-marketplace', priority: 2 },
                 ];
 
                 const searchResults = await Promise.all(
@@ -113,7 +114,6 @@ layout: min
        
 
         search.addWidgets([
-        
 
             instantsearch.widgets.searchBox({
                 container: '#searchbox',
@@ -136,7 +136,7 @@ layout: min
                         return `
                             <div>
                                 <div class="hit-title">
-                                    <a href="${unescapeHtml(item.link)}">${unescapeHtml(item._highlightResult.title.value)}</a>
+                                    <a href="${unescapeHtml(item.link || item.packageUrl || item.sourceUrl)}">${unescapeHtml(item._highlightResult.title?.value || item._highlightResult.name?.value)}</a>
                                 </div>
                                 <div class="hit-breadcrumb">
                                     ${mapSourceToBreadcrumbHome(item.source)}
@@ -181,11 +181,9 @@ layout: min
                 <div class="principal">
                     <h1>Metalama Search</h1>
                     <div id="searchbox"></div>
-                    <div id="stats"></div>
                     <div id="hits"></div>
                     <div id="pagination"></div>
                     </div>
-                    
 
                 </div>
             </div>
