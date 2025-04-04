@@ -32,31 +32,44 @@
 {% endfor %} 
 {% endfor %}
 
-<ul class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-    <li itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+{% comment %}
+The format of the breadbrumb is given by the search crawler. 
+The use of `//nav[@itemtype="https://schema.org/BreadcrumbList"]` containing `//span[@itemprop="name"]` is given.
+{% endcomment %}
+
+<nav class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+    <span itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
         <meta itemprop="position" content="1" />
         <meta itemprop="item" content="{{ active1.url }}" />
-        <a href="{{ active1.url }}" itemprop="name">{{ active1.title }}</a>
-    </li>
+        <a href="{{ active1.url }}">
+            <span itemprop="name">{{ active1.title }}</span>
+        </a>
+    </span>
     {% if active2 %}
-        <li itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+        <span itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
             <meta itemprop="position" content="2" />
             <meta itemprop="item" content="{{ active2.url }}" />
-            <a href="{{ active2.url }}" itemprop="name">{{ active2.title }}</a>
-        </li>
+            <a href="{{ active2.url }}">
+                <span itemprop="name">{{ active2.title }}</span>
+            </a>
+        </span>
     {% endif %}
     {% if active3 %}
-        <li itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+        <span itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
             <meta itemprop="position" content="3" />
             <meta itemprop="item" content="{{ active3.url }}" />
-            <a href="{{ active3.url }}" itemprop="name">{{ active3.title }}</a>
-        </li>
+            <a href="{{ active3.url }}">
+                <span itemprop="name">{{ active3.title }}</span>
+            </a>
+        </span>
     {% endif %}
     {% if active4 %}
-        <li itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+        <span itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
             <meta itemprop="position" content="4" />
             <meta itemprop="item" content="{{ active4.url }}" />
-            <a href="{{ active4.url }}" itemprop="name">{{ active4.title }}</a>
-        </li>
+            <a href="{{ active4.url }}">
+                <span itemprop="name">{{ active4.title }}</span>
+            </a>
+        </span>
     {% endif %}
-</ul>
+</nav>
