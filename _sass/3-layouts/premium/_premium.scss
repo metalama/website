@@ -1,5 +1,7 @@
 main.premium {
 
+  @extend .bg-purple;
+
   @extend .min_height;
 
     h1 { text-align: center; }

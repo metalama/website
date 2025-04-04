@@ -17,7 +17,7 @@ var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumenta
         new UpdateSearchProductExtension(
             "https://0fpg9nu41dat6boep.a1.typesense.net",
             "metalamaweb",
-            "https://gray-meadow-0b191ef03.4.azurestaticapps.net//sitemap.xml",
+            "https://gray-meadow-0b191ef03.4.azurestaticapps.net/sitemap.xml",
             () => new PlainDocumentParser( ["//main"] ),
             ["Metalama"],
             true ) 

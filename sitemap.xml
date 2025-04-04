@@ -74,7 +74,16 @@ layout: null
         <priority>0.8</priority>
       </url>
     {% endunless %}
+    {% for item4 in item3.nodes %}
+      {% unless item4.extern %}
+      <url>
+      <loc>{{ item4.url | prepend: site.baseurl | prepend: site.url }}</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+      </url>
+  {% endunless %}
       {% endfor %}
       {% endfor %}     
     {% endfor %}
+  {% endfor %}
 </urlset>

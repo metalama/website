@@ -37,7 +37,8 @@
 
     <meta property="og:title" content="{{ include.title | escape }}" />
     <meta name="twitter:title" content="{{ include.title | escape }}" />
-    <meta property="og:url" content="https://blog.postsharp.net{{ include.permalink }}" />
+    <meta name="title" content="{{ include.title | escape }}" />
+    <meta property="og:url" content="https://metalama.net{{ include.permalink }}" />
     <meta name="twitter:card" content="summary_large_image" />
     {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
@@ -284,13 +285,19 @@
                         <a href="https://www.github.com/metalama" data-submenu="" class="btn--github"
                             title="Access the source code on GitHub.">
                             <img src="/assets/images/icons/github.svg" alt="Open Source" />
-                            <!--<span>Open Source</span>-->
                         </a>
                     </li>
 
                     <li role="menuitem">
                         <a href="/get" data-submenu="" title="Add Metalama to your projects and install the IDE tooling." class="btn--download">
                             <img src="/assets/images/icons/download-white.svg" alt="Download" />
+                        </a>
+                    </li>
+
+                    
+                    <li role="menuitem">
+                        <a href="/search" data-submenu="" title="Search Metalama." class="btn--download">
+                            <img src="/assets/images/icons/search-white.svg" alt="Download" />
                         </a>
                     </li>
 
