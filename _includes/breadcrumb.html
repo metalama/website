@@ -3,23 +3,22 @@
 {% assign page_url = "/" %}
 {% endif %}
 
-
 {% for item1 in site.data.navigation.nodes %}
   {% if item1.url == page_url %}
     {% assign active1 = item1 %}
   {% endif %}
-  {%  for item2  in item1.nodes %}  
+  {% for item2 in item1.nodes %}
     {% if item2.url == page_url %}
         {% assign active1 = item1 %}
         {% assign active2 = item2 %}
     {% endif %}
-    {%  for item3  in item2.nodes %}  
+    {% for item3 in item2.nodes %}
         {% if item3.url == page_url %}
             {% assign active1 = item1 %}
             {% assign active2 = item2 %}
             {% assign active3 = item3 %}
         {% endif %}
-        {%  for item4  in item3.nodes %}  
+        {% for item4 in item3.nodes %}
             {% if item4.url == page_url %}
                 {% assign active1 = item1 %}
                 {% assign active2 = item2 %}
@@ -28,8 +27,7 @@
             {% endif %}
         {% endfor %}
     {% endfor %}
-           
-{% endfor %} 
+  {% endfor %}
 {% endfor %}
 
 {% comment %}
@@ -37,8 +35,9 @@ The format of the breadbrumb is given by the search crawler.
 The use of `//nav[@itemtype="https://schema.org/BreadcrumbList"]` containing `//span[@itemprop="name"]` is given.
 {% endcomment %}
 
-<nav class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-    <span itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+{% if active1 %}
+<nav class="breadcrumb" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+    <span itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
         <meta itemprop="position" content="1" />
         <meta itemprop="item" content="{{ active1.url }}" />
         <a href="{{ active1.url }}">
@@ -46,7 +45,7 @@ The use of `//nav[@itemtype="https://schema.org/BreadcrumbList"]` containing `//
         </a>
     </span>
     {% if active2 %}
-        <span itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+        <span itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
             <meta itemprop="position" content="2" />
             <meta itemprop="item" content="{{ active2.url }}" />
             <a href="{{ active2.url }}">
@@ -55,7 +54,7 @@ The use of `//nav[@itemtype="https://schema.org/BreadcrumbList"]` containing `//
         </span>
     {% endif %}
     {% if active3 %}
-        <span itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+        <span itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
             <meta itemprop="position" content="3" />
             <meta itemprop="item" content="{{ active3.url }}" />
             <a href="{{ active3.url }}">
@@ -64,7 +63,7 @@ The use of `//nav[@itemtype="https://schema.org/BreadcrumbList"]` containing `//
         </span>
     {% endif %}
     {% if active4 %}
-        <span itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+        <span itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
             <meta itemprop="position" content="4" />
             <meta itemprop="item" content="{{ active4.url }}" />
             <a href="{{ active4.url }}">
@@ -73,3 +72,4 @@ The use of `//nav[@itemtype="https://schema.org/BreadcrumbList"]` containing `//
         </span>
     {% endif %}
 </nav>
+{% endif %}

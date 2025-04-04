@@ -1,0 +1,23 @@
+{% assign page_url = page.url | remove: '.html' | split: '/' | join: '/' %}
+{% if page_url == "" %}
+{% assign page_url = "/" %}
+{% endif %}
+
+<nav class="breadcrumb" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+    <span itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1" />
+        <meta itemprop="item" content="/blog" />
+        <a href="/blog">
+            <span itemprop="name">Blog</span>
+        </a>
+    </span>
+    {% unless page_url == '/blog'  %}
+    <span itemscope="itemscope" itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2" />
+        <meta itemprop="item" content="{{ page_url }}" />
+        <a href="{{ page_url }}">
+            <span itemprop="name">{{ page.title }}</span>
+        </a>
+    </span>
+    {% endunless %}
+</nav>
