@@ -57,12 +57,39 @@ layout: min
             },
         });
 
-        const searchClient = typesenseInstantSearchAdapter.searchClient;
+        const originalSearchClient = typesenseInstantSearchAdapter.searchClient;
+
+        const searchClient = {
+            ...originalSearchClient,
+            search: async (requests) => {
+                const collections = [
+                    { indexName: 'metalamawebA', priority: 1 },
+                    { indexName: 'metalamadocA', priority: 2 },
+                ];
+
+                const searchResults = await Promise.all(
+                    collections.map(( collection ) => {
+                        const modifiedRequests = requests.map((request) => {
+                            request.indexName = collection.indexName;
+                            return request;
+                        });
+                        return originalSearchClient.search(modifiedRequests);
+                    })
+                );
+
+                // Merge all results into searchResults[0]
+                searchResults[0].results[0].hits = searchResults.reduce( (merged, current) => merged.concat(current.results[0].hits), []);
+                searchResults[0].results[0].nbHits = searchResults.reduce( (merged, current) => merged + current.results[0].nbHits, 0);
+                searchResults[0].results[0].nbPages = Math.ceil(searchResults[0].results[0].nbHits / searchResults[0].results[0].hitsPerPage);
+
+                return searchResults[0];
+            },
+        };
 
         const search = instantsearch({
             searchClient,
             indexName: "metalamawebA",
-            routing: true
+            routing: true,
         });
 
        
@@ -85,7 +112,7 @@ layout: min
                 hitsPerPage: 20,
             }),
             instantsearch.widgets.hits({
-                container: '#hits-web',
+                container: '#hits',
                 templates: {
                     item(item) {
                         return `
@@ -93,16 +120,23 @@ layout: min
                                 <div class="hit-title">
                                     <a href="${unescapeHtml(item.link)}">${unescapeHtml(item._highlightResult.title.value)}</a>
                                 </div>
-                                <div class="hit-summary">
-                                    ${unescapeHtml(item._highlightResult.summary.value)}
-                                </div>
+                                ${item.breadcrumb ? `
+                                    <div class="hit-breadcrumb">
+                                        ${item.breadcrumb}
+                                    </div>
+                                ` : ''}
+                                ${item.summary ? `
+                                    <div class="hit-summary">
+                                        ${unescapeHtml(item._highlightResult.summary.value)}
+                                    </div>
+                                ` : ''}
                             </div>
                         `;
                     },
               }
             }),
             instantsearch.widgets.pagination({
-                container: '#pagination-web',
+                container: '#pagination',
                 cssClasses: {
                     list: "",
                     item: "",
@@ -111,35 +145,7 @@ layout: min
                     selectedItem: "selected"
                 }
             }),
-            instantsearch.widgets.index({ indexName: "metalamadocA" }).addWidgets([
-                instantsearch.widgets.hits({
-                    container: '#hits-doc',
-                    templates: {
-                        item(item) {
-                            return `
-                                <div>
-                                    <div class="hit-title">
-                                        <a href="${unescapeHtml(item.link)}">${unescapeHtml(item._highlightResult.title.value)}</a>
-                                    </div>
-                                    <div class="hit-summary">
-                                        ${unescapeHtml(item._highlightResult.summary.value)}
-                                    </div>
-                                </div>
-                            `;
-                        },
-                    }
-                }),
-                instantsearch.widgets.pagination({
-                    container: '#pagination-doc',
-                    cssClasses: {
-                        list: "",
-                        item: "",
-                        link: "",
-                        disabledItem: "disabled",
-                        selectedItem: "selected"
-                    }
-                }),
-        ])
+          
         ]);
 
         
@@ -158,16 +164,8 @@ layout: min
                     <h1>Metalama Search</h1>
                     <div id="searchbox"></div>
                     <div id="stats"></div>
-                    <div id="hits">
-                        <div>
-                            <h2>Web</h2>
-                            <div id="hits-web"></div>
-                            <div id="pagination-web"></div>
-                        </div>
-                        <div>
-                            <h2>Documentation</h2>
-                            <div id="hits-doc"></div>
-                            <div id="pagination-doc"></div>
+                    <div id="hits"></div>
+                    <div id="pagination"></div>
                     </div>
                     
 
