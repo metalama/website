@@ -12,3 +12,4 @@ Whether you're building a mobile, desktop, or web app, Metalama can help impleme
 | [UI Code Patterns](ui) | Change Tracking, INotifyPropertyChanged, Memoization, Undo-Redo, Command |
 | [Classic Object Services](object-services) | Deep Cloning, ToString, Comparison |
 | [Defensive Programming](contracts) | Code contracts: pre-conditions, post-conditions, invariants, data annotations. |
+

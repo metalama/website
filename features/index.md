@@ -1,6 +1,7 @@
 ---
 title: Features
 summary: "Metalama is a C# meta-programming framework for code generation, validation, and custom refactorings, integrating seamlessly with Roslyn."
+keywords: "Metalama, C# meta-programming, code generation, code validation, Roslyn integration, custom refactorings, aspect-oriented programming, real-time feedback, code fixes, Visual Studio, code patterns"
 ---
 
 {: .intro }
@@ -18,4 +19,5 @@ Metalama is a powerful meta-programming framework for C# based on Roslyn. It spe
 | [Transformed Code Debugging](/features/productivity/debugging) | Choose whether to step into the transformed code or stick to the source code during debugging. You can see exactly which code is executed. |
 | [Code Query API](/features/extensibility/code-query) | Query your code as a database and explore code references using LINQPad. Access the Metalama object model to diagnose how aspects and fabrics affect your code. |
 | [Divorce](/features/extensibility/divorce) | Metalama makes it easy to part ways when needed. Run the `metalama divorce` command to commit the generated code into your source code and return to the plain Jane Microsoft's compiler. |
+
 

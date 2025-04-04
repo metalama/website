@@ -1,6 +1,7 @@
 ---
 title: Dependency Injection
 summary: "Metalama integrates dependency injection with aspect-oriented programming, enhancing testability and supporting multiple frameworks like `Microsoft.Extensions.DependencyInjection`."
+keywords: "dependency injection, aspect-oriented programming, Metalama, testability, Microsoft.Extensions.DependencyInjection, dependency injection frameworks, service locator pattern, ILogger"
 ---
 
 {: .intro }
@@ -59,4 +60,5 @@ class Worker : BackgroundService
 
 * Reference documentation: [Injecting dependencies into aspects](https://doc.metalama.net/conceptual/aspects/dependency-injection)
 * Commented example: [Logging with DI](https://doc.metalama.net/examples/log/log-4)
+
 

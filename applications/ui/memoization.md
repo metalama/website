@@ -1,6 +1,7 @@
 ---
 title: Memoization
 summary: "Memoization improves app performance by storing read-only property values, avoiding re-evaluation. Use Metalama.Patterns.Memoization for easy implementation."
+keywords: "memoization, read-only property, Metalama.Patterns.Memoization, app performance, high-performance, multi-threading, Memoize aspect, property evaluation"
 ---
 
 {: .note }
@@ -63,3 +64,4 @@ public class ExpensiveResourceViewModel : DependencyObject
 * Source
   code: [Metalama.Patterns.Memoization](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Memoization).
 * NuGet package: [Metalama.Patterns.Memoization](https://www.nuget.org/packages/Metalama.Patterns.Memoization).
+

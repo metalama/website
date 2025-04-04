@@ -1,6 +1,7 @@
 ---
 title: "Modern Singleton Pattern"
 summary: "The modern Singleton pattern uses Dependency Injection to manage instances, improving testability. Use Metalama to enforce architectural constraints."
+keywords: "Singleton pattern, Dependency Injection, testability, Metalama, architectural constraints, IServiceCollection.AddSingleton, modern Singleton"
 ---
 
 The Classic Singleton pattern didn't age well. Indeed, it's considered an anti-pattern because it's hard to test and
@@ -75,3 +76,4 @@ public class SingletonAttribute : TypeAspect
 
 * Blog post: [The Singleton Pattern in C# Today Is Not Your Dad's One!](https://blog.postsharp.net/singleton)
 * Example: [Validating the modern Singleton](https://doc.postsharp.net/metalama/examples/singleton/singleton-2)
+

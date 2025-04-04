@@ -2,6 +2,7 @@
 title: How to Contribute Code
 toc: true
 summary: "This document outlines the steps for contributing code into Metalama repositories, including feature implementation, testing, formatting, and submitting a pull request."
+keywords: "contributing code, Metalama, testing, formatting, pull request, build repository, unit tests, Contributor License Agreement"
 ---
 
 ## 1. Choose your repository
@@ -68,4 +69,5 @@ Ensure the following command executes successfully:
 Even if you branched from `release/YYYY.N`, remember that we will merge into `develop/YYYY.N`.
 
 Before we can accept your first PR, you will be asked to sign the [Contributor License Agreement](cla).
+
 

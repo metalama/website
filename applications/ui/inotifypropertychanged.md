@@ -1,6 +1,7 @@
 ---
 title: INotifyPropertyChanged
 summary: "Metalama's `Observable` aspect automates `INotifyPropertyChanged` implementation, enhancing productivity and reducing errors in UI applications."
+keywords: "INotifyPropertyChanged, Observable aspect, Metalama, automate implementation, reduce errors, UI applications, data binding, productivity, clean code"
 ---
 
 Most modern UI applications rely on binding data classes to UI classes. The `INotifyPropertyChanged` interface is the
@@ -71,3 +72,4 @@ public partial class CustomerViewModel
 * Source
   code: [Metalama.Patterns.Observability](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Observability).
 * NuGet package: [Metalama.Patterns.Observability](https://www.nuget.org/packages/Metalama.Patterns.Observability).
+

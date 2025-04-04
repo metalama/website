@@ -2,6 +2,7 @@
 title: How to Contribute Docs
 toc: true
 summary: "This document guides on contributing to Metalama's documentation using DocFx, including cloning, building, authoring, updating, and preparing a PR."
+keywords: "DocFx, Metalama, documentation, authoring sample code, Metalama.Testing.AspectTesting, authoring documentation article, update documentation, prepare PR"
 ---
 
 Metalama uses [DocFx](https://dotnet.github.io/docfx/index.html) to build its documentation.
@@ -95,4 +96,5 @@ Ensure the build is successful.
 ## 8. Prepare a PR
 
 Congratulations! You can now prepare a PR against the `develop/YYYY.N` branch.
+
 

@@ -1,6 +1,7 @@
 ---
 title: Contribution License Agreement
 summary: "The Contribution License Agreement requires contributors to grant SharpCrafters s.r.o. rights to use and distribute their submissions legally."
+keywords: "Contribution License Agreement, Contributor License Agreement,  open source, legal rights, submissions, code, licenses"
 ---
 
 {: .intro }
@@ -57,6 +58,7 @@ This Agreement shall be construed and controlled by the laws of the Czech Republ
 #### 8. Entire Agreement/Assignment.
 
 This Agreement is the entire agreement between the parties, and supersedes any and all prior agreements, understandings or communications, written or oral, between the parties relating to the subject matter hereof. This Agreement may be assigned by Maintainer.
+
 
 
 

@@ -1,6 +1,7 @@
 ---
 title: Visual Studio Tools for Metalama
 summary: "Visual Studio Tools for Metalama enhance productivity with CodeLens, Aspect Diff, and Aspect Explorer."
+keywords: "Metalama, productivity, insights, CodeLens, Aspect Diff, Aspect Explorer, Metalama, C#, template language, syntax highlighting, Visual Studio"
 ---
 
 {: .intro }
@@ -44,4 +45,5 @@ Visual Studio Tools for Metalama requires either a free Metalama Community licen
 * Download from [Visual Studio Gallery](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp)
 
 {% include lightbox.html %}
+
 

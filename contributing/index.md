@@ -49,3 +49,4 @@ Let’s build something powerful.
 
     You're welcome to fix bugs (either new ones or already-reported ones) directly in the core projects. See [how to contribute code](contribute-code) for instructions. For new features, please first create a proposal and discuss it with the core maintainers.
 
+

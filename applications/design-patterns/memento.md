@@ -1,6 +1,7 @@
 ---
 title: "Memento Pattern"
 summary: "The Memento pattern captures an object's state without violating encapsulation, useful for undo/redo functionality and state restoration. It can be automatically implemented using Metalama."
+keywords: "Memento pattern, encapsulation, undo/redo functionality, state restoration, Metalama, boilerplate code, design patterns"
 ---
 
 The Memento pattern is the classic behavioral design pattern to use when you want to capture the internal state of an
@@ -94,3 +95,4 @@ code [here](https://doc.postsharp.net/metalama/preview/examples/memento/memento-
 
 * Blog post: [The Memento Design Pattern in C#, Practically With Examples [2024]](https://blog.postsharp.net/memento)
 * Example: [Implementing the Memento pattern without boilerplate](https://doc.postsharp.net/metalama/examples/memento)
+

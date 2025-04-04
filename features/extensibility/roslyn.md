@@ -16,3 +16,4 @@ You can use `Metalama.Framework.Sdk` in the following scenarios:
 
 * Reference documentation: [Extending Metalama](https://doc.metalama.net/conceptual/sdk)
 
+

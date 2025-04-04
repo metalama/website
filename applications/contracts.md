@@ -1,6 +1,7 @@
 ---
 title: Defensive Programming
 summary: "Defensive Programming uses redundant validation checks to enhance software robustness, streamlined by Metalama's automatic code generation."
+keywords: "defensive programming, redundant validation checks, Metalama, automatic code generation, software robustness, validation code, .NET, Metalama.Patterns.Contracts, code contracts, user input validation"
 ---
 
 {: .intro }
@@ -82,4 +83,5 @@ internal class Fabric : ProjectFabric
 * Reference documentation: [Code Contracts](https://doc.postsharp.net/metalama/patterns/contracts).
 * Source code: [Metalama.Patterns.Contracts](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Contracts).
 * NuGet package: [Metalama.Patterns.Contracts](https://www.nuget.org/packages/Metalama.Patterns.Wpf).
+
 

@@ -1,6 +1,7 @@
 ---
 title: Powerful Code Selection Mechanisms
 summary: "Metalama provides powerful code selection mechanisms including custom attributes, fabrics, aspect inheritance, and cross-project fabrics for enhancing or validating declarations."
+keywords: "Metalama, code selection mechanisms, custom attributes, fabrics, aspect inheritance, cross-project fabrics, .NET programming, enhance declarations, validate declarations, LINQ-like queries, compile time"
 ---
 
 {: .intro }
@@ -112,4 +113,5 @@ internal class Fabric : TransitiveProjectFabric
 ### Resources
 
 * Reference documentation: [Adding aspects to multiple projects](https://doc.metalama.net/conceptual/using/amending-many-projects).
+
 

@@ -1,6 +1,7 @@
 ---
 title: "Proxy Pattern"
 summary: "The Proxy pattern in C# provides substitutes for objects to add behavior and can be implemented via interfaces. Use Metalama to generate static proxies instead of dynamic ones."
+keywords: "Proxy pattern, boilerplate code, dynamic proxies, static proxies, Metalama, C#, interceptors, Roslyn source generators, compile time"
 ---
 
 The Proxy pattern is a structural design pattern that lets you provide a substitute or placeholder for another object,
@@ -141,4 +142,5 @@ public interface LoggingInterceptor : IInterceptor
 
 * Source
   code: [Metalama.Samples.Proxy](https://github.com/postsharp/Metalama.Samples/tree/release/2025.0/examples/Metalama.Samples.Proxy)
+
 

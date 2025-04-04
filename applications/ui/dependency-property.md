@@ -1,6 +1,7 @@
 ---
 title: Dependency Properties
 summary: "Metalama.Patterns.Wpf is an open-source library for WPF, enhancing productivity by generating dependency properties without boilerplate code."
+keywords: "dependency properties, boilerplate code, Metalama.Patterns.Wpf, WPF, C# automatic properties, productivity, open-source library, validation rules, OnPropertyChanged callbacks"
 ---
 
 TODO
@@ -54,3 +55,4 @@ public partial class FancyTextBlock : UserControl
 * Source
   code: [Metalama.Patterns.Wpf](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Wpf).
 * NuGet package: [Metalama.Patterns.Wpf](https://www.nuget.org/packages/Metalama.Patterns.Wpf).
+
