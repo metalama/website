@@ -1,0 +1,62 @@
+{% assign page_url = page.url | remove: '.html' | split: '/' | join: '/' %}
+{% if page_url == "" %}
+{% assign page_url = "/" %}
+{% endif %}
+
+
+{% for item1 in site.data.navigation.nodes %}
+  {% if item1.url == page_url %}
+    {% assign active1 = item1 %}
+  {% endif %}
+  {%  for item2  in item1.nodes %}  
+    {% if item2.url == page_url %}
+        {% assign active1 = item1 %}
+        {% assign active2 = item2 %}
+    {% endif %}
+    {%  for item3  in item2.nodes %}  
+        {% if item3.url == page_url %}
+            {% assign active1 = item1 %}
+            {% assign active2 = item2 %}
+            {% assign active3 = item3 %}
+        {% endif %}
+        {%  for item4  in item3.nodes %}  
+            {% if item4.url == page_url %}
+                {% assign active1 = item1 %}
+                {% assign active2 = item2 %}
+                {% assign active3 = item3 %}
+                {% assign active4 = item4 %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+           
+{% endfor %} 
+{% endfor %}
+
+<ul class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+    <li itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+        <meta itemprop="position" content="1" />
+        <meta itemprop="item" content="{{ active1.url }}" />
+        <a href="{{ active1.url }}" itemprop="name">{{ active1.title }}</a>
+    </li>
+    {% if active2 %}
+        <li itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+            <meta itemprop="position" content="2" />
+            <meta itemprop="item" content="{{ active2.url }}" />
+            <a href="{{ active2.url }}" itemprop="name">{{ active2.title }}</a>
+        </li>
+    {% endif %}
+    {% if active3 %}
+        <li itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+            <meta itemprop="position" content="3" />
+            <meta itemprop="item" content="{{ active3.url }}" />
+            <a href="{{ active3.url }}" itemprop="name">{{ active3.title }}</a>
+        </li>
+    {% endif %}
+    {% if active4 %}
+        <li itemscope="itemscope" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+            <meta itemprop="position" content="4" />
+            <meta itemprop="item" content="{{ active4.url }}" />
+            <a href="{{ active4.url }}" itemprop="name">{{ active4.title }}</a>
+        </li>
+    {% endif %}
+</ul>

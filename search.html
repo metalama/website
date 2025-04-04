@@ -19,6 +19,14 @@ layout: min
         return text.replace(/&(amp|lt|gt|quot|#39);/g, (entity) => map[entity]);
     }
 
+    function mapSourceToBreadcrumbHome(source) {
+        const sourceMap = {
+            'metalamaweb': '',
+            'metalamadoc': '',
+        };
+        return sourceMap[source];
+    }
+
 
     // Search
 
@@ -67,7 +75,7 @@ layout: min
             search: async (requests) => {
                 const collections = [
                     { indexName: 'metalamawebA', priority: 1 },
-                    { indexName: 'metalamadocA', priority: 2 },
+                    { indexName: 'metalamadoc', priority: 2 },
                 ];
 
                 const searchResults = await Promise.all(
@@ -126,11 +134,11 @@ layout: min
                                 <div class="hit-title">
                                     <a href="${unescapeHtml(item.link)}">${unescapeHtml(item._highlightResult.title.value)}</a>
                                 </div>
-                                ${item.breadcrumb ? `
-                                    <div class="hit-breadcrumb">
-                                        ${item.breadcrumb}
-                                    </div>
-                                ` : ''}
+                                <div class="hit-breadcrumb">
+                                    ${mapSourceToBreadcrumbHome(item.source)}
+                                    ${mapSourceToBreadcrumbHome(item.source) && item.breadcrumb ? ` &gt; ` : ''}
+                                    ${item.breadcrumb ? `${unescapeHtml(item.breadcrumb)}` : ''}
+                                </div>
                                 ${item.summary ? `
                                     <div class="hit-summary">
                                         ${unescapeHtml(item._highlightResult.summary.value)}
