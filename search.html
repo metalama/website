@@ -33,6 +33,42 @@ summary: "Search Metalama website and documentation."
         return sourceMap[source];
     }
 
+    function bucketize(array, size = 10) {
+        const buckets = [];
+        for (let i = 0; i < array.length; i += size) {
+            buckets.push(array.slice(i, i + size));
+        }
+        return buckets;
+    }
+
+    function mergeBuckets(nestedBuckets) {
+        if (nestedBuckets.length === 0) return [];
+
+        const bucketCount = nestedBuckets[0].length;
+        const result = Array.from({ length: bucketCount }, () => []);
+
+        for (const group of nestedBuckets) {
+            group.forEach((bucket, index) => {
+            result[index].push(...bucket);
+            });
+        }
+
+        return result;
+    }
+
+    function computeRelativeTextMatch(buckets, collection_priority) {
+  return buckets.map(bucket => {
+    const maxMatch = Math.max(...bucket.map(item => item.text_match_info.score));
+    return bucket.map((item,index) => ({
+      ...item,
+      relative_text_match: item.text_match_info.score / maxMatch,
+      collection_priority: collection_priority,
+      position_in_bucket: index,
+    }));
+  });
+}
+            
+
 
     // Search
 
@@ -107,13 +143,24 @@ summary: "Search Metalama website and documentation."
                     })
                 );
 
-                // Merge all results into searchResults[0]
-                searchResults[0].results[0].hits = searchResults
-                    .reduce( (merged, current) => merged.concat(current.results[0].hits), [])
-                    .sort((a, b) => b.text_match - a.text_match);
+                const buckets = searchResults.map((result) => bucketize( result.results[0].hits, 5));
+                const enhancedBuckets = buckets.map((bucket, index) => computeRelativeTextMatch(bucket, collections[index].priority));
+                const mergedBuckets = mergeBuckets(enhancedBuckets);
+                const sortedBuckets = mergedBuckets.map((bucket) => 
+                    bucket.sort((a, b) => 
+                        b.relative_text_match - a.relative_text_match || 
+                        a.position_in_bucket - b.position_in_bucket || 
+                        a.collection_priority - b.collection_priority
+                    )
+                );
+                const hits = sortedBuckets.flat();
 
-                searchResults[0].results[0].nbHits = searchResults.reduce( (merged, current) => merged + current.results[0].nbHits, 0);
-                searchResults[0].results[0].nbPages = Math.ceil(searchResults[0].results[0].nbHits / searchResults[0].results[0].hitsPerPage);
+
+                // Merge all results into searchResults[0]
+                searchResults[0].results[0].hits = hits;
+
+                searchResults[0].results[0].nbHits = hits.length;
+                searchResults[0].results[0].nbPages = Math.ceil(hits.length / searchResults[0].results[0].hitsPerPage);
 
                 return searchResults[0];
             },
