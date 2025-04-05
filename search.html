@@ -33,7 +33,7 @@ summary: "Search Metalama website and documentation."
         return sourceMap[source];
     }
 
-    function bucketize(array, size = 10) {
+    function bucketize(array, size = 5) {
         const buckets = [];
         for (let i = 0; i < array.length; i += size) {
             buckets.push(array.slice(i, i + size));
@@ -44,16 +44,23 @@ summary: "Search Metalama website and documentation."
     function mergeBuckets(nestedBuckets) {
         if (nestedBuckets.length === 0) return [];
 
-        const bucketCount = nestedBuckets[0].length;
+        const bucketCount = Math.max(...nestedBuckets.map(group => group.length));
         const result = Array.from({ length: bucketCount }, () => []);
 
         for (const group of nestedBuckets) {
             group.forEach((bucket, index) => {
-            result[index].push(...bucket);
+                result[index].push(...bucket);
             });
         }
 
         return result;
+    }
+
+    function getPageDepth(item) {
+        if ( !item.breadcrumb ) {
+            return 2; // Default depth for Metalama Marketplace.
+        }
+     return (item.breadcrumb.match(/>/g) || []).length + 1;
     }
 
     function computeRelativeTextMatch(buckets, collection_priority) {
@@ -86,26 +93,22 @@ summary: "Search Metalama website and documentation."
                 ],
             },
             additionalSearchParameters: {
+                sort_by: '_text_match(buckets: 10):desc',
                 text_match_type: 'max_weight',
-                prioritize_exact_match: false
+                prioritize_exact_match: true
             },
             collectionSpecificSearchParameters: {
                 metalamawebA: {
                     query_by: 'title,h1,keywords,summary,h2,h3,h4,h5,h6,text',
-                    query_by_weights: '20,20,20,10,6,5,3,2,1,1',
-              //      sort_by: '_text_match(buckets: 10):desc',
-                    text_match_type: 'max_weight',
-                    prioritize_exact_match: false
+                    query_by_weights: '20,15,15,10,6,5,3,2,1,1'
                 },
                 metalamadoc: {
                     query_by: 'title,h1,keywords,summary,h2,h3,h4,h5,h6,text',
-                    query_by_weights: '20,20,20,10,6,5,3,2,1,1',
-              //      sort_by: '_text_match(buckets: 10):desc',
-                    text_match_type: 'max_weight',
-                    prioritize_exact_match: false
+                    query_by_weights: '20,15,15,10,6,5,3,2,1,1'
                 },
                 "metalama-marketplace": {
-                    query_by: 'name,keywords,description,summaryText,aspectGroups',
+                    query_by: 'name,keywords,summaryText,description,aspectGroups',
+                    query_by_weights: '20,15,10,5,1'
                 }
             },
         });
@@ -130,7 +133,7 @@ summary: "Search Metalama website and documentation."
                 const collections = [
                     { indexName: 'metalamawebA', priority: 1 },
                     { indexName: 'metalamadoc', priority: 2 },
-                    { indexName: 'metalama-marketplace', priority: 2 },
+                    { indexName: 'metalama-marketplace', priority: 3 },
                 ];
 
                 const searchResults = await Promise.all(
@@ -143,14 +146,15 @@ summary: "Search Metalama website and documentation."
                     })
                 );
 
-                const buckets = searchResults.map((result) => bucketize( result.results[0].hits, 5));
+                const buckets = searchResults.map((result) => bucketize( result.results[0].hits.sort( (a,b) => b.text_match - a.text_match || getPageDepth(a) - getPageDepth(b))));
                 const enhancedBuckets = buckets.map((bucket, index) => computeRelativeTextMatch(bucket, collections[index].priority));
                 const mergedBuckets = mergeBuckets(enhancedBuckets);
                 const sortedBuckets = mergedBuckets.map((bucket) => 
                     bucket.sort((a, b) => 
                         b.relative_text_match - a.relative_text_match || 
-                        a.position_in_bucket - b.position_in_bucket || 
+                        a.position_in_bucket - b.position_in_bucket ||
                         a.collection_priority - b.collection_priority
+                                                 
                     )
                 );
                 const hits = sortedBuckets.flat();
@@ -198,6 +202,7 @@ summary: "Search Metalama website and documentation."
                             <div>
                                 <div class="hit-title">
                                     <a href="${unescapeHtml(item.link || item.packageUrl || item.sourceUrl)}">${unescapeHtml(item._highlightResult.title?.value || item._highlightResult.name?.value)}</a>
+                                    <span class="text-match">text_match=${item.text_match}, depth=${ getPageDepth(item)}</span>
                                 </div>
                                 <div class="hit-breadcrumb">
                                     ${mapSourceToBreadcrumbHome(item.source)}
