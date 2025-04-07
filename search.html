@@ -63,6 +63,12 @@ summary: "Search Metalama website and documentation."
      return (item.breadcrumb.match(/>/g) || []).length + 1;
     }
 
+    function getItemScore(item) {
+        var pageDepth = getPageDepth(item);
+        
+        return item.text_match * (1 - 0.05 * (pageDepth / 10))
+    }
+
     function computeRelativeTextMatch(buckets, collection_priority) {
   return buckets.map(bucket => {
     const maxMatch = Math.max(...bucket.map(item => item.text_match_info.score));
@@ -146,12 +152,12 @@ summary: "Search Metalama website and documentation."
                     })
                 );
 
-                const buckets = searchResults.map((result) => bucketize( result.results[0].hits.sort( (a,b) => b.text_match - a.text_match || getPageDepth(a) - getPageDepth(b))));
+                const buckets = searchResults.map((result) => bucketize( result.results[0].hits.sort( (a,b) => getItemScore(b) - getItemScore(a))));
                 const enhancedBuckets = buckets.map((bucket, index) => computeRelativeTextMatch(bucket, collections[index].priority));
                 const mergedBuckets = mergeBuckets(enhancedBuckets);
                 const sortedBuckets = mergedBuckets.map((bucket) => 
                     bucket.sort((a, b) => 
-                        b.relative_text_match - a.relative_text_match || 
+                        getItemScore(b) - getItemScore(a) ||
                         a.position_in_bucket - b.position_in_bucket ||
                         a.collection_priority - b.collection_priority
                                                  
@@ -174,6 +180,7 @@ summary: "Search Metalama website and documentation."
             searchClient,
             indexName: "metalamawebA",
             routing: true,
+            searchAsYouType: false
         });
 
        
@@ -184,25 +191,23 @@ summary: "Search Metalama website and documentation."
                 container: '#searchbox',
                 showSubmit: false,
                 showReset: false,
-                placeholder: 'Search by keyword...',
+                placeholder: 'Type some keyword and press [Enter]...',
                 autofocus: false,
                 cssClasses: {
                     input: '',
                     loadingIcon: 'stroke-primary',
                 },
             }),
-            instantsearch.widgets.configure({
-                hitsPerPage: 20,
-            }),
+      
             instantsearch.widgets.hits({
                 container: '#hits',
                 templates: {
-                    item(item) {
+                    item(item, {html, components}) {
                         return `
                             <div>
                                 <div class="hit-title">
                                     <a href="${unescapeHtml(item.link || item.packageUrl || item.sourceUrl)}">${unescapeHtml(item._highlightResult.title?.value || item._highlightResult.name?.value)}</a>
-                                    <span class="text-match">text_match=${item.text_match}, depth=${ getPageDepth(item)}</span>
+                                    <span class="text-match">text_match=${item.text_match}, score=${ getItemScore(item)}</span>
                                 </div>
                                 <div class="hit-breadcrumb">
                                     ${mapSourceToBreadcrumbHome(item.source)}
