@@ -59,6 +59,10 @@ summary: "Search Metalama website and documentation."
     function getPageDepth(item) {
         if ( !item.breadcrumb ) {
             return 2; // Default depth for Metalama Marketplace.
+        } else if ( item.breadcrumb.startsWith('Blog') ) {
+            return 4; // Give less priority to blog pages.
+        } else if (item.link && item.link.includes('/alternatives/')) {
+            return 10; // Give even less weight to alternatives pages.
         }
      return (item.breadcrumb.match(/>/g) || []).length + 1;
     }
@@ -66,7 +70,7 @@ summary: "Search Metalama website and documentation."
     function getItemScore(item) {
         var pageDepth = getPageDepth(item);
         
-        return item.text_match * (1 - 0.05 * (pageDepth / 10))
+        return item.text_match * (1 - 0.01 * (pageDepth / 10))
     }
 
     function computeRelativeTextMatch(buckets, collection_priority) {
@@ -99,22 +103,22 @@ summary: "Search Metalama website and documentation."
                 ],
             },
             additionalSearchParameters: {
-                sort_by: '_text_match(buckets: 10):desc',
+                sort_by: '_text_match:desc',
                 text_match_type: 'max_weight',
-                prioritize_exact_match: true
+                prioritize_exact_match: false
             },
             collectionSpecificSearchParameters: {
                 metalamawebA: {
                     query_by: 'title,h1,keywords,summary,h2,h3,h4,h5,h6,text',
-                    query_by_weights: '20,15,15,10,6,5,3,2,1,1'
+                    query_by_weights: '40,15,15,10,6,5,3,2,1,1'
                 },
                 metalamadoc: {
                     query_by: 'title,h1,keywords,summary,h2,h3,h4,h5,h6,text',
-                    query_by_weights: '20,15,15,10,6,5,3,2,1,1'
+                    query_by_weights: '40,15,15,10,6,5,3,2,1,1'
                 },
                 "metalama-marketplace": {
                     query_by: 'name,keywords,summaryText,description,aspectGroups',
-                    query_by_weights: '20,15,10,5,1'
+                    query_by_weights: '40,15,10,5,1'
                 }
             },
         });
@@ -152,7 +156,13 @@ summary: "Search Metalama website and documentation."
                     })
                 );
 
-                const buckets = searchResults.map((result) => bucketize( result.results[0].hits.sort( (a,b) => getItemScore(b) - getItemScore(a))));
+                const buckets = searchResults.map((result) => {
+                    const hitsWithScores = result.results[0].hits.map(hit => ({
+                        ...hit,
+                        itemScore: getItemScore(hit)
+                    }));
+                    return bucketize(hitsWithScores.sort((a, b) => b.itemScore - a.itemScore));
+                });
                 const enhancedBuckets = buckets.map((bucket, index) => computeRelativeTextMatch(bucket, collections[index].priority));
                 const mergedBuckets = mergeBuckets(enhancedBuckets);
                 const sortedBuckets = mergedBuckets.map((bucket) => 
