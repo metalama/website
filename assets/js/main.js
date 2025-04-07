@@ -196,23 +196,41 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
+  // Add a top banner if not dismissed
+  if (!localStorage.getItem('bannerDismissed')) {
+    const banner = $(`
+      <div id="preview-banner" style="background: #ffcc00; color: #000; padding: 10px; text-align: center; width: 100%; position: fixed; bottom: 0; z-index: 1000;">
+        <span>This website is a preview. It applies to Metalama 2025.1, the first open-source version of Metalama.</span>
+        <button id="dismiss-banner" style="margin-left: 10px; background: #000; color: #fff; border: none; padding: 5px 10px; cursor: pointer;">Dismiss</button>
+      </div>
+    `);
+    $('body').prepend(banner);
+    $('body').css('padding-bottom', '50px'); // Adjust for banner height
+
+    $('#dismiss-banner').on('click', function () {
+      $('#preview-banner').remove();
+      $('body').css('padding-bottom', '0');
+      localStorage.setItem('bannerDismissed', 'true');
+    });
+  }
+
   // Handle the 'show-more' magic.
   $('p.show-more').each(function () {
-      var $showMorePara = $(this);
-      var $nextHeader = $showMorePara.nextUntil('h2, h3, h4'); // All blocks until the next header
-      var $link = $('<a class="show-more-link">' + $showMorePara.text() + '</a>'); // Create the hyperlink
+    var $showMorePara = $(this);
+    var $nextHeader = $showMorePara.nextUntil('h2, h3, h4'); // All blocks until the next header
+    var $link = $('<a class="show-more-link">' + $showMorePara.text() + '</a>'); // Create the hyperlink
 
-      // Hide the blocks
-      $nextHeader.addClass('hidden');
+    // Hide the blocks
+    $nextHeader.addClass('hidden');
 
-      // Replace the paragraph with the hyperlink
-      $showMorePara.replaceWith($link);
+    // Replace the paragraph with the hyperlink
+    $showMorePara.replaceWith($link);
 
-      // Add a click event to the hyperlink
-      $link.on('click', function (e) {
-          e.preventDefault();
-          $link.hide(); // Hide the link
-          $nextHeader.removeClass('hidden'); // Show all hidden blocks
-      });
+    // Add a click event to the hyperlink
+    $link.on('click', function (e) {
+        e.preventDefault();
+        $link.hide(); // Hide the link
+        $nextHeader.removeClass('hidden'); // Show all hidden blocks
+    });
   });
 });
