@@ -38,7 +38,7 @@ var song = songBuilder.Build();
 {: .show-more }
 Show me how it works!
 
-The [GenerateBuilder](https://doc.postsharp.net/metalama/examples/builder) aspect generates a `Builder` class nested
+The [GenerateBuilder](https://doc.metalama.net/examples/builder) aspect generates a `Builder` class nested
 inside the `Song` class and a `ToBuilder` method to create a new `Builder` object.
 
 ```cs
@@ -90,6 +90,6 @@ That's a lot of boilerplate you want to avoid!
 ## Resources
 
 * Blog post: [Implementing the Builder pattern with Metalama](https://blog.postsharp.net/builder-pattern-with-metalama)
-* Example: [Implementing the Builder pattern without boilerplate](https://doc.postsharp.net/metalama/examples/builder)
+* Example: [Implementing the Builder pattern without boilerplate](https://doc.metalama.net/examples/builder)
 
 

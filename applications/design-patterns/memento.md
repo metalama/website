@@ -81,7 +81,7 @@ public partial class Fish : IMementoable
 ```
 
 You can find the complete `Memento` aspect source
-code [here](https://doc.postsharp.net/metalama/preview/examples/memento/memento-1#complete-aspect).
+code [here](https://doc.metalama.net/preview/examples/memento/memento-1#complete-aspect).
 
 ## Metalama benefits
 
@@ -94,5 +94,5 @@ code [here](https://doc.postsharp.net/metalama/preview/examples/memento/memento-
 ## Resources
 
 * Blog post: [The Memento Design Pattern in C#, Practically With Examples [2024]](https://blog.postsharp.net/memento)
-* Example: [Implementing the Memento pattern without boilerplate](https://doc.postsharp.net/metalama/examples/memento)
+* Example: [Implementing the Memento pattern without boilerplate](https://doc.metalama.net/examples/memento)
 

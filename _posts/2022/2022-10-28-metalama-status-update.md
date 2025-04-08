@@ -22,7 +22,7 @@ On a side note, we have been working on PostSharp 6.11, which will support .NET 
 
 ## PostSharp migration
 
-We started the work to streamline the migration of projects from PostSharp to Metalama and have published the [PostSharp API Annotated for Migration to Metalama](https://doc.postsharp.net/metalama/migration-api). This work is not completed: we still want to write a conceptual documentation for the migration, and a Metalama replacement for PostSharp aspect multicasting so that customers who have dozens of usages of multicast attributes do not need to rewrite every single one of them.
+We started the work to streamline the migration of projects from PostSharp to Metalama and have published the [PostSharp API Annotated for Migration to Metalama](https://doc.metalama.net/migration-api). This work is not completed: we still want to write a conceptual documentation for the migration, and a Metalama replacement for PostSharp aspect multicasting so that customers who have dozens of usages of multicast attributes do not need to rewrite every single one of them.
 
 It is still not recommended to migrate your project from PostSharp to Metalama unless you have some spare time, want to help us, or simply want to have fun -- because Metalama is fun!
 
@@ -31,7 +31,7 @@ It is still not recommended to migrate your project from PostSharp to Metalama u
 This is a pretty short list, which I think is good news:
 
 
-* **Ability to add compile-time packages**: you can now use any .NET Standard 2.0 project at compile time by including them as a [MetalamaCompileTimePackage ](https://doc.postsharp.net/metalama/aspects/templates/template-compile-time#calling-other-packages-from-compile-time-code) item in your `csproj`.
+* **Ability to add compile-time packages**: you can now use any .NET Standard 2.0 project at compile time by including them as a [MetalamaCompileTimePackage ](https://doc.metalama.net/aspects/templates/template-compile-time#calling-other-packages-from-compile-time-code) item in your `csproj`.
 * **Support for packages.config**: you can now use Metalama with legacy projects as long as the target framework is compatible with .NET Standard 2.0.
 * `IAdviceFactory.Override(IMethod)` now works with property and event accessors.
 

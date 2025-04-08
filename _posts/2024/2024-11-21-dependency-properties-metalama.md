@@ -66,7 +66,7 @@ Let's see how the `MaxLength` property can be implemented using the `[Dependency
 
 In the code snippet above, we use the `[DependencyProperty]` aspect to decorate the `MaxLength` property in the `LimitedTextBox` class. Note that the property should be auto-implemented (no backing field required), and the default value is set directly in the property declaration. The aspect takes care of generating the necessary boilerplate code, including the property registration, metadata, and validation callbacks.
 
-You can take a look at what the generated code will look like using our [Metalama Diff tool](https://doc.postsharp.net/metalama/conceptual/using/understanding-your-code-with-aspects#metalama-diff) (included in [Visual Studio Tools for Metalama](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp)).
+You can take a look at what the generated code will look like using our [Metalama Diff tool](https://doc.metalama.net/conceptual/using/understanding-your-code-with-aspects#metalama-diff) (included in [Visual Studio Tools for Metalama](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp)).
 
 ![Metalama Diff tool](/assets/images/2024/2024-11-wpf-dependency-properties-metalama/dependency-props-metalama_diff.png#unzoom150)
 
@@ -74,11 +74,11 @@ By using the `[DependencyProperty]` aspect, we eliminate the need to manually im
 
 ## Adding validation with an attribute
 
-If you've implemented dependency properties manually, you're likely familiar with _validation callback_ methods. With Metalama, validating a property can often be done using a simple _contract_ custom attribute from the [Metalama.Patterns.Contracts](https://doc.postsharp.net/metalama/patterns/contracts) package.
+If you've implemented dependency properties manually, you're likely familiar with _validation callback_ methods. With Metalama, validating a property can often be done using a simple _contract_ custom attribute from the [Metalama.Patterns.Contracts](https://doc.metalama.net/patterns/contracts) package.
 
-Some examples are the [[Email], [Phone], and [Url]](https://doc.postsharp.net/metalama/patterns/contracts/contract-types#email-phone-and-url), or [[NotEmpty]](https://doc.postsharp.net/metalama/patterns/contracts/contract-types#notempty) contracts.
+Some examples are the [[Email], [Phone], and [Url]](https://doc.metalama.net/patterns/contracts/contract-types#email-phone-and-url), or [[NotEmpty]](https://doc.metalama.net/patterns/contracts/contract-types#notempty) contracts.
 
-Here you can see an example where we apply the [[StrictlyGreaterThan]](https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-strictlygreaterthanattribute) contract to the `MaxLength` property:
+Here you can see an example where we apply the [[StrictlyGreaterThan]](https://doc.metalama.net/api/metalama-patterns-contracts-strictlygreaterthanattribute) contract to the `MaxLength` property:
 
 {% include_file "{{page.source_url}}/LimitedTextBox_Metalama/LimitedTextBox.xaml.cs" syntax="csharp" snippet="MaxLength_Property_WithContract" %}
 
@@ -86,14 +86,14 @@ This approach results in compact and readable source code.
 
 ## Adding a validation callback
 
-Let's now turn to the second dependency property: `Text`. We want to validate that the text is only made of letters or whitespaces. Although we could implement this requirement by using the [[RegularExpression]](https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-regularexpressionattribute) contract, we'll show here how to do this using a callback method.
+Let's now turn to the second dependency property: `Text`. We want to validate that the text is only made of letters or whitespaces. Although we could implement this requirement by using the [[RegularExpression]](https://doc.metalama.net/api/metalama-patterns-contracts-regularexpressionattribute) contract, we'll show here how to do this using a callback method.
 
 Validation callbacks are methods that run _before_ the property is set. If they fail, the property is not set. There are two ways to add a validation contract:
 
 * _Implicitly_ by following a _naming convention_ and creating a method whose name corresponds to the property name, plus the `Validate` prefix. In this case, the property name is `Text`, so the validation method should be named `ValidateText`.
 * _Explicitly_, by setting the `ValidateMethod` parameter of the `[DependencyProperty]` type.
 
-Metalama supports [several signatures](https://doc.postsharp.net/metalama/patterns/wpf/dependency-property#adding-validation-through-a-callback-method) for the validation callback.
+Metalama supports [several signatures](https://doc.metalama.net/patterns/wpf/dependency-property#adding-validation-through-a-callback-method) for the validation callback.
 
 Here is the validation callback for the `Text` property:
 
@@ -112,7 +112,7 @@ Property-changed callbacks are invoked _after_ the value of a dependency propert
 * _Implicitly_ by following a naming convention. For example, the name of our property is `MaxLength`, so the PropertyChanged method should be named `OnMaxLengthChanged`. The same applies to the `Text` property and the `OnTextChanged` method. Metalama will automatically detect and use them as property-changed callbacks.
 * _Explicitly_ by setting the `PropertyChangedMethod` of the `[DependencyProperty]` attribute.
 
-As with the validation callback, there are several signatures for the `PropertyChanged` method (see them in the [documentation here](https://doc.postsharp.net/metalama/patterns/wpf/dependency-property#adding-validation-through-a-callback-method)), so you can choose the one that best fits your needs. An important detail compared to the method used in the manual implementation (using the `DependencyProperty.Register`) is that the `PropertyChanged` method does not need to be static and can access the instance of the class.
+As with the validation callback, there are several signatures for the `PropertyChanged` method (see them in the [documentation here](https://doc.metalama.net/patterns/wpf/dependency-property#adding-validation-through-a-callback-method)), so you can choose the one that best fits your needs. An important detail compared to the method used in the manual implementation (using the `DependencyProperty.Register`) is that the `PropertyChanged` method does not need to be static and can access the instance of the class.
 
 Here are the `PropertyChanged` methods for our dependency properties:
 

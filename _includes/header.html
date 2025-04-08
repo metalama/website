@@ -61,10 +61,10 @@
 <script>
   var _paq = window._paq = window._paq || [];
   _paq.push(["setExcludedQueryParams", ["clientid","ck_subscriber_id","qid","license","interests","version","vgo_ee","conf"]]);
-  _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   _paq.push(["setDoNotTrack", "true"]);
   _paq.push(["setCookieDomain", "*.metalama.net"]);
+  _paq.push(['trackPageView']);
   (function() {
     var u="https://postsharp.matomo.cloud/";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
@@ -89,7 +89,7 @@
             {% if page.author == "Metalama Team" %}
             "@type": "Organization",
             "name": "Metalama Team",
-            "url": "https://www.postsharp.net/metalama"
+            "url": "https://metalama.net/metalama"
             {% else %}
             "@type": "Person",
             "name": "{{ page.author | escape }}"

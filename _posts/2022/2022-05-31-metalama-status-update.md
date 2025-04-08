@@ -20,11 +20,11 @@ It has been another month since our [last update](https://blog.postsharp.net/pos
 
 * **Completely automated multi-repo deployment**. Our build and deployment process is now completely integrated. We can now ship, in just a few clicks, all kinds of artifacts coming from 9 different git repos (and counting). We have created a custom build integration front-end, free and open source on [GitHub](https://github.com/postsharp/PostSharp.Engineering).
   
-* **Contracts** allow you to validate or normalize the value assigned to field, properties, or parameters. Check the [documentation](https://doc.postsharp.net/metalama/aspects/advising/contracts) for details. There is a great example that validates all non-nullable parameters of public methods in the project, just with a few lines of code.
+* **Contracts** allow you to validate or normalize the value assigned to field, properties, or parameters. Check the [documentation](https://doc.metalama.net/aspects/advising/contracts) for details. There is a great example that validates all non-nullable parameters of public methods in the project, just with a few lines of code.
 
-* **Template Parameters** and **Generic Templates**. Template can now have compile-time parameters and type parameters (i.e. generic parameters). Generic templates are especially convenient when your template code needs to use a generic method or type whose generic argument depends on the type of the declaration to which the aspect is applied. For details, see the [documentation](https://doc.postsharp.net/metalama/aspects/templates/template-parameters) of this feature.
+* **Template Parameters** and **Generic Templates**. Template can now have compile-time parameters and type parameters (i.e. generic parameters). Generic templates are especially convenient when your template code needs to use a generic method or type whose generic argument depends on the type of the declaration to which the aspect is applied. For details, see the [documentation](https://doc.metalama.net/aspects/templates/template-parameters) of this feature.
 
-* **Telemetry**. Anonymous error and usage reports now get automatically uploaded. You can of course [opt out](https://doc.postsharp.net/metalama/deployment/telemetry).
+* **Telemetry**. Anonymous error and usage reports now get automatically uploaded. You can of course [opt out](https://doc.metalama.net/deployment/telemetry).
 
 * **Extensibility examples**. We fixed several bugs around the extensibility of Metalama using the Roslyn API. We are not completely finished with this use case, but you can already look at the following examples:
 
@@ -34,10 +34,10 @@ It has been another month since our [last update](https://blog.postsharp.net/pos
   * [Metalama.Open.DependencyEmbedder](https://github.com/postsharp/Metalama.Open.DependencyEmbedder): bundles .NET Framework applications into a single executable file.
 
 * **Documentation**. We have completed chapters the following articles:
-  * [Aspect Inheritance](https://doc.postsharp.net/metalama/aspects/aspect-inheritance)
-  * [Template Parameters and Type Parameters](https://doc.postsharp.net/metalama/aspects/templates/template-parameters)
-  * [Validating Parameter, Field and Property Values](https://doc.postsharp.net/metalama/aspects/advising/contracts)
-  * [Extending Metalama with the Roslyn API](https://doc.postsharp.net/metalama/sdk/sdk) (not completed)
+  * [Aspect Inheritance](https://doc.metalama.net/aspects/aspect-inheritance)
+  * [Template Parameters and Type Parameters](https://doc.metalama.net/aspects/templates/template-parameters)
+  * [Validating Parameter, Field and Property Values](https://doc.metalama.net/aspects/advising/contracts)
+  * [Extending Metalama with the Roslyn API](https://doc.metalama.net/sdk/sdk) (not completed)
 
 
 ## New feature _gap_

@@ -48,7 +48,7 @@ Our development efforts are chiefly aimed at the upcoming Metalama 2023.4 releas
 
 Key features to anticipate include:
 
-* A versatile [options framework](https://doc.postsharp.net/metalama/api/metalama_framework_options) for configuring aspects through custom attributes or specific fabric-based APIs. This framework is in its final stages of stabilization.
+* A versatile [options framework](https://doc.metalama.net/api/metalama_framework_options) for configuring aspects through custom attributes or specific fabric-based APIs. This framework is in its final stages of stabilization.
 * A new, professionally crafted open-source aspect: `INotifyPropertyChanged`.
 * The transition of `Metalama.Framework` to a proprietary source-available license.
 * The open-sourcing of `Metalama.Compiler`, our customized fork of Roslyn.

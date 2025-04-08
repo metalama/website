@@ -12,7 +12,7 @@ singleton instance (e.g. `IServiceCollection.AddSingleton`).
 
 The main problem with the modern Singleton is that it's hard to enforce that the constructor is used only in the right
 context, typically from the `Startup` code and from unit tests. Metalama can help
-you [enforce architectural constraints](https://doc.postsharp.net/metalama/conceptual/architecture) and report
+you [enforce architectural constraints](https://doc.metalama.net/conceptual/architecture) and report
 violations right in the code editor as warnings.
 
 ## Example
@@ -75,5 +75,5 @@ public class SingletonAttribute : TypeAspect
 ## Resources
 
 * Blog post: [The Singleton Pattern in C# Today Is Not Your Dad's One!](https://blog.postsharp.net/singleton)
-* Example: [Validating the modern Singleton](https://doc.postsharp.net/metalama/examples/singleton/singleton-2)
+* Example: [Validating the modern Singleton](https://doc.metalama.net/examples/singleton/singleton-2)
 

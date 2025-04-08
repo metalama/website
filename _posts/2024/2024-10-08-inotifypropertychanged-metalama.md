@@ -20,7 +20,7 @@ related_articles:
   - /wpf-dependency-property-metalama
 ---
 
-Most of today's UI applications rely on _binding_ data classes to UI classes. The `INotifyPropertyChanged` interface is the standard way to achieve this. However, implementing this interface manually can be cumbersome and error-prone, particularly when dealing with a large number of properties. In this article, we'll show you how to use Metalama to implement the `INotifyPropertyChanged` interface with minimal manual effort. We'll approach this in two ways: first, by providing a basic, educational implementation of an aspect using Metalama; and second, by using our open-source, production-ready implementation of the [Observable pattern](https://doc.postsharp.net/metalama/patterns/observability). Not only will we eliminate virtually all observability boilerplate from our codebase, but we will also reduce a significant source of human errors.
+Most of today's UI applications rely on _binding_ data classes to UI classes. The `INotifyPropertyChanged` interface is the standard way to achieve this. However, implementing this interface manually can be cumbersome and error-prone, particularly when dealing with a large number of properties. In this article, we'll show you how to use Metalama to implement the `INotifyPropertyChanged` interface with minimal manual effort. We'll approach this in two ways: first, by providing a basic, educational implementation of an aspect using Metalama; and second, by using our open-source, production-ready implementation of the [Observable pattern](https://doc.metalama.net/patterns/observability). Not only will we eliminate virtually all observability boilerplate from our codebase, but we will also reduce a significant source of human errors.
 
 ## Example
 
@@ -99,7 +99,7 @@ Here is the full code of it.
 
 {% include_file "{{page.source_url}}/ColorSwatch/NotifyPropertyChangedAttribute.cs" syntax="csharp" %}
 
-For a comprehensive breakdown of the above code, along with its limitations and potential drawbacks, check out [Implementing INotifyPropertyChanged without Boilerplate](https://doc.postsharp.net/metalama/examples/notifypropertychanged) in Metalama's documentation.
+For a comprehensive breakdown of the above code, along with its limitations and potential drawbacks, check out [Implementing INotifyPropertyChanged without Boilerplate](https://doc.metalama.net/examples/notifypropertychanged) in Metalama's documentation.
 
 We can now use the `[NotifyPropertyChanged]` aspect with our `ColorViewModel` class.
 
@@ -111,7 +111,7 @@ public class ColorViewModel
 }
 ```
 
-You can take a look at what the generated code will look like using our [Metalama Diff tool](https://doc.postsharp.net/metalama/conceptual/using/understanding-your-code-with-aspects#metalama-diff) (included in [Visual Studio Tools for Metalama](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp)).
+You can take a look at what the generated code will look like using our [Metalama Diff tool](https://doc.metalama.net/conceptual/using/understanding-your-code-with-aspects#metalama-diff) (included in [Visual Studio Tools for Metalama](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp)).
 
 ![Metalama Diff tool](/assets/images/2024/2024-10-15-inpc/vs-metalama-tool-code-diff.png#unzoom150)
 
@@ -167,7 +167,7 @@ The `Metalama.Patterns.Observability` package supports a variety of common scena
 
 * **Child objects (properties of properties)**
 
-    When a property’s getter accesses the property of another object (a *child object* like `RgbColor`), the `[Observable]` aspect automatically creates a `SubscribeTo` method for that property. This method listens for the child object’s `PropertyChanged` event, ensuring that any changes in the child are detected and handled properly. Thus, the `BackgroundBrush` property will be updated whenever the `RgbColor.Hex` property changes. Please refer to the [documentation](https://doc.postsharp.net/metalama/patterns/observability/standard-cases) to see the code generation pattern in action.
+    When a property’s getter accesses the property of another object (a *child object* like `RgbColor`), the `[Observable]` aspect automatically creates a `SubscribeTo` method for that property. This method listens for the child object’s `PropertyChanged` event, ensuring that any changes in the child are detected and handled properly. Thus, the `BackgroundBrush` property will be updated whenever the `RgbColor.Hex` property changes. Please refer to the [documentation](https://doc.metalama.net/patterns/observability/standard-cases) to see the code generation pattern in action.
 
     ```csharp
     public SolidColorBrush BackgroundBrush => ColorHelper.ConvertToBrush(this.RgbColor.Hex);

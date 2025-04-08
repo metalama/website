@@ -17,11 +17,11 @@ We’re thrilled to announce that **Metalama**, the most complete and innovative
 
 [Metalama](https://www.postsharp.net/metalama) is a framework that enables developers to write cleaner, more maintainable code by automating repetitive tasks and enforcing architectural rules. Built on top of Roslyn, it allows you to write classes called _aspects_ that modify other code at compile time, reducing boilerplate and improving productivity—typically by 15%.
 
-Metalama provides a unique combination of simplicity, power, and extensibility thanks to its innovative, [type-safe C#-to-C# code templates](https://doc.postsharp.net/metalama/conceptual/aspects/templates) that let you add new behaviors to hand-written code.
+Metalama provides a unique combination of simplicity, power, and extensibility thanks to its innovative, [type-safe C#-to-C# code templates](https://doc.metalama.net/conceptual/aspects/templates) that let you add new behaviors to hand-written code.
 
 After over ten person-years of work, it is now a stable and mature product, and we’re ready to share it with the world.
 
-If you haven't heard about Metalama before, you can give it a try now and follow this [getting started guide](https://doc.postsharp.net/metalama/conceptual/getting-started), knowing that most features will soon be free and open-source.
+If you haven't heard about Metalama before, you can give it a try now and follow this [getting started guide](https://doc.metalama.net/conceptual/getting-started), knowing that most features will soon be free and open-source.
 
 ## Why open source?
 

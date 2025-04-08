@@ -26,7 +26,7 @@ All packages have been uploaded to `nuget.org` and we recommend you also [downlo
 
 Our Code Contracts library is an [open-source](https://github.com/postsharp/Metalama.Patterns/tree/release/2023.3/src/Metalama.Patterns.Contracts), aspect-oriented implementation of [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations). Unlike Microsoft's annotations, Metalama's Code Contracts works with any C# code, not just ASP.NET MVC or Entity Framework, as it utilizes aspects to inject validation logic during compilation.
 
-You can use a range of contracts like [Required](https://doc.postsharp.net/metalama/api/metalama_patterns_contracts_requiredattribute), [EmailAddress](https://doc.postsharp.net/metalama/api/metalama_patterns_contracts_emailaddressattribute), [StrictlyLessThan](https://doc.postsharp.net/metalama/api/metalama_patterns_contracts_strictlylessthanattribute), and [many more](https://doc.postsharp.net/metalama/api/metalama_patterns_contracts).
+You can use a range of contracts like [Required](https://doc.metalama.net/api/metalama_patterns_contracts_requiredattribute), [EmailAddress](https://doc.metalama.net/api/metalama_patterns_contracts_emailaddressattribute), [StrictlyLessThan](https://doc.metalama.net/api/metalama_patterns_contracts_strictlylessthanattribute), and [many more](https://doc.metalama.net/api/metalama_patterns_contracts).
 
 If you're already using PostSharp code contracts, migration is straightforward with minimal code alterations, as we only changed the way exception messages and types are customized.
 
@@ -168,7 +168,7 @@ When adding this package to your project, it's important to set all assets to pr
 </ItemGroup>
 ```
 
-For those interested in leveraging this feature, consult the [conceptual documentation](https://doc.postsharp.net/metalama/conceptual/sdk). You may also find the following examples illuminating:
+For those interested in leveraging this feature, consult the [conceptual documentation](https://doc.metalama.net/conceptual/sdk). You may also find the following examples illuminating:
 
 * [INotifyPropertyChanged Dependency Graph](https://github.com/postsharp/Metalama.Samples/tree/release/2023.3/examples/sdk): These examples demonstrate how to analyze the dependency graph of properties. For instance, they show how to detect when a change in the `FirstName` property necessitates updating the `FullName` property.
 
@@ -180,7 +180,7 @@ For those interested in leveraging this feature, consult the [conceptual documen
 ### Debugging and troubleshooting
 
 * In the error list, with most errors and warnings reported by aspects, you can now see which aspect class and target declaration reported the diagnostic.
-* It is now possible to enable performance profiling of Metalama processes. See [this documentation page](https://doc.postsharp.net/metalama/conceptual/configuration/profiling) for details.
+* It is now possible to enable performance profiling of Metalama processes. See [this documentation page](https://doc.metalama.net/conceptual/configuration/profiling) for details.
 * Metalama Tools for Visual Studio has improved reporting of errors in compile-time code.
 * The debugging experience of templates and compile-time code has been dramatically improved. However, it is still required to use `Debugger.Break()` or `meta.DebugBreak()` to add an initial breakpoint.
 
@@ -211,7 +211,7 @@ For those interested in leveraging this feature, consult the [conceptual documen
 
 ## Video Tutorials
 
-This summer, I've had the pleasure of creating [9 video tutorials](https://doc.postsharp.net/metalama/videos) to walk you through Metalama's most crucial features.
+This summer, I've had the pleasure of creating [9 video tutorials](https://doc.metalama.net/videos) to walk you through Metalama's most crucial features.
 
 ## What's On the Horizon
 

@@ -151,7 +151,7 @@ You can run these scripts in a small console app or use an interactive tool like
 The `System.Reflection` namespace is not sufficient to navigate through the code references.
 
 A good option is to
-use [Metalama's introspection API](https://doc.postsharp.net/metalama/preview/conceptual/introspection/linqpad) through
+use [Metalama's introspection API](https://doc.metalama.net/preview/conceptual/introspection/linqpad) through
 the [Metalama.Framework.Workspaces]() namespace.
 
 <div class="row benefits">

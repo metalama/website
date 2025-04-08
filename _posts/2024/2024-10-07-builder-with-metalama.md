@@ -127,7 +127,7 @@ Our `[GenerateBuilder]` aspect will need to perform the following steps:
 
 ## Implementing the Builder pattern
 
-In this article, I will only outline the major steps of the implementation. For a detailed implementation, see the [Builder pattern example](https://doc.postsharp.net/metalama/examples/builder) in the reference documentation.
+In this article, I will only outline the major steps of the implementation. For a detailed implementation, see the [Builder pattern example](https://doc.metalama.net/examples/builder) in the reference documentation.
 
 ### Step 1. Create a Metalama aspect
 
@@ -203,7 +203,7 @@ The T# template for the `Build` method first invokes the newly introduced constr
 
 ### Next implementation steps
 
-I hope the previous steps gave you an idea of how Metalama works. Automating the implementation of the Builder pattern requires a few more steps, all covered in the [Builder pattern example](https://doc.postsharp.net/metalama/examples/builder):
+I hope the previous steps gave you an idea of how Metalama works. Automating the implementation of the Builder pattern requires a few more steps, all covered in the [Builder pattern example](https://doc.metalama.net/examples/builder):
 
 * Generating the `ToBuilder` method
 * Coping with base and derived types
@@ -215,7 +215,7 @@ As you can see, even with Metalama, automating the Builder pattern is not comple
 
 It depends on how often the aspect will be used in your application. Typically, if an aspect is used fewer than a dozen times, automation may not be worthwhile. However, if you're planning a large project with dozens or even hundreds of classes that would benefit from the builder pattern, then automating it is definitely worth the effort.
 
-Remember, every project will have slightly different requirements for implementing the Builder pattern. To save time, start with the [Builder pattern example](https://doc.postsharp.net/metalama/examples/builder), understand its principles, and customize it to your needs.
+Remember, every project will have slightly different requirements for implementing the Builder pattern. To save time, start with the [Builder pattern example](https://doc.metalama.net/examples/builder), understand its principles, and customize it to your needs.
 
 The benefit of automating the pattern implementation as an aspect is that when you want to change the pattern, you only have to edit a _single_ class: the aspect.
 

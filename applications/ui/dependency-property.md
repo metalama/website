@@ -41,7 +41,7 @@ public partial class FancyTextBlock : UserControl
 
 ## Features
 
-* Integrates with [Metalama.Patterns.Contracts](https://doc.postsharp.net/metalama/patterns/contracts) to set validation
+* Integrates with [Metalama.Patterns.Contracts](https://doc.metalama.net/patterns/contracts) to set validation
   rules without reinventing the wheel.
 * Fully customizable: add your own validation or `OnPropertyChanged` callbacks.
 * Open source (MIT).
@@ -51,7 +51,7 @@ public partial class FancyTextBlock : UserControl
 * Blog
   post: [Implementing WPF Dependency Properties with Metalama](https://blog.postsharp.net/wpf-dependency-property-metalama).
 * Reference
-  documentation: [WPF Dependency Properties](https://doc.postsharp.net/metalama/patterns/wpf/dependency-property).
+  documentation: [WPF Dependency Properties](https://doc.metalama.net/patterns/wpf/dependency-property).
 * Source
   code: [Metalama.Patterns.Wpf](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Wpf).
 * NuGet package: [Metalama.Patterns.Wpf](https://www.nuget.org/packages/Metalama.Patterns.Wpf).

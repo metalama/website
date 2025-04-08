@@ -21,13 +21,13 @@ Our special thanks go to [Dom Sinclair](https://github.com/domsinclair) for his 
 While addressing community feedback, we have also been busy building new features:
 
 * **Support for Visual Studio 17.1 and Roslyn 4.1.0**. We can now support many versions of Roslyn in the same set of packages.
-* **Exclusion of aspects**. To prevent a declaration from being targeted by a fabric, use the [ExcludeAspectAttribute](https://doc.postsharp.net/metalama/api/metalama_framework_aspects_excludeaspectattribute) custom attribute.
-* **Initializers**. You can add initializers to introduced fields, properties and events. You can also inject initialization logic into object and type constructors. See [Adding Initializers](https://doc.postsharp.net/metalama/aspects/advising/initializers) for details.
-* **Require aspect**. The [RequireAspect](https://doc.postsharp.net/metalama/api/metalama_framework_aspects_iaspectreceiver-1_requireaspect#metalama_framework_aspects_iaspectreceiver_1_requireaspect__1) method allows a parent aspect to add a child aspect, but only if the aspect has not been added by a different path.
+* **Exclusion of aspects**. To prevent a declaration from being targeted by a fabric, use the [ExcludeAspectAttribute](https://doc.metalama.net/api/metalama_framework_aspects_excludeaspectattribute) custom attribute.
+* **Initializers**. You can add initializers to introduced fields, properties and events. You can also inject initialization logic into object and type constructors. See [Adding Initializers](https://doc.metalama.net/aspects/advising/initializers) for details.
+* **Require aspect**. The [RequireAspect](https://doc.metalama.net/api/metalama_framework_aspects_iaspectreceiver-1_requireaspect#metalama_framework_aspects_iaspectreceiver_1_requireaspect__1) method allows a parent aspect to add a child aspect, but only if the aspect has not been added by a different path.
 * **Properties and indexers split**. The `IProperty` interface no longer represents indexers and the `Properties` collection no longer expose them. We now have `IIndexer` and `Indexers`.
 * **Incremental source generators**. We have migrated our implementation of source generators to the new incremental API.
-* **Code fix: change member accessibility**. You can now change the visibility of a member from a custom code fix with the [CodeFixFactory.ChangeAccessibility](https://doc.postsharp.net/metalama/api/metalama_framework_codefixes_codefixfactory_changeaccessibility) method.
-* **Documentation**. We have completed chapters about [fabrics](https://doc.postsharp.net/metalama/fabrics/fabrics), [validation](https://doc.postsharp.net/metalama/validation/validation) and [custom code fixes](https://doc.postsharp.net/metalama/ide/ide).
+* **Code fix: change member accessibility**. You can now change the visibility of a member from a custom code fix with the [CodeFixFactory.ChangeAccessibility](https://doc.metalama.net/api/metalama_framework_codefixes_codefixfactory_changeaccessibility) method.
+* **Documentation**. We have completed chapters about [fabrics](https://doc.metalama.net/fabrics/fabrics), [validation](https://doc.metalama.net/validation/validation) and [custom code fixes](https://doc.metalama.net/ide/ide).
 
 ## What's next
 
@@ -37,7 +37,7 @@ In the next weeks, we will be focusing on the following:
 
 * Testing and bug fixing
 * Documentation:
-  *  [Metalama SDK](https://doc.postsharp.net/metalama/sdk/sdk) documentation
+  *  [Metalama SDK](https://doc.metalama.net/sdk/sdk) documentation
   *  Migration from PostSharp
 * Adding a proper API to implement parameter/field/property validation
 * Telemetry

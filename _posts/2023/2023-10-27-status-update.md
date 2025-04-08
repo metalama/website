@@ -16,7 +16,7 @@ As October draws to a close, we find ourselves amidst a flurry of AI-generated l
 
 <img src="/assets/images/2023/2023-10-17-metalama-2023-3/llama.png" class="thumbnailFloatRight"/>
 
-We celebrated the release of Metalama 2023.3 on October 17th, marking the most significant feature leap since our inaugural 2023.0 release. This version introduces [auxiliary T# templates](https://doc.postsharp.net/metalama/conceptual/aspects/templates/auxilliary-templates), enabling T# templates to call other templates, and seamless integration with the Roslyn API through [Metalama.Framework.Sdk](https://doc.postsharp.net/metalama/conceptual/sdk). It also features a [simplified licensing model](https://blog.postsharp.net/post/metalama-open-source-licensing), along with numerous other enhancements and bug fixes. The added support for the Visual Studio Code C# Dev Kit and a significant performance boost make this update a substantial step towards an optimized development experience.
+We celebrated the release of Metalama 2023.3 on October 17th, marking the most significant feature leap since our inaugural 2023.0 release. This version introduces [auxiliary T# templates](https://doc.metalama.net/conceptual/aspects/templates/auxilliary-templates), enabling T# templates to call other templates, and seamless integration with the Roslyn API through [Metalama.Framework.Sdk](https://doc.metalama.net/conceptual/sdk). It also features a [simplified licensing model](https://blog.postsharp.net/post/metalama-open-source-licensing), along with numerous other enhancements and bug fixes. The added support for the Visual Studio Code C# Dev Kit and a significant performance boost make this update a substantial step towards an optimized development experience.
 
 More details can be found [here](https://blog.postsharp.net/post/metalama-2023-3-ga).
 
@@ -24,7 +24,7 @@ ___
 
 ## Metalama 2023.4 RC
 
-We published the first RC of Metalama 2023.4, which features a versatile [options framework](https://doc.postsharp.net/metalama/conceptual/aspects/configuration) for configuring aspects through custom attributes or specific fabric-based APIs. We have refined three open-source aspect libraries: [code contracts](https://doc.postsharp.net/metalama/patterns/contracts), [caching](https://doc.postsharp.net/metalama/patterns/caching), and [memoization](https://doc.postsharp.net/metalama/patterns/memoization). Work has commenced on an [observability aspect](https://doc.postsharp.net/metalama/api/metalama_patterns_observability_observableattribute) implementing `INotifyPropertyChanged`. We have also ensured that the future update of Visual Studio will not disrupt Metalama.
+We published the first RC of Metalama 2023.4, which features a versatile [options framework](https://doc.metalama.net/conceptual/aspects/configuration) for configuring aspects through custom attributes or specific fabric-based APIs. We have refined three open-source aspect libraries: [code contracts](https://doc.metalama.net/patterns/contracts), [caching](https://doc.metalama.net/patterns/caching), and [memoization](https://doc.metalama.net/patterns/memoization). Work has commenced on an [observability aspect](https://doc.metalama.net/api/metalama_patterns_observability_observableattribute) implementing `INotifyPropertyChanged`. We have also ensured that the future update of Visual Studio will not disrupt Metalama.
 
 ## Metalama 2024.0 WIP
 

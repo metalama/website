@@ -12,7 +12,7 @@ Although Metalama can be used to create a Factory aspect that generates a factor
 Abstract Factory class), it's generally not worth the effort unless you have a large number of highly trivial factories
 that just call the constructor.
 
-Instead, you can use [Metalama Architecture Verification](https://doc.postsharp.net/metalama/conceptual/architecture) to
+Instead, you can use [Metalama Architecture Verification](https://doc.metalama.net/conceptual/architecture) to
 verify that no code except the factories directly calls the constructor. By doing this, you're making the design intent
 _explicit_ and _executable_, reporting warnings in real-time in case of violation.
 

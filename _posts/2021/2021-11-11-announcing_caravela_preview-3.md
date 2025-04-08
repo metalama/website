@@ -17,7 +17,7 @@ The following resources are available:
 
 * A set of [NuGet packages](https://www.nuget.org/packages?q=Caravela), all in _pre-release_ quality band.
 * [PostSharp "Caravela" Tools for Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.caravela) providing syntax highlighting and the diff feature.
-* A fairly complete [documentation](https://doc.postsharp.net/metalama/).
+* A fairly complete [documentation](https://doc.metalama.net/).
 * [try.postsharp.net](https://try.postsharp.net/), an online sandbox to try Caravela without installing it on your machine.
 * A set of open-source [samples](https://github.com/postsharp/Caravela.Samples) on GitHub.
 * Public [discussions](https://github.com/postsharp/Caravela/discussions) and [issue reporting](https://github.com/postsharp/Caravela/issues) on GitHub, or chat on [Gitter](https://gitter.im/postsharp/caravela?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge).
@@ -30,23 +30,23 @@ So, what features are already available?
 
 Override any method with a simple code template:
 
-{% embedded id:override-method-example, url:https://doc.postsharp.net/metalama/aspects/simple-aspects/overriding-methods, node:code-simplelogging %}
+{% embedded id:override-method-example, url:https://doc.metalama.net/aspects/simple-aspects/overriding-methods, node:code-simplelogging %}
 
 The template will also work on async methods and iterators:
 
-{% embedded id:override-async-method-example, url:https://doc.postsharp.net/metalama/aspects/simple-aspects/overriding-methods, node:code-overridemethoddefaulttemplateallkinds %}
+{% embedded id:override-async-method-example, url:https://doc.metalama.net/aspects/simple-aspects/overriding-methods, node:code-overridemethoddefaulttemplateallkinds %}
 
 ## Overriding properties
 
 Override the implementation of a field or property. If the examples above were annoyingly simple, here's a more complex example that demonstrates the implementation of that and shows how to automatically generate code that calls a service locator.
 
-{% embedded id:override-property-example, url:https://doc.postsharp.net/metalama/aspects/simple-aspects/overriding-properties, node:code-globalimportwithsetter %}
+{% embedded id:override-property-example, url:https://doc.metalama.net/aspects/simple-aspects/overriding-properties, node:code-globalimportwithsetter %}
 
 ## Introducing members and implementing
 
 Your aspect can generate new methods, properties, fields or events. It can make the target type implement a new interface. The following example goes further in complexity and implements the _deep cloneable_ pattern.
 
-{% embedded id:clone-example, url:https://doc.postsharp.net/metalama/aspects/advising/implementing-interfaces, node:code-deepclone %}
+{% embedded id:clone-example, url:https://doc.metalama.net/aspects/advising/implementing-interfaces, node:code-deepclone %}
 
 ## Authoring complex code templates
 
@@ -56,23 +56,23 @@ Even if the features of the template language are impressing, there will be time
 
 The template language offers helper classes to generate run-time expressions like arrays or, as in the following examples, interpolated strings:
 
-{% embedded id:interpolated-string-example, url:https://doc.postsharp.net/metalama/aspects/templates, node:code-tostring %}
+{% embedded id:interpolated-string-example, url:https://doc.metalama.net/aspects/templates, node:code-tostring %}
 
 You can easily convert compile-time objects, such as collections, intrinsic types or reflection types, to C# expressions. You can even define custom converters for your own classes. The following example demonstrates the conversion of the system type `Dictionary` and a custom type. It also shows how to programmatically generate expressions.
 
-{% embedded id:custom-serializer-example, url:https://doc.postsharp.net/metalama/aspects/templates, node:code-customsyntaxserializer %}
+{% embedded id:custom-serializer-example, url:https://doc.metalama.net/aspects/templates, node:code-customsyntaxserializer %}
 
 ## Defining eligibility
 
 Aspects can define onto which declarations they want to be applied.
 
-{% embedded id:eligibility-example, url:https://doc.postsharp.net/metalama/aspects/eligibility, node:code-eligibility %}
+{% embedded id:eligibility-example, url:https://doc.metalama.net/aspects/eligibility, node:code-eligibility %}
 
 ## Reporting and suppressing diagnostics
 
 Aspects can report warnings and errors. They can also suppress warnings reported by the C# compiler or other analyzers. In this example, we revisit a previous example and add some validation.
 
-{% embedded id:report-example, url:https://doc.postsharp.net/metalama/aspects/diagnostics, node:code-localimport %}
+{% embedded id:report-example, url:https://doc.metalama.net/aspects/diagnostics, node:code-localimport %}
 
 It's perfectly fine to create an aspect that _only_ analyzes the code and reports diagnostics, without transforming the code.
 
@@ -80,23 +80,23 @@ It's perfectly fine to create an aspect that _only_ analyzes the code and report
 
 If you don't want to add a custom attribute on each method to add your logging aspect, no problem. Fabrics have you covered. In the following example, we are adding the `Log` aspect to all methods of the current project.
 
-{% embedded id:fabrics-example, url:https://doc.postsharp.net/metalama/using-aspects/applying-aspects, node:code-projectfabric %}
+{% embedded id:fabrics-example, url:https://doc.metalama.net/using-aspects/applying-aspects, node:code-projectfabric %}
 
 ## Configuring aspects
 
 You can create a configuration API for your aspects or just consume MSBuild properties.
 
-{% embedded id:configuration-example, url:https://doc.postsharp.net/metalama/aspects/exposing-configuration, node:code-aspectconfiguration %}
+{% embedded id:configuration-example, url:https://doc.metalama.net/aspects/exposing-configuration, node:code-aspectconfiguration %}
 
 ## Type fabrics
 
 Without defining an aspect class, you can programmatically introduce new members, override existing members or report warnings in the current type by just defining a nested class.
 
-{% embedded id:typefabric-example, url:https://doc.postsharp.net/metalama/using-aspects/type-fabrics, node:code-advisingtypefabric %}
+{% embedded id:typefabric-example, url:https://doc.metalama.net/using-aspects/type-fabrics, node:code-advisingtypefabric %}
 
 ## Performing arbitrary modifications to code
 
-Caravela's philosophy is to offer a well-mannered API to express code transformations safely, without changing the code semantics, and in a composable way (which means that you can safely add to the same declaration several aspects that don't know about each other). However, if you feel brave, you can shortcut the safety features and implement your code transformations directly using the Roslyn API. Anything you could do with an IL weaving tool like Cecil, Fody, CCI or PostSharp can now be done with Caravela. The [documentation](https://doc.postsharp.net/metalama/sdk/sdk) of this feature is severely outdated but you can have a look at the [ConfigureAwait example](https://try.postsharp.net/#autoconfigureawait).
+Caravela's philosophy is to offer a well-mannered API to express code transformations safely, without changing the code semantics, and in a composable way (which means that you can safely add to the same declaration several aspects that don't know about each other). However, if you feel brave, you can shortcut the safety features and implement your code transformations directly using the Roslyn API. Anything you could do with an IL weaving tool like Cecil, Fody, CCI or PostSharp can now be done with Caravela. The [documentation](https://doc.metalama.net/sdk/sdk) of this feature is severely outdated but you can have a look at the [ConfigureAwait example](https://try.postsharp.net/#autoconfigureawait).
 
 ## Modifying _source_ code with an aspect at design time
 

@@ -33,17 +33,17 @@ instead of at compile time.
 There are two approaches:
 
 * You can mark an aspect class as
-  a [live template](https://doc.postsharp.net/metalama/conceptual/aspects/ide/live-template) by using
-  the [EditorExperience](https://doc.postsharp.net/metalama/api/metalama-framework-aspects-editorexperienceattribute)
+  a [live template](https://doc.metalama.net/conceptual/aspects/ide/live-template) by using
+  the [EditorExperience](https://doc.metalama.net/api/metalama-framework-aspects-editorexperienceattribute)
   custom attribute. This will export the aspect class to the refactoring menu. In this approach, it's important to
-  define the [aspect eligibility](https://doc.postsharp.net/metalama/conceptual/aspects/eligibility).
+  define the [aspect eligibility](https://doc.metalama.net/conceptual/aspects/eligibility).
 
 * You can use a fabric or an aspect to detect possible defects
-  and [attach a code fix](https://doc.postsharp.net/metalama/api/metalama-framework-diagnostics-idiagnostic-withcodefixes)
+  and [attach a code fix](https://doc.metalama.net/api/metalama-framework-diagnostics-idiagnostic-withcodefixes)
   to the error or warning.
 
 * Using a fabric or aspect, you can also detect refactoring opportunities
-  and [suggest a refactoring](https://doc.postsharp.net/metalama/api/metalama-framework-diagnostics-scopeddiagnosticsink-suggest)
+  and [suggest a refactoring](https://doc.metalama.net/api/metalama-framework-diagnostics-scopeddiagnosticsink-suggest)
   _without_ reporting any error or warning.
 
 ## Report warnings on obsolete code

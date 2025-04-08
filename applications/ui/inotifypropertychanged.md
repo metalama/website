@@ -8,7 +8,7 @@ Most modern UI applications rely on binding data classes to UI classes. The `INo
 standard way to achieve this. However, implementing this interface manually can be cumbersome and error-prone,
 particularly when dealing with a large number of properties.
 
-Thanks to Metalama's [Observable](https://doc.postsharp.net/metalama/patterns/observability) aspect of the
+Thanks to Metalama's [Observable](https://doc.metalama.net/patterns/observability) aspect of the
 `Metalama.Patterns.Observability` open-source package, you can implement the `INotifyPropertyChanged` interface
 automatically. The plumbing code is generated on-the-fly when you compile, so your source code remains clean and
 concise.
@@ -68,7 +68,7 @@ public partial class CustomerViewModel
 
 * Blog
   post: [Implementing INotifyPropertyChanged with Metalama](https://blog.postsharp.net/inotifypropertychanged-metalama).
-* Reference documentation: [Metalama.Patterns.Observability](https://doc.postsharp.net/metalama/patterns/observability).
+* Reference documentation: [Metalama.Patterns.Observability](https://doc.metalama.net/patterns/observability).
 * Source
   code: [Metalama.Patterns.Observability](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Observability).
 * NuGet package: [Metalama.Patterns.Observability](https://www.nuget.org/packages/Metalama.Patterns.Observability).

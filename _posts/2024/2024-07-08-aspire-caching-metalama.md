@@ -108,7 +108,7 @@ As we've shown in the introduction, adding caching to a method is now as easy as
 
 A few points will require your attention.
 
-* First, you must ensure that the parameters of a cached method generate a meaningful caching key. The `ToString()` method is used by default, and Metalama offers [several strategies](https://doc.postsharp.net/metalama/patterns/caching/caching-keys) to customize it.
+* First, you must ensure that the parameters of a cached method generate a meaningful caching key. The `ToString()` method is used by default, and Metalama offers [several strategies](https://doc.metalama.net/patterns/caching/caching-keys) to customize it.
 
 * Then, you might want to check that all return values are safely JSON-serializable. Metalama transparently handles special types like streams, enumerables, or enumerators.
 
@@ -123,7 +123,7 @@ The simplest approach is to use the `[InvalidateCache]` aspect, as you can see i
 
 This aspect matches the method arguments with the cache keys and invalidates the proper cache items when a to-do item gets deleted.
 
-As you probably know, cache invalidation is the [second hardest problem in computer science](https://martinfowler.com/bliki/TwoHardThings.html), so there's [way more](https://doc.postsharp.net/metalama/patterns/caching/invalidation) to cache invalidation in Metalama Caching besides the `[InvalidateCache]` aspect: imperative invalidation, and even cache dependencies.
+As you probably know, cache invalidation is the [second hardest problem in computer science](https://martinfowler.com/bliki/TwoHardThings.html), so there's [way more](https://doc.metalama.net/patterns/caching/invalidation) to cache invalidation in Metalama Caching besides the `[InvalidateCache]` aspect: imperative invalidation, and even cache dependencies.
 
 ## Summary
 

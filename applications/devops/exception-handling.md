@@ -53,7 +53,7 @@ public class CalculatorService
 }
 ```
 
-See [this commented example](https://doc.postsharp.net/metalama/examples/exception-handling/retry/retry-5) to learn how
+See [this commented example](https://doc.metalama.net/examples/exception-handling/retry/retry-5) to learn how
 to create such aspects.
 
 {: .show-more }
@@ -100,13 +100,13 @@ internal class CalculatorService
 
 ### Resources
 
-* Example: [Implementing an auto-retry aspect that uses Polly](https://doc.postsharp.net/metalama/examples/exception-handling/retry/retry-5)
+* Example: [Implementing an auto-retry aspect that uses Polly](https://doc.metalama.net/examples/exception-handling/retry/retry-5)
 * Blog: [5 practical ways to add Polly to your application](https://blog.postsharp.net/polly)
 
 ## Resilience without Polly
 
 You can, of course, create exception-handling aspects without Polly.
-See [these examples](https://doc.postsharp.net/metalama/examples/exception-handling) to get some inspiration.
+See [these examples](https://doc.metalama.net/examples/exception-handling) to get some inspiration.
 
 
 ## Enriching exception stacks
@@ -133,7 +133,7 @@ To continue your investigation, you would need to know for which value of `custo
 
 You create an `EnrichExceptionAttribute` aspect that automatically wraps the whole method body in a try-catch block and
 enriches the exception with the parameter values. You
-can [see the full code of that aspect here](https://doc.postsharp.net/metalama/examples/exception-handling/enrich-exception#aspect-code).
+can [see the full code of that aspect here](https://doc.metalama.net/examples/exception-handling/enrich-exception#aspect-code).
 
 However, solely defining an aspect is not enough. You need to apply it to all your methods, so you add this class to
 your project:
@@ -174,7 +174,7 @@ public string GetCustomerCreationDate( int customerId )
 ```
 
 When you build the project, the fabric added
-the [EnrichException](https://doc.postsharp.net/metalama/examples/exception-handling/enrich-exception#aspect-code)
+the [EnrichException](https://doc.metalama.net/examples/exception-handling/enrich-exception#aspect-code)
 aspect to any public method, including this one. Therefore, instead of your source code, the following code is executed:
 
 ```cs
@@ -207,4 +207,4 @@ providing additional context information that can help developers quickly identi
 ### Resources
 
 *
-Example: [Enriching exceptions with parameter values](https://doc.postsharp.net/metalama/examples/exception-handling/enrich-exception)
+Example: [Enriching exceptions with parameter values](https://doc.metalama.net/examples/exception-handling/enrich-exception)

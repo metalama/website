@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://blog.postsharp.net/sitemap.xml
+Sitemap: https://metalama.net/sitemap.xml

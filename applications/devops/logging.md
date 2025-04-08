@@ -27,7 +27,7 @@ Logging and tracing are often used as synonyms (including on this website), but 
 
 ## Features
 
-Metalama comes with several [examples of logging aspects](https://doc.postsharp.net/metalama/examples/log) as we learned
+Metalama comes with several [examples of logging aspects](https://doc.metalama.net/examples/log) as we learned
 that many teams prefer to customize their logging and tracing logic.
 
 You will value the following Metalama features when implementing logging:
@@ -70,7 +70,7 @@ internal class Calculator
 ```
 
 If you select one of the most sophisticated versions of
-the [example logging aspects](https://doc.postsharp.net/metalama/examples/log), it will transform the code into this
+the [example logging aspects](https://doc.metalama.net/examples/log), it will transform the code into this
 during the build:
 
 ```cs
@@ -130,7 +130,7 @@ You probably don't want to write this code by hand, ever!
 
 ## Resources
 
-* Example: [Implementing logging without boilerplate](https://doc.postsharp.net/metalama/examples/log)
+* Example: [Implementing logging without boilerplate](https://doc.metalama.net/examples/log)
 * Blog article: [Serilog log levels, and how to use them](https://blog.postsharp.net/serilog-log-levels)
 * Blog article: [Adding Serilog to ASP.NET Core: a practical guide](https://blog.postsharp.net/serilog-aspnetcore)
 * Blog article: [Fast and Compact Structured Logging in C# Using String Interpolation](https://blog.postsharp.net/structured-logging-with-string-interpolation)

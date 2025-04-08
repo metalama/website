@@ -133,7 +133,7 @@ Access a range of published extensions and samples under open-source licenses.
 
 ## Metalama vs PostSharp
 
-While Metalama is the successor to PostSharp, it is not yet a replacement, and migration from PostSharp is not recommended at this time unless all features required by your projects are available in Metalama. For more details, please see our [migration guide](https://doc.postsharp.net/metalama/conceptual/migration). 
+While Metalama is the successor to PostSharp, it is not yet a replacement, and migration from PostSharp is not recommended at this time unless all features required by your projects are available in Metalama. For more details, please see our [migration guide](https://doc.metalama.net/conceptual/migration). 
 
 PostSharp is still being maintained and supported, as demonstrated by the recent release of [PostSharp 2023](https://blog.postsharp.net/post/postsharp-2023). If you are a PostSharp user, we suggest you consider Metalama for new projects. Your PostSharp license already includes Metalama.
 
@@ -141,7 +141,7 @@ PostSharp is still being maintained and supported, as demonstrated by the recent
 
 If you're ready to transform the way you write code, get started in these three steps:
 
-1. Explore the [examples](https://doc.postsharp.net/metalama/examples) and try them in the online sandbox.
+1. Explore the [examples](https://doc.metalama.net/examples) and try them in the online sandbox.
 
 2. Install the [Metalama Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.metalama). It's optional, but we recommend it, especially if you're just starting.
  

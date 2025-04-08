@@ -119,6 +119,6 @@ Other verification tools may fail to understand the code after it has been enhan
 
 ## Resources
 
-- Reference documentation: [Verifying architecture](https://doc.postsharp.net/metalama/conceptual/architecture).
+- Reference documentation: [Verifying architecture](https://doc.metalama.net/conceptual/architecture).
 - Source code: [Metalama.Extensions.Architecture](https://github.com/postsharp/Metalama.Extensions/tree/release/2024.2/src/Metalama.Extensions.Architecture)
 - NuGet package: [Metalama.Extensions.Architecture](https://www.nuget.org/packages/Metalama.Extensions.Architecture)

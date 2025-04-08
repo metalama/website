@@ -9,8 +9,8 @@ alternative to subclassing because it allows you to add new functionalities to o
 
 Metalama seems like it was _invented_ to easily implement decorators. If you want to apply decorators _statically_ to
 your code, just use
-the [OverrideMethodAspect](https://doc.postsharp.net/metalama/api/metalama-framework-aspects-overridemethodaspect), [OverrideFieldOrPropertyAspect](https://doc.postsharp.net/metalama/api/metalama-framework-aspects-overridefieldorpropertyaspect),
-or [OverrideEventAspect](https://doc.postsharp.net/metalama/api/metalama-framework-aspects-overrideeventaspect)
+the [OverrideMethodAspect](https://doc.metalama.net/api/metalama-framework-aspects-overridemethodaspect), [OverrideFieldOrPropertyAspect](https://doc.metalama.net/api/metalama-framework-aspects-overridefieldorpropertyaspect),
+or [OverrideEventAspect](https://doc.metalama.net/api/metalama-framework-aspects-overrideeventaspect)
 according to what you want to decorate.
 
 If you want to _dynamically_ apply decorators at runtime, see the Proxy pattern.

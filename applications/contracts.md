@@ -9,7 +9,7 @@ keywords: "defensive programming, redundant validation checks, Metalama, automat
 
 Manually implementing these practices is often labor-intensive due to the need for repetitive boilerplate code. Metalama streamlines this process by automatically generating validation code, enabling developers to reap its benefits without the associated overhead.
 
-Metalama [Code Contracts](https://doc.postsharp.net/metalama/patterns/contracts), implemented in the `Metalama.Patterns.Contracts` package, are a simple mechanism to validate
+Metalama [Code Contracts](https://doc.metalama.net/patterns/contracts), implemented in the `Metalama.Patterns.Contracts` package, are a simple mechanism to validate
 the value assigned to properties, fields, or parameters. 
 
 When applied to Model or ViewModel properties, code contracts can be used to implement _user input validation_. Unlike [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations) namespace, Metalama's code contracts can be applied to _any_ class and not just ASP.NET ones.
@@ -80,7 +80,7 @@ internal class Fabric : ProjectFabric
 
 ## Resources
 
-* Reference documentation: [Code Contracts](https://doc.postsharp.net/metalama/patterns/contracts).
+* Reference documentation: [Code Contracts](https://doc.metalama.net/patterns/contracts).
 * Source code: [Metalama.Patterns.Contracts](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Contracts).
 * NuGet package: [Metalama.Patterns.Contracts](https://www.nuget.org/packages/Metalama.Patterns.Wpf).
 

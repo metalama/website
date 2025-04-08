@@ -81,7 +81,7 @@ To be eligible for technical support, customers using the LTS option must have t
 
 In this section, we use the term _platform_ to refer to Windows, .NET Framework, .NET Core or Visual Studio.
 
-This section covers only policies. For a list of supported platforms, please see the Requirements and Compatibility page in [PostSharp](https://doc.postsharp.net/il/requirements) or [Metalama](https://doc.postsharp.net/metalama/conceptual/requirements) documentation.
+This section covers only policies. For a list of supported platforms, please see the Requirements and Compatibility page in [PostSharp](https://doc.postsharp.net/il/requirements) or [Metalama](https://doc.metalama.net/conceptual/requirements) documentation.
 
 ### What we mean by _supported platform_
 

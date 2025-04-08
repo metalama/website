@@ -13,7 +13,7 @@ instance and provides a global point of access to that instance.
 The following `PerformanceCounterManager` class is a classic Singleton example; it should consistently gather
 performance counters across an entire application. The `[Singleton]` class attribute that indicates it's a Singleton
 also is an aspect that can
-be [developed using Metalama](https://doc.postsharp.net/metalama/examples/singleton/singleton-1#aspect-implementation).
+be [developed using Metalama](https://doc.metalama.net/examples/singleton/singleton-1#aspect-implementation).
 It generates a static `Instance` property and reports an error if there is a public constructor. If needed, it also
 creates a private constructor.
 
@@ -55,6 +55,6 @@ public partial class PerformanceCounterManager
 
 ## Resources
 
-* Example: [Classic Singleton](https://doc.postsharp.net/metalama/examples/singleton/singleton-1)
+* Example: [Classic Singleton](https://doc.metalama.net/examples/singleton/singleton-1)
 
 

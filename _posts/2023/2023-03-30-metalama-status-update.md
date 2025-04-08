@@ -17,15 +17,15 @@ We have been working hard this month to improve the documentation and fix bugs i
 
 Clear and comprehensive documentation is crucial for a tool as broad and complex as Metalama. That's why we've been working hard to improve our documentation in several ways:
 
-- We added a new chapter on [verifying architecture](https://doc.postsharp.net/metalama/conceptual/architecture), which explains how to use the `Metalama.Extensions.Architecture` namespace to validate source code against your architecture. You'll learn to define architectural rules, such as dependencies or naming conventions, and how to enforce these rules using custom attributes and fabrics.
-- We added another new chapter on [using Metalama](https://doc.postsharp.net/metalama/conceptual/using), aimed at developers who participate in projects using Metalama but don't write aspects themselves. You'll learn to install Metalama in your development environment, apply aspects to your code, see which aspects have been applied, and understand and debug your aspect-oriented code.
-- We revamped the [documentation website](https://doc.postsharp.net/metalama), integrating the examples and the online sandbox with the documentation, and improving the representation of errors and warnings in source code.
+- We added a new chapter on [verifying architecture](https://doc.metalama.net/conceptual/architecture), which explains how to use the `Metalama.Extensions.Architecture` namespace to validate source code against your architecture. You'll learn to define architectural rules, such as dependencies or naming conventions, and how to enforce these rules using custom attributes and fabrics.
+- We added another new chapter on [using Metalama](https://doc.metalama.net/conceptual/using), aimed at developers who participate in projects using Metalama but don't write aspects themselves. You'll learn to install Metalama in your development environment, apply aspects to your code, see which aspects have been applied, and understand and debug your aspect-oriented code.
+- We revamped the [documentation website](https://doc.metalama.net), integrating the examples and the online sandbox with the documentation, and improving the representation of errors and warnings in source code.
 
 We hope these improvements will make it easier for you to learn and use Metalama. We [welcome your feedback](https://www.postsharp.net/slack) and suggestions on how to make our documentation even better.
 
 ## Divorce... also
 
-We have introduced a [divorce feature](https://doc.postsharp.net/metalama/conceptual/divorcing) to Metalama, and it's not what you think. It's not a feature that will send you into a spiraling emotional meltdown, like a real-life divorce. Instead, it's a feature that allows you to part ways with the framework gracefully and efficiently, like a break-up between two adults who have had enough of each other.
+We have introduced a [divorce feature](https://doc.metalama.net/conceptual/divorcing) to Metalama, and it's not what you think. It's not a feature that will send you into a spiraling emotional meltdown, like a real-life divorce. Instead, it's a feature that allows you to part ways with the framework gracefully and efficiently, like a break-up between two adults who have had enough of each other.
 
 With the `metalama divorce` command, the code usually generated in the background during compilation is injected into your source code, leaving you free to exit the framework without experiencing daunting code separation challenges. It's like a considerate ex-partner who helps you pack your bags and move out of the apartment.
 

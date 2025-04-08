@@ -112,7 +112,7 @@ In the following example, we have defined the `MeasureTemperature` method with t
 
 {% include_file "{{page.source_url}}/TemperatureMonitor_Metalama/TemperatureViewModel.cs" syntax="csharp" snippet="MeasureTemperatureCommand" %}
 
-You can take a look at what the generated code will look like using our [Metalama Diff tool](https://doc.postsharp.net/metalama/conceptual/using/understanding-your-code-with-aspects#metalama-diff) (included in [Visual Studio Tools for Metalama](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp)).
+You can take a look at what the generated code will look like using our [Metalama Diff tool](https://doc.metalama.net/conceptual/using/understanding-your-code-with-aspects#metalama-diff) (included in [Visual Studio Tools for Metalama](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp)).
 
 ![Metalama Diff tool](/assets/images/2024/2024-11-wpf-command-metalama/metalama_diff.png#unzoom150)
 
@@ -169,7 +169,7 @@ This is a lot of boilerplate code that can be avoided using the `[Observable]` a
 
 {% include_file "{{page.source_url}}/TemperatureMonitor_Metalama/TemperatureViewModel.cs" syntax="csharp" %} 
 
-For more details on the `[Observable]` pattern, its benefits and how to use it, please read our [Implement INotifyPropertyChanged with Metalama](https://blog.postsharp.net/inotifypropertychanged-metalama) article or the [reference documentation](https://doc.postsharp.net/metalama/patterns/observability).
+For more details on the `[Observable]` pattern, its benefits and how to use it, please read our [Implement INotifyPropertyChanged with Metalama](https://blog.postsharp.net/inotifypropertychanged-metalama) article or the [reference documentation](https://doc.metalama.net/patterns/observability).
 
 ## Summary
 

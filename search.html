@@ -170,17 +170,22 @@ summary: "Search Metalama website and documentation."
                         getItemScore(b) - getItemScore(a) ||
                         a.position_in_bucket - b.position_in_bucket ||
                         a.collection_priority - b.collection_priority
-                                                 
                     )
                 );
                 const hits = sortedBuckets.flat();
-
 
                 // Merge all results into searchResults[0]
                 searchResults[0].results[0].hits = hits;
 
                 searchResults[0].results[0].nbHits = hits.length;
                 searchResults[0].results[0].nbPages = Math.ceil(hits.length / searchResults[0].results[0].hitsPerPage);
+
+                // Matomo search tracking
+                if (typeof _paq !== 'undefined') {
+                    const query = requests[0].params.query;
+                    const totalHits = hits.length;
+                    _paq.push(['trackSiteSearch', query, false, totalHits]);
+                }
 
                 return searchResults[0];
             },

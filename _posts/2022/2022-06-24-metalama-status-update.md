@@ -18,21 +18,21 @@ In June, we have focused on the support for **dependency injection**. It is now 
 
 Here is an example where a `LogAttribute` aspect pulls a dependency of type `IMessageWriter` you can see that the aspect code is very simple and does not know anything about the dependency injection pattern.
 
-{% embedded id:dependency-injection-example, url:https://doc.postsharp.net/metalama/aspects/dependency-injection, node:code-logdefaultframework %}
+{% embedded id:dependency-injection-example, url:https://doc.metalama.net/aspects/dependency-injection, node:code-logdefaultframework %}
 
-For details regarding dependency injection in Metalama, see [this documentation article](https://doc.postsharp.net/metalama/aspects/dependency-injection).
+For details regarding dependency injection in Metalama, see [this documentation article](https://doc.metalama.net/aspects/dependency-injection).
 
 The dependency injection feature was made possible thanks to the following user stories:
 
-* [Introduce and pull parameters from constructors](https://doc.postsharp.net/metalama/aspects/advising/introducing-constructor-parameters)
-* [Add/remove custom attribute from aspect](https://doc.postsharp.net/metalama/api/metalama_framework_advising_iadvicefactory_introduceattribute)
-* [Any compile-time type can have templates](https://doc.postsharp.net/metalama/api/metalama_framework_advising_iadvicefactory_withtemplateprovider)
-* [Declarative advising is now customizable](https://doc.postsharp.net/metalama/api/metalama_framework_aspects_declarativeadviceattribute)
+* [Introduce and pull parameters from constructors](https://doc.metalama.net/aspects/advising/introducing-constructor-parameters)
+* [Add/remove custom attribute from aspect](https://doc.metalama.net/api/metalama_framework_advising_iadvicefactory_introduceattribute)
+* [Any compile-time type can have templates](https://doc.metalama.net/api/metalama_framework_advising_iadvicefactory_withtemplateprovider)
+* [Declarative advising is now customizable](https://doc.metalama.net/api/metalama_framework_aspects_declarativeadviceattribute)
 
 ## Other features
 
 * The test framework now supports concurrent processing on different cores.
-* You can now [override](https://doc.postsharp.net/metalama/api/metalama_framework_advising_iadvicefactory_override) and [introduce](https://doc.postsharp.net/metalama/api/metalama_framework_advising_iadvicefactory_introducefinalizer) a finalizer.
+* You can now [override](https://doc.metalama.net/api/metalama_framework_advising_iadvicefactory_override) and [introduce](https://doc.metalama.net/api/metalama_framework_advising_iadvicefactory_introducefinalizer) a finalizer.
 * We have updated our compiler to Roslyn 4.2.
 * 38 bug fixes and minor enhancements just in June.
 

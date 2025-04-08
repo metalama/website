@@ -35,7 +35,7 @@ We've rolled out several preview builds of Metalama 2024.2, introducing the foll
 * The ability to create an `IStatement` from a template.
 * `SwitchStatementBuilder` to dynamically create `switch` statements.
 
-For a detailed list, including breaking changes, check out the [preview release notes](https://doc.postsharp.net/metalama/conceptual/release-notes/release-notes-2024-2).
+For a detailed list, including breaking changes, check out the [preview release notes](https://doc.metalama.net/conceptual/release-notes/release-notes-2024-2).
 
 We're actively refining this release. Here's what we're working on:
 - The introduction of new classes (both nested and non-nested). This feature has been highly requested and is necessary for patterns like Memento or enum view-model classes.

@@ -47,7 +47,7 @@ separately from Fody itself.
   customize than Fody add-ins.
 
 - [Metalama](/metalama) is the simplest and most powerful AOP framework for .NET. It can be extended
-  using [Metalama.Framework.Sdk](https://doc.postsharp.net/metalama/conceptual/sdk) to support code transformations
+  using [Metalama.Framework.Sdk](https://doc.metalama.net/conceptual/sdk) to support code transformations
   using the Roslyn code
   model. [Metalama.Community.Costura](https://github.com/postsharp/Metalama.Community/tree/release/2024.2/src/Metalama.Community.Costura)
   is a port of the popular `Costura.Fody` weaver built with `Metalama.Framework.Sdk`.

@@ -86,7 +86,7 @@ IsChanged=False
 {: .show-more }
 Show me how it works!
 
-The [TrackChanges](https://doc.postsharp.net/metalama/examples/change-tracking/change-tracking-1) aspect transforms the
+The [TrackChanges](https://doc.metalama.net/examples/change-tracking/change-tracking-1) aspect transforms the
 `Comment` class into this:
 
 ```csharp
@@ -141,7 +141,7 @@ public partial class Comment : ISwitchableChangeTracking, IChangeTracking
 }
 ```
 
-A [more complex variant](https://doc.postsharp.net/metalama/examples/change-tracking/change-tracking-3) of the aspect
+A [more complex variant](https://doc.metalama.net/examples/change-tracking/change-tracking-3) of the aspect
 can integrate with the `INotifyPropertyChanged` interface or implement the `RejectChanges` functionality.
 
 ## Metalama benefits
@@ -150,5 +150,5 @@ TODO
 
 ## Resources
 
-* Example: [Change tracking](https://doc.postsharp.net/metalama/examples/change-tracking)
+* Example: [Change tracking](https://doc.metalama.net/examples/change-tracking)
 

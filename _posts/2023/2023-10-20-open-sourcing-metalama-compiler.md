@@ -40,7 +40,7 @@ We plan to continue merging changes originated from the Roslyn team at Microsoft
 
 ## Technical Overview
 
-This fork extends the capabilities of analyzer projects and allows them to execute arbitrary transformations of source code during compilation via the [ISourceTransformer](https://doc.postsharp.net/metalama/api/metalama_compiler_isourcetransformer) interface from the `Metalama.Compiler.Sdk` package. Source transformers can replace entire syntax trees in the compilation. They can also add managed resources.
+This fork extends the capabilities of analyzer projects and allows them to execute arbitrary transformations of source code during compilation via the [ISourceTransformer](https://doc.metalama.net/api/metalama_compiler_isourcetransformer) interface from the `Metalama.Compiler.Sdk` package. Source transformers can replace entire syntax trees in the compilation. They can also add managed resources.
 
 As an illustration, here is the typical skeleton of a source transformer:
 
@@ -75,7 +75,7 @@ public class MySourceTransformer : ISourceTransformer
 
 By default, errors and warnings are reported on the _source_ code, and PDB files map the MSIL binary code to the _source_ code as well, so that debugging and breakpoints work as usual. It is possible to toggle that behavior and debug the _transformed code_ by setting some MSBuild properties. The ability to map diagnostics and PDBs back to the source code is by far the most complex feature of `Metalama.Compiler`.
 
-When there are multiple source transformers in a project, they must be deterministically ordered.  One way to order transformers is to use the [TransformerOrderAttribute](https://doc.postsharp.net/metalama/api/metalama_compiler_transformerorderattribute) assembly-level custom attribute. A second way is to define the `MetalamaCompilerTransformerOrder` MSBuild property.
+When there are multiple source transformers in a project, they must be deterministically ordered.  One way to order transformers is to use the [TransformerOrderAttribute](https://doc.metalama.net/api/metalama_compiler_transformerorderattribute) assembly-level custom attribute. A second way is to define the `MetalamaCompilerTransformerOrder` MSBuild property.
 
 By default, analyzers run _after_ all source transformers. This allows these analyzers to see the _final_ code. However, some analyzers, for instance, the ones checking formatting, need to see the _source_ code. To move the execution of an analyzer _before_ the source transformers, use the `MetalamaSourceOnlyAnalyzers` MSBuild property.
 
@@ -105,7 +105,7 @@ Metalama.Microsoft.CodeAnalysis["`_forked_
 
 Please note that `Metalama.Compiler` only works for C#. There is no plan to support Visual Basic.
 
-For further details, see the [project home](https://github.com/postsharp/Metalama.Compiler) on GitHub and the [API documentation](https://doc.postsharp.net/metalama/api/metalama_compiler).
+For further details, see the [project home](https://github.com/postsharp/Metalama.Compiler) on GitHub and the [API documentation](https://doc.metalama.net/api/metalama_compiler).
 
 ## Who Should Use Metalama Compiler?
 

@@ -11,10 +11,10 @@ You can use Metalama to generate common object-oriented services like deep cloni
 
 ## Deep Cloning
 
-https://doc.postsharp.net/metalama/examples/clone
+https://doc.metalama.net/examples/clone
 
 ## ToString
 
-https://doc.postsharp.net/metalama/examples/tostring
+https://doc.metalama.net/examples/tostring
 
 ## Comparison

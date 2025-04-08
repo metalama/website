@@ -11,9 +11,9 @@ itself as grayed out when the command is not available, thanks to `CanExecute`.
 
 The implementation of WPF commands requires some redundant code, especially to integrate the `CanExecute` logic.
 
-The [Command](https://doc.postsharp.net/metalama/patterns/wpf/command) aspect of the `Metalama.Patterns.Wpf` open-source
+The [Command](https://doc.metalama.net/patterns/wpf/command) aspect of the `Metalama.Patterns.Wpf` open-source
 package solves this problem by automatically generating the plumbing code. It integrates with
-the [Observable](https://doc.postsharp.net/metalama/patterns/observability) aspect to provide support for the
+the [Observable](https://doc.metalama.net/patterns/observability) aspect to provide support for the
 `CanExecute` logic.
 
 {: .note }
@@ -59,7 +59,7 @@ public partial class MainWindow : Window
 ## Resources
 
 * Blog post: [Implementing WPF Commands with Metalama](https://blog.postsharp.net/wpf-command-metalama).
-* Reference documentation: [WPF Commands](https://doc.postsharp.net/metalama/patterns/wpf/command).
+* Reference documentation: [WPF Commands](https://doc.metalama.net/patterns/wpf/command).
 * Source
   code: [Metalama.Patterns.Wpf](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Wpf).
 * NuGet package: [Metalama.Patterns.Wpf](https://www.nuget.org/packages/Metalama.Patterns.Wpf).

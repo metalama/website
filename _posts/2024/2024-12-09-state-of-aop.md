@@ -64,7 +64,7 @@ public class CacheAttribute : OverrideMethodAspect
 }
 ```
 
-In the code above, `OverrideMethod` is a _template_ applied to the method to which we want to add caching. You can consider `meta` as a "magic" keyword (actually, it's a static class) that gives you access to meta-programming features. `meta.Proceed()` is replaced by the _original_ method implementation (before caching is applied), and `meta.Target.Method` represents the method to which the aspect is applied. `CacheKeyBuilder` is a compile-time utility method. Read [this article](https://doc.postsharp.net/metalama/examples/caching) for details about this aspect.
+In the code above, `OverrideMethod` is a _template_ applied to the method to which we want to add caching. You can consider `meta` as a "magic" keyword (actually, it's a static class) that gives you access to meta-programming features. `meta.Proceed()` is replaced by the _original_ method implementation (before caching is applied), and `meta.Target.Method` represents the method to which the aspect is applied. `CacheKeyBuilder` is a compile-time utility method. Read [this article](https://doc.metalama.net/examples/caching) for details about this aspect.
 
 Since this class is a custom attribute, we can add it to any method we want to cache. Here is our _source_ code, i.e., the one we write manually and commit to _git_:
 
@@ -174,11 +174,11 @@ AOP was formalized when Java and C# were still in their infancy. In the meantime
 
 In .NET, examples of code patterns that are still better handled by AOP than by other mechanisms include:
 
-* Instrumentation: [logging](https://doc.postsharp.net/metalama/examples/log), profiling;
+* Instrumentation: [logging](https://doc.metalama.net/examples/log), profiling;
 * Security: authorization, audit, encryption;
-* Resilience: [caching](https://blog.postsharp.net/aspire-caching-metalama), transaction handling, [exception handling](https://doc.postsharp.net/metalama/examples/exception-handling);
+* Resilience: [caching](https://blog.postsharp.net/aspire-caching-metalama), transaction handling, [exception handling](https://doc.metalama.net/examples/exception-handling);
 * UI: [observability](https://blog.postsharp.net/inotifypropertychanged-metalama) (`INotifyPropertyChanged`), change tracking, undo/redo, WPF [dependency properties](https://blog.postsharp.net/wpf-dependency-property-metalama) and [commands](https://blog.postsharp.net/wpf-command-metalama);
-* Classic design patterns: [Builder](https://blog.postsharp.net/builder-pattern-with-metalama), [Singleton](https://doc.postsharp.net/metalama/examples/singleton), [Memento](https://doc.postsharp.net/metalama/examples/memento), Factory, Proxy, [Decorator](https://blog.postsharp.net/decorator-pattern);
+* Classic design patterns: [Builder](https://blog.postsharp.net/builder-pattern-with-metalama), [Singleton](https://doc.metalama.net/examples/singleton), [Memento](https://doc.metalama.net/examples/memento), Factory, Proxy, [Decorator](https://blog.postsharp.net/decorator-pattern);
 * Multi-threading: synchronization (locking), freezable, background execution;
 * Classic object services: equality, `ToString`;
 * Persistence: object-database mapping, serialization, object-configuration mapping.
@@ -201,7 +201,7 @@ Just because you need to cache one or two methods does not mean that you should 
 
 As a rule of thumb, you need _dozens_ of uses of an aspect to justify building one. _Getting Started_ guides will always insist on how easy it is to create something easy. Perhaps. But with aspects, the devil is in the detail. It can take days to create a robust aspect, one that will act as a productivity multiplier for your team instead of one of those the-boss-wants-us-to-use-it libraries.
 
-Of course, if you're using ready-made, tested aspects ([and we release a lot of them open-source for free](https://doc.postsharp.net/metalama/patterns)), it will pay off sooner than if you build your own.
+Of course, if you're using ready-made, tested aspects ([and we release a lot of them open-source for free](https://doc.metalama.net/patterns)), it will pay off sooner than if you build your own.
 
 Let's be honest. AOP frameworks like PostSharp or Metalama are heavyweight dependencies. You don't want them in your projects until it _really_ makes a difference. In a small project, it's probably not going to make a big difference. However, one of our customers confessed to having saved _tens of millions of euros_ thanks to AOP.
 
@@ -258,7 +258,7 @@ Fody has a long list of [plug-ins](https://github.com/Fody/Home/blob/master/page
 ## Unit-testing aspects in 2025
 
 When we discussed with Matt about his book back in 2013, we had a disagreement about unit testing of aspects. The only way to test PostSharp aspects was to apply them to a method, invoke that method, and check its output or its side effect. Matt argued that this was not real unit testing. And he was right.
-Ten years later, you can finally unit-test aspects! Metalama, PostSharp's successor, now generates C# code instead of MSIL. You can now test that your aspect generates the code you expect. We've built an [aspect test framework](https://doc.postsharp.net/metalama/conceptual/aspects/testing/aspect-testing) for this purpose. It works as a _snapshot test_, similar to [Verify](https://github.com/VerifyTests/Verify), and integrates with [DiffEngine](https://github.com/VerifyTests/DiffEngine).
+Ten years later, you can finally unit-test aspects! Metalama, PostSharp's successor, now generates C# code instead of MSIL. You can now test that your aspect generates the code you expect. We've built an [aspect test framework](https://doc.metalama.net/conceptual/aspects/testing/aspect-testing) for this purpose. It works as a _snapshot test_, similar to [Verify](https://github.com/VerifyTests/Verify), and integrates with [DiffEngine](https://github.com/VerifyTests/DiffEngine).
 
 ## Dependency injection in aspect in 2025
 
@@ -266,7 +266,7 @@ Another area that has greatly improved in the last decade is the integration of 
 
 The reason that the concepts of DI and AOP were not properly integrated from the beginning is that they were both formalized around the same time, in the early 2000s. The first AOP implementations, including PostSharp, were not designed for dependency injection. This was a serious limitation because many aspects depend on services that are typically exposed in a dependency injection container. For instance, a logging aspect uses `ILogger`, caching uses `IMemoryCache`, and so on. That led to excessive use of static methods in aspects, which made them difficult to test.
 
-Metalama now has first-class support for dependency injection. As you have seen in the example above, aspects can [import dependencies](https://doc.postsharp.net/metalama/patterns/dependency-injection) using the `Metalama.Extensions.DependencyInjection` package. With the default .NET Core dependency injection pattern, dependencies are [added as constructor parameters](https://doc.postsharp.net/metalama/conceptual/aspects/advising/introducing-constructor-parameters) and pulled from derived classes.
+Metalama now has first-class support for dependency injection. As you have seen in the example above, aspects can [import dependencies](https://doc.metalama.net/patterns/dependency-injection) using the `Metalama.Extensions.DependencyInjection` package. With the default .NET Core dependency injection pattern, dependencies are [added as constructor parameters](https://doc.metalama.net/conceptual/aspects/advising/introducing-constructor-parameters) and pulled from derived classes.
 
 Therefore, I consider that today, dependency injection and AOP are complementary and almost orthogonal concepts.
 

@@ -21,7 +21,7 @@ __It is a good time to start playing with Metalama.__ Because the team is no lon
 
 ## PostSharp migration
 
-Last month, we published the [PostSharp API Annotated for Migration to Metalama](https://doc.postsharp.net/metalama/migration-api). This month, we are announcing [Metalama.Extensions.Multicast](https://github.com/postsharp/Metalama.Extensions/tree/master/src/Metalama.Extensions.Multicast), an open-source emulation of PostSharp attribute multicasting for Metalama. Our design objective with Metalama is that you should not have to change your _business code_ when migrating from PostSharp to Metalama, that it should be enough to migrate your _aspect code_.
+Last month, we published the [PostSharp API Annotated for Migration to Metalama](https://doc.metalama.net/migration-api). This month, we are announcing [Metalama.Extensions.Multicast](https://github.com/postsharp/Metalama.Extensions/tree/master/src/Metalama.Extensions.Multicast), an open-source emulation of PostSharp attribute multicasting for Metalama. Our design objective with Metalama is that you should not have to change your _business code_ when migrating from PostSharp to Metalama, that it should be enough to migrate your _aspect code_.
 
 We are still not completely done with the PostSharp-to-Metalama migration story: there is no documentation, and we want to release a package to report warnings and errors for the PostSharp API.
 

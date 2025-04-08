@@ -66,7 +66,7 @@ logs any exceptions that occur. This means that the `GetTaxAmount` method has mo
 
 To remove the logging responsibility from the `GetTaxAmount` method, we can move all the logging code to a Metalama
 aspect (a separate class) like the `Log` attribute introduced in
-the [Implementing logging without boilerplate](https://doc.postsharp.net/metalama/examples/log) article.
+the [Implementing logging without boilerplate](https://doc.metalama.net/examples/log) article.
 
 Using that new `Log` attribute, the `TaxCalculator` class will look like this:
 
@@ -135,12 +135,12 @@ public class TaxCalculator
 ```
 
 In this example, the `Cache` attribute (part of
-the [Metalama Patterns](https://doc.postsharp.net/metalama/patterns/caching)) is used to add caching behavior to the
+the [Metalama Patterns](https://doc.metalama.net/patterns/caching)) is used to add caching behavior to the
 `GetTaxAmount` method. The `TaxCalculator` class is open for extension because you can add new functionalities to it (
 using attributes in this case) but closed for modification because you don't need to change the existing code of the
 class.
 
-Metalama also provides something called [Fabrics](https://doc.postsharp.net/metalama/conceptual/using/fabrics) to add
+Metalama also provides something called [Fabrics](https://doc.metalama.net/conceptual/using/fabrics) to add
 multiple aspects at once using compile-time imperative code, as opposed to the declarative custom attributes we used in
 the previous example. Why should you need to do this? Because sometimes you need to add aspects dynamically, based on
 some conditions to several classes/methods at once.

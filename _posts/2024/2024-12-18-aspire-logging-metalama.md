@@ -60,7 +60,7 @@ When you run the app, you should see this:
 
 An _aspect_ is a special kind of class, usually a custom attribute, that executes within the compiler or the IDE and dynamically transforms your source code. There are several [aspect frameworks](https://www.postsharp.net/solutions/aspect-oriented-programming) for .NET. In this article, we'll use the most modern of all: [Metalama](https://www.postsharp.net/metalama).
 
-We will use the [example logging aspect](https://doc.postsharp.net/metalama/examples/log) of the reference documentation.
+We will use the [example logging aspect](https://doc.metalama.net/examples/log) of the reference documentation.
 
 Let's see how we can use the `[Log]` aspect in real code:
 
@@ -149,9 +149,9 @@ This code is arguably very verbose, but you don't have to write it by hand! To m
 
 In the previous step, we've shown how to add logging without _almost_ any change in the source code. However, you still had to add a custom attribute to every single method. This is still quite cumbersome!
 
-It would be awesome to have some sort of SQL that would allow me to "select" all the public methods and then iterate over the result to apply the [Log] aspect... no? This is where [the fabrics](https://doc.postsharp.net/metalama/conceptual/using/fabrics) come in.
+It would be awesome to have some sort of SQL that would allow me to "select" all the public methods and then iterate over the result to apply the [Log] aspect... no? This is where [the fabrics](https://doc.metalama.net/conceptual/using/fabrics) come in.
 
-In a nutshell, a fabric is a feature of Metalama that allows you to apply aspects in bulk. In the next example, we're going to use the [transitive project fabric](https://doc.postsharp.net/metalama/api/metalama-framework-fabrics-transitiveprojectfabric). A transitive fabric is a build-time entry point that is executed when any project _referencing_ the project containing that fabric is built. The same works, of course, at design time.
+In a nutshell, a fabric is a feature of Metalama that allows you to apply aspects in bulk. In the next example, we're going to use the [transitive project fabric](https://doc.metalama.net/api/metalama-framework-fabrics-transitiveprojectfabric). A transitive fabric is a build-time entry point that is executed when any project _referencing_ the project containing that fabric is built. The same works, of course, at design time.
 
 Here is the code of the fabric:
 
