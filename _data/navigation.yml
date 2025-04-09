@@ -10,60 +10,58 @@ nodes:
     - url: "/features/core"
       title: "Core Features"
       nodes:
-      - url: "/features/core/code-generation"
+      - url: "/features/code-generation"
         title: "Code Generation"
         description: "Dynamically generate C# code and seamlessly integrate it with handcrafted logic."    
         nodes:
-          - url: "/features/core/code-generation/templates"
+          - url: "/features/templates"
             title: "C#-to-C# Templates"
-          - url: "/features/core/code-generation/override"
+          - url: "/features/override"
             title: "Enhance Hand-Written Code"
-          - url: "/features/core/code-generation/reference-from-source-code"
+          - url: "/features/reference-from-source-code"
             title: "Reference Generated Code"
-          - url: "/features/core/code-generation/dependency-injection"
+          - url: "/features/dependency-injection"
             title: "Dependency Injection"
-          - url: "/features/core/code-generation/applying"
+          - url: "/features/applying"
             title: "Powerful Code Selection Mechanisms"
             description: "Add aspects to code using custom attributes, compile-time code queries, aspect inheritance, or cross-project transitivity."
             nodes:
 
-      - url: "/features/core/code-validation"
+      - url: "/features/code-validation"
         title: "Code Validation"
         description: "Report errors and warnings at design time directly into the editor, or as part of the build process."
 
-      - url: "/features/core/design-time-feedback"
+      - url: "/features/design-time-feedback"
         title: "Immediate Editor Feedback"
         description: "Get immediate feedback on your code as you type. No need to recompile your code."
 
       - title: "Architecture Verification"
-        url: "/features/core/architecture-verification"
+        url: "/features/architecture-verification"
         description: "Ensure that both manually written and AI-assisted code adhere to strict architectural standards."
         premium: true
 
-      - url: "/features/core/code-fixes"
+      - url: "/features/code-fixes"
         title: "Code Fix Toolkit"
         premium: true
         description: "Leverage custom code fixes and code factorings to your team using Metalama's simple API."
-
-
 
     - url: "/features/productivity"
       title: "Productivity Features"
       nodes:
 
-      - url: "/features/productivity/aspect-libraries"
+      - url: "/features/aspect-libraries"
         title: "Ready-to-Use Aspect Libraries"
         description: "Accelerate development with open-source extensions and ready-to-use aspects and avoid reinventing the wheel."
   
-      - url: "/features/productivity/tooling"
+      - url: "/features/tooling"
         title: "Visual Studio Tooling"
         premium: true
         description: "Boost productivity with T# syntax highlighting, CodeLens, Aspect Explorer, and Aspect Diff."
 
-      - url: "/features/productivity/testing"
+      - url: "/features/testing"
         title: "Test Frameworks"
         description: "Test that your aspects generate code and report warnings as expected using our xUnit-compatible test framework."      
-      - url: "/features/productivity/debugging"
+      - url: "/features/debugging"
         title: "Transformed Code Debugging"
         description: "Choose whether to step into the transformed code or stick to the source code during debugging."
 
@@ -71,15 +69,15 @@ nodes:
       title: Extensibility Features
       nodes:
 
-      - url: "/features/extensibility/roslyn"
+      - url: "/features/roslyn"
         title: "Roslyn Extensibility"
         description: "Overcome Metalama's limitations with the full power of Roslyn."      
 
-      - url: "/features/extensibility/code-query"
+      - url: "/features/code-query"
         title: "Code Query API"
         description: "Query your code and dependencies in application. Includes a LINQPad driver."
 
-      - url: "/features/extensibility/divorce"
+      - url: "/features/divorce"
         title: "Divorce"
         description: "Metalama gracefully accepts when it's time to part ways and makes the breakup process as smooth as possible."
   
@@ -93,13 +91,13 @@ nodes:
         description: "Empower your clean coding journey by enforcing SOLID and DRY principles and see how Aspect-Oriented Programming has evolved."
         nodes:
           - title: "Clean Code"
-            url: "/applications/principles/clean-code"
+            url: "/applications/clean-code"
             description: "Maintain a streamlined, concise codebase devoid of redundant boilerplate."
           - title: "SOLID & DRY Principles"
-            url: "/applications/principles/solid"
+            url: "/applications/solid"
             description: "Take SOLID and DRY principles to the next level with aspects and code verification."
           - title: "Aspect-Oriented Programming"
-            url: "/applications/principles/aspect-oriented-programming"
+            url: "/applications/aspect-oriented-programming"
             description: "Experience the post-AOP revolution with Metalama’s next-generation aspect capabilities."            
           - title: "Refactoring"
             url: "/applications/refactoring"
@@ -114,38 +112,38 @@ nodes:
             description: "Implement time-tested design patterns like Singleton, Memento, Abstract Factory, and Builder with ease."
             nodes:
               - title: "Classic Singleton"
-                url: "/applications/design-patterns/classic-singleton"
+                url: "/applications/classic-singleton"
               - title: "Modern Singleton"
-                url: "/applications/design-patterns/modern-singleton"
+                url: "/applications/modern-singleton"
               - title: "Memento"
-                url: "/applications/design-patterns/memento"
+                url: "/applications/memento"
               - title: "Factory"
-                url: "/applications/design-patterns/factory"
+                url: "/applications/factory"
               - title: "Builder"
-                url: "/applications/design-patterns/builder"
+                url: "/applications/builder"
               - title: "Decorator"
-                url: "/applications/design-patterns/decorator"
+                url: "/applications/decorator"
               - title: "Proxy"
-                url: "/applications/design-patterns/proxy"
+                url: "/applications/proxy"
           - title: "UI Patterns"
             url: "/applications/ui"
             description: "Streamline UI features such as INotifyPropertyChanged, dependency properties, commands, and undo/redo."
             nodes:
               - title: INotifyPropertyChanged
-                url: /applications/ui/inotifypropertychanged
+                url: /applications/inotifypropertychanged
                 supported: true
               - title: Command
-                url: /applications/ui/command
+                url: /applications/command
                 supported: true
               - title: Dependency Property
-                url: /applications/ui/dependency-property                
+                url: /applications/dependency-property                
                 supported: true
               - title: Change Tracking
-                url: /applications/ui/change-tracking
+                url: /applications/change-tracking
               - title: Undo-Redo
-                url: /applications/ui/undo-redo
+                url: /applications/undo-redo
               - title: Memoization
-                url: /applications/ui/memoization
+                url: /applications/memoization
                 supported: true
           - title: "Classic Object Services"
             url: "/applications/object-services"
@@ -160,17 +158,17 @@ nodes:
         description: "Boost performance and resilience while maintaining top-tier code quality with Metalama’s dynamic metaprogramming."
         nodes:
           - title: "Logging & Tracing"
-            url: "/applications/devops/logging"
+            url: "/applications/logging"
             description: "Automatically infuse comprehensive logging across your codebase with a single line."
           - title: "Metrics"
-            url: "/applications/devops/metrics"
+            url: "/applications/metrics"
             description: "Gain deep operational insights with method-level performance metrics."
           - title: "Caching"
-            url: "/applications/devops/caching"
+            url: "/applications/caching"
             supported: true
             description: "Implement robust caching across diverse topologies, including seamless Redis integration."
           - title: "Exception Handling"
-            url: "/applications/devops/exception-handling"
+            url: "/applications/exception-handling"
             description: "Streamline exception management with a zero-boilerplate approach that integrates seamlessly with Polly."
 
       - url: "/alternatives"
@@ -268,7 +266,7 @@ nodes:
     title: "Premium"
     description: "Unlock advanced features and enterprise support with Metalama premium editions."
     premium: true
-    
-    
+
+
 
 

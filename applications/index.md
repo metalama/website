@@ -28,6 +28,6 @@ Conversely, *avoid* using Metalama if:
 | Category | Description |
 |----------|----------|
 | [Principles At Work](principles) | See how Metalama can help implement fundamental software development principles like Clean Code, SOLID, DRY, Aspect-Oriented Programming, Architecture Verification, or Refactoring.|
-| [Applications](applications) | See typical and concrete use cases of Metalama in software application development. |
+| [Classics](classics) | See typical and concrete use cases of Metalama in software application development. |
 | [DevOps](devops) | Learn how can Metalama can help moving from a prototype to a production-ready application with technical features like logging, metrics, caching, exception handling, and resilience. |
-| [Alternatives](alternatives) | See alternatives of Metalama is different areas of application. |
+| [Alternatives](/alternatives) | See alternatives of Metalama is different areas of application. |

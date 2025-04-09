@@ -89,7 +89,7 @@ internal class UseFactoryAttribute : TypeAspect
 * **Reduce human errors**. You can be confident that no rogue code is calling the constructor directly instead of
   getting an instance from the DI container.
 
-![](images/factory-validation.png)
+![](/assets/images/solutions/factory-validation.png)
 
 ## Resources
 

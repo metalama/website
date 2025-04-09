@@ -74,5 +74,5 @@ Take, for instance, caching. You might realize in the middle of a project that y
 good enough and needs to be refactored. If the caching strategy was implemented in dozens of places, you have a bigger
 refactoring problem than if it were implemented in a single place.
 
-By leveraging [aspects](code-generation) early in your design, you reduce the need for large refactorings later in the
+By leveraging [on-the-fly code generation](/features/code-generation) early in your design, you reduce the need for large refactorings later in the
 project. When the need arises to modify the code pattern, the only thing to change is the aspect itself.
