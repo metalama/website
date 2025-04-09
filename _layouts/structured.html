@@ -29,6 +29,11 @@
             {% if page_url == level4.url %}
             {% assign isLevel1Active = true %}
             {% endif %}
+            {% for level5 in level4.nodes %}
+            {% if page_url == level5.url %}
+            {% assign isLevel1Active = true %}
+            {% endif %}
+            {% endfor %}
             {% endfor %}
             {% endfor %}
             {% endif %}
@@ -65,6 +70,11 @@
                 {% if page_url == level4.url %}
                 {% assign isLevel2Active = true %}
                 {% endif %}
+                {% for level5 in level4.nodes %}
+                {% if page_url == level5.url %}
+                {% assign isLevel2Active = true %}
+                {% endif %}
+                {% endfor %}
                 {% endfor %}
                 {% endfor %}
 
@@ -95,6 +105,11 @@
                         {% if page_url == level4.url %}
                         {% assign isLevel3Active = true %}
                         {% endif %}
+                        {% for level5 in level4.nodes %}
+                        {% if page_url == level5.url %}
+                        {% assign isLevel3Active = true %}
+                        {% endif %}
+                        {% endfor %}
                         {% endfor %}
 
                         <li class="{% if page_url == level3.url %}active{% endif %}">
@@ -111,6 +126,15 @@
                             {% if isLevel3Active and level3.nodes.size > 0 %}
                             <ul class="level4">
                                 {% for level4 in level3.nodes %}
+                                {% assign isLevel4Active = false %}
+                                {% if page_url == level4.url %}
+                                {% assign isLevel4Active = true %}
+                                {% endif %}
+                                {% for level5 in level4.nodes %}
+                                {% if page_url == level5.url %}
+                                {% assign isLevel4Active = true %}
+                                {% endif %}
+                                {% endfor %}
                                 <li class="{% if page_url == level4.url %}active{% endif %}">
                                     <a href="{{ level4.url }}">
                                         <span title="{{ level4.description }}">{{ level4.title }}</span>
@@ -122,6 +146,23 @@
                                             <i class="supported"></i>
                                         {% endif %}
                                     </a>
+                                    {% if isLevel4Active and level4.nodes.size > 0 %}
+                                    <ul class="level5">
+                                        {% for level5 in level4.nodes %}
+                                        <li class="{% if page_url == level5.url %}active{% endif %}">
+                                            <a href="{{ level5.url }}">
+                                                <span title="{{ level5.description }}">{{ level5.title }}</span>
+                                                {% if level5.premium %}
+                                                <i class="premium"></i>
+                                                {% endif %}
+                                                {% if level5.supported %}
+                                                    <i class="supported"></i>
+                                                {% endif %}
+                                            </a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                    {% endif %}
                                 </li>
                                 {% endfor %}
                             </ul>

@@ -164,7 +164,6 @@
                     {% for item in site.data.navigation.nodes %}
                     {% unless item.hidden %}
 
-
                     {% assign itemId = itemId | plus: 1 %}
                     {% assign isItemActive = false %}
 
@@ -178,13 +177,25 @@
                     {% for subentry in entry.nodes %}
                     {% if page_url == subentry.url %}
                     {% assign isItemActive = true %}
+                    {% else %}
+                    {% for subsubentry in subentry.nodes %}
+                    {% if page_url == subsubentry.url %}
+                    {% assign isItemActive = true %}
+                    {% else %}
+                    {% for subsubsubentry in subsubentry.nodes %}
+                        {% if page_url == subsubsubentry.url %}
+                        {% assign isItemActive = true %}
+                        {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    {% endfor %}
+        
                     {% endif %}
                     {% endfor %}
                     {% endif %}
                     {% endfor %}
                     {% endif %}
-
-
+                  
 
                     <li class="{% if item.drop_down_menu %}has-dropdownmenu{% endif %}">
                         <a href="{{ item.url }}" 
