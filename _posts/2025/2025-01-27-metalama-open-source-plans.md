@@ -105,7 +105,7 @@ But this is significant even beyond the .NET ecosystem. Metalama brings many inn
 
 ## What’s next?
 
-We're now in the process of reorganizing our codebases. We’re eager to hear your feedback and ideas as we finalize our plans. Share your thoughts on [GitHub](https://github.com/orgs/postsharp/discussions/388) or join the conversation in our [Slack workspace](https://www.postsharp.net/slack).
+We're now in the process of reorganizing our codebases. We’re eager to hear your feedback and ideas as we finalize our plans. Share your thoughts on [GitHub](https://github.com/orgs/metalama/discussions/388) or join the conversation in our [Slack workspace](https://www.postsharp.net/slack).
 
 If you haven't tried Metalama before, you can start today, keeping in mind that a few namespaces will not be open-sourced.
 

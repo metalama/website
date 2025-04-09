@@ -34,7 +34,7 @@ It comes with a Visual Studio extension that provides visibility into the transf
 
 ## Metalama
 
-[Metalama](/metalama), built by the same team as PostSharp and first launched in 2023, is PostSharp's successor. Based
+[Metalama](/), built by the same team as PostSharp and first launched in 2023, is PostSharp's successor. Based
 on Roslyn, Metalama works both at design time (within the IDE) and at compile time. It is today's most complete
 implementation of aspect-oriented principles.
 

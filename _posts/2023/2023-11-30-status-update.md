@@ -41,8 +41,8 @@ The General Availability (GA) release of Metalama 2024.0 is planned for the firs
 
 For more details about this branch, see the changelogs:
 
-- [2024.0.2-preview](https://github.com/orgs/postsharp/discussions/241)
-- [2024.0.1-preview](https://github.com/orgs/postsharp/discussions/238)
+- [2024.0.2-preview](https://github.com/orgs/metalama/discussions/241)
+- [2024.0.1-preview](https://github.com/orgs/metalama/discussions/238)
 
 Real enthusiasts can also look at the list of [unpublished commits](https://github.com/postsharp/Metalama.Framework/compare/release/2024.0...develop/2024.0).
 

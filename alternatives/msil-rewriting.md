@@ -12,7 +12,7 @@ members, during the build.
 
 The following tools are based on MSIL rewriting:
 
-* [PostSharp](/il) implements its own MSIL rewriting stack.
+* [PostSharp](https://www.postsharp.net/il) implements its own MSIL rewriting stack.
 * [Mono.Cecil](https://github.com/jbevain/cecil) is a standalone library that can be used to modify .NET assemblies.
 * [Fody](fody) is based on `Mono.Cecil`. It integrates with MSBuild and implements a plug-in system so that MSIL
   transformations can be easily packaged and combined.

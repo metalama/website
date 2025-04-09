@@ -38,7 +38,7 @@ Key features include:
 * A comprehensive overhaul of `Metalama.Framework.Sdk`.
 * Numerous other enhancements and bug fixes.
 
-For a thorough review of this release, you can consult our [July-August 2023 status update](https://metalama.net/blog/metalama-status-update-2023-08). Since then, we've published several builds: [2023.3.7-rc](https://github.com/orgs/postsharp/discussions/226), [2023.3.6-rc](https://github.com/orgs/postsharp/discussions/223), and [2023.3.5-rc](https://github.com/orgs/postsharp/discussions/218).
+For a thorough review of this release, you can consult our [July-August 2023 status update](https://metalama.net/blog/metalama-status-update-2023-08). Since then, we've published several builds: [2023.3.7-rc](https://github.com/orgs/metalama/discussions/226), [2023.3.6-rc](https://github.com/orgs/metalama/discussions/223), and [2023.3.5-rc](https://github.com/orgs/metalama/discussions/218).
 
 We anticipate Metalama 2023.3 will reach General Availability by mid-October.
 
@@ -53,7 +53,7 @@ Key features to anticipate include:
 * The transition of `Metalama.Framework` to a proprietary source-available license.
 * The open-sourcing of `Metalama.Compiler`, our customized fork of Roslyn.
 
-We've released two preview builds: [2023.4.2-preview](https://github.com/orgs/postsharp/discussions/224) and [2023.4.1-preview](https://github.com/orgs/postsharp/discussions/219).
+We've released two preview builds: [2023.4.2-preview](https://github.com/orgs/metalama/discussions/224) and [2023.4.1-preview](https://github.com/orgs/metalama/discussions/219).
 
 ## Future Roadmap: PostSharp 2024 and Metalama 2024
 

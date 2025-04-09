@@ -17,12 +17,12 @@ As Easter approaches, we have published Metalama 2024.1 RC with a focus on Visua
 
 Metalama 2024.0 seems to be pretty stable at the moment. We have issued two maintenance releases addressing just 5 bugs:
 
-* [2024.0.10](https://github.com/orgs/postsharp/discussions/273)
-* [2024.0.11](https://github.com/orgs/postsharp/discussions/275)
+* [2024.0.10](https://github.com/orgs/metalama/discussions/273)
+* [2024.0.11](https://github.com/orgs/metalama/discussions/275)
 
 ## Metalama 2024.1 Reaches Release Candidate
 
-We're excited to announce the release of the [first RC of Metalama 2024.1](https://github.com/orgs/postsharp/discussions/277). The RC is the most important milestone for the development team. It signifies that all new features have been completely coded and tested, including on virtual machines and physical devices.
+We're excited to announce the release of the [first RC of Metalama 2024.1](https://github.com/orgs/metalama/discussions/277). The RC is the most important milestone for the development team. It signifies that all new features have been completely coded and tested, including on virtual machines and physical devices.
 
 It's a good time to test-drive the release in a separate branch of your product and report any issues. You can download the extension from [OneDrive](https://1drv.ms/u/s!AiDyReaGUXn5qJM8QwaIw-T5zm0Gzg?e=sQmfZS) and update the packages from nuget.org. Please see the note below regarding Visual Studio Tools for Metalama and PostSharp.
 

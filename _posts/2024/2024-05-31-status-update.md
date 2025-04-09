@@ -20,7 +20,7 @@ We've promoted the PostSharp 2024.0 release to Long-Term Support status. This ve
 
 We've published several bug-fixing releases for Metalama 2024.0 and 2024.1 and PostSharp 6.10, 2024.0, and 2024.1.
 
-For details, please refer to the [Metalama changelogs](https://github.com/orgs/postsharp/discussions/categories/changelog) or the [PostSharp release notes](https://www.postsharp.net/downloads/postsharp/postsharp-2024.1/v2024.1.4/PostSharp-ReleaseNotes-2024.1.4).
+For details, please refer to the [Metalama changelogs](https://github.com/orgs/metalama/discussions/categories/changelog) or the [PostSharp release notes](https://www.postsharp.net/downloads/postsharp/postsharp-2024.1/v2024.1.4/PostSharp-ReleaseNotes-2024.1.4).
 
 
 ## Work in Progress in Metalama 2024.2

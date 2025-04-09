@@ -23,7 +23,7 @@ For more details, check out our announcement blog posts:
 
 ## Metalama 2024.1 Preview 1
 
-We've rolled out the [first preview](https://github.com/orgs/postsharp/discussions/256) of Metalama 2024.1. This release aims to enhance the UI, improve build-time performance, and introduce support for constructor advising.
+We've rolled out the [first preview](https://github.com/orgs/metalama/discussions/256) of Metalama 2024.1. This release aims to enhance the UI, improve build-time performance, and introduce support for constructor advising.
 
 Keep in mind, this release is a work in progress, and the first preview provides a glimpse into what's under development.
 

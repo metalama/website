@@ -43,15 +43,15 @@ Please note that this strategy will narrow the time gap between updates of .NET 
 
 ## Bug fixes in Metalama 2023.4
 
-We're still diligently maintaining 2023.4 with critical bug fixes. This month, we rolled out [2023.4.9](https://github.com/orgs/postsharp/discussions/257), which includes a Blazor-related bug fix.
+We're still diligently maintaining 2023.4 with critical bug fixes. This month, we rolled out [2023.4.9](https://github.com/orgs/metalama/discussions/257), which includes a Blazor-related bug fix.
 
 ## Updates in Metalama 2024.0
 
 We've merged Roslyn 4.9 into `Metalama.Compiler` 2024.0 to support the .NET SDK 8.0.200 feature update and released three bug-fixing builds to address relatively minor bugs. The only significant improvement is that the `IntroduceAttribute` advice method now works with enums and delegates. For more details, check out the change logs:
 
-* [2024.0.7](https://github.com/orgs/postsharp/discussions/258)
-* [2024.0.8](https://github.com/orgs/postsharp/discussions/263)
-* [2024.0.9](https://github.com/orgs/postsharp/discussions/266)
+* [2024.0.7](https://github.com/orgs/metalama/discussions/258)
+* [2024.0.8](https://github.com/orgs/metalama/discussions/263)
+* [2024.0.9](https://github.com/orgs/metalama/discussions/266)
 
 ## Preview releases of Metalama 2024.1
 

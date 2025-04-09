@@ -51,7 +51,7 @@ There are two approaches:
 Another way Metalama can help in a large refactoring is by identifying areas that need to be refactored by reporting
 warnings on any code that must be refactored.
 
-At the beginning of the refactoring effort, you create [architecture verification](architecture-verification) rules for
+At the beginning of the refactoring effort, you create [architecture verification](/features/architecture-verification) rules for
 the new intended design. You will have dozens of warnings initially, and you can resolve them progressively until there
 are none.
 
