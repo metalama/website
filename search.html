@@ -194,8 +194,7 @@ summary: "Search Metalama website and documentation."
         const search = instantsearch({
             searchClient,
             indexName: "metalamawebA",
-            routing: true,
-            searchAsYouType: false
+            routing: true
         });
 
        
@@ -204,10 +203,11 @@ summary: "Search Metalama website and documentation."
 
             instantsearch.widgets.searchBox({
                 container: '#searchbox',
-                showSubmit: false,
+                showSubmit: true,
                 showReset: false,
                 placeholder: 'Type some keyword and press [Enter]...',
-                autofocus: false,
+                autofocus: true,
+                searchAsYouType: false,
                 cssClasses: {
                     input: '',
                     loadingIcon: 'stroke-primary',
