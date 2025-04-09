@@ -29,7 +29,7 @@ We are still not completely done with the PostSharp-to-Metalama migration story:
 
 We have merged Roslyn 4.4 into Metalama Compiler and fixed the issues with .NET 7.0. The new features of C# 11 are still not fully implemented in Metalama: you may still hit some bug if you use them.
 
-We also published [PostSharp 6.11 RC](/post/postsharp-6-11-rc) this week, with support for C# 11 and .NET 7.0.
+We also published [PostSharp 6.11 RC](/blog/post/postsharp-6-11-rc) this week, with support for C# 11 and .NET 7.0.
 
 ## Code Lens for Visual Studio
 

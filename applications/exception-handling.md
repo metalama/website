@@ -101,7 +101,7 @@ internal class CalculatorService
 ### Resources
 
 * Example: [Implementing an auto-retry aspect that uses Polly](https://doc.metalama.net/examples/exception-handling/retry/retry-5)
-* Blog: [5 practical ways to add Polly to your application](https://blog.postsharp.net/polly)
+* Blog: [5 practical ways to add Polly to your application](https://metalama.net/blog/polly)
 
 ## Resilience without Polly
 

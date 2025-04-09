@@ -1,4 +1,4 @@
-name: Publish to blog.postsharp.net
+name: Publish to metalama.net/blog
 
 on:
   push:

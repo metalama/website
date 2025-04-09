@@ -33,7 +33,7 @@ There's a saying that computers always do what you tell them to do, which isn't 
 
 In this article, we'll explore how to trace _method calls_ in a .NET Aspire app without boilerplate code using Metalama.
 
-As we discussed in the article about [caching in .NET Aspire](/aspire-caching-metalama), .NET Aspire is a development platform that simplifies building distributed cloud-native applications. It manages all the wiring between the various services of your application and other components like databases, messaging, and caching. Using Open Telemetry, it provides essential features for the [observability of your app](https://learn.microsoft.com/en-us/dotnet/aspire/fundamentals/telemetry), such as logging, tracing, and metrics.
+As we discussed in the article about [caching in .NET Aspire](/blog/aspire-caching-metalama), .NET Aspire is a development platform that simplifies building distributed cloud-native applications. It manages all the wiring between the various services of your application and other components like databases, messaging, and caching. Using Open Telemetry, it provides essential features for the [observability of your app](https://learn.microsoft.com/en-us/dotnet/aspire/fundamentals/telemetry), such as logging, tracing, and metrics.
 
 ## Step 1. Setting up the projects
 
@@ -143,7 +143,7 @@ public partial class TodoApiClient
 }
 ```
 {% endraw %}
-This code is arguably very verbose, but you don't have to write it by hand! To make it more compact, you could use some [string interpolation techniques](/structured-logging-with-string-interpolation).
+This code is arguably very verbose, but you don't have to write it by hand! To make it more compact, you could use some [string interpolation techniques](/blog/structured-logging-with-string-interpolation).
 
 ## Step 3. Adding logging to all public methods
 

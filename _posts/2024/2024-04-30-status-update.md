@@ -10,7 +10,7 @@ image: /assets/images/2024/2024-04-30-status/2024-04-dark.svg
 summary: "In this update, we cover the general availability of Metalama 2024.1 and PostSharp 2024.1, the release of Metalama 2024.2 preview builds, the introduction of the Metalama Email Course, and our roadmap for the coming months."
 ---
 
-After almost five months of work, we were pleased to announce this month the general availability of both [Metalama 2024.1](https://blog.postsharp.net/metalama-2024-1-ga) and [PostSharp 2024.1](/postsharp-2024-1-ga), with a particular emphasis on a unified user interface and performance. We are now focusing on one of the most demanded (and demanding) features: introducing types, and are finishing the work we started with INotifyPropertyChanged and XAML.
+After almost five months of work, we were pleased to announce this month the general availability of both [Metalama 2024.1](https://metalama.net/blog/metalama-2024-1-ga) and [PostSharp 2024.1](/blog/postsharp-2024-1-ga), with a particular emphasis on a unified user interface and performance. We are now focusing on one of the most demanded (and demanding) features: introducing types, and are finishing the work we started with INotifyPropertyChanged and XAML.
 
 ## Metalama and PostSharp 2024.1 Go Live
 
@@ -18,9 +18,9 @@ We released the 2024.1 version of both products this month.
 
 Previously, Metalama and PostSharp had distinct Visual Studio extensions, each with its unique features and user experiences. However, with Metalama and PostSharp 2024.1, we've merged these two extensions into one, enhancing the overall development experience. Whether you're a Metalama, PostSharp, or a user of both, you'll only need to install a single extension: the [Visual Studio Tools for Metalama and PostSharp](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp). In short, it's _Metalama + PostSharp_.
 
-Furthermore, Metalama 2024.1 boosts support for constructors and brings a [55% performance increase](https://blog.postsharp.net/metalama-2024-1-performance) in processing aspects.
+Furthermore, Metalama 2024.1 boosts support for constructors and brings a [55% performance increase](https://metalama.net/blog/metalama-2024-1-performance) in processing aspects.
 
-Find more details in the [Metalama 2024.1](https://blog.postsharp.net/metalama-2024-1-ga) and [PostSharp 2024.1](/postsharp-2024-1-ga) release announcements.
+Find more details in the [Metalama 2024.1](https://metalama.net/blog/metalama-2024-1-ga) and [PostSharp 2024.1](/blog/postsharp-2024-1-ga) release announcements.
 
 ## Preview of Metalama 2024.2
 

@@ -176,9 +176,9 @@ In .NET, examples of code patterns that are still better handled by AOP than by 
 
 * Instrumentation: [logging](https://doc.metalama.net/examples/log), profiling;
 * Security: authorization, audit, encryption;
-* Resilience: [caching](https://blog.postsharp.net/aspire-caching-metalama), transaction handling, [exception handling](https://doc.metalama.net/examples/exception-handling);
-* UI: [observability](https://blog.postsharp.net/inotifypropertychanged-metalama) (`INotifyPropertyChanged`), change tracking, undo/redo, WPF [dependency properties](https://blog.postsharp.net/wpf-dependency-property-metalama) and [commands](https://blog.postsharp.net/wpf-command-metalama);
-* Classic design patterns: [Builder](https://blog.postsharp.net/builder-pattern-with-metalama), [Singleton](https://doc.metalama.net/examples/singleton), [Memento](https://doc.metalama.net/examples/memento), Factory, Proxy, [Decorator](https://blog.postsharp.net/decorator-pattern);
+* Resilience: [caching](https://metalama.net/blog/aspire-caching-metalama), transaction handling, [exception handling](https://doc.metalama.net/examples/exception-handling);
+* UI: [observability](https://metalama.net/blog/inotifypropertychanged-metalama) (`INotifyPropertyChanged`), change tracking, undo/redo, WPF [dependency properties](https://metalama.net/blog/wpf-dependency-property-metalama) and [commands](https://metalama.net/blog/wpf-command-metalama);
+* Classic design patterns: [Builder](https://metalama.net/blog/builder-pattern-with-metalama), [Singleton](https://doc.metalama.net/examples/singleton), [Memento](https://doc.metalama.net/examples/memento), Factory, Proxy, [Decorator](https://metalama.net/blog/decorator-pattern);
 * Multi-threading: synchronization (locking), freezable, background execution;
 * Classic object services: equality, `ToString`;
 * Persistence: object-database mapping, serialization, object-configuration mapping.

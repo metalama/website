@@ -89,7 +89,7 @@ That's a lot of boilerplate you want to avoid!
 
 ## Resources
 
-* Blog post: [Implementing the Builder pattern with Metalama](https://blog.postsharp.net/builder-pattern-with-metalama)
+* Blog post: [Implementing the Builder pattern with Metalama](https://metalama.net/blog/builder-pattern-with-metalama)
 * Example: [Implementing the Builder pattern without boilerplate](https://doc.metalama.net/examples/builder)
 
 

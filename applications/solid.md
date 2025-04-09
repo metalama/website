@@ -98,7 +98,7 @@ to the `Log` attribute.
 Another way to implement the Single Responsibility Principle is to use the Decorator design pattern. You can use this
 pattern to add the logging behavior to a class without changing its existing code. To implement this pattern with
 Metalama, you can follow the steps in
-the [The Decorator Pattern in Modern C# [2024]](https://blog.postsharp.net/decorator-pattern) article.
+the [The Decorator Pattern in Modern C# [2024]](https://metalama.net/blog/decorator-pattern) article.
 
 ## Open/Closed Principle (OCP)
 

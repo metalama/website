@@ -21,7 +21,7 @@ layout: null
           {{ post.content | xml_escape }}
 
           &lt;p&gt;
-            This article was first published on a &lt;a href="https://blog.postsharp.net"&gt;https://blog.postsharp.net&lt;/a&gt;
+            This article was first published on a &lt;a href="https://metalama.net/blog"&gt;https://metalama.net/blog&lt;/a&gt;
             under the title &lt;a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}"&gt;{{ post.title | xml_escape }}&lt;/a&gt;.
           &lt;/p&gt;
         </description>

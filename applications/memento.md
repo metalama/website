@@ -93,6 +93,6 @@ code [here](https://doc.metalama.net/preview/examples/memento/memento-1#complete
 
 ## Resources
 
-* Blog post: [The Memento Design Pattern in C#, Practically With Examples [2024]](https://blog.postsharp.net/memento)
+* Blog post: [The Memento Design Pattern in C#, Practically With Examples [2024]](https://metalama.net/blog/memento)
 * Example: [Implementing the Memento pattern without boilerplate](https://doc.metalama.net/examples/memento)
 

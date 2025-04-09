@@ -53,7 +53,7 @@ We'd love to extend this experiment to other customers. If you are interested, p
 
 ## Analyzing Licensing Credits Usage
 
-Last month, we introduced a new [pricing model](https://blog.postsharp.net/post/metalama-pricing) where the main differentiator between product editions was the number of credits that can be consumed by a project. In the latest build, we've included a new command, `metalama license credits`, that lets you analyze the number of credits that your projects are consuming and why. This tool is especially useful when your trial period is ending and you need to determine which Metalama edition is right for you.
+Last month, we introduced a new [pricing model](https://metalama.net/blog/metalama-pricing) where the main differentiator between product editions was the number of credits that can be consumed by a project. In the latest build, we've included a new command, `metalama license credits`, that lets you analyze the number of credits that your projects are consuming and why. This tool is especially useful when your trial period is ending and you need to determine which Metalama edition is right for you.
 
 ## Documentation
 

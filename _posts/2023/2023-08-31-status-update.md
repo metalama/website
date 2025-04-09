@@ -14,7 +14,7 @@ Though July and August are usually slower months for us, this year we're excited
 
 ## Metalama 2023.2 General Availability
 
-On August 7th, Metalama 2023.2 was officially released, featuring 32 bug fixes and 5 minor improvements, but no new features. For more details, check the [official announcement](https://blog.postsharp.net/post/metalama-2023-2-ga).
+On August 7th, Metalama 2023.2 was officially released, featuring 32 bug fixes and 5 minor improvements, but no new features. For more details, check the [official announcement](https://metalama.net/blog/metalama-2023-2-ga).
 
 ## Metalama 2023.3 Code-Complete Preview
 

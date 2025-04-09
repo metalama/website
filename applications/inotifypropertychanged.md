@@ -67,7 +67,7 @@ public partial class CustomerViewModel
 ## Resources
 
 * Blog
-  post: [Implementing INotifyPropertyChanged with Metalama](https://blog.postsharp.net/inotifypropertychanged-metalama).
+  post: [Implementing INotifyPropertyChanged with Metalama](https://metalama.net/blog/inotifypropertychanged-metalama).
 * Reference documentation: [Metalama.Patterns.Observability](https://doc.metalama.net/patterns/observability).
 * Source
   code: [Metalama.Patterns.Observability](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Observability).

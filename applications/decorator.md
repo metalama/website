@@ -85,6 +85,6 @@ internal class RetryAttribute : OverrideMethodAspect
 
 ## Resources
 
-* Blog post: [The Decorator Pattern in Modern C#](https://blog.postsharp.net/decorator-pattern)
+* Blog post: [The Decorator Pattern in Modern C#](https://metalama.net/blog/decorator-pattern)
 
 

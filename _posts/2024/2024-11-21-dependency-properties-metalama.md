@@ -19,9 +19,9 @@ related_articles:
 image: /assets/images/2024/2024-11-wpf-dependency-properties-metalama/dependency-properties-dark.svg
 ---
 
-When building user controls in WPF, it's [best practice](/wpf-best-practices-2024) to expose dependency properties in addition to normal C# properties. Unfortunately, implementing custom dependency properties requires a fair amount of redundant code. In this article, we'll explore how to use Metalama to eliminate this boilerplate code.
+When building user controls in WPF, it's [best practice](/blog/wpf-best-practices-2024) to expose dependency properties in addition to normal C# properties. Unfortunately, implementing custom dependency properties requires a fair amount of redundant code. In this article, we'll explore how to use Metalama to eliminate this boilerplate code.
 
-[Dependency properties](/wpf-dependency-property) allow WPF to assign these properties to a _source_ of values, enabling the UI to refresh when the source changes or implement animations -- a mechanism called _data binding_. In contrast, C# properties are directly assigned to a _value_, one time. The downside of dependency properties is that implementing them manually can be tedious and error-prone. It requires writing significant boilerplate code to register the property (using `DependencyProperty.Register`) and manage property-changed and validation callbacks.
+[Dependency properties](/blog/wpf-dependency-property) allow WPF to assign these properties to a _source_ of values, enabling the UI to refresh when the source changes or implement animations -- a mechanism called _data binding_. In contrast, C# properties are directly assigned to a _value_, one time. The downside of dependency properties is that implementing them manually can be tedious and error-prone. It requires writing significant boilerplate code to register the property (using `DependencyProperty.Register`) and manage property-changed and validation callbacks.
 
 In this article, we'll show how to reduce redundant code using Metalama, a powerful tool that automates repetitive coding tasks using aspects, thus simplifying the creation of custom dependency properties. This reduces development time and improves code consistency. Specifically, we'll demonstrate the `[DependencyProperty]` aspect and show how to add validation and callbacks.
 
@@ -33,7 +33,7 @@ In this article, we'll use the example of a simple custom control called `Limite
   <img src="/assets/images/2024/2024-11-wpf-dependency-properties-metalama/dependency-properties-sample_project.png#unzoom150" alt="WPF HighlightedText app"/>
 </p>
 
-If you were to implement the `MaxLength` dependency [manually](/wpf-dependency-property), you'd end up with the following _three_ snippets:
+If you were to implement the `MaxLength` dependency [manually](/blog/wpf-dependency-property), you'd end up with the following _three_ snippets:
 
 {% include_file "{{page.source_url}}/LimitedTextBox_Manually/LimitedTextBox.xaml.cs" syntax="csharp" snippet="MaxLength_Property" %}
 {% include_file "{{page.source_url}}/LimitedTextBox_Manually/LimitedTextBox.xaml.cs" syntax="csharp" snippet="OnMaxLengthChanged" %}
@@ -47,7 +47,7 @@ Let's see how we can simplify this using Metalama.
 
 ## Implementing dependency properties with Metalama
 
-[Metalama](https://www.postsharp.net/metalama) is a tool that facilitates real-time code generation and validation in C# through the use of aspects. Aspects are special classes that work within the compiler to dynamically transforms code when you build, never committing the changes to your source code. This tool helps automate the creation of repetitive code, such as implementing dependency properties, [INotifyPropertyChanged](/inotifypropertychanged-metalama), [WPF commands](/wpf-command-metalama), and many others.
+[Metalama](https://www.postsharp.net/metalama) is a tool that facilitates real-time code generation and validation in C# through the use of aspects. Aspects are special classes that work within the compiler to dynamically transforms code when you build, never committing the changes to your source code. This tool helps automate the creation of repetitive code, such as implementing dependency properties, [INotifyPropertyChanged](/blog/inotifypropertychanged-metalama), [WPF commands](/blog/wpf-command-metalama), and many others.
 
 If you need to generate boilerplate code for a specific situation (like this one), you can create an aspect from scratch for it. However, as this task is quite common among WPF developers, Metalama simplifies it by offering a built-in solution.
 

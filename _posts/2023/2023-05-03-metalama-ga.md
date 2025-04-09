@@ -135,7 +135,7 @@ Access a range of published extensions and samples under open-source licenses.
 
 While Metalama is the successor to PostSharp, it is not yet a replacement, and migration from PostSharp is not recommended at this time unless all features required by your projects are available in Metalama. For more details, please see our [migration guide](https://doc.metalama.net/conceptual/migration). 
 
-PostSharp is still being maintained and supported, as demonstrated by the recent release of [PostSharp 2023](https://blog.postsharp.net/post/postsharp-2023). If you are a PostSharp user, we suggest you consider Metalama for new projects. Your PostSharp license already includes Metalama.
+PostSharp is still being maintained and supported, as demonstrated by the recent release of [PostSharp 2023](https://metalama.net/blog/postsharp-2023). If you are a PostSharp user, we suggest you consider Metalama for new projects. Your PostSharp license already includes Metalama.
 
 ## Try Metalama today
 

@@ -93,6 +93,6 @@ internal class UseFactoryAttribute : TypeAspect
 
 ## Resources
 
-* Blog post: [The Factory design pattern in C#](https://blog.postsharp.net/factory-pattern)
+* Blog post: [The Factory design pattern in C#](https://metalama.net/blog/factory-pattern)
 
 

@@ -25,7 +25,7 @@ comparing their features.
 
 ## PostSharp
 
-[PostSharp](/il), first launched in 2008, was the first complete implementation of AOP concepts in .NET. It is based
+[PostSharp](https://www.postsharp.net/il), first launched in 2008, was the first complete implementation of AOP concepts in .NET. It is based
 on [MSIL rewriting](msil-rewriting). PostSharp became a source of inspiration for several MSIL-based AOP frameworks.
 
 PostSharp includes a broad set of ready-made aspects. It has complete documentation.

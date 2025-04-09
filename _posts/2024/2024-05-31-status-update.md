@@ -79,10 +79,10 @@ The goal of this series is to educate .NET developers about building robust and 
 This month, we released two articles:
 
 <div class="article-thumbnails">
-    <a href="/nullreferenceexception-object-reference-not-set">
+    <a href="/blog/nullreferenceexception-object-reference-not-set">
          <img src="/assets/images/2024/2024-04-12-method-decorators/decorator.svg" alt="The Decorator Pattern in Modern C#"/>
     </a>
-    <a href="/decorator-pattern">
+    <a href="/blog/decorator-pattern">
         <img src="/assets/images/2024/2024-04-16-nullreferenceexception/nullreference.svg" alt="How to Deal With NullReferenceException"/>
     </a>
 </div>

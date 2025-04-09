@@ -17,11 +17,11 @@ Today, we're thrilled to announce the first Release Candidate of [Metalama](http
 
 If you haven't heard about it yet, Metalama is our new meta-programming framework for C# that focuses on improving developers' productivity and code quality thanks to **boilerplate code reduction** through [aspect-oriented programming](https://www.postsharp.net/solutions/aspect-oriented-programming),  **coded architecture validation** and a **custom refactoring toolkit**. Metalama is based on Roslyn and integrates with most C# IDEs and editors. You can learn more about it on our [website](https://www.postsharp.net/metalama) or your can [try it online](https://try.metalama.net).
 
-While Metalama is the successor of PostSharp, it is not yet a replacement. We do not recommend migrating your projects from PostSharp to Metalama at this time unless you're certain that all the features you need are already available. We're working on this, and for more details, please see our [migration guide](https://doc.metalama.net/migration/migration). Rest assured, we're still committed to maintaining and supporting PostSharp, as evidenced by the recent release of [PostSharp 2023](https://blog.postsharp.net/post/postsharp-2023).
+While Metalama is the successor of PostSharp, it is not yet a replacement. We do not recommend migrating your projects from PostSharp to Metalama at this time unless you're certain that all the features you need are already available. We're working on this, and for more details, please see our [migration guide](https://doc.metalama.net/migration/migration). Rest assured, we're still committed to maintaining and supporting PostSharp, as evidenced by the recent release of [PostSharp 2023](https://metalama.net/blog/postsharp-2023).
 
 ## About this RC
 
-Our first version will be numbered `2023.0`, since [we've switched to year-based versioning](/post/year-versioning).
+Our first version will be numbered `2023.0`, since [we've switched to year-based versioning](/blog/post/year-versioning).
 
 The Release Candidate milestone signals that Metalama is code-complete, has no severe bugs, and has not required any destabilizing refactoring in the past weeks. Users of the preview version have given us positive feedback, and Metalama has already been deployed to some development teams for production work. 
 
@@ -31,7 +31,7 @@ We would like to express our sincerest gratitude to everyone who has tried Metal
 
 ## New Pricing Model
 
-In addition to the release of Metalama, we're also unveiling a new pricing model. A powerful and completely free edition is available, with commercial options ranging from $40 to $400 per developer, depending on the product edition and the number of concurrent developers. We're also releasing several components and extensions of Metalama as open-source projects, and we plan to release the migrated `PostSharp.Pattern` aspect libraries as open-source projects as well. For details about the new pricing model, read our [announcement](/post/metalama-pricing).
+In addition to the release of Metalama, we're also unveiling a new pricing model. A powerful and completely free edition is available, with commercial options ranging from $40 to $400 per developer, depending on the product edition and the number of concurrent developers. We're also releasing several components and extensions of Metalama as open-source projects, and we plan to release the migrated `PostSharp.Pattern` aspect libraries as open-source projects as well. For details about the new pricing model, read our [announcement](/blog/post/metalama-pricing).
 
 
 ## What's New Since the last update

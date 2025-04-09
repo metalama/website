@@ -18,8 +18,8 @@ Fridays and the two weeks before Christmas are no-go zones for releases at our e
 
 For more details, check out our announcement blog posts:
 
-* [Introducing PostSharp 2024: Now with .NET 8.0, C# 12, and ARM64 Support](https://blog.postsharp.net/postsharp-2024-0-ga)
-* [Metalama 2024.0 Generally Available: .NET 8 and C# 12](https://blog.postsharp.net/metalama-2024-0-ga)
+* [Introducing PostSharp 2024: Now with .NET 8.0, C# 12, and ARM64 Support](https://metalama.net/blog/postsharp-2024-0-ga)
+* [Metalama 2024.0 Generally Available: .NET 8 and C# 12](https://metalama.net/blog/metalama-2024-0-ga)
 
 ## Metalama 2024.1 Preview 1
 

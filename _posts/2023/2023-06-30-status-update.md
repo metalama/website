@@ -15,7 +15,7 @@ Greetings, fellow clean code enthusiasts! As we bid farewell to June and its bar
 
 ## Metalama 2023.1 GA: Now Available
 
-Our first announcement this month is the general availability of Metalama 2023.1. This release includes support for Visual Studio 17.6. Additionally, we have implemented eight minor improvements and addressed 50 bugs, now mostly minor ones. For a detailed overview of what this release entails, check out our [release announcement](https://blog.postsharp.net/post/metalama-2023-1-ga).
+Our first announcement this month is the general availability of Metalama 2023.1. This release includes support for Visual Studio 17.6. Additionally, we have implemented eight minor improvements and addressed 50 bugs, now mostly minor ones. For a detailed overview of what this release entails, check out our [release announcement](https://metalama.net/blog/metalama-2023-1-ga).
 
 ## Metalama 2023.2 Preview
 

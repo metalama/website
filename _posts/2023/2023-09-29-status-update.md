@@ -25,7 +25,7 @@ The new logo has only been active for two weeks, but it already feels as if it h
 
 After rigorous debate within our Slack community, we've simplified the licensing options for open-source projects. Metalama Free will now allow up to three aspect classes per project, regardless of aspect origin — a significant simplification over our prior, more complex system. Additionally, Metalama Free will now offer two new complimentary features: unlimited contract aspects and the ability to debug transformed code.
 
-We are also extending a free namespace-bound license key to open-source projects, granting full access to Metalama's feature set within the scope of those projects. This change will be effective as of Metalama version 2023.3. For additional details, please refer to our [article on the licensing changes](https://blog.postsharp.net/post/metalama-open-source-licensing).
+We are also extending a free namespace-bound license key to open-source projects, granting full access to Metalama's feature set within the scope of those projects. This change will be effective as of Metalama version 2023.3. For additional details, please refer to our [article on the licensing changes](https://metalama.net/blog/metalama-open-source-licensing).
 
 ## Metalama 2023.3 Reaches RC Quality Standard
 
@@ -38,7 +38,7 @@ Key features include:
 * A comprehensive overhaul of `Metalama.Framework.Sdk`.
 * Numerous other enhancements and bug fixes.
 
-For a thorough review of this release, you can consult our [July-August 2023 status update](https://blog.postsharp.net/post/metalama-status-update-2023-08). Since then, we've published several builds: [2023.3.7-rc](https://github.com/orgs/postsharp/discussions/226), [2023.3.6-rc](https://github.com/orgs/postsharp/discussions/223), and [2023.3.5-rc](https://github.com/orgs/postsharp/discussions/218).
+For a thorough review of this release, you can consult our [July-August 2023 status update](https://metalama.net/blog/metalama-status-update-2023-08). Since then, we've published several builds: [2023.3.7-rc](https://github.com/orgs/postsharp/discussions/226), [2023.3.6-rc](https://github.com/orgs/postsharp/discussions/223), and [2023.3.5-rc](https://github.com/orgs/postsharp/discussions/218).
 
 We anticipate Metalama 2023.3 will reach General Availability by mid-October.
 

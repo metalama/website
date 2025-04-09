@@ -16,7 +16,7 @@ After a bustling month of October filled with announcements, November has seemed
 
 We released the first stable version of Metalama 2023.4, which features a versatile [options framework](https://doc.metalama.net/conceptual/aspects/configuration) for configuring aspects through custom attributes or specific fabric-based APIs. We have finished and released three open-source aspect libraries: [code contracts](https://doc.metalama.net/patterns/contracts), [caching](https://doc.metalama.net/patterns/caching), and [memoization](https://doc.metalama.net/patterns/memoization). We have also started work on an [observability aspect](https://doc.metalama.net/api/metalama_patterns_observability_observableattribute) that implements `INotifyPropertyChanged`. Moreover, we have ensured that the v18.8 update of Visual Studio did not disrupt Metalama.
 
-[For more details, see this blog post.](https://blog.postsharp.net/metalama-2023-4-ga)
+[For more details, see this blog post.](https://metalama.net/blog/metalama-2023-4-ga)
 
 ## Metalama 2024.0 Previews
 

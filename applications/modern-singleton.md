@@ -74,6 +74,6 @@ public class SingletonAttribute : TypeAspect
 
 ## Resources
 
-* Blog post: [The Singleton Pattern in C# Today Is Not Your Dad's One!](https://blog.postsharp.net/singleton)
+* Blog post: [The Singleton Pattern in C# Today Is Not Your Dad's One!](https://metalama.net/blog/singleton)
 * Example: [Validating the modern Singleton](https://doc.metalama.net/examples/singleton/singleton-2)
 

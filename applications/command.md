@@ -4,7 +4,7 @@ summary: "Metalama.Patterns.Wpf automates WPF command implementation, enhancing 
 keywords: "WPF command implementation, ICommand, CanExecute, Metalama.Patterns.Wpf, boilerplate code, command automation"
 ---
 
-One of the [best practices](https://blog.postsharp.net/wpf-best-practices-2024) in WPF is to implement the logic behind
+One of the [best practices](https://metalama.net/blog/wpf-best-practices-2024) in WPF is to implement the logic behind
 buttons and menu items as a Command (`ICommand`) instead of a simple event handler. This keeps the command logic
 separate from the UI code, achieving a better separation of concerns. It also allows the button or menu item to render
 itself as grayed out when the command is not available, thanks to `CanExecute`.
@@ -58,7 +58,7 @@ public partial class MainWindow : Window
 
 ## Resources
 
-* Blog post: [Implementing WPF Commands with Metalama](https://blog.postsharp.net/wpf-command-metalama).
+* Blog post: [Implementing WPF Commands with Metalama](https://metalama.net/blog/wpf-command-metalama).
 * Reference documentation: [WPF Commands](https://doc.metalama.net/patterns/wpf/command).
 * Source
   code: [Metalama.Patterns.Wpf](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Wpf).

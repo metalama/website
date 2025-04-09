@@ -11,7 +11,7 @@ image: /assets/images/2022/2022-02-23-metalama/metalama-2.svg
 summary: "Metalama's May 2022 update includes new features like automated multi-repo deployment, contracts, template parameters, generic templates, telemetry, extensibility examples, and documentation. They plan to add a feature to pull a dependency from the constructor."
 ---
 
-It has been another month since our [last update](https://blog.postsharp.net/post/metalama-status-update-2022-04) so I wanted to give you a fresh status briefing.
+It has been another month since our [last update](https://metalama.net/blog/metalama-status-update-2022-04) so I wanted to give you a fresh status briefing.
 
 
 

@@ -16,9 +16,9 @@ As October draws to a close, we find ourselves amidst a flurry of AI-generated l
 
 <img src="/assets/images/2023/2023-10-17-metalama-2023-3/llama.png" class="thumbnailFloatRight"/>
 
-We celebrated the release of Metalama 2023.3 on October 17th, marking the most significant feature leap since our inaugural 2023.0 release. This version introduces [auxiliary T# templates](https://doc.metalama.net/conceptual/aspects/templates/auxilliary-templates), enabling T# templates to call other templates, and seamless integration with the Roslyn API through [Metalama.Framework.Sdk](https://doc.metalama.net/conceptual/sdk). It also features a [simplified licensing model](https://blog.postsharp.net/post/metalama-open-source-licensing), along with numerous other enhancements and bug fixes. The added support for the Visual Studio Code C# Dev Kit and a significant performance boost make this update a substantial step towards an optimized development experience.
+We celebrated the release of Metalama 2023.3 on October 17th, marking the most significant feature leap since our inaugural 2023.0 release. This version introduces [auxiliary T# templates](https://doc.metalama.net/conceptual/aspects/templates/auxilliary-templates), enabling T# templates to call other templates, and seamless integration with the Roslyn API through [Metalama.Framework.Sdk](https://doc.metalama.net/conceptual/sdk). It also features a [simplified licensing model](https://metalama.net/blog/metalama-open-source-licensing), along with numerous other enhancements and bug fixes. The added support for the Visual Studio Code C# Dev Kit and a significant performance boost make this update a substantial step towards an optimized development experience.
 
-More details can be found [here](https://blog.postsharp.net/post/metalama-2023-3-ga).
+More details can be found [here](https://metalama.net/blog/metalama-2023-3-ga).
 
 ___
 
@@ -42,7 +42,7 @@ Despite the llama frenzy, our loyal PostSharp users have not been forgotten! We 
 
 We have released the source code of Metalama.Framework on GitHub under a proprietary source-available license. This initiative aims to provide transparency into the inner workings of Metalama while maintaining commercial viability. This step simplifies debugging and troubleshooting, enriches the learning experience, and fosters a higher level of trust and auditability.
 
-More details can be found [here](https://blog.postsharp.net/post/source-available).
+More details can be found [here](https://metalama.net/blog/source-available).
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 Our journey towards transparency and collaboration continues with the release of Metalama.Compiler, our unique Roslyn fork that allows dynamic code modification during compilation, under its original MIT license. This is an excellent opportunity for SyntaxNode enthusiasts to engage in some real, low-level metaprogramming.
 
-More details can be found [here](https://blog.postsharp.net/post/open-sourcing-metalama-compiler).
+More details can be found [here](https://metalama.net/blog/open-sourcing-metalama-compiler).
 
 ___
 
@@ -66,6 +66,6 @@ ___
 
 We will continue to deliver more open-source aspects to the community, all of which will be compatible with the free edition of Metalama. Our vision is to foster a tripartite win-win-win relationship among free and commercial users, open-source projects, and our company.
 
-More details can be found [here](https://blog.postsharp.net/post/marketplace).
+More details can be found [here](https://metalama.net/blog/marketplace).
 
 

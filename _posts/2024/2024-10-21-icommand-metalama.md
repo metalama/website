@@ -153,7 +153,7 @@ This extra complexity has some drawbacks:
 
 What if I told you that there is a way to further reduce the boilerplate code in the temperature monitor example?
 
-Metalama's `[Command]` aspect excels by generating boilerplate code for the `ICommand` interface. However, if you're looking to take it a step further, you can pair it with the `[Observable]` aspect we introduced in [this article](/notifypropertychanged-metalama) to automatically create the `INotifyPropertyChanged` interface.
+Metalama's `[Command]` aspect excels by generating boilerplate code for the `ICommand` interface. However, if you're looking to take it a step further, you can pair it with the `[Observable]` aspect we introduced in [this article](/blog/notifypropertychanged-metalama) to automatically create the `INotifyPropertyChanged` interface.
 
 Let's use the `TemperatureViewModel` class as an illustration. This class implements the `INotifyPropertyChanged` interface to inform the UI when a property is updated.
 
@@ -169,7 +169,7 @@ This is a lot of boilerplate code that can be avoided using the `[Observable]` a
 
 {% include_file "{{page.source_url}}/TemperatureMonitor_Metalama/TemperatureViewModel.cs" syntax="csharp" %} 
 
-For more details on the `[Observable]` pattern, its benefits and how to use it, please read our [Implement INotifyPropertyChanged with Metalama](https://blog.postsharp.net/inotifypropertychanged-metalama) article or the [reference documentation](https://doc.metalama.net/patterns/observability).
+For more details on the `[Observable]` pattern, its benefits and how to use it, please read our [Implement INotifyPropertyChanged with Metalama](https://metalama.net/blog/inotifypropertychanged-metalama) article or the [reference documentation](https://doc.metalama.net/patterns/observability).
 
 ## Summary
 

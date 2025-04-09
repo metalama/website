@@ -26,7 +26,7 @@ We're excited to announce the release of the [first RC of Metalama 2024.1](https
 
 It's a good time to test-drive the release in a separate branch of your product and report any issues. You can download the extension from [OneDrive](https://1drv.ms/u/s!AiDyReaGUXn5qJM8QwaIw-T5zm0Gzg?e=sQmfZS) and update the packages from nuget.org. Please see the note below regarding Visual Studio Tools for Metalama and PostSharp.
 
-[Last month](https://blog.postsharp.net/metalama-status-update-2024-02), we introduced some key features and improvements:
+[Last month](https://metalama.net/blog/metalama-status-update-2024-02), we introduced some key features and improvements:
 
 * Design-time support for introducing and pulling constructor parameters.
 * `Metalama.Extensions.DependencyInjection`: Capability to unregister `LoggerDependencyInjectionFramework`.

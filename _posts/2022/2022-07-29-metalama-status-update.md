@@ -10,7 +10,7 @@ image: /assets/images/2022/2022-02-23-metalama/metalama-2.svg
 summary: "The Metalama project saw significant progress in July 2022 with 40 bug fixes and various features added despite vacation time. However, customers trying the solution encountered bugs, which were fixed within 2-3 days."
 ---
 
-It has been another month since our last update. July and August are traditionally lazy months for us as team members enjoy several weeks of vacation. But despite the fewer working hours, our overall feeling is that our pace has significantly accelerated. As we announced [last month](/post/metalama-status-update-2022-06), Metalama is now feature-complete. Therefore, we can now focus on fixing bugs and closing the remaining gaps in the C# syntaxes supported by Metalama. All these remaining gaps or defects are now counted in hours or days, and no longer in weeks.
+It has been another month since our last update. July and August are traditionally lazy months for us as team members enjoy several weeks of vacation. But despite the fewer working hours, our overall feeling is that our pace has significantly accelerated. As we announced [last month](/blog/post/metalama-status-update-2022-06), Metalama is now feature-complete. Therefore, we can now focus on fixing bugs and closing the remaining gaps in the C# syntaxes supported by Metalama. All these remaining gaps or defects are now counted in hours or days, and no longer in weeks.
 
 Here is what we've managed to complete in July on the Metalama project:
 
