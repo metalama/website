@@ -170,6 +170,9 @@ nodes:
           - title: "Exception Handling"
             url: "/applications/exception-handling"
             description: "Streamline exception management with a zero-boilerplate approach that integrates seamlessly with Polly."
+          - title: "Security"
+            url: "/applications/security"
+            description: "Authorization, audit and encryption."            
 
       - url: "/alternatives"
         title: "Alternatives"

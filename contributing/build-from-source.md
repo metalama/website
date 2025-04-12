@@ -11,7 +11,10 @@ To build Metalama, you'll need:
 
 - Windows
 - PowerShell
-- .NET SDK (check the specific version in the `global.json` file of each repository).
+- .NET SDK: check the specific version in the `global.json` file of each repository
+
+{: .warning }
+Ensure that the .NET SDK version matches the minor version specified in the `global.json` file of each repository. The `rollForward` option is set to `patch`, so only patch-level updates are allowed. Using an incorrect SDK version will result in build failures.
 
 ## Checking out source code
 
@@ -37,39 +40,46 @@ For more details, see our [branching strategy](branching).
 
 ## Performing a local (development) build
 
-To build Metalama, run this script from PowerShell:
+To build Metalama, run the following script in PowerShell:
 
 ```powershell
 ./Build.ps1 build
 ```
+The packages will be placed in the `artifacts/publish/private` directory.
 
-The packages are placed into the `artifacts/publish/private` directory.
+This command creates _development builds_ intended for use on your development machine only. Each time you run `./Build.ps1 build`, a new package version number is generated.
 
-This command creates _development builds_ to be used on your development machine only. Every time you call `Build.ps1 build`, a new package version number is generated.
+There are three build configurations, which you can specify using the `-c` command-line option:
+- `Debug`
+- `Release`
+- `Public`: A release build with the following differences:
+    - The version is _not_ suffixed with a unique build number; it matches the version specified in `eng/MainVersion.props`.
+    - Binaries are signed. If you do not have access to the signing server, use the `--no-sign` option.
+    - XML documentation files exclude internal APIs.
 
 ## Consuming local builds
 
-Once you have a successful local build, it's easy to use it in any project:
+After successfully creating a local build, you can use it in any project as follows:
 
-1. Add the following code to your `Directory.Build.props`:
-
-    ```xml
-    <Import Path="path/to/Metalama/Metalama.Imports.props">
-    ```
-
-2. Use the `$(MetalamaVersion)` property to reference the version number of any package produced by this repo:
+1. Add the following code to your `Directory.Build.props` file:
 
     ```xml
-    <PackageReference Include="Metalama.Framework" Version="$(MetalamaVersion)"/>
+    <Import Path="path/to/Metalama/Metalama.Imports.props" />
     ```
 
-3. Perform a `dotnet restore` after completing a new local build.
+2. Use the `$(MetalamaVersion)` property to reference the version number of any package produced by this repository:
 
-Each time you build the repo using `./Build.ps1 build`, a new version number is generated, so you don't have to worry about clearing the cache and restarting your IDE.
+    ```xml
+    <PackageReference Include="Metalama.Framework" Version="$(MetalamaVersion)" />
+    ```
+
+3. Run `dotnet restore` after completing a new local build.
+
+Each time you run `./Build.ps1 build`, a new version number is generated, so you do not need to clear the cache or restart your IDE.
 
 ## Running tests
 
-Execute this script from PowerShell:
+To execute tests, run the following script in PowerShell:
 
 ```powershell
 ./Build.ps1 test
@@ -142,7 +152,7 @@ Specifically, you should process the repositories in the following order:
 
 We use Docker as a reference build environment to ensure all dependencies are explicit.
 
-The Metalama build requires .NET Framework, which requires a Windows Server Core image.
+The Metalama build requires .NET Framework, which requires a Windows Server Core image. This is a requirement of [ILRepack](https://github.com/gluck/il-repack), one of our dependencies.
 
 Follow these steps:
 
@@ -165,6 +175,10 @@ Follow these steps:
     docker run -v ".\artifacts:c:/src/artifacts" build-metalama pwsh ./Build.ps1 build
     ```
 
-The packages are then placed into the `artifacts/publish/private` directory.
+5. You might want to remove the `build-metalama` image.
+
+The build artifacts are then placed into the `artifacts/publish/private` directory. The logs are available under `artifacts/logs`.
+
+For details, see also the GitHub workflow `.github/workflows/build-on-docker.yml`, which follows these steps in a repeatable way.
 
 
