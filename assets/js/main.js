@@ -1,96 +1,199 @@
 /*
 var swiper = new Swiper('.swiper-container', {
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+	 nextEl: '.swiper-button-next',
+	 prevEl: '.swiper-button-prev',
   },
   pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + '</span>';
-    },
+	 el: '.swiper-pagination',
+	 clickable: true,
+	 renderBullet: function (index, className) {
+		return '<span class="' + className + '">' + (index + 1) + '</span>';
+	 },
   },
 });
 */
-// Manage the pinned TOC.
-$(document).ready(function() {
-
-  var isPinned = false;
-  
-
-  function adjustPinned() {    
-    var scrollPosition = $(window).scrollTop();
-    if (scrollPosition > 600 && !isPinned ) {
-        $('.toc_nav').addClass('pinned');
-        isPinned = true;
-    } else if (scrollPosition < 200 && isPinned ) {
-        $('.toc_nav').removeClass('pinned');
-        isPinned = false;
-    }
-  }
-  adjustPinned();
-  $(window).scroll(function() {
-    adjustPinned();    
-  });
-  
-});
-
-// Pin the header when scrolling up and unpin it when scrolling down.
-$(document).ready(function() {
-  var lastScrollTop = 0;
-  var $header = $('header');
-  var $spacer = $('.header-spacer');
-
-  $(window).scroll(function() {
-    var scrollTop = $(this).scrollTop();
-
-    if (scrollTop > lastScrollTop) {
-      // Scrolling down
-      $header.removeClass('pinned');
-      $spacer.hide();
-    } else {
-      // Scrolling up
-      $header.addClass('pinned');
-      $spacer.show();
-    }
-
-    lastScrollTop = scrollTop;
-  });
-});
-
-// Manages the drop-down menu in the header.
+(() => {
+	"use strict";
+	let bodyLockStatus = true;
+	let bodyLockToggle = (delay = 500) => {
+		if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
+	};
+	let bodyUnlock = (delay = 500) => {
+		if (bodyLockStatus) {
+			setTimeout((() => {
+				document.documentElement.classList.remove("lock");
+			}), delay);
+			bodyLockStatus = false;
+			setTimeout((function () {
+				bodyLockStatus = true;
+			}), delay);
+		}
+	};
+	let bodyLock = (delay = 500) => {
+		if (bodyLockStatus) {
+			document.documentElement.classList.add("lock");
+			bodyLockStatus = false;
+			setTimeout((function () {
+				bodyLockStatus = true;
+			}), delay);
+		}
+	};
+	function menuInit() {
+		if (document.querySelector(".icon-menu")) document.addEventListener("click", (function (e) {
+			if (bodyLockStatus && e.target.closest(".icon-menu")) {
+				bodyLockToggle();
+				document.documentElement.classList.toggle("menu-open");
+			}
+		}));
+	}
+	window["FLS"] = true;
+	menuInit();
+})();
 $(document).ready(function () {
-  $(".has-dropdownmenu").hover(
-      function () {
-          // Mouse enter: hide other dropdowns then show the current one.
-          var submenuId = $(this).find("a").attr("data-submenu");
-          $(".dropdownmenu").not("#" + submenuId).stop(true, true).hide();
-          $("#" + submenuId).stop(true, true).show();
-      },
-      function (e) {
-          // Mouse leave: hide dropdown immediately unless entering the dropdown area.
-          if ($(e.relatedTarget).closest(".has-dropdownmenu, .dropdownmenu").length) {
-            return;
-          }
-          var submenuId = $(this).find("a").attr("data-submenu");
-          $("#" + submenuId).stop(true, true).hide();
-      }
-  );
+	var lastScrollTop = 0;
+	var $header = $('header');
+	var $spacer = $('.header-spacer');
+	var currentSubmenu = null;  // Храним текущее открытое подменю
+	function isMobile() {
+		return getComputedStyle(document.body).getPropertyValue('--is-mobile').trim() === '1';
+	}
 
-  // Keep the dropdown visible when hovering over it.
-  $(".dropdownmenu").hover(
-      function (e) {
-          $(this).stop(true, true).show();
-      },
-      function (e) {
-          // Hide dropdown immediately unless moving into the parent menu.
-          if ($(e.relatedTarget).closest(".has-dropdownmenu, .dropdownmenu").length) {
-            return;
-          }
-          $(this).stop(true, true).hide();
-      }
-  );
+	function setHeaderBg(scrollTop) {
+		if (scrollTop > 85) {
+			$header.css('background', '#130722');
+		} else {
+			$header.css('background', 'transparent');
+		}
+	}
+
+	// При загрузке сразу проверяем фон
+	setHeaderBg($(window).scrollTop());
+
+	$(window).scroll(function () {
+		var scrollTop = $(this).scrollTop();
+
+		if (scrollTop > lastScrollTop) {
+			$header.removeClass('pinned');
+			$spacer.hide();
+		} else {
+			if (scrollTop > 85) {
+				$header.addClass('pinned');
+				$spacer.show();
+			} else {
+				$header.removeClass('pinned');
+				$spacer.hide();
+			}
+		}
+
+		setHeaderBg(scrollTop);
+		lastScrollTop = scrollTop;
+	});
+
+	$(".has-dropdownmenu").hover(
+		function () {
+			if (!isMobile()) { // Только для десктопа
+				var submenuId = $(this).find("a").data("submenu");
+
+				if (currentSubmenu && currentSubmenu !== submenuId) {
+					$("#" + currentSubmenu).stop(true, true).hide();
+				}
+
+				$("#" + submenuId).stop(true, true).show();
+				currentSubmenu = submenuId;
+
+				setHeaderBg($(window).scrollTop());
+			}
+		},
+		function (e) {
+			if (!isMobile()) { // Только для десктопа
+				if ($(e.relatedTarget).closest('.dropdownmenu').length === 0) {
+					if (currentSubmenu) {
+						$("#" + currentSubmenu).stop(true, true).hide();
+						currentSubmenu = null;
+					}
+				}
+			}
+		}
+	);
+
+
+	$(".dropdownmenu").hover(
+		function () {
+			$(this).stop(true, true).show();
+			setHeaderBg($(window).scrollTop());
+		},
+		function (e) {
+			if ($(e.relatedTarget).closest(".has-dropdownmenu, .dropdownmenu, header").length) return;
+
+			$(this).stop(true, true).hide();
+			setHeaderBg($(window).scrollTop());
+		}
+	);
+
+	var currentSubmenu = null;
+
+	// Клик по ссылке (dropdown3 и dropdown4)
+	$(".has-dropdownmenu > a").on("click", function (e) {
+		if (isMobile()) {
+			var submenuId = $(this).data("submenu");
+
+			// Только если submenuId есть и оно нужное — отменяем переход
+			if (submenuId && (submenuId === "dropdown3" || submenuId === "dropdown4")) {
+				e.preventDefault();
+
+				var $submenu = $("#" + submenuId);
+				var $parentItem = $(this).parent(); // .has-dropdownmenu
+
+				// Закрыть другие и убрать у них класс
+				if (currentSubmenu && currentSubmenu !== submenuId) {
+					$("#" + currentSubmenu).stop(true, true).slideUp();
+					$(".has-dropdownmenu").removeClass("submenu-open");
+				}
+
+				// Переключение
+				if ($submenu.is(":visible")) {
+					$submenu.stop(true, true).slideUp();
+					$parentItem.removeClass("submenu-open");
+					currentSubmenu = null;
+				} else {
+					$submenu.stop(true, true).slideDown();
+					$parentItem.addClass("submenu-open");
+					currentSubmenu = submenuId;
+				}
+
+				setHeaderBg($(window).scrollTop());
+			}
+		}
+	});
+
+	// Закрытие по клику вне
+	$(document).on("click", function (e) {
+		if (isMobile()) {
+			if (
+				!$(e.target).closest(".has-dropdownmenu").length &&
+				!$(e.target).closest(".dropdownmenu").length
+			) {
+				if (currentSubmenu) {
+					$("#" + currentSubmenu).stop(true, true).slideUp();
+					$(".has-dropdownmenu").removeClass("submenu-open");
+					currentSubmenu = null;
+					setHeaderBg($(window).scrollTop());
+				}
+			}
+		}
+	});
+
+	// Закрытие при ресайзе
+	$(window).on("resize", function () {
+		if (!isMobile() && currentSubmenu) {
+			$("#" + currentSubmenu).hide();
+			$(".has-dropdownmenu").removeClass("submenu-open");
+			currentSubmenu = null;
+			setHeaderBg($(window).scrollTop());
+		}
+	});
+
 });
 
 // Track the active section in the right nav.
