@@ -1,42 +1,61 @@
 footer {
-  background-color: $footer_bg_color;
+	background-color: $footer_bg_color;
 }
 
 footer .items_wrapper {
-  @extend .desktop_box;
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
+	@extend .desktop_box;
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
 
-  color: $text_color;
- 
-  .footer_texts {
-    vertical-align: middle;
-    align-items: center;
-    display: flex;
-  }
+	color: $text_color;
 
-  .improve-page {
-    vertical-align: middle;
-    align-items: center;
-    display: flex;
-    margin-left: auto;
+	@media (max-width: 615px) {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding-bottom: 25px;
+		& .col_logo {
+			flex: 1 0 100%;
+		}
+	}
+	@media (max-width: 490px) {
+		flex-direction: column;
+		align-items: center;
+		gap: 0;
+	}
+	.footer_texts {
+		vertical-align: middle;
+		align-items: center;
+		display: flex;
+		@media (max-width: 490px){
+			margin-bottom: 25px;
+		}
+	}
 
-    a {
-      color: $lightBlue;
-      text-decoration: none;
-    }
+	.improve-page {
+		white-space: nowrap;
+		vertical-align: middle;
+		align-items: center;
+		display: flex;
+		margin-left: auto;
+		@media (max-width: 490px) {
+			margin-left: 0;
+		}
+		a {
+			color: $lightBlue;
+			text-decoration: none;
+		}
 
-    a:after {
-      content: "";
+		a:after {
+			content: "";
 
-      display: inline-block;
-      background-image: url("/assets/images/icons/github-lightblue.svg");
-      background-size: contain;
-      width: 20px;
-      height: 20px;
-      vertical-align: middle;
-      margin-left: 5px;
-    }
-  }
+			display: inline-block;
+			background-image: url("/assets/images/icons/github-lightblue.svg");
+			background-size: contain;
+			width: 20px;
+			height: 20px;
+			vertical-align: middle;
+			margin-left: 5px;
+		}
+	}
 }
