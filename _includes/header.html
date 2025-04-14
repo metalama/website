@@ -144,11 +144,7 @@
 </head>
 
 {% assign bg_url = "/assets/images/homepage/main-background.svg" %}
-{% if page.url contains "/blog/" %}
-{% assign bg_url = "/assets/images/blog/main-background.jpg" %}
-{% elsif page.url contains "/features/" or page.url contains "/applications/" or page.url contains "/premium/" or page.url contains "/get" %}
-{% assign bg_url = "/assets/images/main-background.jpg" %}
-{% endif %}
+
 
 <body style="background: url('{{ bg_url }}') no-repeat; background-size: cover;" data-spy="scroll" data-target="#toc">
 	{% if include.noheader != "true" %}
