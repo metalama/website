@@ -652,18 +652,27 @@ summary: "Metalama is an open-source meta-programming framework for C# projects,
         <div class="container">
             <h2>Features</h2>
 
-            <div class="features">
+            <div class="case-columns">
 
                 {% for item in site.data.navigation.nodes[1].nodes %}
-                    <div class="feature">
-                        <a href="{{ item.url }}">
-                            <p class="title">{{ item.title }}</p>
-                            <p class="description">{{ item.description }}
-                                <span class="more">Learn more</span>
-                            </p>
-                        </a>
+                    {% unless item.hidden %}
+                    <div class="case-column">
+                        <h4>{{ item.title }}</h4>
+                        <div class="cases">
+                        {% for item2 in item.nodes %}
+                        <div class="case">
+                            <a href="{{ item2.url }}">
+                                <p class="title">{{ item2.title }}</p>
+                                <p class="description">{{ item2.description }}
+                                    <span class="more">Learn more</span>
+                                </p>
+                            </a>
+                        </div>                     
+                    {% endfor  %}
                     </div>
 
+                    </div>
+                {% endunless %}
                 {% endfor  %}
 
             </div>
