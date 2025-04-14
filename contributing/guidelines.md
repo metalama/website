@@ -51,8 +51,3 @@ Project leaders make final decisions based on technical merit, project goals, an
 ## Enforcement
 
 As the main contributor, PostSharp Technologies leadership is responsible for enforcing these Guidelines, consulting top contributors when needed. Enforcement may range from warnings to permanent bans, depending on severity and impact. Reports may be sent to <hello@postsharp.net>. Confidentiality and fairness are guaranteed.
-
-## Final Notes
-
-Participation implies agreement to this Guidelines. Its purpose is to protect the integrity of the project, the dignity of its contributors, and the value of its output. We uphold a professional, merit-based environment where quality work and respectful conduct are the foundation of success.
-
