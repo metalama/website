@@ -1009,12 +1009,18 @@
 		padding-top: 74px;
 		position: relative;
 		z-index: 2;
-		& img {
+		& img:nth-of-type(1) {
+			position: relative;
+			z-index: 2;
+			max-width: 100%;
+		}
+		& img:nth-of-type(2) {
 			position: absolute;
 			bottom: -72px;
 			right: -88px;
 			z-index: 1;
 		}
+
 		& div {
 			position: relative;
 			z-index: 2;
@@ -1591,7 +1597,7 @@
 		overflow: auto;
 		max-width: 300px;
 		width: 100%;
-		
+
 		// Webkit browsers (Chrome, Edge, Safari)
 		&::-webkit-scrollbar {
 			width: 4px; // super thin
@@ -1632,12 +1638,20 @@
 	}
 	// .section-features__subtitle
 	&__subtitle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 3px;
 		font-family: Monosten;
 		color: #fff;
 		font-size: 14px;
 		line-height: 100%;
 		margin-bottom: 20px !important;
 		text-align: center;
+		&::before{
+			content:'#';
+			
+		}
 	}
 	// .section-features__description
 	&__description {
