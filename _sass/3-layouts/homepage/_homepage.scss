@@ -1537,14 +1537,16 @@
 	// .section-features__title
 	&__title {
 		margin-top: 0;
-		margin-bottom: 50px;
+		margin-bottom: 70px;
 		color: #fff;
 		line-height: 117.7%; /* 53/45 */
 	}
 	// .section-features__columns
 	&__columns {
+		max-width: 1300px;
+		margin: 0 auto;
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		gap: 100px;
 		justify-items: center;
 		& h4 {
@@ -1582,14 +1584,31 @@
 	}
 	// .section-features__cases
 	&__cases {
+		padding-right: 8px;
 		display: grid;
 		gap: 50px;
 		max-height: 451px;
 		overflow: auto;
 		max-width: 300px;
 		width: 100%;
-		scrollbar-width: none; // Firefox
-		-ms-overflow-style: none; // IE/Edge
+		
+		// Webkit browsers (Chrome, Edge, Safari)
+		&::-webkit-scrollbar {
+			width: 4px; // super thin
+		}
+
+		&::-webkit-scrollbar-track {
+			background: transparent; // or rgba(255,255,255,0.05) for hint line
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: rgba(255, 255, 255, 0.5); // white with opacity
+			border-radius: 2px;
+		}
+
+		// Firefox
+		scrollbar-width: thin;
+		scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
 
 		&::-webkit-scrollbar {
 			display: none; // Chrome/Safari
