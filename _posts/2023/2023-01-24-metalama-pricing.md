@@ -5,6 +5,7 @@ title: "Metalama Pricing Model: Affordable, Flexible, and Open-Source Friendly"
 date: 2023-01-25 08:00:00 +01:00
 categories: [Metalama]
 permalink: /blog/metalama-pricing
+origin: https://blog.postsharp.net/metalama-pricing
 author: "Gael Fraiteur"
 image: assets/images/2023/2023-01-25-metalama-pricing/title.jpg
 tag: featured

@@ -5,6 +5,7 @@ title: "Metalama Performance Improvements Analysis [Updated for 2025.0]"
 date: 2024-11-28 08:00:01 +01:00
 categories: [Metalama]
 permalink: /blog/metalama-performance
+origin: https://blog.postsharp.net/metalama-performance
 author: "Gael Fraiteur"
 image: /assets/images/2024/2024-04-22-performance/featured.svg
 tag: featured

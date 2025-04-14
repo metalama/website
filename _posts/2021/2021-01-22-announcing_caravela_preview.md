@@ -5,6 +5,7 @@ title: "PostSharp's Great Reset: Announcing Project \"Caravela\", a Roslyn-based
 date: 2021-01-25 15:30:00 +02:00
 categories: [Metalama]
 permalink: /blog/announcing-caravela-preview
+origin: https://blog.postsharp.net/announcing-caravela-preview
 author: "Gael Fraiteur"
 image: /assets/images/2021/2021-01-25-caravela-announcement/Project Caravela 1.png
 summary: "PostSharp announces the preview of \"Caravela\", a Roslyn-based framework for code transformation and aspect-oriented programming. Caravela is designed to replace the MSIL-based PostSharp Framework and SDK, offering faster builds, more powerful transformations, better multi-platform support, improved design-time and run-time experiences, and enhanced debugging."

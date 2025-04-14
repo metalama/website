@@ -6,6 +6,7 @@ date: 2024-10-07 08:00:01 +01:00
 categories:
     - The Timeless .NET Engineer
 permalink: /blog/builder-pattern-with-metalama
+origin: https://blog.postsharp.net/builder-pattern-with-metalama
 author: "Metalama Team"
 image: /assets/images/2024/2024-10-builder-1/builder-dark.svg
 thumbnail: /assets/images/2024/2024-10-builder-1/builder-dark.svg

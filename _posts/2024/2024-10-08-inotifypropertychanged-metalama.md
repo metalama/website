@@ -4,6 +4,7 @@ title: "Implement INotifyPropertyChanged with Metalama"
 date: 2024-10-14 08:30:00 -03:00
 categories: [The Timeless .NET Engineer]
 permalink: /blog/inotifypropertychanged-metalama
+origin: https://blog.postsharp.net/inotifypropertychanged-metalama
 author: "Metalama Team"
 summary: "How to use Metalama to implement the INotifyPropertyChanged interface with minimal manual effort. We give an example application."
 keywords:

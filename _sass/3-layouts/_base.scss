@@ -79,6 +79,11 @@ img[src*="#unzoom150"] {
 
 .note, .tip {
     background-color:    #01343d;
+    color: white;
+
+    a {
+        color: white !important;
+    }
 }
 
 

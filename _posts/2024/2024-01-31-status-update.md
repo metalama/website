@@ -5,6 +5,7 @@ title: "Metalama Status Update, January 2024"
 date: 2024-01-31 08:00:01 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2024-01
+origin: https://blog.postsharp.net/metalama-status-update-2024-01
 author: "Gael Fraiteur"
 image: /assets/images/2024/2024-01-31-status/llama.png
 summary: "Metalama and PostSharp 2024.0 were released, introducing support for .NET 8, C# 12, and ARM64. Work is ongoing for Metalama 2024.1, which aims to enhance UI, build-time performance, and constructor advising. The company also announced a partnership with the Productive C# community."

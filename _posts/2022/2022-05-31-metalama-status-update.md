@@ -5,6 +5,7 @@ title: "Metalama Status Update (May 2022)"
 date: 2022-05-31 09:00:00 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2022-05
+origin: https://blog.postsharp.net/metalama-status-update-2022-05
 author: "Gael Fraiteur"
 image: /assets/images/2022/2022-02-23-metalama/metalama-2.svg
 

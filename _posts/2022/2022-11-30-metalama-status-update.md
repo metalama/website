@@ -5,6 +5,7 @@ title: "Metalama Status Update (November 2022)"
 date: 2022-11-30 09:00:00 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2022-11
+origin: https://blog.postsharp.net/metalama-status-update-2022-11
 author: "Gael Fraiteur"
 image: /assets/images/2022/2022-02-23-metalama/metalama-2.svg
 summary: "Metalama's November 2022 update includes zero severe bugs, progress in PostSharp migration, .NET 7.0 / C# 11 support, LinqPad support, and integration with CodeLens. Work on documentation and new C# 11 features continues. "

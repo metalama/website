@@ -5,6 +5,7 @@ title: "Metalama Status Update (September 2022)"
 date: 2022-09-29 09:00:00 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2022-09
+origin: https://blog.postsharp.net/metalama-status-update-2022-09
 author: "Gael Fraiteur"
 image: /assets/images/2022/2022-02-23-metalama/metalama-2.svg
 summary: "The Metalama team has been focused on making the software faster and more robust, implementing user stories, and fixing bugs. They plan to focus on addressing their bug backlog and aim to have a release candidate by end of Autumn 2022. "

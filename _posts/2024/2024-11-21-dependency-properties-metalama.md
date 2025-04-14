@@ -4,6 +4,7 @@ title: "Implementing WPF dependency properties with Metalama"
 date: 2024-11-22 00:30:00 +01:00
 categories: [The Timeless .NET Engineer]
 permalink: /blog/wpf-dependency-property-metalama
+origin: https://blog.postsharp.net/wpf-dependency-property-metalama
 author: "Darío Macchi"
 summary: "Learn how to implement custom WPF dependency properties with minimal manual effort using Metalama, demonstrated through an example application."
 source_url: https://github.com/postsharp/TimelessDotNetEngineer/tree/main/src/wpf/dependencyproperties

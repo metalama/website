@@ -5,6 +5,7 @@ title: "Announcing PostSharp \"Caravela\" Preview 2 (0.3.5)"
 date: 2021-07-23 08:30:00 +02:00
 categories: [Metalama]
 permalink: /blog/announcing-caravela-preview-2
+origin: https://blog.postsharp.net/announcing-caravela-preview-2
 author: "Gael Fraiteur"
 image: /assets/images/2021/2021-01-25-caravela-announcement/Project Caravela 1.png 
 summary: "The second preview of PostSharp \"Caravela\", a Roslyn-based meta-programming framework for [aspect-oriented programming](https://www.postsharp.net/solutions/aspect-oriented-programming), code generation, and code validation, has been announced. The preview is built on the product's final architecture but is not yet suitable for production use."

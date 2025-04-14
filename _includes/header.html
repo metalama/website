@@ -20,7 +20,12 @@
         type="image/png" />
     <link href="{{site.baseurl}}/assets/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
     <link href="{{site.baseurl}}/assets/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+
+    {% if page.origin %}
+        <link rel="canonical" href="{{page.origin}}" />
+    {% else %}
     <link rel="canonical" href="{{site.baseurl}}{{include.permalink}}" />
+    {% endif  %}
 
     <link rel="alternate" type="application/rss+xml" href="{{site.baseurl}}/feed.xml" />
     <title>{% if include.title And include.title != "" And include.title != nil %}{{include.title}} {% if

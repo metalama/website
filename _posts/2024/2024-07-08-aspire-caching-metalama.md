@@ -6,6 +6,7 @@ date: 2024-07-08 08:00:02 +01:00
 categories:
     - The Timeless .NET Engineer
 permalink: /blog/aspire-caching-metalama
+origin: https://blog.postsharp.net/aspire-caching-metalama
 author: "Metalama Team"
 summary: "Learn how to cache method results in a .NET Aspire distributed cloud-native app with minimal boilerplate in this step-by-step guide."
 keywords:

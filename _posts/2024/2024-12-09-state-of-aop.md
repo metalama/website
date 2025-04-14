@@ -4,6 +4,7 @@ title: "The State of Aspect-Oriented Programming in C# [2025]"
 date: 2024-12-09 08:30:00 +01:00
 categories: [Opinion]
 permalink: /blog/state-of-aop
+origin: https://blog.postsharp.net/state-of-aop
 author: "Gael Fraiteur"
 summary: "This article reviews the state of aspect-oriented programming in C# and .NET in 2025. It addresses misconceptions, lists and compares implementations, and studies how the main challenges have been resolved."
 keywords:

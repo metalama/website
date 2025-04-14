@@ -5,6 +5,7 @@ title: "Metalama Status Update (June 2022)"
 date: 2022-06-24 09:00:00 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2022-06
+origin: https://blog.postsharp.net/metalama-status-update-2022-06
 author: "Gael Fraiteur"
 image: /assets/images/2022/2022-02-23-metalama/metalama-2.svg
 summary: "The blog post announces that Metalama 1.0 is now feature-complete with the addition of support for dependency injection in aspects. However, some features still have gaps, so the team will spend the summer filling these gaps and improving testing standards."

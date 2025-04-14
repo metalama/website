@@ -4,6 +4,7 @@ title: "Why I switched from Fody to Metalama for method caching"
 date: 2024-10-29 09:10:00 +01:00
 categories: [Guest Article]
 permalink: /blog/why-switch-from-fody
+origin: https://blog.postsharp.net/why-switch-from-fody
 author: "Cyril Canovas"
 summary: "Cyril Canovas compares Fody and Metalama when it comes to avoiding boilerplate with the implementation of caching. He cites idiomatic C# code and debugging experience as its main benefits."
 image: /assets/images/2024/2024-10-goatreview/caching.svg

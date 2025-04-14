@@ -4,6 +4,7 @@ title: "Implement ICommand with Metalama"
 date: 2024-11-04 08:30:00 +01:00
 categories: [The Timeless .NET Engineer]
 permalink: /blog/wpf-command-metalama
+origin: https://blog.postsharp.net/wpf-command-metalama
 author: "Darío Macchi"
 summary: "Learn how to implement the ICommand interface with minimal manual effort using Metalama, demonstrated through an example application."
 keywords:

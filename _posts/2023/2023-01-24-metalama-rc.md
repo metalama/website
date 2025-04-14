@@ -5,6 +5,7 @@ title: "Announcing Metalama RC"
 date: 2023-01-25 08:00:01 +01:00
 categories: [Metalama]
 permalink: /blog/metalama-2023.0-rc
+origin: https://blog.postsharp.net/metalama-2023.0-rc
 author: "Gael Fraiteur"
 image: /assets/images/blog/metalama-status-updates/1.jpg
 tag: 
