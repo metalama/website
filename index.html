@@ -638,51 +638,12 @@ summary: "Metalama is an open-source meta-programming framework for C# projects,
         </div>
     </section>
 
-    <section class="section-features section section--features">
+	 <section class="section-features section section--features">
         <div class="section-features__container">
             
-            <h2 class="section-features__title">Use Cases</h2>
-
+            <h2 class="section-features__title">Features</h2>
             <div class="section-features__columns">
-
-					<div class="section-features__column">
-						<h4>Features</h4>
-						<div class="section-features__cases">
-							{% for item in site.data.navigation.nodes[1].nodes %}
-							{% unless item.hidden %}
-								{% for item2 in item.nodes %}
-								<div class="section-features__case">
-									<a class="section-features__link" href="{{ item2.url }}">
-										<p class="section-features__subtitle">{{ item2.title }}</p>
-										<p class="section-features__description">{{ item2.description }}
-												<span class="section-features__more">Learn more</span>
-										</p>
-									</a>
-									<div class="section-features__decor-1"></div>
-									<div class="section-features__decor-2"></div>
-								</div>
-								{% endfor  %}
-							{% endunless %}
-							{% endfor  %}
-						</div>
-						<div class="section-features__text-decor">
-							<span>S</span>
-							<span>C</span>
-							<span>R</span>
-							<span>O</span>
-							<span>L</span>
-							<span>L</span>
-							<span> </span>
-							<span>.</span>
-							<span>D</span>
-							<span>O</span>
-							<span>W</span>
-							<span>N</span>
-							<img src="assets/images/icons/features-arrow.svg" alt="Arrow">
-						</div>
-					</div>
-
-				{% for item in site.data.navigation.nodes[2].nodes %}
+				{% for item in site.data.navigation.nodes[1].nodes %}
 					{% unless item.hidden %}
 					<div class="section-features__column">
 						<h4>{{ item.title }}</h4>
@@ -700,20 +661,34 @@ summary: "Metalama is an open-source meta-programming framework for C# projects,
 							</div>
 							{% endfor %}
 						</div>
-						<div class="section-features__text-decor">
-							<span>S</span>
-							<span>C</span>
-							<span>R</span>
-							<span>O</span>
-							<span>L</span>
-							<span>L</span>
-							<span> </span>
-							<span>.</span>
-							<span>D</span>
-							<span>O</span>
-							<span>W</span>
-							<span>N</span>
-							<img src="assets/images/icons/features-arrow.svg" alt="Arrow">
+					</div>
+					{% endunless %}
+				{% endfor  %}
+            </div>
+        </div>
+    </section>
+
+		<section class="section-features section section--features">
+			<div class="section-features__container">
+				<h2 class="section-features__title">Use Cases</h2>
+				<div class="section-features__columns">
+				{% for item in site.data.navigation.nodes[2].nodes %}
+					{% unless item.hidden %}
+					<div class="section-features__column">
+						<h4>{{ item.title }}</h4>
+						<div class="section-features__cases">
+							{% for item2 in item.nodes %}
+							<div class="section-features__case">
+								<a class="section-features__link" href="{{ item2.url }}">
+									<p class="section-features__subtitle">#{{ item2.title }}</p>
+									<p class="section-features__description">{{ item2.description }}
+											<span class="section-features__more">Learn more</span>
+									</p>
+								</a>
+								<div class="section-features__decor-1"></div>
+								<div class="section-features__decor-2"></div>
+							</div>
+							{% endfor %}
 						</div>
 					</div>
 					{% endunless %}
