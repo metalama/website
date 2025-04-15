@@ -351,8 +351,17 @@ document.querySelectorAll('.scroll-wrapper').forEach(wrapper => {
 	  const scrollHeight = content.scrollHeight;
 	  const clientHeight = content.clientHeight;
   
-	  btnUp.style.opacity = scrollTop <= 0 ? 0.2 : 1;
-	  btnDown.style.opacity = scrollTop + clientHeight >= scrollHeight - 20 ? 0.2 : 1;
+	  if (scrollTop <= 0) {
+		btnUp.classList.add('disabled');
+	  } else {
+		btnUp.classList.remove('disabled');
+	  }
+  
+	  if (scrollTop + clientHeight >= scrollHeight - 20) {
+		btnDown.classList.add('disabled');
+	  } else {
+		btnDown.classList.remove('disabled');
+	  }
 	};
   
 	// Scroll event listener just for this content div
@@ -370,4 +379,3 @@ document.querySelectorAll('.scroll-wrapper').forEach(wrapper => {
 	// Initialize opacity once on load
 	updateButtonOpacity();
   });
-  

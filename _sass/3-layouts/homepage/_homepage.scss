@@ -1849,12 +1849,17 @@
 	left: 50%;
 	transform: translateX(-50%);
 	background: transparent;
-	color: white;
+	color: $purple;
 	border: none;
 	padding: 0.5rem 1rem;
 	cursor: pointer;
 	transition: opacity 0.3s ease;
 	z-index: 1;
+
+	&.disabled {
+		cursor: default;
+		opacity: 0.2;
+	}
   }
   
   .scroll-btn.up {
