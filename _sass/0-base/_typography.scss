@@ -3,6 +3,7 @@
     src:url(../fonts/Monosten/Monosten-A.woff2) format("woff2"),
     url(../fonts/Monosten/Monosten-A.woff) format("woff");
     font-weight:400;
+	 font-display: swap;
     font-style:normal
    }
    @font-face {
@@ -14,6 +15,7 @@
     url(../fonts/LatoLatin/LatoLatin-Bold.ttf) format("truetype");
     font-style:normal;
     font-weight:700;
+	 font-display: swap;
     text-rendering:optimizeLegibility
    }
    @font-face {
@@ -25,6 +27,7 @@
     url(../fonts/LatoLatin/LatoLatin-BoldItalic.ttf) format("truetype");
     font-style:italic;
     font-weight:700;
+	 font-display: swap;
     text-rendering:optimizeLegibility
    }
    @font-face {
@@ -36,6 +39,7 @@
     url(../fonts/LatoLatin/LatoLatin-Italic.ttf) format("truetype");
     font-style:italic;
     font-weight:400;
+	 font-display: swap;
     text-rendering:optimizeLegibility
    }
    @font-face {
@@ -47,6 +51,7 @@
     url(../fonts/LatoLatin/LatoLatin-Regular.ttf) format("truetype");
     font-style:normal;
     font-weight:400;
+	 font-display: swap;
     text-rendering:optimizeLegibility
    }
 
@@ -55,6 +60,7 @@
     src: url("../fonts/SegoeMDL2/segmdl2-webfont.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
+	 font-display: swap;
   }
 
    $ff-headings: monosten;

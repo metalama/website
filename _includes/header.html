@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
+	<link rel="preload" as="image" href="/assets/images/homepage/main-background.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css">
     <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css">
+    
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
     <link href="{{site.baseurl}}/assets/images/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" />
     <link href="{{site.baseurl}}/assets/images/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
@@ -143,10 +145,8 @@
         
 </head>
 
-{% assign bg_url = "/assets/images/homepage/main-background.svg" %}
-
-
-<body style="background: url('{{ bg_url }}') no-repeat; background-size: cover;" data-spy="scroll" data-target="#toc">
+<body style="background: url('/assets/images/homepage/main-background.svg') no-repeat; background-size: cover;" data-spy="scroll" data-target="#toc">
+	<body>
 	{% if include.noheader != "true" %}
 	<header>
 		<div class="wrapper-large">
