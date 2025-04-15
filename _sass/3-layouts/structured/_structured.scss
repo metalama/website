@@ -176,12 +176,16 @@
 		padding: 50px;
 		border-radius: 20px;
 		background: rgba(30, 11, 56, 0.7);
+		@media (max-width: 991.98px) {
+			padding: 10px;
+		}
+		@media (max-width: 767.98px){
+			padding: 25px;
+		}
 	}
 	.text_content > main {
 		color: #fff;
-		@media (max-width: 991.98px) {
-			padding: 25px;
-		}
+		
 		@media (max-width: 479.98px) {
 			& h1 {
 				font-size: 32px;
