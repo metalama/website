@@ -630,7 +630,9 @@ summary: "Metalama is an open-source meta-programming framework for C# projects,
 					{% unless item.hidden %}
 					<div class="section-features__column">
 						<h4>{{ item.title }}</h4>
-						<div class="section-features__cases">
+						<div class="section-features__cases scroll-wrapper">
+                            <button class="scroll-btn up">▲</button>
+                            <div class="scroll-content">
 							{% for item2 in item.nodes %}
 							<div class="section-features__case">
 								<a class="section-features__link" href="{{ item2.url }}">
@@ -643,6 +645,8 @@ summary: "Metalama is an open-source meta-programming framework for C# projects,
 								<div class="section-features__decor-2"></div>
 							</div>
 							{% endfor %}
+                            <button class="scroll-btn down">▼</button>
+                        </div>
 						</div>
 					</div>
 					{% endunless %}
@@ -659,7 +663,9 @@ summary: "Metalama is an open-source meta-programming framework for C# projects,
 					{% unless item.hidden %}
 					<div class="section-features__column">
 						<h4>{{ item.title }}</h4>
-						<div class="section-features__cases">
+						<div class="section-features__cases scroll-wrapper">
+                            <button class="scroll-btn up">▲</button>
+                            <div class="scroll-content">
 							{% for item2 in item.nodes %}
 							<div class="section-features__case">
 								<a class="section-features__link" href="{{ item2.url }}">
@@ -672,6 +678,8 @@ summary: "Metalama is an open-source meta-programming framework for C# projects,
 								<div class="section-features__decor-2"></div>
 							</div>
 							{% endfor %}
+                            <button class="scroll-btn down">▼</button>
+                        </div>
 						</div>
 					</div>
 					{% endunless %}

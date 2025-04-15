@@ -1631,15 +1631,28 @@
 	&__column {
 		position: relative;
 	}
-	// .section-features__cases
+	// .section-features__cases {
 	&__cases {
 		padding-right: 8px;
-		display: grid;
-		gap: 50px;
-		max-height: 451px;
-		overflow: auto;
+//		max-height: 370px;
+//		overflow: auto;
 		max-width: 300px;
 		width: 100%;
+		scrollbar-width: thin;
+		scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+
+		.scroll-content {
+	
+			max-height: 340px;	
+			scroll-snap-type: y mandatory;
+			display: grid;
+			gap: 25px;
+			
+
+		> * {
+			scroll-snap-align: start;
+		}
+	}
 
 		// Webkit browsers (Chrome, Edge, Safari)
 		&::-webkit-scrollbar {
@@ -1656,9 +1669,7 @@
 		}
 
 		// Firefox
-		scrollbar-width: thin;
-		scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
-
+		
 		&::-webkit-scrollbar {
 			display: none; // Chrome/Safari
 		}
@@ -1674,7 +1685,7 @@
 		position: relative;
 		background-color: #160827;
 		padding: 10px;
-		min-height: 200px;
+		min-height: 150px;
 	}
 	// .section-features__link
 	&__link {
@@ -1812,3 +1823,45 @@
 	justify-content: center;
 	flex-wrap: wrap;
 }
+
+
+// Scroll
+.scroll-wrapper {
+	position: relative;
+
+  }
+  
+  .scroll-content {
+	overflow-y: auto;
+	margin-bottom: 20px;
+	
+	&::-webkit-scrollbar {
+		display: none; // Hide scrollbar for Chrome, Safari, and Edge
+	}
+
+	-ms-overflow-style: none; // Hide scrollbar for Internet Explorer
+	scrollbar-width: none; // Hide scrollbar for Firefox
+  }
+  
+  /* Buttons float at top/bottom */
+  .scroll-btn {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background: transparent;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	transition: opacity 0.3s ease;
+	z-index: 1;
+  }
+  
+  .scroll-btn.up {
+	top: 0;
+	// We don't display the up button at all.
+	display: none;
+  }
+  .scroll-btn.down {
+	bottom: -40px;
+  }

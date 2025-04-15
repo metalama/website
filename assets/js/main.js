@@ -337,3 +337,37 @@ $(document).ready(function () {
     });
   });
 });
+
+
+
+// Scrolling without scrollbars
+document.querySelectorAll('.scroll-wrapper').forEach(wrapper => {
+	const content = wrapper.querySelector('.scroll-content');
+	const btnUp = wrapper.querySelector('.scroll-btn.up');
+	const btnDown = wrapper.querySelector('.scroll-btn.down');
+  
+	const updateButtonOpacity = () => {
+	  const scrollTop = content.scrollTop;
+	  const scrollHeight = content.scrollHeight;
+	  const clientHeight = content.clientHeight;
+  
+	  btnUp.style.opacity = scrollTop <= 0 ? 0.2 : 1;
+	  btnDown.style.opacity = scrollTop + clientHeight >= scrollHeight - 20 ? 0.2 : 1;
+	};
+  
+	// Scroll event listener just for this content div
+	content.addEventListener('scroll', updateButtonOpacity);
+  
+	// Click listeners only affect their local content
+	btnUp.addEventListener('click', () => {
+	  content.scrollBy({ top: -100, behavior: 'smooth' });
+	});
+  
+	btnDown.addEventListener('click', () => {
+	  content.scrollBy({ top: 100, behavior: 'smooth' });
+	});
+  
+	// Initialize opacity once on load
+	updateButtonOpacity();
+  });
+  
