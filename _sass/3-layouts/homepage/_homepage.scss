@@ -1643,6 +1643,7 @@
 	
 			max-height: 340px;	
 			scroll-snap-type: y mandatory;
+			scroll-snap-align: start;
 			display: grid;
 			gap: 25px;
 			
@@ -1702,6 +1703,7 @@
 		text-align: center;
 		&::before{
 			content:'#';
+			color: $purple
 			
 		}
 	}

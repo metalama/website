@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78f52341-ca9d-412b-b8ab-4cfb7fa84559" name="Changes" comment="" />
+    <list default="true" id="78f52341-ca9d-412b-b8ab-4cfb7fa84559" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/_sass/3-layouts/homepage/_homepage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/3-layouts/homepage/_homepage.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +64,7 @@
       <workItem from="1725442510094" duration="740000" />
       <workItem from="1744693443446" duration="1307000" />
       <workItem from="1744725122789" duration="215000" />
+      <workItem from="1744727169011" duration="1255000" />
     </task>
     <servers />
   </component>
@@ -75,7 +78,14 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="GRAPH_OPTIONS">
+                <list>
+                  <option value="Base" />
+                  <option value="Standard" />
+                </list>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

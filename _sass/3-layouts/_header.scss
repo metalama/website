@@ -145,7 +145,7 @@ header {
 					left: 50%;
 					transform: translateX(-50%);
 					.dropdown-wrapper {
-						gap: 80px;
+						gap: 40px;
 						display: flex;
 						flex-direction: row;
 
@@ -476,9 +476,14 @@ section {
 		border-radius: 8px;
 		min-height: 100px;
 		background-color: rgba(255, 255, 255, 0.2);
+		transition: background-color 0.1s ease;
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.4);
+		}
 	}
 	.dropdownmenu {
-		padding: 25px;
+		padding: 40px;
 		border-radius: 8px;
 	}
 	.dropdown-wrapper {
