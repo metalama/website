@@ -377,18 +377,16 @@
 		table.compare {
 			border-collapse: collapse;
 			font-weight: 700;
-
+			background-color: rgba(30, 11, 56, 60%);
+			
 			td,
 			th {
 				padding: 20px;
 			}
 
 			> thead {
-				background-color: rgba(30, 11, 56, 60%);
 				color: #d3d3d3;
-				&:hover {
-					background-color: rgb(30, 11, 56);
-				}
+				background-color: rgb(30, 11, 56);
 				> tr {
 					> th {
 						border: none !important;
@@ -433,7 +431,7 @@
 					}
 
 					> td.yes {
-						color: #6122b4;
+						color: #569cd6;
 						font-weight: bold;
 						text-align: center;
 					}
