@@ -75,6 +75,11 @@
             {% endif %}
         </div>
         <div class="main_content">
+            {% if page.origin %}
+            <div class="note">
+                This article was originally published on the <a href="{{page.origin}}">PostSharp Blog</a>.
+            </div>
+            {% endif %}
             <main>
             {{ content | remove: page.excerpt }}
             </main>

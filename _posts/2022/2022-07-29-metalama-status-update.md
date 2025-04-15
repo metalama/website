@@ -5,6 +5,7 @@ title: "Metalama Status Update (July 2022)"
 date: 2022-07-29 09:00:00 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2022-07
+origin: https://blog.postsharp.net/metalama-status-update-2022-07
 author: "Gael Fraiteur"
 image: /assets/images/2022/2022-02-23-metalama/metalama-2.svg
 summary: "The Metalama project saw significant progress in July 2022 with 40 bug fixes and various features added despite vacation time. However, customers trying the solution encountered bugs, which were fixed within 2-3 days."

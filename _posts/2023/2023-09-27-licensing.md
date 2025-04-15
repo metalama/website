@@ -5,6 +5,7 @@ title: "Metalama Licensing Changes"
 date: 2023-09-27 07:00:01 +01:00
 categories: [Metalama]
 permalink: /blog/metalama-open-source-licensing
+origin: https://blog.postsharp.net/metalama-open-source-licensing
 author: "Gael Fraiteur"
 image: /assets/images/2023/2023-09-27-licensing/llama.png
 tag: featured

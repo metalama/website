@@ -5,6 +5,7 @@ title: "Metalama Status Update, November 2023"
 date: 2023-11-30 08:00:01 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2023-11
+origin: https://blog.postsharp.net/metalama-status-update-2023-11
 author: "Gael Fraiteur"
 image: /assets/images/2023/2023-11-30-status/november.png
 summary: "The Metalama team has released the first stable version of Metalama 2023.4, and two previews of Metalama 2024.0, focusing on .NET 8.0 and C# 12 support. The General Availability (GA) release of Metalama 2024.0 is planned for the first week of January 2024."

@@ -252,6 +252,8 @@ nodes:
             title: "Branching Strategy"
           - url: "/contributing/cla"
             title: "Contributor License Agreement"
+          - url: "/contributing/guidelines"
+            title: "Community Guidelines"
 
       - url: "/blog"
         title: "Blog"

@@ -5,6 +5,7 @@ title: "Open-Sourcing Metalama Compiler, a Roslyn Branch with Source Transformer
 date: 2023-10-20 08:00:01 +01:00
 categories: [Metalama]
 permalink: /blog/open-sourcing-metalama-compiler
+origin: https://blog.postsharp.net/open-sourcing-metalama-compiler
 author: "Gael Fraiteur"
 image: /assets/images/2023/2023-10-20-open-sourcing/llama-and-octopus.png
 mermaid: true

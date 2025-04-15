@@ -5,6 +5,7 @@ title: "Introducing the Metalama Marketplace: A Triple Win"
 date: 2023-10-23 09:00:01 +01:00
 categories: [Metalama]
 permalink: /blog/marketplace
+origin: https://blog.postsharp.net/marketplace
 author: "Gael Fraiteur"
 image: /assets/images/2023/2023-10-20-open-sourcing/marketplace.png
 mermaid: true

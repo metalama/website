@@ -5,6 +5,7 @@ title: "Metalama Status Update (October 2022)"
 date: 2022-10-27 09:00:00 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2022-10
+origin: https://blog.postsharp.net/metalama-status-update-2022-10
 author: "Gael Fraiteur"
 image: /assets/images/2022/2022-02-23-metalama/metalama-2.svg
 summary: "The October 2022 update for Metalama includes fixing 85 bugs, improving performance, and filling minor API gaps. Work has begun to streamline migration from PostSharp to Metalama, and new features have been added. Future plans involve further bug fixes and feature enhancements."

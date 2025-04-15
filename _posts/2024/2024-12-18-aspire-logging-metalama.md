@@ -6,6 +6,7 @@ date: 2024-12-18 08:00:02 +01:00
 categories:
     - The Timeless .NET Engineer
 permalink: /blog/aspire-logging-metalama
+origin: https://blog.postsharp.net/aspire-logging-metalama
 author: "Metalama Team"
 summary: "Discover how to trace method calls in a .NET Aspire distributed cloud-native app with minimal boilerplate in this step-by-step guide."
 keywords:

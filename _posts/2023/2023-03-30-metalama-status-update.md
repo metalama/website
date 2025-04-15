@@ -5,6 +5,7 @@ title: "Metalama Status Update (March 2023)"
 date: 2023-03-30 09:00:00 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2023-03
+origin: https://blog.postsharp.net/metalama-status-update-2023-03
 author: "Gael Fraiteur"
 image: /assets/images/blog/metalama-status-updates/3.jpg
 tag: 

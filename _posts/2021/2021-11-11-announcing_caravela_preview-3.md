@@ -5,6 +5,7 @@ title: "Announcing PostSharp \"Caravela\" Preview 3 (0.4)"
 date: 2021-11-11 11:11:11 +02:00
 categories: [Metalama]
 permalink: /blog/announcing-caravela-preview-3
+origin: https://blog.postsharp.net/announcing-caravela-preview-3
 author: "Gael Fraiteur"
 image: /assets/images/2021/2021-01-25-caravela-announcement/Project Caravela 1.png
 summary: "PostSharp has released a new preview of \"Caravela,\" their Roslyn-based meta-programming framework. This version supports the complete C# 9 language and is not recommended for use in production projects yet."

@@ -5,6 +5,7 @@ title: "Metalama Status Update, March 2024"
 date: 2024-03-28 08:00:01 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2024-03
+origin: https://blog.postsharp.net/metalama-status-update-2024-03
 author: "Gael Fraiteur"
 image: /assets/images/2024/2024-03-28-status/2024-03-dark.svg
 thumbnail: /assets/images/2024/2024-03-28-status/2024-03-light.svg

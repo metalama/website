@@ -5,6 +5,7 @@ title: "Metalama 2025.1 Will Be Open-Source"
 date: 2025-01-27 08:00:00 +01:00
 categories: [Metalama]
 permalink: /blog/metalama-open-source-plans
+origin: https://blog.postsharp.net/metalama-open-source-plans
 author: "Gael Fraiteur"
 image: /assets/images/2025/2025-01-open-source/metalama.svg
 tag: featured

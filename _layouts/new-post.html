@@ -93,6 +93,12 @@
                             {{ page.excerpt }}
                         </div>
 
+                        {% if page.origin %}
+                        <div class="note">
+                            This article was originally published on the <a href="{{page.origin}}">PostSharp Blog</a>.
+                        </div>
+                        {% endif %}
+
                         {{ content | inject_anchors | remove: page.excerpt }}
 
 

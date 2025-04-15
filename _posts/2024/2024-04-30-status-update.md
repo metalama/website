@@ -5,6 +5,7 @@ title: "Metalama Status Update, April 2024"
 date: 2024-04-30 08:00:01 +01:00
 categories: [Status Update]
 permalink: /blog/metalama-status-update-2024-04
+origin: https://blog.postsharp.net/metalama-status-update-2024-04
 author: "Gael Fraiteur"
 image: /assets/images/2024/2024-04-30-status/2024-04-dark.svg
 summary: "In this update, we cover the general availability of Metalama 2024.1 and PostSharp 2024.1, the release of Metalama 2024.2 preview builds, the introduction of the Metalama Email Course, and our roadmap for the coming months."
