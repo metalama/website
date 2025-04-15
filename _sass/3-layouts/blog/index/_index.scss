@@ -12,7 +12,8 @@
   max-width: $desktop_wide_width;
   //    padding:0 $desktop_side_margins;
   .post_data {
-    overflow: hidden;
+   //  overflow: hidden;
+	height: 100%;
   }
   .post_details {
     font-size: rem(9px);

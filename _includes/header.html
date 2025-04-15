@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
+	<link rel="preload" as="image" href="/assets/images/homepage/main-background.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css">
     <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css">
+    
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
     <link href="{{site.baseurl}}/assets/images/icons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" />
     <link href="{{site.baseurl}}/assets/images/icons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
@@ -148,172 +150,161 @@
         
 </head>
 
-<body data-spy="scroll" data-target="#toc">
-    {% if include.noheader != "true" %}
-    <header>
-        <div class="wrapper">
+<body style="background: url('/assets/images/homepage/main-background.svg') no-repeat; background-size: cover;" data-spy="scroll" data-target="#toc">
+	<body>
+	{% if include.noheader != "true" %}
+	<header>
+		<div class="wrapper-large">
+			<a href="/" class="logo" title="Go To Home Page">
+				<img src="/assets/images/metalama-logo.svg" width="200" alt="Metalama Logo" />
+			</a>
+			<nav>
+			<div class="menu__body">
+				<ul class="menu__list level1 left">
+					{% assign page_url = page.url | remove: '.html' | split: '/' | join: '/' %}
+					{% if page_url == "" %}
+					{% assign page_url = "/" %}
+					{% endif %}
+					<!-- page_url ='{{page_url}}'-->
+					{% assign entryId = 0 %}
+					{% for item in site.data.navigation.nodes %}
+					{% unless item.hidden %}
+						{% assign itemId = itemId | plus: 1 %}
+						{% assign isItemActive = false %}
+						{% if page_url == item.url %}
+							{% assign isItemActive = true %}
+						{% else %}
+							{% for entry in item.nodes %}
+							{% if page_url == entry.url %}
+								{% assign isItemActive = true %}
+							{% else %}
+								{% for subentry in entry.nodes %}
+									{% if page_url == subentry.url %}
+									{% assign isItemActive = true %}
+									{% else %}
+									{% for subsubentry in subentry.nodes %}
+									{% if page_url == subsubentry.url %}
+									{% assign isItemActive = true %}
+									{% else %}
+									{% for subsubsubentry in subsubentry.nodes %}
+											{% if page_url == subsubsubentry.url %}
+											{% assign isItemActive = true %}
+											{% endif %}
+									{% endfor %}
+									{% endif %}
+								{% endfor %}
+							{% endif %}
+							{% endfor %}
+						{% endif %}
+						{% endfor %}
+						{% endif %}
 
-            <a href="/" class="logo" title="Go To Home Page">
-                <img src="/assets/images/metalama-logo.svg" width="200" alt="Metalama Logo" />
-            </a>
+						<li class="menu__item {% if item.drop_down_menu %}has-dropdownmenu{% endif %}">
+							<a href="{{ item.url }}"
+								{% unless item.drop_down_menu %}title="{{ item.description }}"{% endunless %}
+								{% if item.drop_down_menu %}data-submenu="dropdown{{ itemId }}"{% endif %}
+								{% if isItemActive %}class="active"{% endif %}>
+							{% if item.premium %}
+								<i class="premium no-tooltip"></i>
+							{% endif %}
+							{{ item.title }}
+							</a>
 
-            <nav>
-                <ul class="level1 left">
+							{% if item.drop_down_menu == "List" %}
+							<div id="dropdown{{ itemId }}" class="dropdownmenu list" style="display:none">
+								<ul class="dropdown-wrapper">
+									{% for entry in item.nodes %}
+									<li>
+										<a href="{{ entry.url }}">
+											<div class="title">
+											{{ entry.title }}
+											{% if entry.premium %}
+												<i class="premium no-tooltip"></i>
+											{% endif %}
+											</div>
+											<div class="description">
+											{{ entry.description }}
+											</div>
+										</a>
+									</li>
+									{% endfor %}
+								</ul>
+							</div>
+							{% elsif item.drop_down_menu == "Columns" %}
+							<div id="dropdown{{ itemId }}" class="dropdownmenu columns" style="display:none">
+								<div class="dropdown-wrapper">
+									{% for column in item.nodes %}
+									{% unless column.hidden %}
+										<div class="column">
+											<div class="column-title">
+											{% if column.url %}
+												<a href="{{ column.url }}">{{ column.title }}</a>
+											{% else %}
+												<span>{{ column.title }}</span>
+											{% endif %}
+											</div>
+											<ul>
+											{% for entry in column.nodes %}
+												{% unless entry.hidden %}
+													<li>
+													<a href="{{ entry.url }}">
+														<div class="title">
+															{{ entry.title }}
+															{% if entry.premium %}
+															<i class="premium no-tooltip"></i>
+															{% endif %}
+														</div>
+														<div class="description">
+															{{ entry.description }}
+														</div>
+													</a>
+													</li>
+												{% endunless %}
+											{% endfor %}
+											</ul>
+										</div>
+									{% endunless %}
+									{% endfor %}
+								</div>
+							</div>
+							{% endif %}
+						</li>
+					{% endunless %}
+					{% endfor %}
+				</ul>
+			</div>
 
-                    {% assign page_url = page.url | remove: '.html' | split: '/' | join: '/' %}
-                    {% if page_url == "" %}
-                    {% assign page_url = "/" %}
-                    {% endif %}
-                    <!-- page_url ='{{page_url}}'-->
-                    {% assign entryId = 0 %}
-                    {% for item in site.data.navigation.nodes %}
-                    {% unless item.hidden %}
+			<ul class="level1 right" role="menu">
+				<li role="menuitem">
+					<a href="https://www.github.com/metalama"
+						data-submenu=""
+						class="btn--github"
+						title="Access the source code on GitHub.">
+					<img src="/assets/images/icons/github.svg" alt="Open Source" />
+					</a>
+				</li>
+				<li role="menuitem">
+					<a href="/get"
+						data-submenu=""
+						title="Add Metalama to your projects and install the IDE tooling."
+						class="btn--download">
+					<img src="/assets/images/icons/download-white.svg" alt="Download" />
+					</a>
+				</li>
+				<li role="menuitem">
+					<a href="/search"
+						data-submenu=""
+						title="Search Metalama."
+						class="btn--download">
+					<img src="/assets/images/icons/search-white.svg" alt="Download" />
+					</a>
+				</li>
+			</ul>
 
-                    {% assign itemId = itemId | plus: 1 %}
-                    {% assign isItemActive = false %}
+			<button type="button" class="menu__icon icon-menu"><span></span></button>
+			</nav>
 
-                    {% if page_url == item.url %}
-                    {% assign isItemActive = true %}
-                    {% else %}
-                    {% for entry in item.nodes %}
-                    {% if page_url == entry.url %}
-                    {% assign isItemActive = true %}
-                    {% else %}
-                    {% for subentry in entry.nodes %}
-                    {% if page_url == subentry.url %}
-                    {% assign isItemActive = true %}
-                    {% else %}
-                    {% for subsubentry in subentry.nodes %}
-                    {% if page_url == subsubentry.url %}
-                    {% assign isItemActive = true %}
-                    {% else %}
-                    {% for subsubsubentry in subsubentry.nodes %}
-                        {% if page_url == subsubsubentry.url %}
-                        {% assign isItemActive = true %}
-                        {% endif %}
-                    {% endfor %}
-                    {% endif %}
-                    {% endfor %}
-        
-                    {% endif %}
-                    {% endfor %}
-                    {% endif %}
-                    {% endfor %}
-                    {% endif %}
-                  
-
-                    <li class="{% if item.drop_down_menu %}has-dropdownmenu{% endif %}">
-                        <a href="{{ item.url }}" 
-                            {% unless item.drop_down_menu %}title="{{ item.description }}"{% endunless %}
-                            {% if item.drop_down_menu %}data-submenu="dropdown{{ itemId }}"{% endif %}
-                            {% if isItemActive %}class="active"{% endif %}
-                        >
-                            {% if item.premium %}
-                            <i class="premium no-tooltip"></i>
-                            {% endif %}
-
-                            {{ item.title }}
-                        </a>
-
-                        {% if item.drop_down_menu == "List"%}
-
-                        <div id="dropdown{{ itemId }}" class="dropdownmenu list" style="display:none">
-                            <ul class="dropdown-wrapper">
-                                {% for entry in item.nodes %}
-                                <li>
-                                    <a href="{{ entry.url }}">
-                                        <div class="title">
-                                            {{ entry.title }}
-
-                                            {% if entry.premium %}
-                                            <i class="premium no-tooltip"></i>
-                                            {% endif %}
-                                        </div>
-                                        <div class="description"> {{ entry.description }}</div>
-                                    </a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-
-                        {% elsif item.drop_down_menu == "Columns" %}
-
-                        <div id="dropdown{{ itemId }}" class="dropdownmenu columns" style="display:none">
-                            <div class="dropdown-wrapper">
-                                {% for column in item.nodes %}
-                                    {%  unless column.hidden %} 
-                                <div class="column">
-                                    <div class="column-title">
-                                        {% if column.url %}
-                                        <a href="{{ column.url }}">{{ column.title }}</a>
-                                        {% else %}
-                                        <span>{{ column.title }}</span>
-                                        {% endif %}
-                                    </div>
-                                    <ul>
-                                        {% for entry in column.nodes %}
-                                            {%  unless entry.hidden %} 
-                                        <li>
-                                            <a href="{{ entry.url }}">
-                                                <div class="title">
-                                                    {{ entry.title }}
-
-                                                    {% if entry.premium %}
-                                                    <i class="premium no-tooltip"></i>
-                                                    {% endif %}
-                                                </div>
-                                                <div class="description"> {{ entry.description }}</div>
-                                            </a>
-                                        </li>
-                                    {% endunless %}
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                                {% endunless %}
-                                {% endfor %}
-                            </div>
-                        </div>
-
-
-                        {% endif %}
-
-                    </li>
-
-                    {% endunless %}
-                    {% endfor %}
-
-
-                </ul>
-
-                <ul class="level1 right" role="menu">
-                    <li role="menuitem">
-                        <a href="https://www.github.com/metalama" data-submenu="" class="btn--github"
-                            title="Access the source code on GitHub.">
-                            <img src="/assets/images/icons/github.svg" alt="Open Source" />
-                        </a>
-                    </li>
-
-                    <li role="menuitem">
-                        <a href="/get" data-submenu="" title="Add Metalama to your projects and install the IDE tooling." class="btn--download">
-                            <img src="/assets/images/icons/download-white.svg" alt="Download" />
-                        </a>
-                    </li>
-
-                    
-                    <li role="menuitem">
-                        <a href="/search" data-submenu="" title="Search Metalama." class="btn--download">
-                            <img src="/assets/images/icons/search-white.svg" alt="Download" />
-                        </a>
-                    </li>
-
-                </ul>
-
-
-
-            </nav>
-
-        </div>
-    </header>
-    <div class="header-spacer" style="display: none;"></div>
-
-    {% endif %}
+		</div>
+	</header>
+	<div class="header-spacer" style="display: none;"></div>
+	{% endif %}
