@@ -34,3 +34,4 @@ artifacts/
 /PostSharp.Documentation.Import.props
 *.g.props
 eng/tools
+.idea/workspace.xml

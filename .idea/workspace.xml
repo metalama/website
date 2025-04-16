@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="78f52341-ca9d-412b-b8ab-4cfb7fa84559" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/2-modules/_c.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/2-modules/_c.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/3-layouts/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/3-layouts/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,7 @@
       <workItem from="1725442510094" duration="740000" />
       <workItem from="1744693443446" duration="1307000" />
       <workItem from="1744725122789" duration="215000" />
-      <workItem from="1744727169011" duration="3559000" />
+      <workItem from="1744727169011" duration="3748000" />
     </task>
     <servers />
   </component>

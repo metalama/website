@@ -58,10 +58,16 @@ gulp.task('jsmin', function () {
 });
 
 gulp.task("rev-all", function () {
+    const excludedFiles = ['.woff', '.woff2', '.ttf', '.eot', '.png', '.jpg', '.jpeg', '.gif', '.ico'];
+    const excludedGlob = excludedFiles.map(ext => `_site/**/*${ext}`); // Create glob patterns for excluded files
+
+    gulp.src(excludedGlob)
+        .pipe(gulp.dest("_cdn"));
+
     return gulp.src(["_site/**", "!_site/assets/fonts/**/*"])
         .pipe(revall.revision({
-            dontGlobal: ['.woff', '.woff2', '.ttf', '.eot'],
-            dontRenameFile: ['.html', '.txt', '.xml', 'staticwebapp.config']
+            dontGlobal: excludedFiles,
+            dontRenameFile: ['.html', '.txt', '.xml', 'staticwebapp.config'],
         }))
         .pipe(gulp.dest("_cdn"));
 });
