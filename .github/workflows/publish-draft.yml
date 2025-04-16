@@ -46,10 +46,6 @@ jobs:
       - name: Run Gulp Tasks
         run: npx gulp 
 
-        # For some reason fonts are corrupted by Gulp. We need to copy them again.
-      - name: Copy assets to _cdn directory
-        run: find assets -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.ico" -o -name "*.eot" -o -name "*.ttf" -o -name "*.woff" -o -name "*.woff2" \) -exec cp --parents {} _cdn \;
-
       - name: Copy robots.txt
         run: cp robots.draft.txt _cdn/robots.txt        
 

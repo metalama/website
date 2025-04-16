@@ -4,8 +4,11 @@ import rename from 'gulp-rename';
 import brotli from 'gulp-brotli';
 import gzip from 'gulp-gzip';
 import htmlmin from 'gulp-htmlmin';
-import revall from 'gulp-rev-all';
+import rev from 'gulp-rev';
+import revRewrite from 'gulp-rev-rewrite';
 import terser from 'gulp-terser';
+import { readFileSync } from 'node:fs';
+import connect from 'gulp-connect';
 
 gulp.task('svg-to-png', function () {
     return gulp
@@ -60,25 +63,45 @@ gulp.task('jsmin', function () {
         .pipe(gulp.dest('_cdn'));
 });
 
-gulp.task("rev-all", function () {
-    const excludedFiles = ['.woff', '.woff2', '.ttf', '.eot', '.png', '.jpg', '.jpeg', '.gif', '.ico'];
-    const excludedGlob = excludedFiles.map(ext => `_site/**/*${ext}`); // Create glob patterns for excluded files
+gulp.task("rev-assets", function () {
+    return gulp
+        .src([ "_site/assets/**/*.{png,jpg,jpeg,gif,svg,css,js,woff,woff2,ttf,eot}" ], { encoding: false })
+        .pipe(rev())
+        .pipe(gulp.dest("_cdn/assets"))
+        .pipe(rev.manifest())
+        .pipe(gulp.dest("_cdn/assets"));
+});
 
-    gulp.src(excludedGlob)
-        .pipe(gulp.dest("_cdn"));
+gulp.task("rev-rewrite", function () {
+    const manifest = readFileSync("_cdn/assets/rev-manifest.json");
 
     return gulp
-        .src(["_site/**", "!_site/assets/fonts/**/*"])
-        .pipe(revall.revision({
-            dontGlobal: excludedFiles,
-            dontRenameFile: ['.html', '.txt', '.xml', 'staticwebapp.config'],
-        }))
+        .src(["_cdn/**/*.{html,css,js}"])
+        .pipe(revRewrite({ manifest }))
         .pipe(gulp.dest("_cdn"));
+});
+
+// Copy files that are not renamed.
+gulp.task('copy-other', function () {
+    return gulp
+        .src('_site/**/*.{html,json}')
+        .pipe(gulp.dest('_cdn'));
 });
 
 gulp.task('default', gulp.series(
     'htmlmin',
-    'rev-all',
+    'rev-assets', 
+    'copy-other',
+    'rev-rewrite',
     'jsmin',
     gulp.parallel('brotli', 'gzip', 'svg-to-png')
 ));
+
+// Task to serve the _cdn directory over HTTP on port 8080
+gulp.task('serve', gulp.series('default', function () {
+    connect.server({
+        root: '_cdn',
+        port: 8080,
+        https: false
+    });
+}));

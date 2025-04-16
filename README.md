@@ -29,7 +29,7 @@ This is the source code of https://metalama.net/.
 On a command prompt, execute:
 
 ```
-run-server.cmd
+run-all.ps1
 ```
 
 ## Writing posts
