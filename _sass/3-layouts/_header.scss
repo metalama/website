@@ -135,9 +135,17 @@ header {
 							color: white;
 							margin-bottom: 10px;
 							font-family: Monosten;
+
+							i.premium::before {
+								 margin-right: 0 !important;
+								 margin-left: 0 !important;
+								}
+
 						}
 					}
 				}
+
+				
 				@media (min-width: 1361px) {
 					& ul {
 						grid-template-columns: repeat(auto-fit, 350px);
