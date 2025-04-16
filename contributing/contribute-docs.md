@@ -96,5 +96,3 @@ Ensure the build is successful.
 ## 8. Prepare a PR
 
 Congratulations! You can now prepare a PR against the `develop/YYYY.N` branch.
-
-

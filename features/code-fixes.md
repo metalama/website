@@ -9,7 +9,7 @@ With Metalama, coding architects and senior developers can create custom code fi
 
 ## Benefits
 
-* **Accelerate development.** Developers can fix issues with a single click, instead of manually figuring out how to resolve a warning or apply a pattern.
+* **Accelerate development.** Developers can fix issues with a single click instead of manually figuring out how to resolve a warning or apply a pattern.
 
 * **Improve API discoverability.** Make it easier for new developers to discover less common members of your API.
 
@@ -51,5 +51,3 @@ foreach ( var property in GetIncludedProperties( builder.Target ) )
 
 * Examples:
     - [ToString: adding code fixes and refactorings](https://doc.metalama.net/examples/tostring/tostring-2)
-
-

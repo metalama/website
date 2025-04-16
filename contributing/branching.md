@@ -65,5 +65,3 @@ gitGraph:
     merge develop/2023.4
     commit
 ```
-
-

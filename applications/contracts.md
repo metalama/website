@@ -5,18 +5,16 @@ keywords: "defensive programming, redundant validation checks, Metalama, automat
 ---
 
 {: .intro }
-**Defensive Programming** emphasizes adding redundant validation checks—such as preconditions, postconditions, and invariants—to ensure software remains robust against unexpected inputs or failures. Defensive programming prevents the propagation of defects from one component to another, making it easier to trace exceptions to their root cause. 
+**Defensive Programming** emphasizes adding redundant validation checks—such as preconditions, postconditions, and invariants—to ensure software remains robust against unexpected inputs or failures. Defensive programming prevents the propagation of defects from one component to another, making it easier to trace exceptions to their root cause.
 
 Manually implementing these practices is often labor-intensive due to the need for repetitive boilerplate code. Metalama streamlines this process by automatically generating validation code, enabling developers to reap its benefits without the associated overhead.
 
-Metalama [Code Contracts](https://doc.metalama.net/patterns/contracts), implemented in the `Metalama.Patterns.Contracts` package, are a simple mechanism to validate
-the value assigned to properties, fields, or parameters. 
+Metalama [Code Contracts](https://doc.metalama.net/patterns/contracts), implemented in the `Metalama.Patterns.Contracts` package, are a simple mechanism to validate the value assigned to properties, fields, or parameters.
 
-When applied to Model or ViewModel properties, code contracts can be used to implement _user input validation_. Unlike [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations) namespace, Metalama's code contracts can be applied to _any_ class and not just ASP.NET ones.
+When applied to Model or ViewModel properties, code contracts can be used to implement _user input validation_. Unlike the [System.ComponentModel.DataAnnotations](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations) namespace, Metalama's code contracts can be applied to _any_ class and not just ASP.NET ones.
 
 {: .note }
-`Metalama.Patterns.Contracts` is a production-ready, professionally-supported and open-source aspect library. <i class="supported no-tooltip"></i>
-
+`Metalama.Patterns.Contracts` is a production-ready, professionally-supported, and open-source aspect library. <i class="supported no-tooltip"></i>
 
 ## Example
 
@@ -82,5 +80,3 @@ internal class Fabric : ProjectFabric
 * Reference documentation: [Code Contracts](https://doc.metalama.net/patterns/contracts).
 * Source code: [Metalama.Patterns.Contracts](https://github.com/metalama/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Contracts).
 * NuGet package: [Metalama.Patterns.Contracts](https://www.nuget.org/packages/Metalama.Patterns.Wpf).
-
-

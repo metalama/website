@@ -4,17 +4,13 @@ summary: "The Builder pattern constructs complex objects step by step but requir
 keywords: "Builder pattern, creational design pattern, immutable object, abstraction"
 ---
 
-The Builder pattern is a creational design pattern that allows you to construct complex objects step by step. It is
-especially useful when you need to create an immutable object with many optional parameters or properties. A variant of
-this pattern, the Abstract Builder, allows adding abstraction to the construction process.
+The Builder pattern is a creational design pattern that allows you to construct complex objects step by step. It is especially useful when you need to create an immutable object with many optional parameters or properties. A variant of this pattern, the Abstract Builder, adds abstraction to the construction process.
 
-The inconvenience of the Builder pattern is the sheer amount of repetitive code required to implement it. This can be
-all but eliminated thanks to a Metalama aspect.
+The main inconvenience of the Builder pattern is the large amount of repetitive code required to implement it. This can be virtually eliminated with a Metalama aspect.
 
 ## Example
 
-In the following example, we will use the `Song` class for the Builder pattern. The `Song` class has two required
-properties (`Artist` and `Title`) and two optional properties (`Duration` and `Genre`).
+In the following example, we will use the `Song` class for the Builder pattern. The `Song` class has two required properties (`Artist` and `Title`) and two optional properties (`Duration` and `Genre`).
 
 ```cs
 [GenerateBuilder]
@@ -38,8 +34,7 @@ var song = songBuilder.Build();
 {: .show-more }
 Show me how it works!
 
-The [GenerateBuilder](https://doc.metalama.net/examples/builder) aspect generates a `Builder` class nested
-inside the `Song` class and a `ToBuilder` method to create a new `Builder` object.
+The [GenerateBuilder](https://doc.metalama.net/examples/builder) aspect generates a `Builder` class nested inside the `Song` class and a `ToBuilder` method to create a new `Builder` object.
 
 ```cs
 public partial class Song
@@ -82,14 +77,9 @@ That's a lot of boilerplate you want to avoid!
 ## Metalama benefits
 
 * **Improve productivity**: Any generated code is code you don't have to write and maintain.
-* **Reduce human errors**: Whenever you have to add new optional (or required) properties to the `Song` class, the
-  aspect will take care of it. It's the best way to avoid having to remember to update the Builder class (manually
-  adding new fields, properties, and the necessary mappings to move the value of that new Builder property to the Song
-  class).
+* **Reduce human errors**: Whenever you have to add new optional (or required) properties to the `Song` class, the aspect will take care of it. It's the best way to avoid having to remember to update the Builder class manually by adding new fields, properties, and the necessary mappings to move the value of that new Builder property to the `Song` class.
 
 ## Resources
 
 * Blog post: [Implementing the Builder pattern with Metalama](https://metalama.net/blog/builder-pattern-with-metalama)
 * Example: [Implementing the Builder pattern without boilerplate](https://doc.metalama.net/examples/builder)
-
-

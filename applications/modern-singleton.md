@@ -4,21 +4,15 @@ summary: "The modern Singleton pattern uses Dependency Injection to manage insta
 keywords: "Singleton pattern, Dependency Injection, testability, Metalama, architectural constraints, IServiceCollection.AddSingleton, modern Singleton"
 ---
 
-The Classic Singleton pattern didn't age well. Indeed, it's considered an anti-pattern because it's hard to test and
-incompatible with the whole Dependency Injection paradigm.
+The classic Singleton pattern has not aged well. It's considered an anti-pattern because it is difficult to test and incompatible with the Dependency Injection paradigm.
 
-A modern approach to the Singleton pattern is to use a Dependency Injection container to manage the lifecycle of the
-singleton instance (e.g. `IServiceCollection.AddSingleton`).
+A modern approach to the Singleton pattern is to use a Dependency Injection container to manage the lifecycle of the singleton instance (e.g., `IServiceCollection.AddSingleton`).
 
-The main problem with the modern Singleton is that it's hard to enforce that the constructor is used only in the right
-context, typically from the `Startup` code and from unit tests. Metalama can help
-you [enforce architectural constraints](https://doc.metalama.net/conceptual/architecture) and report
-violations right in the code editor as warnings.
+The main problem with the modern Singleton is that it is challenging to ensure the constructor is used only in the appropriate context, typically from the `Startup` code and unit tests. Metalama can help you [enforce architectural constraints](https://doc.metalama.net/conceptual/architecture) and report violations directly in the code editor as warnings.
 
 ## Example
 
-The following `PerformanceCounterManager` class is a modern Singleton example. It has a public constructor, but it's
-registered as a Singleton in the DI container.
+The following `PerformanceCounterManager` class is a modern Singleton example. It has a public constructor but is registered as a Singleton in the DI container.
 
 ```cs
 [Singleton]
@@ -37,8 +31,7 @@ public class PerformanceCounterManager : IPerformanceCounterManager
 }
 ```
 
-The `[Singleton]` aspect reports warnings when any class other than `Startup` or a unit test attempts to call the
-constructor.
+The `[Singleton]` aspect reports warnings when any class other than `Startup` or a unit test attempts to call the constructor.
 
 ```cs
 class MetricsCollection( IPerformanceCounterUploader uploader )
@@ -69,11 +62,9 @@ public class SingletonAttribute : TypeAspect
 
 ## Metalama benefits
 
-* **Reduce human errors**. You can be confident that no improper code is calling the constructor directly instead of
-  getting an instance from the DI container.
+* **Reduce human errors**. You can be confident that no improper code is calling the constructor directly instead of getting an instance from the DI container.
 
 ## Resources
 
 * Blog post: [The Singleton Pattern in C# Today Is Not Your Dad's One!](https://metalama.net/blog/singleton)
 * Example: [Validating the modern Singleton](https://doc.metalama.net/examples/singleton/singleton-2)
-

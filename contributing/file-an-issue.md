@@ -40,7 +40,7 @@ To increase your chances of resolving your issue quickly, please consider includ
     - Screenshots.
 
 {: .warning }
-Binary build logs (`msbuild.binlog`), other log files, and crash reports contain data that might identify you or your company, and may leak fragments of source code.
+Binary build logs (`msbuild.binlog`), other log files, and crash reports contain data that might identify you or your company and may leak fragments of source code.
 
 ## Existing issues
 
@@ -49,5 +49,3 @@ If the issue you're encountering is already being tracked, you can still help by
 - Let us know how you're affected. If you can add more details, please leave a comment. Otherwise, adding a reaction to the original issue is a quick way to communicate that this is a recurring issue.
 - Provide a workaround. This can help unblock others until a fix is identified.
 - Send a pull request. If you think you can help with a fix, we'd be happy to see a PR! See also [Contributing code](contribute-code).
-
-

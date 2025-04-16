@@ -5,7 +5,7 @@ keywords: "debugging transformed code, LamaDebug configuration, breakpoint setti
 ---
 
 {: .intro }
-Metalama lets you decide whether to step into the _source_ code or the _transformed_ code. Simply switch to the `LamaDebug` build configuration.
+Metalama allows you to choose whether to step into the _source_ code or the _transformed_ code. Simply switch to the `LamaDebug` build configuration.
 
 When you build with the `LamaDebug` configuration, the transformed code is stored under the `obj/LamaDebug/metalama` directory. This makes it easy to inspect the generated code and set breakpoints directly in it.
 
@@ -15,5 +15,3 @@ When you build with the `LamaDebug` configuration, the transformed code is store
 * Works with all IDEs.
 * Produces readable, well-formatted code.
 * Allows you to set breakpoints in the generated code.
-
-

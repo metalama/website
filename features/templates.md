@@ -13,7 +13,7 @@ With T#, you can seamlessly blend generated code with hand-written code.
 
 Benefits of T# include:
 
-- **Full Intellisense support.** Enjoy syntax highlighting, code completion, member list, and error detection.
+- **Full Intellisense support.** Enjoy syntax highlighting, code completion, member lists, and error detection.
 - **100% C# compatible.** Use any C# editor of your choice.
 - **High performance.** Generate high-performance code without any runtime overhead.
 - **No need to learn MSIL.** It's just the C# you already know.
@@ -130,5 +130,3 @@ Most of the `Metalama.Framework` namespace is compile-time. You can extend T# wi
 - Complete API to reflect on the code being compiled.
 - APIs to dynamically build interpolated strings, `switch` statements.
 - Serialization from compile-time objects to run-time expressions.
-
-

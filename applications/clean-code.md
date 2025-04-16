@@ -2,7 +2,7 @@
 title: "Clean Code"
 keywords:
 - clean code
-summary: "This page lists several criteria of clean code and shows how Metalama can help improving many of them."
+summary: "This page lists several criteria of clean code and shows how Metalama can help improve many of them."
 ---
 
 {: .intro }
@@ -16,13 +16,11 @@ It's crucial to understand that clean code matters most _at scale_, when the app
 
 There are several categories of tools:
 
-- **General code analysis tools** detect violations of general principles, industry standards, and best practices, but
-  they cannot easily be customized to your specific situation.
+- **General code analysis tools** detect violations of general principles, industry standards, and best practices, but they cannot easily be customized to your specific situation.
 
 - **Architecture verification tools**, such as Metalama Architecture Verification, allow you to create your own rules.
 
-- **Code generation tools**, including aspect-oriented frameworks, allow you to generate redundant code on the fly
-  during compilation, keeping your source code clean and concise.
+- **Code generation tools**, including aspect-oriented frameworks, allow you to generate redundant code on the fly during compilation, keeping your source code clean and concise.
 
 Your clean code pipeline will need _all_ of these tools.
 
@@ -53,7 +51,7 @@ According to Martin, clean code possesses several characteristics. Let's see how
       <td>
         <ul>
           <li>
-          <p>Code is often cluttered by operational requirements like error handling, data binding, and caching. With Metalama, you can <a href="https://doc.metalama.net/conceptual/aspects">encapsulate these requirements as aspects</a> and apply them to your code using custom attributes or <a href="https://doc.metalama.net/conceptual/using/adding-aspects-with-fabrics">fabrics</a>.  This helps you remove this clutter from the source code, making its essence more apparent.</p>
+          <p>Code is often cluttered by operational requirements like error handling, data binding, and caching. With Metalama, you can <a href="https://doc.metalama.net/conceptual/aspects">encapsulate these requirements as aspects</a> and apply them to your code using custom attributes or <a href="https://doc.metalama.net/conceptual/using/adding-aspects-with-fabrics">fabrics</a>. This helps you remove this clutter from the source code, making its essence more apparent.</p>
           </li>
           <li>
             <p>Using <a href="https://doc.metalama.net/conceptual/architecture">Metalama Architecture Verification</a>, you can enforce naming conventions, for instance, naming classes and members according to their role in the design pattern.</p>
@@ -224,3 +222,4 @@ According to Martin, clean code possesses several characteristics. Let's see how
         </tr>
         </tbody>
 </table>
+

@@ -14,7 +14,7 @@ When enhancing a class or method, it's crucial to validate that the target code 
 - **Improved developer experience.** Provide real-time feedback in the IDE, helping developers identify and fix issues as they write code.
 - **Enforce coding standards.** Ensure that code adheres to specific rules and guidelines, improving consistency across the codebase.
 - **Reduce debugging time.** Catch issues early during development rather than at runtime, saving time and effort.
-- **Architecture validation.** <i class="premium"></i> Ensure that code adheres to [architectural rules](/applications/architecture-verification) and constraints, preventing violations that could lead to long-term maintenance issues. 
+- **Architecture validation.** <i class="premium"></i> Ensure that code adheres to [architectural rules](/applications/architecture-verification) and constraints, preventing violations that could lead to long-term maintenance issues.
 
 ## Features
 
@@ -77,5 +77,3 @@ internal class LogAttribute : OverrideMethodAspect
 * Reference documentation:
     - [Reporting and suppressing diagnostics](https://doc.metalama.net/conceptual/aspects/diagnostics)
     - [Defining the aspect eligibility](https://doc.metalama.net/conceptual/aspects/eligibility)
-
-

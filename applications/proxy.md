@@ -4,26 +4,19 @@ summary: "The Proxy pattern in C# provides substitutes for objects to add behavi
 keywords: "Proxy pattern, boilerplate code, dynamic proxies, static proxies, Metalama, C#, interceptors, Roslyn source generators, compile time"
 ---
 
-The Proxy pattern is a structural design pattern that lets you provide a substitute or placeholder for another object,
-typically to add new behavior. In C#, the proxied object is generally represented by an interface, although it's also
-possible to implement the pattern with virtual methods.
+The Proxy pattern is a structural design pattern that lets you provide a substitute or placeholder for another object, typically to add new behavior. In C#, the proxied object is generally represented by an interface, although it's also possible to implement the pattern with virtual methods.
 
-Implementing the Proxy pattern involves duplicating all interface members, which requires a lot of boilerplate code. The
-proxy's added behavior can either be implemented separately in each of these members or can be abstracted. In this case,
-the abstraction is called an _interceptor_.
+Implementing the Proxy pattern involves duplicating all interface members, which requires a lot of boilerplate code. The proxy's added behavior can either be implemented separately in each of these members or can be abstracted. In this case, the abstraction is called an _interceptor_.
 
 There are three ways to generate proxy classes:
 
-* By hand, which is affordable only with a low number of interfaces and members.
-* Dynamically at runtime using libraries
-  like [Castle DynamicProxy](https://github.com/castleproject/Core/blob/master/docs/dynamicproxy.md), which increases
-  startup time and is not compatible with ahead-of-time compilation.
+* By hand, which is feasible only with a small number of interfaces and members.
+* Dynamically at runtime using libraries like [Castle DynamicProxy](https://github.com/castleproject/Core/blob/master/docs/dynamicproxy.md), which increases startup time and is not compatible with ahead-of-time compilation.
 * Statically at build time using Roslyn source generators or Metalama.
 
 ## Example
 
-Let's see how a proxy aspect could work in practice. This example is a slightly simplified version
-of [this sample aspect](https://github.com/metalama/Metalama.Samples/tree/release/2025.0/examples/Metalama.Samples.Proxy).
+Let's see how a proxy aspect could work in practice. This example is a slightly simplified version of [this sample aspect](https://github.com/metalama/Metalama.Samples/tree/release/2025.0/examples/Metalama.Samples.Proxy).
 
 Suppose we have an implementation class `OrderService` that we cannot modify, but we want to add logging to it.
 
@@ -133,14 +126,10 @@ public interface LoggingInterceptor : IInterceptor
 
 ## Metalama benefits
 
-* **Fast application startup.** Static proxies are generated at compile time instead of at runtime, so your application
-  starts faster.
+* **Fast application startup.** Static proxies are generated at compile time instead of at runtime, so your application starts faster.
 * **Compatible with AoT compilation.** No reflection is necessary at runtime.
 * **No boilerplate code.** Unlike with the handwritten approach, you just have to write a single line of code.
 
 ## Resources
 
-* Source
-  code: [Metalama.Samples.Proxy](https://github.com/metalama/Metalama.Samples/tree/release/2025.0/examples/Metalama.Samples.Proxy)
-
-
+* Source code: [Metalama.Samples.Proxy](https://github.com/metalama/Metalama.Samples/tree/release/2025.0/examples/Metalama.Samples.Proxy)

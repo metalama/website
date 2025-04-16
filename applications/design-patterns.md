@@ -1,6 +1,6 @@
 ---
 title: "Design Patterns"
-summary: "This article details how Metalama can help implementing design patterns in C# including the Memento, Singleton, Factory, Builder, Decorator, and Proxy patterns."
+summary: "This article details how Metalama can help implement design patterns in C#, including the Memento, Singleton, Factory, Builder, Decorator, and Proxy patterns."
 keywords:
 - c# design patterns
 - c# memento pattern
@@ -12,16 +12,11 @@ keywords:
 ---
 
 {: .intro }
-Design patterns are repetitive _by design_. The more your pattern implementations are regular and predictable, the more
-you can reduce the cognitive complexity of your codebase. If it's repetitive, it can be automated! Metalama can help
-implement design patterns in two ways:
+Design patterns are repetitive by design. The more your pattern implementations are regular and predictable, the more you can reduce the cognitive complexity of your codebase. If it's repetitive, it can be automated! Metalama can help implement design patterns in two ways:
 
-* **Code generation.** Sometimes patterns require so much repetitive code, with almost no creativity required, that it's
-  possible to algorithmically generate the required code. Good examples of this are the Memento or Builder patterns.
+* **Code generation.** Sometimes patterns require so much repetitive code, with almost no creativity required, that it's possible to algorithmically generate the required code. Good examples of this are the Memento or Builder patterns.
 
-* **Code verification.** For some other patterns, there are fewer opportunities to generate code. However, we still want
-  to verify that handwritten code complies with the design pattern rules. And we can also use Metalama for this. See,
-  for instance, the modern Singleton and Abstract Factory patterns.
+* **Code verification.** For some other patterns, there are fewer opportunities to generate code. However, we still want to verify that handwritten code complies with the design pattern rules. And we can also use Metalama for this. See, for instance, the modern Singleton and Abstract Factory patterns.
 
 ## Benefits
 

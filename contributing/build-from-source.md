@@ -180,5 +180,3 @@ Follow these steps:
 The build artifacts are then placed into the `artifacts/publish/private` directory. The logs are available under `artifacts/logs`.
 
 For details, see also the GitHub workflow `.github/workflows/build-on-docker.yml`, which follows these steps in a repeatable way.
-
-

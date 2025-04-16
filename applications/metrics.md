@@ -1,6 +1,6 @@
 ---
 title: "Metrics"
-summary: "This article details how Metalama can help instrument C# applications to make them more observable in production by adding logging, tracing, exception handling, and metrics"
+summary: "This article details how Metalama can help instrument C# applications to make them more observable in production by adding logging, tracing, exception handling, and metrics."
 keywords:
 - .net instrumentation
 - .net core instrumentation
@@ -9,9 +9,7 @@ keywords:
 ---
 
 {: .intro }
-.NET applications can be instrumented using the `System.Diagnostics.Metrics` APIs to track important metrics. Some
-metrics are included in standard .NET libraries, but you may want to add new custom metrics that are relevant for your
-applications and libraries.
+.NET applications can be instrumented using the `System.Diagnostics.Metrics` APIs to track important metrics. Some metrics are included in standard .NET libraries, but you may want to add new custom metrics that are relevant to your applications and libraries.
 
 You can use a Metalama aspect to add metrics that are relevant to the execution of a method, for instance:
 
@@ -47,8 +45,7 @@ public class HatShop
 }
 ```
 
-Alternatively, if you want to add metrics to several methods (for instance, all public methods) but don't want to add a
-custom attribute to each of them, you can also add the metrics using a fabric:
+Alternatively, if you want to add metrics to several methods (for instance, all public methods) but don't want to add a custom attribute to each of them, you can also add the metrics using a fabric:
 
 ```csharp
 internal class Fabric : ProjectFabric
@@ -63,8 +60,7 @@ internal class Fabric : ProjectFabric
 }
 ```
 
-The metric aspects will generate new classes that define the metrics. For instance, for `HatShop`, it will generate
-`HatShopMetrics`. It will also generate an `IServiceCollection` extension method to add these metrics to your apps:
+The metric aspects will generate new classes that define the metrics. For instance, for `HatShop`, it will generate `HatShopMetrics`. It will also generate an `IServiceCollection` extension method to add these metrics to your apps:
 
 ```csharp
 services.AddMetrics();
@@ -95,7 +91,7 @@ public class HatShopMetrics
         this.PlaceOrderExecutionTime = meter.CreateCounter<long>("PlaceOrder.ExecutionTime");
     }
 }
- ```
+```
 
 It then modifies the `HatShop` class in two ways:
 

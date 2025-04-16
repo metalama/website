@@ -34,5 +34,3 @@ Metalama includes two testing libraries:
 ## Resources
 
 - **Reference documentation.** [Testing the aspect's code generation and error reporting](https://doc.metalama.net/conceptual/aspects/testing/aspect-testing).
-
-

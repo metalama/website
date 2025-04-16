@@ -1,11 +1,11 @@
 ---
 title: Code Query API
-summary: "Metalama's Code Query API allows querying code like a database, enabling diagnostics, interactive investigations, and architecture validation in .NET applications."
+summary: "Metalama's Code Query API enables querying code like a database, facilitating diagnostics, interactive investigations, and architecture validation in .NET applications."
 keywords: "code query API, .NET applications, code diagnostics, interactive investigations, architecture validation, Metalama, LINQPad, codebase investigation, CI/CD pipeline, dependency graph"
 ---
 
 {: .intro }
-Query your code like it's a database using the `Metalama.Framework.Workspaces` package. Whether you're running interactive queries in LINQPad or hosting them in any .NET application, it's all possible.
+Query your code as if it's a database using the `Metalama.Framework.Workspaces` package. Whether you're running interactive queries in LINQPad or hosting them in any .NET application, it's all possible.
 
 Although Metalama is primarily designed to run within the compiler or IDE process, you can also leverage its powerful and intuitive code API from any .NET application.
 
@@ -25,7 +25,5 @@ Although Metalama is primarily designed to run within the compiler or IDE proces
 ## Resources
 
 * Reference documentation:
-    - [Querying code with or without LINQPad](https://doc.metalama.net/conceptual/introspection/linqpad)
-    - [Introspection API](https://doc.metalama.net/api/introspection-api)
-
-
+  - [Querying code with or without LINQPad](https://doc.metalama.net/conceptual/introspection/linqpad)
+  - [Introspection API](https://doc.metalama.net/api/introspection-api)

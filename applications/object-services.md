@@ -9,7 +9,7 @@ keywords:
 {: .intro }
 You can use Metalama to generate common object-oriented services like deep cloning or ToString.
 
-## Deep Cloning
+## Deep cloning
 
 https://doc.metalama.net/examples/clone
 

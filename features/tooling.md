@@ -8,7 +8,7 @@ keywords: "Metalama, productivity, insights, CodeLens, Aspect Diff, Aspect Explo
 Boost your productivity and gain insights into how Metalama aspects impact your code with CodeLens integration, Aspect Diff, and Aspect Explorer. Enhance your aspect writing with T#, our C#-to-C# template language, offering syntax highlighting.
 
 {: .note }
-Visual Studio Tools for Metalama requires either a free Metalama Community license or a Metalama Professional license.
+Visual Studio Tools for Metalama require either a free Metalama Community license or a Metalama Professional license.
 
 ## Features
 
@@ -16,7 +16,7 @@ Visual Studio Tools for Metalama requires either a free Metalama Community licen
     <li>
         <img src="/assets/images/homepage/codelens.svg" alt="CodeLens Integration" />
         <p>
-            <b>CodeLens</b>: Effortlessly identify applied aspects within the editor, even when it's not evident from the source code.
+            <b>CodeLens</b>: Effortlessly identify applied aspects within the editor, even when they are not evident from the source code.
         </p>
     </li>
     <li>
@@ -45,5 +45,3 @@ Visual Studio Tools for Metalama requires either a free Metalama Community licen
 * Download from [Visual Studio Gallery](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp)
 
 {% include lightbox.html %}
-
-

@@ -4,26 +4,19 @@ summary: "Metalama's `Observable` aspect automates `INotifyPropertyChanged` impl
 keywords: "INotifyPropertyChanged, Observable aspect, Metalama, automate implementation, reduce errors, UI applications, data binding, productivity, clean code"
 ---
 
-Most modern UI applications rely on binding data classes to UI classes. The `INotifyPropertyChanged` interface is the
-standard way to achieve this. However, implementing this interface manually can be cumbersome and error-prone,
-particularly when dealing with a large number of properties.
+Most modern UI applications rely on binding data classes to UI classes. The `INotifyPropertyChanged` interface is the standard way to achieve this. However, implementing this interface manually can be cumbersome and error-prone, particularly when dealing with a large number of properties.
 
-Thanks to Metalama's [Observable](https://doc.metalama.net/patterns/observability) aspect of the
-`Metalama.Patterns.Observability` open-source package, you can implement the `INotifyPropertyChanged` interface
-automatically. The plumbing code is generated on-the-fly when you compile, so your source code remains clean and
-concise.
+Thanks to Metalama's [Observable](https://doc.metalama.net/patterns/observability) aspect from the `Metalama.Patterns.Observability` open-source package, you can implement the `INotifyPropertyChanged` interface automatically. The plumbing code is generated on-the-fly when you compile, so your source code remains clean and concise.
 
 {: .note }
-`Metalama.Patterns.Observability` is a production-ready, professionally-supported and open-source aspect library. <i class="supported no-tooltip"></i>
+`Metalama.Patterns.Observability` is a production-ready, professionally supported, and open-source aspect library. <i class="supported no-tooltip"></i>
 
 {: .note }
 Available for all UI frameworks
 
-
 ## Example
 
-In the following code, the `[Observable]` aspect is applied to two classes: `Customer` (the Model class) and
-`CustomerViewModel`.
+In the following code, the `[Observable]` aspect is applied to two classes: `Customer` (the model class) and `CustomerViewModel`.
 
 ```csharp
 // THAT'S ALL. These classes implement INotifyPropertyChanged
@@ -50,8 +43,7 @@ public partial class CustomerViewModel
 
 ## Benefits
 
-* **Boost your productivity**. Eliminate 95% of the `INotifyPropertyChanged` repetitive code, as most cases are handled
-  automatically.
+* **Boost your productivity**. Eliminate 95% of the `INotifyPropertyChanged` repetitive code, as most cases are handled automatically.
 * **Avoid errors**. Never forget to call `OnPropertyChanged` again.
 * **Keep your code clean and concise**. Your business logic is no longer hidden behind the observability plumbing.
 
@@ -65,10 +57,7 @@ public partial class CustomerViewModel
 
 ## Resources
 
-* Blog
-  post: [Implementing INotifyPropertyChanged with Metalama](https://metalama.net/blog/inotifypropertychanged-metalama).
+* Blog post: [Implementing INotifyPropertyChanged with Metalama](https://metalama.net/blog/inotifypropertychanged-metalama).
 * Reference documentation: [Metalama.Patterns.Observability](https://doc.metalama.net/patterns/observability).
-* Source
-  code: [Metalama.Patterns.Observability](https://github.com/metalama/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Observability).
+* Source code: [Metalama.Patterns.Observability](https://github.com/metalama/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Observability).
 * NuGet package: [Metalama.Patterns.Observability](https://www.nuget.org/packages/Metalama.Patterns.Observability).
-

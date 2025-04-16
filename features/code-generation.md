@@ -9,7 +9,7 @@ keywords:
 ---
 
 {: .intro }
-Why write repetitive code by hand when you can generate it automatically? Metalama is hands-down the most powerful code generator for .NET with its unique C#-to-C# template technology.
+Why write repetitive code by hand when you can generate it automatically? Metalama is hands down the most powerful code generator for .NET with its unique C#-to-C# template technology.
 
 ## Benefits
 

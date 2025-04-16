@@ -9,7 +9,7 @@ No need to reinvent the wheel. Metalama comes with a set of professionally built
 
 ## Features
 
-* **Open source.** Released under the same MIT license as Metalama Framework.
+* **Open source.** Released under the same MIT license as the Metalama Framework.
 * **Professionally built.** Crafted by the Metalama core team.
 * **Continuously tested.** Integrated into Metalama's CI/CD process.
 * **Customizable.** Designed for extensibility and adaptability.
@@ -69,5 +69,4 @@ Transform C# automatic properties into WPF dependency properties and methods int
 
 * Source code on [GitHub](https://github.com/metalama/Metalama/tree/HEAD/Metalama.Patterns)
 * [Metalama Marketplace](/marketplace) indexes all aspect libraries and extensions
-
 

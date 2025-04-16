@@ -7,7 +7,7 @@ keywords: "Metalama, immediate error notifications, real-time access, code chang
 {: .intro }
 Metalama operates both within the compiler process and the IDE. Your aspects are triggered whenever a relevant change is detected in the code.
 
-This means you don't have to build your project to see warnings and errors, or to reference generated artifacts in your source code.
+This means you don't have to build your project to see warnings and errors or to reference generated artifacts in your source code.
 
 ## Benefits
 
@@ -27,5 +27,3 @@ This means you don't have to build your project to see warnings and errors, or t
 </ul>
 
 {% include lightbox.html %}
-
-

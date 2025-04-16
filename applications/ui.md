@@ -12,11 +12,7 @@ keywords:
 ---
 
 {: .intro }
-Metalama can save you a significant amount of redundant code and reduce errors when implementing UI apps, whether they
-run on desktop, mobile, or browser through WASM. UI apps are often complex, requiring a lot of boilerplate code to make
-them reactive to user input. Metalama aids in implementing observability (allowing the UI framework to react to data
-changes), input validation, memoization, and framework-specific constructs such as dependency properties or commands in
-WPF.
+Metalama can save you a significant amount of redundant code and reduce errors when implementing UI apps, whether they run on desktop, mobile, or browser through WASM. UI apps are often complex, requiring a lot of boilerplate code to make them reactive to user input. Metalama aids in implementing observability (allowing the UI framework to react to data changes), input validation, memoization, and framework-specific constructs such as dependency properties or commands in WPF.
 
 | Pattern | How Metalama can help |
 |---------|-----------------------|

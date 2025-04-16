@@ -1,5 +1,5 @@
 ---
-summary: "Metalama is a tool for architecture verification, ensuring that your C# codebase complies to the intended software architecture."
+summary: "Metalama is a tool for architecture verification, ensuring that your C# codebase complies with the intended software architecture."
 title: "Architecture Verification for .NET"
 short_title: "Architecture Verification"
 keywords:
@@ -8,18 +8,17 @@ keywords:
 ---
 
 {: .intro }
-Architecture is often defined in non-executable forms, such as text and diagrams. Since it cannot be automatically enforced, it is verified during _code reviews_, which can be slow and frustrating for both sides. As a result, the _real_ architecture of the code departs from the _intended_ one, a phenomenon known as _architecture erosion_.
+Architecture is often defined in non-executable forms such as text and diagrams. Since it cannot be automatically enforced, it is verified during _code reviews_, which can be slow and frustrating for both sides. As a result, the _real_ architecture of the code departs from the _intended_ one, a phenomenon known as _architecture erosion_.
 
 {: .intro }
-Metalama lets you validate code **usages**, **references**, and **dependencies**, enabling you to enforce architectural rules directly in code — a concept we call **Architecture as Code**. 
+Metalama lets you validate code **usages**, **references**, and **dependencies**, enabling you to enforce architectural rules directly in code — a concept we call **Architecture as Code**.
 
 {: .note }
 This feature requires a Metalama Professional license.
 
+Metalama is the only C# tool that lets you define rules tailored to your architecture and business domain and enforce them in the IDE with real-time feedback.
 
-Metalama the only C# tool that lets you define rules tailored to your architecture and business domain, and enforce them in the IDE with real-time feedback.
-
-Expressing architecture in an _executable_ way allows you to validate the codebase in real time. Most issues can be identified and resolved immediately, making code reviews smoother and less focused on mundane issues.
+Expressing architecture in an _executable_ way allows you to validate the codebase in real-time. Most issues can be identified and resolved immediately, making code reviews smoother and less focused on mundane issues.
 
 Typically, the following rules can be automatically enforced in a codebase:
 

@@ -19,5 +19,3 @@ Metalama Divorce is not designed for regular execution. Like any divorce, breaki
 ## Resources
 
 * Reference documentation: [Divorcing from Metalama](https://doc.metalama.net/conceptual/divorcing)
-
-

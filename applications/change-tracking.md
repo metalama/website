@@ -4,10 +4,7 @@ summary: "The document explains implementing change tracking in .NET UIs using `
 keywords: "change tracking, IChangeTracking, IRevertibleChangeTracking, Dirty Flag, Metalama, code generation, property instrumentation"
 ---
 
-When programming UIs, especially "transactional" UIs with _Ok_ buttons, it's necessary to detect whether a data object
-has been modified. This feature is often called the _Dirty Flag_. It allows, for instance, enabling or disabling the
-_Save_ button. In .NET, this behavior is abstracted by the `IChangeTracking` interface. Another interface,
-`IRevertibleChangeTracking`, supports the _Reset_ feature.
+When programming UIs, especially "transactional" UIs with _Ok_ buttons, it's necessary to detect whether a data object has been modified. This feature is often called the _Dirty Flag_. It allows, for instance, enabling or disabling the _Save_ button. In .NET, this behavior is abstracted by the `IChangeTracking` interface. Another interface, `IRevertibleChangeTracking`, supports the _Reset_ feature.
 
 Here is the definition of these system interfaces:
 
@@ -24,19 +21,15 @@ public interface IRevertibleChangeTracking : IChangeTracking
 }
 ```
 
-Implementing these interfaces manually requires a lot of work because it is necessary to instrument every property
-setter or any method modifying fields.
+Implementing these interfaces manually requires a lot of work because it is necessary to instrument every property setter or any method modifying fields.
 
 Generating code in properties and fields is exactly where Metalama excels.
 
-You can create an aspect that adds the `IChangeTracking` or `IRevertibleChangeTracking` interface to the target type and
-instruments all fields and properties to set the `IsChanged` property.
+You can create an aspect that adds the `IChangeTracking` or `IRevertibleChangeTracking` interface to the target type and instruments all fields and properties to set the `IsChanged` property.
 
 ## Example
 
-Implementing `IChangeTracking` or even `IRevertibleChangeTracking` in the following classes can be as easy as adding a
-`[TrackChanges]` custom attribute. We made a slight modification to the .NET pattern: we require an `IsTrackingChanges`
-property to be enabled for change tracking to work.
+Implementing `IChangeTracking` or even `IRevertibleChangeTracking` in the following classes can be as easy as adding a `[TrackChanges]` custom attribute. We made a slight modification to the .NET pattern: we require an `IsTrackingChanges` property to be enabled for change tracking to work.
 
 ```csharp
 [TrackChanges]
@@ -86,8 +79,7 @@ IsChanged=False
 {: .show-more }
 Show me how it works!
 
-The [TrackChanges](https://doc.metalama.net/examples/change-tracking/change-tracking-1) aspect transforms the
-`Comment` class into this:
+The [TrackChanges](https://doc.metalama.net/examples/change-tracking/change-tracking-1) aspect transforms the `Comment` class into this:
 
 ```csharp
 public partial class Comment : ISwitchableChangeTracking, IChangeTracking
@@ -142,8 +134,7 @@ public partial class Comment : ISwitchableChangeTracking, IChangeTracking
 }
 ```
 
-A [more complex variant](https://doc.metalama.net/examples/change-tracking/change-tracking-3) of the aspect
-can integrate with the `INotifyPropertyChanged` interface or implement the `RejectChanges` functionality.
+A [more complex variant](https://doc.metalama.net/examples/change-tracking/change-tracking-3) of the aspect can integrate with the `INotifyPropertyChanged` interface or implement the `RejectChanges` functionality.
 
 ## Metalama benefits
 
@@ -155,4 +146,3 @@ can integrate with the `INotifyPropertyChanged` interface or implement the `Reje
 ## Resources
 
 * Example: [Change tracking](https://doc.metalama.net/examples/change-tracking)
-

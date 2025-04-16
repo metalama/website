@@ -53,4 +53,3 @@ fish.Name = "Shark";
 fish.RestoreMemento(memento);
 ```
 
-

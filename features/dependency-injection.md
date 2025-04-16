@@ -60,5 +60,3 @@ class Worker : BackgroundService
 
 * Reference documentation: [Injecting dependencies into aspects](https://doc.metalama.net/conceptual/aspects/dependency-injection)
 * Commented example: [Logging with DI](https://doc.metalama.net/examples/log/log-4)
-
-

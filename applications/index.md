@@ -8,8 +8,8 @@ summary: "This web section lists different use cases of Metalama."
 Metalama is not for every project. Consider using Metalama if one of the following situations applies to your project:
 
 * **Large projects.** Your project contains dozens of entities and hundreds of properties or methods requiring the same behaviors.
-* **Large teams.** There is a large team of developers and it is challenging to align everyone on consistent patterns and practices.
-* **Long lifecycle.** You must maintain the project for several years — an investment in long-term quality makes sense.
+* **Large teams.** There is a large team of developers, and it is challenging to align everyone on consistent patterns and practices.
+* **Long lifecycle.** You must maintain the project for several years—an investment in long-term quality makes sense.
 
 ## When _not_ to use Metalama
 
@@ -21,7 +21,7 @@ Conversely, *avoid* using Metalama if:
 ## Which factors are almost irrelevant
 
 * **Run-time performance.** Your code will run as fast or faster with Metalama than without it. Why faster? Since Metalama generates C# code automatically, it can use optimized, faster patterns that would be cumbersome to implement by hand.
-* **Compilation time.** Metalama typically adds 25% to your `dotnet build` time, which is probably not a big difference for most projects. If it does seem important, it might mean the Metalama's benefits won't outweight the added complexity.
+* **Compilation time.** Metalama typically adds 25% to your `dotnet build` time, which is probably not a big difference for most projects. If it does seem important, it might mean Metalama's benefits won't outweigh the added complexity.
 
 ## What are the principal use cases?
 
@@ -29,5 +29,5 @@ Conversely, *avoid* using Metalama if:
 |----------|----------|
 | [Principles At Work](principles) | See how Metalama can help implement fundamental software development principles like Clean Code, SOLID, DRY, Aspect-Oriented Programming, Architecture Verification, or Refactoring.|
 | [Classics](classics) | See typical and concrete use cases of Metalama in software application development. |
-| [DevOps](devops) | Learn how can Metalama can help moving from a prototype to a production-ready application with technical features like logging, metrics, caching, exception handling, and resilience. |
-| [Alternatives](/alternatives) | See alternatives of Metalama is different areas of application. |
+| [DevOps](devops) | Learn how Metalama can help move from a prototype to a production-ready application with technical features like logging, metrics, caching, exception handling, and resilience. |
+| [Alternatives](/alternatives) | See alternatives of Metalama in different areas of application. |

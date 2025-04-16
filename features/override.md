@@ -10,7 +10,7 @@ Metalama is the only C# generator that lets you add behaviors to existing hand-w
 ## Benefits
 
 * It's the only way to implement features like instrumentation (logging, metrics), exception handling (retry, throttling), observability (`INotifyPropertyChanged`), thread synchronization (locking), and more.
-* It's transparent. No need for the `partial` keyword.
+* It's transparent. There is no need for the `partial` keyword.
 
 ## Example
 
@@ -66,10 +66,8 @@ public class HatShop
 }
 ```
 
-As you can see, it not only adds new members like the `HatShopMetrics` class and field, but also injects logic into the `PlaceOrder` method.
+As you can see, it not only adds new members like the `HatShopMetrics` class and field but also injects logic into the `PlaceOrder` method.
 
 ## Resources
 
 * Reference documentation: [Creating simple aspects](https://doc.metalama.net/conceptual/aspects/simple-aspects)
-
-

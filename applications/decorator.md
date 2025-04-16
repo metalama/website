@@ -4,14 +4,9 @@ summary: "The Decorator pattern adds behaviors to objects without altering their
 keywords: "Decorator pattern, structural design pattern, Metalama, static implementation"
 ---
 
-The Decorator pattern is a structural design pattern that allows you to add new behaviors to objects. It is a good
-alternative to subclassing because it allows you to add new functionalities to objects without changing their structure.
+The Decorator pattern is a structural design pattern that allows you to add new behaviors to objects. It is a good alternative to subclassing because it allows you to add new functionalities to objects without changing their structure.
 
-Metalama seems like it was _invented_ to easily implement decorators. If you want to apply decorators _statically_ to
-your code, just use
-the [OverrideMethodAspect](https://doc.metalama.net/api/metalama-framework-aspects-overridemethodaspect), [OverrideFieldOrPropertyAspect](https://doc.metalama.net/api/metalama-framework-aspects-overridefieldorpropertyaspect),
-or [OverrideEventAspect](https://doc.metalama.net/api/metalama-framework-aspects-overrideeventaspect)
-according to what you want to decorate.
+Metalama seems like it was _invented_ to easily implement decorators. If you want to apply decorators _statically_ to your code, just use the [OverrideMethodAspect](https://doc.metalama.net/api/metalama-framework-aspects-overridemethodaspect), [OverrideFieldOrPropertyAspect](https://doc.metalama.net/api/metalama-framework-aspects-overridefieldorpropertyaspect), or [OverrideEventAspect](https://doc.metalama.net/api/metalama-framework-aspects-overrideeventaspect) according to what you want to decorate.
 
 If you want to _dynamically_ apply decorators at runtime, see the Proxy pattern.
 
@@ -75,16 +70,10 @@ internal class RetryAttribute : OverrideMethodAspect
 
 ## Metalama benefits
 
-* **Use decorators everywhere**: With Metalama, we’re not limited to virtual or interface methods (such as with the
-  Proxy pattern); we can intercept anything, even static private fields. This allows you to use the Decorator pattern
-  throughout your code.
-* **Keep your code clean**: It's a great way to add new functionalities to objects without changing their structure. It
-  allows you to keep your code clean and maintainable.
-* **Improve your code quality**: The generated code is always consistent with the design pattern rules. Every time you
-  apply the aspect, you can be sure that the code is compliant with the Decorator pattern.
+* **Use decorators everywhere**: With Metalama, we’re not limited to virtual or interface methods (such as with the Proxy pattern); we can intercept anything, even static private fields. This allows you to use the Decorator pattern throughout your code.
+* **Keep your code clean**: It's a great way to add new functionalities to objects without changing their structure. It allows you to keep your code clean and maintainable.
+* **Improve your code quality**: The generated code is always consistent with the design pattern rules. Every time you apply the aspect, you can be sure that the code is compliant with the Decorator pattern.
 
 ## Resources
 
 * Blog post: [The Decorator Pattern in Modern C#](https://metalama.net/blog/decorator-pattern)
-
-

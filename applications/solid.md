@@ -8,11 +8,9 @@ keywords:
 ---
 
 {: .intro }
-SOLID and DRY principles are universally accepted guidelines in software engineering. Metalama enables you to implement,
-improve, or promote these principles in your C# code.
+SOLID and DRY principles are universally accepted guidelines in software engineering. Metalama enables you to implement, improve, or promote these principles in your C# code.
 
-The _SOLID principles_ consist of five design principles that help create well-structured, maintainable, and scalable
-software:
+The _SOLID principles_ consist of five design principles that help create well-structured, maintainable, and scalable software:
 
 - **S**ingle Responsibility Principle (SRP)
 - **O**pen/Closed Principle (OCP)
@@ -28,12 +26,9 @@ We'll show you how to use Metalama to implement the SRP, OCP, DIP, and DRY princ
 
 ***"A class should have only one reason to change."***
 
-This means that a class should have only one responsibility. If not, it should be refactored into multiple classes, each
-with a single responsibility.
+This means that a class should have only one responsibility. If not, it should be refactored into multiple classes, each with a single responsibility.
 
-Although we can't use Metalama to ensure that a class has only one responsibility, we can use it once you've identified
-which responsibility doesn't belong to the class. For example, you can use Metalama to move cross-cutting concerns into
-their own classes, such as logging, validation, and caching.
+Although we can't use Metalama to ensure that a class has only one responsibility, we can use it once you've identified which responsibility doesn't belong to the class. For example, you can use Metalama to move cross-cutting concerns into their own classes, such as logging, validation, and caching.
 
 For instance, let's say we have a `TaxCalculator` class with a `GetTaxAmount` method.
 
@@ -61,12 +56,9 @@ public class TaxCalculator
 }
 ```
 
-The `GetTaxAmount` method is responsible for adding two numbers, but it also logs the start and end of the method and
-logs any exceptions that occur. This means that the `GetTaxAmount` method has more than one responsibility.
+The `GetTaxAmount` method is responsible for adding two numbers, but it also logs the start and end of the method and logs any exceptions that occur. This means that the `GetTaxAmount` method has more than one responsibility.
 
-To remove the logging responsibility from the `GetTaxAmount` method, we can move all the logging code to a Metalama
-aspect (a separate class) like the `Log` attribute introduced in
-the [Implementing logging without boilerplate](https://doc.metalama.net/examples/log) article.
+To remove the logging responsibility from the `GetTaxAmount` method, we can move all the logging code to a Metalama aspect (a separate class) like the `Log` attribute introduced in the [Implementing logging without boilerplate](https://doc.metalama.net/examples/log) article.
 
 Using that new `Log` attribute, the `TaxCalculator` class will look like this:
 
@@ -92,13 +84,9 @@ public class TaxCalculator
 }
 ```
 
-Now the `GetTaxAmount` method only has one responsibility: adding two numbers. The logging responsibility has been moved
-to the `Log` attribute.
+Now the `GetTaxAmount` method only has one responsibility: adding two numbers. The logging responsibility has been moved to the `Log` attribute.
 
-Another way to implement the Single Responsibility Principle is to use the Decorator design pattern. You can use this
-pattern to add the logging behavior to a class without changing its existing code. To implement this pattern with
-Metalama, you can follow the steps in
-the [The Decorator Pattern in Modern C# [2024]](https://metalama.net/blog/decorator-pattern) article.
+Another way to implement the Single Responsibility Principle is to use the Decorator design pattern. You can use this pattern to add the logging behavior to a class without changing its existing code. To implement this pattern with Metalama, you can follow the steps in the [The Decorator Pattern in Modern C# [2024]](https://metalama.net/blog/decorator-pattern) article.
 
 ## Open/Closed Principle (OCP)
 
@@ -106,9 +94,7 @@ the [The Decorator Pattern in Modern C# [2024]](https://metalama.net/blog/decora
 
 This means that you should be able to add new functionality to a class without changing its existing code.
 
-Aspects are a great way to add new functionalities to classes without changing their existing code. Consider the
-`TaxCalculator` class from the previous example. If you want to add logging behavior to the `GetTaxAmount` method, you
-can use the `Log` attribute to add this behavior without changing the `TaxCalculator` class.
+Aspects are a great way to add new functionalities to classes without changing their existing code. Consider the `TaxCalculator` class from the previous example. If you want to add logging behavior to the `GetTaxAmount` method, you can use the `Log` attribute to add this behavior without changing the `TaxCalculator` class.
 
 ```cs
 public class TaxCalculator
@@ -134,16 +120,9 @@ public class TaxCalculator
 }
 ```
 
-In this example, the `Cache` attribute (part of
-the [Metalama Patterns](https://doc.metalama.net/patterns/caching)) is used to add caching behavior to the
-`GetTaxAmount` method. The `TaxCalculator` class is open for extension because you can add new functionalities to it (
-using attributes in this case) but closed for modification because you don't need to change the existing code of the
-class.
+In this example, the `Cache` attribute (part of the [Metalama Patterns](https://doc.metalama.net/patterns/caching)) is used to add caching behavior to the `GetTaxAmount` method. The `TaxCalculator` class is open for extension because you can add new functionalities to it (using attributes in this case) but closed for modification because you don't need to change the existing code of the class.
 
-Metalama also provides something called [Fabrics](https://doc.metalama.net/conceptual/using/fabrics) to add
-multiple aspects at once using compile-time imperative code, as opposed to the declarative custom attributes we used in
-the previous example. Why should you need to do this? Because sometimes you need to add aspects dynamically, based on
-some conditions to several classes/methods at once.
+Metalama also provides something called [Fabrics](https://doc.metalama.net/conceptual/using/fabrics) to add multiple aspects at once using compile-time imperative code, as opposed to the declarative custom attributes we used in the previous example. Why should you need to do this? Because sometimes you need to add aspects dynamically, based on some conditions to several classes/methods at once.
 
 The following snippet adds logging to all public methods of public types (except `ToString`):
 
@@ -167,20 +146,13 @@ internal class Fabric : ProjectFabric
 
 This means that you should depend on abstractions, not on concrete implementations.
 
-This is another principle that the use of Metalama aspects helps improve. Consider the `TaxCalculator` class from
-previous examples. The first version of the class had a dependency on the logging mechanism (in this case just a
-`Console.WriteLine` method, but it could be easily replaced by a more complex logging mechanism generating a stronger
-dependency).
+This is another principle that the use of Metalama aspects helps improve. Consider the `TaxCalculator` class from previous examples. The first version of the class had a dependency on the logging mechanism (in this case just a `Console.WriteLine` method, but it could be easily replaced by a more complex logging mechanism generating a stronger dependency).
 
-The final version of the `TaxCalculator` class, thanks to Metalama aspects, depends on the `Log` aspects, not on their
-concrete implementations. This means that the `TaxCalculator` class depends on abstractions, not on concrete
-implementations. You can start logging with the `Console.WriteLine` method and then switch to a more complex logging
-mechanism without changing the `TaxCalculator` class.
+The final version of the `TaxCalculator` class, thanks to Metalama aspects, depends on the `Log` aspects, not on their concrete implementations. This means that the `TaxCalculator` class depends on abstractions, not on concrete implementations. You can start logging with the `Console.WriteLine` method and then switch to a more complex logging mechanism without changing the `TaxCalculator` class.
 
 ## Don't Repeat Yourself Principle (DRY)
 
-In C# development, there are many opportunities to repeat code. For example, you may encounter scenarios where you need
-to:
+In C# development, there are many opportunities to repeat code. For example, you may encounter scenarios where you need to:
 
 1. Write the same validation logic in multiple classes or methods.
 2. Implement identical logging logic across different classes or methods.
@@ -188,13 +160,9 @@ to:
 4. Implement the INotifyPropertyChanged interface in multiple classes.
 5. Develop cumbersome code when using the Builder design pattern.
 
-Metalama helps you avoid code duplication by allowing you to define reusable aspects that can be applied to multiple
-classes or methods. This way, you can write the validation, logging, caching, and other logic once and apply it to
-multiple classes or methods.
+Metalama helps you avoid code duplication by allowing you to define reusable aspects that can be applied to multiple classes or methods. This way, you can write the validation, logging, caching, and other logic once and apply it to multiple classes or methods.
 
-Let's take a look at an example where we apply the DRY principle using Metalama. Suppose you have a `Person` class that
-implements the `INotifyPropertyChanged` interface. You can use Metalama to avoid writing the same boilerplate code in
-multiple classes.
+Let's take a look at an example where we apply the DRY principle using Metalama. Suppose you have a `Person` class that implements the `INotifyPropertyChanged` interface. You can use Metalama to avoid writing the same boilerplate code in multiple classes.
 
 ```cs
 [Observable]
@@ -208,8 +176,7 @@ public class Person
 {: .show-more }
 How much code have we saved?
 
-The use of the `[Observable]` attribute generates the boilerplate code required to implement the
-`INotifyPropertyChanged` interface. Take a look at how much code you saved using Metalama:
+The use of the `[Observable]` attribute generates the boilerplate code required to implement the `INotifyPropertyChanged` interface. Take a look at how much code you saved using Metalama:
 
 ```cs
 public class Person : INotifyPropertyChanged
@@ -225,25 +192,24 @@ public class Person : INotifyPropertyChanged
       if (name != value)
       {
         name = value;
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Name)));
-      }
-    }
+```
+```csharp
+PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Name)));
   }
+}
 
-  private int age;
-  public int Age
+private int age;
+public int Age
+{
+  get => age;
+  set
   {
-    get => age;
-    set
+    if (age != value)
     {
-      if (age != value)
-      {
-        age = value;
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Age)));
-      }
+      age = value;
+      PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Age)));
     }
   }
 }
 ```
-
-That's a lot of boilerplate you'd want to avoid!
+The amount of repetitive code here is significant and likely something you'd want to minimize!

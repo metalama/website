@@ -3,9 +3,9 @@ title: Contributing Overview
 summary: "Contribute to Metalama by spreading awareness, answering questions, sharing aspects, building libraries, and improving documentation and core projects."
 ---
 
-First off, thanks for your interest in contributing to Metalama — we appreciate the support. Whether you're fixing bugs, improving docs, sharing aspects, or proposing features, your input helps make Metalama better for everyone.
+First off, thank you for your interest in contributing to Metalama—we appreciate your support. Whether you're fixing bugs, improving documentation, sharing aspects, or proposing features, your input helps make Metalama better for everyone.
 
-This project revolves around compile-time code transformation in .NET, and contributions are expected to align with that philosophy: clean, predictable, well-documented code that plays nicely with Roslyn and modern C#.
+This project revolves around compile-time code transformation in .NET, and contributions are expected to align with that philosophy: clean, predictable, well-documented code that integrates well with Roslyn and modern C#.
 
 Before you dive in, please read the sections below to get up to speed with how we work and what we expect from contributors. Following the guidelines will save both your time and ours.
 
@@ -48,5 +48,3 @@ Let’s build something powerful.
 6. **Contribute to the core projects.**
 
     You're welcome to fix bugs (either new ones or already-reported ones) directly in the core projects. See [how to contribute code](contribute-code) for instructions. For new features, please first create a proposal and discuss it with the core maintainers.
-
-
