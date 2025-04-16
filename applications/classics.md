@@ -9,7 +9,6 @@ Whether you're building a mobile, desktop, or web app, Metalama can help impleme
 | Category | Patterns |
 |----------|----------|
 | [Classic Design Patterns](design-patterns) | Singleton, Memento, Factory, Builder, Decorator, Proxy |
-| [UI Code Patterns](ui) | Change Tracking, INotifyPropertyChanged, Memoization, Undo-Redo, Command |
+| [UI Code Patterns](ui) <i class="supported"></i>| Change Tracking, INotifyPropertyChanged, Memoization, Undo-Redo, Command |
+| [Defensive Programming](contracts) <i class="supported"></i> | Code contracts: pre-conditions, post-conditions, invariants, data annotations. |
 | [Classic Object Services](object-services) | Deep Cloning, ToString, Comparison |
-| [Defensive Programming](contracts) | Code contracts: pre-conditions, post-conditions, invariants, data annotations. |
-

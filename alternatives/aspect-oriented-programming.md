@@ -1,5 +1,6 @@
 ---
 title: "Alternatives for AOP"
+toc: true
 summary: "The document compares aspect-oriented programming frameworks for .NET, detailing approaches like MSIL rewriting, Roslyn-based, and middleware."
 keywords: "aspect-oriented programming, .NET frameworks, MSIL rewriting, Roslyn-based frameworks, middleware-based frameworks, PostSharp, Metalama, dynamic proxies, code transformation, dependency injection, alternatives"
 ---

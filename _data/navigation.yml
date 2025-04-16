@@ -196,11 +196,7 @@ nodes:
             description: "Compare Metalama with Roslyn code generators, T4 and custom build tasks."
           - url: "/alternatives/architecture-verification"
             title: "Architecture Verification"        
-            description: "Compare Metalama with ArchUnitTest and other architecture verification tools."
-          - url: "/alternatives/comparison"
-            title: "Comparison"        
-            description: "A summary table of pros and cons of Metalama compared with other approaches."
-        
+            description: "Compare Metalama with ArchUnitTest and other architecture verification tools."        
         
 
   - title: "Docs & Support"

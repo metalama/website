@@ -1,5 +1,6 @@
 ---
 title: "Alternatives for Code Generation"
+toc: true
 summary: "This document discusses various approaches for code generation in .NET, highlighting benefits, inconveniences, and use cases for each method."
 keywords: "code generation in .NET, Metalama, pre-build scripts, T4 templates, MSIL Rewriting, Roslyn Code Generators, source code access, generated code access, real-time feedback, override handwritten code"
 ---

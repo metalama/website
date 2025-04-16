@@ -2,6 +2,7 @@
 title: Alternatives for Architecture Verification
 summary: "The document discusses various methods for architecture verification, including code style analyzers, architectural unit tests, custom Roslyn analyzers, and custom scripts."
 keywords: "architecture verification, code style analyzers, architectural unit tests, Roslyn analyzers, custom scripts, .NET, custom architecture rules, native warnings, real-time code analysis, alternatives"
+toc: true
 ---
 
 ## Code style analyzers and linters
