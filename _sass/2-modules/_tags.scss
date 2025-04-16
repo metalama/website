@@ -1,4 +1,8 @@
 i.premium {
+
+  font-style: normal;
+  position: relative;
+
   &::before {
     content: ""; 
     background-image: url("/assets/images/icons/gemstone.svg");
@@ -10,11 +14,9 @@ i.premium {
     margin-left: 5px;
     margin-top: -2px;
     display: inline-block;
-    vertical-align: middle; /* Align with text */
+    vertical-align: middle;
   }
-  font-style: normal;
-  position: relative;
-
+  
   &:not(.no-tooltip)::after {
     content: "Premium Feature";
     position: absolute;
@@ -24,14 +26,14 @@ i.premium {
     border-radius: 5px;
     font-size: 14px;
     white-space: nowrap;
-    bottom: 150%; /* Adjust position */
+    bottom: 150%;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease-in-out;
-    pointer-events: none; /* Prevents interfering with hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    pointer-events: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   &:not(.no-tooltip):hover::after {
@@ -42,7 +44,17 @@ i.premium {
 
 i.supported {
   &::before {
-    content: "🛡️";
+    content: ""; 
+    background-image: url("/assets/images/icons/box.svg");
+    background-size: contain; 
+    background-repeat: no-repeat;
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: -5px;
+    display: inline-block;
+    vertical-align: middle; 
   }
   font-style: normal;
   position: relative;
@@ -67,6 +79,48 @@ i.supported {
   }
 
   &:not(.no-tooltip):hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+span.info-icon {
+
+  background-image: url("/assets/images/icons/info.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: -2px;
+  display: inline-block;
+  vertical-align: middle; 
+  cursor: pointer;
+  position: relative;
+
+  > * {
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none; /* Prevents interfering with hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    z-index: 10;
+    width: 250px;
+    display: block;
+  }
+
+  &:hover > * {
     opacity: 1;
     visibility: visible;
   }

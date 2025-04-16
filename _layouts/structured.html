@@ -82,7 +82,7 @@
                 <li class="{% if page_url == level2.url %}active{% endif %}">
 
                     <a href="{{ level2.url | default: level2.shortcut_url }}" >
-                        <span title="{{ level2.description }}">{{ level2.title }}</span>
+                        <span title="{{ level2.description }}"  class="{% if level2.extern %}extern{% endif %}">{{ level2.title }}</span>
 
                         {% if level2.premium %}
                         <i class="premium"></i>
@@ -114,7 +114,7 @@
 
                         <li class="{% if page_url == level3.url %}active{% endif %}">
                             <a href="{{ level3.url }}">
-                                <span  title="{{ level3.description }}">{{ level3.title }}</span>
+                                <span  title="{{ level3.description }}"  class="{% if level3.extern %}extern{% endif %}">{{ level3.title }}</span>
 
                                 {% if level3.premium %}
                                 <i class="premium"></i>
@@ -137,7 +137,7 @@
                                 {% endfor %}
                                 <li class="{% if page_url == level4.url %}active{% endif %}">
                                     <a href="{{ level4.url }}">
-                                        <span title="{{ level4.description }}">{{ level4.title }}</span>
+                                        <span title="{{ level4.description }}" class="{% if level4.extern %}extern{% endif %}">{{ level4.title }}</span>
 
                                         {% if level4.premium %}
                                         <i class="premium"></i>
@@ -151,7 +151,7 @@
                                         {% for level5 in level4.nodes %}
                                         <li class="{% if page_url == level5.url %}active{% endif %}">
                                             <a href="{{ level5.url }}">
-                                                <span title="{{ level5.description }}">{{ level5.title }}</span>
+                                                <span title="{{ level5.description }}"  class="{% if level5.extern %}extern{% endif %}">{{ level5.title }}</span>
                                                 {% if level5.premium %}
                                                 <i class="premium"></i>
                                                 {% endif %}
