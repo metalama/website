@@ -25,5 +25,3 @@ Consider purchasing an enterprise subscription for the following benefits:
     <a class="btn btn--md" href="/premium">SEE OUR PREMIUM OFFERING</a>
     <a class="btn btn--md" href="https://www.postsharp.net/support">ACCESS ENTERPRISE SUPPORT</a>
 </div>
-
-
