@@ -54,7 +54,7 @@ $(document).ready(function () {
 	var lastScrollTop = 0;
 	var $header = $('header');
 	var $spacer = $('.header-spacer');
-	var currentSubmenu = null;  // Храним текущее открытое подменю
+	var currentSubmenu = null;  // Store the currently open submenu
 	function isMobile() {
 		return getComputedStyle(document.body).getPropertyValue('--is-mobile').trim() === '1';
 	}
@@ -67,7 +67,7 @@ $(document).ready(function () {
 		}
 	}
 
-	// При загрузке сразу проверяем фон
+	// Check the background immediately on load
 	setHeaderBg($(window).scrollTop());
 
 	$(window).scroll(function () {
@@ -92,7 +92,7 @@ $(document).ready(function () {
 
 	$(".has-dropdownmenu").hover(
 		function () {
-			if (!isMobile()) { // Только для десктопа
+			if (!isMobile()) { // Only for desktop
 				var submenuId = $(this).find("a").data("submenu");
 
 				if (currentSubmenu && currentSubmenu !== submenuId) {
@@ -106,7 +106,7 @@ $(document).ready(function () {
 			}
 		},
 		function (e) {
-			if (!isMobile()) { // Только для десктопа
+			if (!isMobile()) { // Only for desktop
 				if ($(e.relatedTarget).closest('.dropdownmenu').length === 0) {
 					if (currentSubmenu) {
 						$("#" + currentSubmenu).stop(true, true).hide();
@@ -133,25 +133,33 @@ $(document).ready(function () {
 
 	var currentSubmenu = null;
 
-	// Клик по ссылке (dropdown3 и dropdown4)
+	// Click on the link (dropdown3 and dropdown4)
 	$(".has-dropdownmenu > a").on("click", function (e) {
+
+		 // Prevent default behavior for touch events
+		if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+			e.preventDefault();
+		}
+		
 		if (isMobile()) {
+			
+			
 			var submenuId = $(this).data("submenu");
 
-			// Только если submenuId есть и оно нужное — отменяем переход
+			// Only if submenuId exists and is relevant — cancel navigation
 			if (submenuId && (submenuId === "dropdown3" || submenuId === "dropdown4")) {
 				e.preventDefault();
 
 				var $submenu = $("#" + submenuId);
 				var $parentItem = $(this).parent(); // .has-dropdownmenu
 
-				// Закрыть другие и убрать у них класс
+				// Close others and remove their class
 				if (currentSubmenu && currentSubmenu !== submenuId) {
 					$("#" + currentSubmenu).stop(true, true).slideUp();
 					$(".has-dropdownmenu").removeClass("submenu-open");
 				}
 
-				// Переключение
+				// Toggle
 				if ($submenu.is(":visible")) {
 					$submenu.stop(true, true).slideUp();
 					$parentItem.removeClass("submenu-open");
@@ -167,7 +175,7 @@ $(document).ready(function () {
 		}
 	});
 
-	// Закрытие по клику вне
+	// Close on click outside
 	$(document).on("click", function (e) {
 		if (isMobile()) {
 			if (
@@ -184,7 +192,7 @@ $(document).ready(function () {
 		}
 	});
 
-	// Закрытие при ресайзе
+	// Close on resize
 	$(window).on("resize", function () {
 		if (!isMobile() && currentSubmenu) {
 			$("#" + currentSubmenu).hide();

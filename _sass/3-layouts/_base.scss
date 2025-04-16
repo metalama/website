@@ -1,10 +1,14 @@
 html {
     font-size: $fs-base-mobile;
     scroll-behavior: smooth;
+    overscroll-behavior: contain; /* Prevents visual overscroll effects */
+    background-color: #0c0c0c; /* Set a consistent background color */
+
     @media screen and (min-width: rem($mobile_breakpoint)) {
         font-size: $fs-base-desktop;
     }
 }
+   
 body {
     font-family: LatoLatinWeb;
     color: $text_color;
