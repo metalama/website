@@ -8,7 +8,8 @@ import revall from 'gulp-rev-all';
 import terser from 'gulp-terser';
 
 gulp.task('svg-to-png', function () {
-    return gulp.src('./_cdn/assets/images/**/*.svg') // Adjust to match SVG files in all subdirectories
+    return gulp
+        .src('./_cdn/assets/images/**/*.svg') // Adjust to match SVG files in all subdirectories
         .pipe(svg2png({
             width: 1200,
             height: 675
@@ -36,7 +37,8 @@ gulp.task('brotli', function () {
 
 // Task to create Gzip-compressed assets and pages.
 gulp.task('gzip', function () {
-    return gulp.src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json', './_cdn/**/*.html' ])
+    return gulp
+        .src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json', './_cdn/**/*.html' ])
         .pipe(gzip())
         .pipe(gulp.dest(function (file) {
             return file.base;
@@ -45,7 +47,8 @@ gulp.task('gzip', function () {
 
 // Task to minify HTML files produced by Jekyll
 gulp.task('htmlmin', () => {
-    return gulp.src('_site/**/*.html')
+    return gulp
+      .src('_site/**/*.html')
       .pipe(htmlmin({ collapseWhitespace: true }))
       .pipe(gulp.dest('_site'));
 });
@@ -64,7 +67,8 @@ gulp.task("rev-all", function () {
     gulp.src(excludedGlob)
         .pipe(gulp.dest("_cdn"));
 
-    return gulp.src(["_site/**", "!_site/assets/fonts/**/*"])
+    return gulp
+        .src(["_site/**", "!_site/assets/fonts/**/*"])
         .pipe(revall.revision({
             dontGlobal: excludedFiles,
             dontRenameFile: ['.html', '.txt', '.xml', 'staticwebapp.config'],
