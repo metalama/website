@@ -59,6 +59,10 @@ $(document).ready(function () {
 		return getComputedStyle(document.body).getPropertyValue('--is-mobile').trim() === '1';
 	}
 
+	function isTouch() {
+		return 'ontouchstart' in window || navigator.maxTouchPoints > 0
+	}
+
 	function setHeaderBg(scrollTop) {
 		if (scrollTop > 85) {
 			$header.css('background', '#130722');
@@ -133,47 +137,47 @@ $(document).ready(function () {
 
 	var currentSubmenu = null;
 
-	// Click on the link (dropdown3 and dropdown4)
-	$(".has-dropdownmenu > a").on("click", function (e) {
-
-		 // Prevent default behavior for touch events
-		if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-			e.preventDefault();
-		}
-		
-		if (isMobile()) {
-			
-			
-			var submenuId = $(this).data("submenu");
-
-			// Only if submenuId exists and is relevant — cancel navigation
-			if (submenuId && (submenuId === "dropdown3" || submenuId === "dropdown4")) {
-				e.preventDefault();
-
-				var $submenu = $("#" + submenuId);
-				var $parentItem = $(this).parent(); // .has-dropdownmenu
-
-				// Close others and remove their class
-				if (currentSubmenu && currentSubmenu !== submenuId) {
-					$("#" + currentSubmenu).stop(true, true).slideUp();
-					$(".has-dropdownmenu").removeClass("submenu-open");
-				}
-
-				// Toggle
-				if ($submenu.is(":visible")) {
-					$submenu.stop(true, true).slideUp();
-					$parentItem.removeClass("submenu-open");
-					currentSubmenu = null;
-				} else {
-					$submenu.stop(true, true).slideDown();
-					$parentItem.addClass("submenu-open");
-					currentSubmenu = submenuId;
-				}
-
-				setHeaderBg($(window).scrollTop());
+	// Present <a> link behavior on touch because there is no hover.
+	if ( isTouch()  ) {
+		$(".has-dropdownmenu > a").on("click", function (e) {
+			if ( !isMobile() || $(this).hasClass('.has-mobile-dropdownmenu')) {
+				e.preventDefault(); 
 			}
-		}
-	});
+			});
+	}
+
+
+	// Click on the link on mobile displays the drop-down menu in the mobile way.
+	if (isMobile()) {
+		$(".has-mobile-dropdownmenu > a").on("click", function (e) {
+		
+			var submenuId = $(this).data("submenu");
+			e.preventDefault();
+			
+			var $submenu = $("#" + submenuId);
+			var $parentItem = $(this).parent(); // .has-dropdownmenu
+
+			// Close others and remove their class
+			if (currentSubmenu && currentSubmenu !== submenuId) {
+				$("#" + currentSubmenu).stop(true, true).slideUp();
+				$(".has-dropdownmenu").removeClass("submenu-open");
+			}
+
+			// Toggle
+			if ($submenu.is(":visible")) {
+				$submenu.stop(true, true).slideUp();
+				$parentItem.removeClass("submenu-open");
+				currentSubmenu = null;
+			} else {
+				$submenu.stop(true, true).slideDown();
+				$parentItem.addClass("submenu-open");
+				currentSubmenu = submenuId;
+			}
+
+			setHeaderBg($(window).scrollTop());
+			}
+		);
+	}
 
 	// Close on click outside
 	$(document).on("click", function (e) {

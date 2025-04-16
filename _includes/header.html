@@ -197,11 +197,11 @@
 						{% endfor %}
 						{% endif %}
 
-						<li class="menu__item {% if item.drop_down_menu %}has-dropdownmenu{% endif %}">
-							<a href="{{ item.url }}"
+						<li class="menu__item {% if item.drop_down_menu %}has-dropdownmenu{% endif %} {% unless item.url %}has-mobile-dropdownmenu{% endunless %}">
+							<a href="{{ item.url | default: '#' }}"
 								{% unless item.drop_down_menu %}title="{{ item.description }}"{% endunless %}
 								{% if item.drop_down_menu %}data-submenu="dropdown{{ itemId }}"{% endif %}
-								{% if isItemActive %}class="active"{% endif %}>
+								class="{% if isItemActive %}active{% endif %}">
 							{% if item.premium %}
 								<i class="premium no-tooltip"></i>
 							{% endif %}
