@@ -101,6 +101,7 @@ public partial class Comment : ISwitchableChangeTracking, IChangeTracking
     {
         get => this._author;
         set
+        {
             if (value != this._author)
             {
                 this._author = value;
@@ -146,7 +147,10 @@ can integrate with the `INotifyPropertyChanged` interface or implement the `Reje
 
 ## Metalama benefits
 
-TODO
+- Enhance productivity and reduce boilerplate code by automating property and field instrumentation.
+- Improve code readability.
+- Ensure consistency and reduce human error in implementing change tracking.
+- Simplify maintenance by centralizing logic in one aspect class.
 
 ## Resources
 

@@ -35,11 +35,6 @@ nodes:
         title: "Immediate Editor Feedback"
         description: "Get immediate feedback on your code as you type. No need to recompile your code."
 
-      - title: "Architecture Verification"
-        url: "/features/architecture-verification"
-        description: "Ensure that both manually written and AI-assisted code adhere to strict architectural standards."
-        premium: true
-
       - url: "/features/code-fixes"
         title: "Code Fix Toolkit"
         premium: true
@@ -99,6 +94,10 @@ nodes:
           - title: "Aspect-Oriented Programming"
             url: "/applications/aspect-oriented-programming"
             description: "Metalama doesn't just improve on AOP — it reinvents it in a pragmatic approach tailored to modern C#."            
+          - title: "Architecture Verification"
+            url: "/applications/architecture-verification"
+            description: "Ensure that both manually written and AI-assisted code adhere to strict architectural standards."
+            premium: true
           - title: "Refactoring"
             url: "/applications/refactoring"
             premium: true
@@ -138,13 +137,13 @@ nodes:
               - title: Dependency Property
                 url: /applications/dependency-property                
                 supported: true
+              - title: Memoization
+                url: /applications/memoization
+                supported: true
               - title: Change Tracking
                 url: /applications/change-tracking
               - title: Undo-Redo
                 url: /applications/undo-redo
-              - title: Memoization
-                url: /applications/memoization
-                supported: true
           - title: "Classic Object Services"
             url: "/applications/object-services"
             description: "Stop writing boilerplate for ToString methods, equality contracts, cloning, and more."

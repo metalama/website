@@ -11,6 +11,10 @@ When enhancing a class or method, it's crucial to validate that the target code 
 
 - **Least astonishment.** As an aspect author, it's your responsibility to ensure users of your aspects receive clear and meaningful error messages.
 - **Fail fast, early.** Avoid exceptions in your aspect logic or confusing C# errors due to invalid generated code.
+- **Improved developer experience.** Provide real-time feedback in the IDE, helping developers identify and fix issues as they write code.
+- **Enforce coding standards.** Ensure that code adheres to specific rules and guidelines, improving consistency across the codebase.
+- **Reduce debugging time.** Catch issues early during development rather than at runtime, saving time and effort.
+- **Architecture validation.** <i class="premium"></i> Ensure that code adheres to [architectural rules](/applications/architecture-verification) and constraints, preventing violations that could lead to long-term maintenance issues. 
 
 ## Features
 
@@ -18,6 +22,7 @@ When enhancing a class or method, it's crucial to validate that the target code 
 - **Warnings suppress.** Your aspects or fabrics can suppress warnings reported by the compiler or other analyzers.
 - **Aspect eligibility.** Your aspects can specify which declarations the aspect can be applied to. If eligibility conditions are violated, an error is reported, and the aspect is not applied. Additionally, the refactoring menu in the IDE will only suggest adding eligible aspects.
 - **Metrics.** You can query code metrics such as the number of nodes or statements in a method and define custom metrics.
+- **Reference validation.** <i class="premium"></i> Find who in your solution is using your code and enforce your design intent.
 
 All features work both in real-time as you type or during the build process.
 

@@ -76,7 +76,6 @@ internal class Fabric : ProjectFabric
 * Invariants: method executed before exiting any public method.
 * Global null-checking with one line of code thanks to fabrics.
 * Customizable and localizable: change the `throw` statement at will.
-* Open source (MIT).
 
 ## Resources
 

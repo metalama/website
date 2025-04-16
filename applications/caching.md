@@ -45,9 +45,8 @@ on Metalama, adding caching to a method can be as simple as adding a custom attr
 * Type-safe cache invalidation API.
 * Full support for dependency injection.
 * Support for dependencies.
-* Support for Redis.
-* Support for cache synchronization over a message bus.
-* Open source.
+* Support for Redis. <i class="premium"></i>
+* Support for cache synchronization over a message bus. <i class="premium"></i>
 
 ## Example
 

@@ -3,10 +3,6 @@ title: Memoization
 summary: "Memoization improves app performance by storing read-only property values, avoiding re-evaluation. Use Metalama.Patterns.Memoization for easy implementation."
 keywords: "memoization, read-only property, Metalama.Patterns.Memoization, app performance, high-performance, multi-threading, Memoize aspect, property evaluation"
 ---
-
-{: .note }
-Available for all UI frameworks
-
 {: .intro }
 In high-performance apps or components, [memoization](https://doc.metalama.net/patterns/memoization) is the
 technique of "remembering" the value of a read-only property of an object to avoid subsequent evaluations. Memoization
@@ -20,6 +16,16 @@ effectively turning a standard read-only property into a memoized one without an
 
 {: .note }
 `Metalama.Patterns.Memoization` is a production-ready, professionally-supported and open-source aspect library. <i class="supported no-tooltip"></i>
+
+{: .note }
+Available for all UI frameworks.
+
+
+## Benefits
+
+* Improve your application's performance.
+* Avoid common mistakes in implementing the memoization code pattern.
+* Keep your code clean and concise.
 
 
 ## Example
@@ -51,12 +57,6 @@ public class ExpensiveResourceViewModel : DependencyObject
     }
 }
 ```
-
-## Benefits
-
-* Improve your application's performance.
-* Avoid common mistakes in implementing the memoization code pattern.
-* Keep your code clean and concise.
 
 ## Resources
 

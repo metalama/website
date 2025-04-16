@@ -62,7 +62,6 @@ public partial class CustomerViewModel
 * Support for complex dependencies, such as properties depending on properties of child objects or of the base class.
 * Customizable. Take control when needed to handle corner cases.
 * Compatible with MVVM frameworks.
-* Open source (MIT).
 
 ## Resources
 

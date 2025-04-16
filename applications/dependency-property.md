@@ -4,15 +4,32 @@ summary: "Metalama.Patterns.Wpf is an open-source library for WPF, enhancing pro
 keywords: "dependency properties, boilerplate code, Metalama.Patterns.Wpf, WPF, C# automatic properties, productivity, open-source library, validation rules, OnPropertyChanged callbacks"
 ---
 
-TODO
+{: .intro }
+Dependency properties enable advanced property behaviors such as data binding, animation, and styling. However, implementing dependency properties in WPF often requires writing repetitive and error-prone boilerplate code, which can slow down development and introduce bugs. 
+
+{: .intro }
+`Metalama.Patterns.Wpf` addresses this issue by allowing developers to generate dependency properties directly from C# automatic properties. This eliminates the need for boilerplate code, boosts productivity, and ensures cleaner, more maintainable code.
 
 {: .note }
 `Metalama.Patterns.Wpf` is a production-ready, professionally-supported and open-source aspect library. <i class="supported no-tooltip"></i>
 
-
 {: .note }
-Available for WPF only
+Available for WPF only.
 
+
+## Benefits
+
+* **Boost your productivity**. Generate dependency properties from C# automatic properties without boilerplate code.
+* **Reduce human errors**. Eliminate repetitive code that is prone to mistakes.
+* **Improve maintainability**. Keep your codebase clean and easier to understand.
+* **Seamless integration**. Works with existing WPF projects without requiring major refactoring.
+* **Customization**. Easily add validation rules or `OnPropertyChanged` callbacks tailored to your needs.
+
+## Features
+
+* Integrates with [Metalama.Patterns.Contracts](https://doc.metalama.net/patterns/contracts) to set validation
+  rules without reinventing the wheel.
+* Fully customizable: add your own validation or `OnPropertyChanged` callbacks.
 
 ## Example
 
@@ -34,17 +51,6 @@ public partial class FancyTextBlock : UserControl
     public void OnFancyBorderBrushChanged() { /* Handle changes here. */}
 }
 ```
-
-## Benefits
-
-* **Boost your productivity**. Generate dependency properties from C# automatic properties without boilerplate code.
-
-## Features
-
-* Integrates with [Metalama.Patterns.Contracts](https://doc.metalama.net/patterns/contracts) to set validation
-  rules without reinventing the wheel.
-* Fully customizable: add your own validation or `OnPropertyChanged` callbacks.
-* Open source (MIT).
 
 ## Resources
 

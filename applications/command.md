@@ -4,24 +4,33 @@ summary: "Metalama.Patterns.Wpf automates WPF command implementation, enhancing 
 keywords: "WPF command implementation, ICommand, CanExecute, Metalama.Patterns.Wpf, boilerplate code, command automation"
 ---
 
+{: .intro }
 One of the [best practices](https://metalama.net/blog/wpf-best-practices-2024) in WPF is to implement the logic behind
-buttons and menu items as a Command (`ICommand`) instead of a simple event handler. This keeps the command logic
-separate from the UI code, achieving a better separation of concerns. It also allows the button or menu item to render
-itself as grayed out when the command is not available, thanks to `CanExecute`.
+buttons and menu items as a Command (`ICommand`) instead of a simple event handler. However, WPF commands requires some redundant code, especially to integrate the `CanExecute` logic.
 
-The implementation of WPF commands requires some redundant code, especially to integrate the `CanExecute` logic.
-
+{: .intro }
 The [Command](https://doc.metalama.net/patterns/wpf/command) aspect of the `Metalama.Patterns.Wpf` open-source
-package solves this problem by automatically generating the plumbing code. It integrates with
-the [Observable](https://doc.metalama.net/patterns/observability) aspect to provide support for the
-`CanExecute` logic.
+package solves this problem by automatically generating the plumbing code. 
 
 {: .note }
 `Metalama.Patterns.Wpf` is a production-ready, professionally-supported and open-source aspect library. <i class="supported no-tooltip"></i>
 
 {: .note }
-Available for WPF only
+Available for WPF only.
 
+## Benefits
+
+* **Boost your productivity**. Minimize boilerplate code to implement ICommand properties.
+* **Keep your code clean and concise**. Your business logic is easier to read and less entangled.
+* **Reduce human errors**. Eliminate repetitive code that is prone to mistakes.
+* **Improve maintainability**. Keep your codebase clean and easier to understand.
+* **Seamless integration**. Works with existing WPF projects without requiring major refactoring.
+
+## Features
+
+* Idiomatically C#: Metalama works _with_ your code, not against it.
+* Supports simple, parameterized, async, and background commands.
+* Integrates with the `[Observable]` aspect to handle the `CanExecute` functionality without boilerplate.
 
 ## Example
 
@@ -44,17 +53,6 @@ public partial class MainWindow : Window
 }
 ```
 
-## Benefits
-
-* **Boost your productivity**. Minimize boilerplate code to implement ICommand properties.
-* **Keep your code clean and concise**. Your business logic is easier to read and less entangled.
-
-## Features
-
-* Idiomatically C#: Metalama works _with_ your code, not against it.
-* Supports simple, parameterized, async, and background commands.
-* Integrates with the `[Observable]` aspect to handle the `CanExecute` functionality without boilerplate.
-* Open source (MIT).
 
 ## Resources
 
