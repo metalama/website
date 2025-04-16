@@ -133,10 +133,3 @@ html {
 .important:before {
     content: "\26a0\a0\a0IMPORTANT"
 }
-
-a.extern::after {
-    content: "🡕";
-    margin-left: 5px;
-    text-decoration: none; 
-    display: inline-block;
-}

@@ -125,3 +125,19 @@ span.info-icon {
     visibility: visible;
   }
 }
+
+.extern {
+  &::after {
+    content: ""; 
+    background-image: url("/assets/images/icons/external-link.svg");
+    background-size: contain; /* Ensure the image fits properly */
+    background-repeat: no-repeat; /* Prevent tiling */
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 5px;
+    margin-top: -2px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+}

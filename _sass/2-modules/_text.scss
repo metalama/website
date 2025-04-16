@@ -1,164 +1,172 @@
 .text_content {
 
-    h1 {
-        margin-bottom: rem(18px);
-        line-height: rem(56px, "desktop");
-        font-family: Monosten;
+  h1 {
+    margin-bottom: rem(18px);
+    line-height: rem(56px, "desktop");
+    font-family: Monosten;
 
+  }
+
+  h2 {
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: 40px;
+  }
+
+  h3 {
+    font-weight: $fw-semi-bold;
+    font-family: $ff-texts;
+    text-align: left;
+  }
+
+  h4 {
+    text-align: left;
+  }
+
+
+  h2,
+  h3,
+  h4 {
+    clear: both;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  b,
+  strong {
+    color: white;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+
+  ul,
+  ol {
+    line-height: 20px;
+    margin-bottom: 1rem;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 40px;
+  }
+
+
+  ul ul,
+  ul ol,
+  ol ol,
+  ol ul {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  a {
+    font-weight: bold;
+    color: $link_color;
+  }
+
+  li+li {
+    margin-top: 20px;
+  }
+
+  .intro {
+    font-size: $font-size-lg;
+    line-height: 1.5rem !important;
+  }
+
+  p.detail {
+    font-size: $font-size-sm;
+    font-weight: 500;
+    line-height: 1.2rem !important;
+    padding: 4px 20px;
+  }
+
+
+  li,
+  p,
+  td,
+  th {
+    font-size: $font-size-base;
+    line-height: 20px;
+  }
+
+  h2 {
+    text-align: left;
+    margin-bottom: 17px;
+    margin-top: 60px;
+  }
+
+  h3 {
+    font-weight: $fw-semi-bold;
+    font-family: $ff-texts;
+  }
+
+  h4 {
+    font-weight: $fw-semi-bold;
+    font-family: $ff-texts;
+  }
+
+  p+h3,
+  img+h3,
+  ol+h3,
+  ul+h3,
+  pre+h3,
+  .highlighter-rouge+h3 {
+    margin-top: 40px;
+  }
+
+
+  td,
+  th {
+    padding: 10px;
+    border: $text_table_color 2px solid;
+    border-collapse: collapse;
+
+    >ul {
+      padding-inline-start: 20px;
     }
 
-    h2 {
-        text-align: left;
-        margin-bottom: 15px;
-        margin-top: 40px;
+    >p:first-child,
+    >ul:first-child {
+      margin-top: 0;
     }
 
-    h3 {
-        font-weight: $fw-semi-bold;
-        font-family: $ff-texts;
-        text-align: left;
-    }
-
-    h4 {
-        text-align: left;
+    >p:last-child,
+    >ul:last-child {
+      margin-bottom: 0;
     }
 
 
-    h2,
-    h3,
-    h4 {
-        clear: both;
+  }
+
+  td {
+    vertical-align: top; // align text at the top of the cell
+  }
+
+  th {
+    background-color: $text_table_color;
+    color: white;
+  }
+
+  table {
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+
+
+  a[href*=":"]:not([href*="metalama.net"]) {
+    @extend .extern;
+
+    &:after {
+      margin-left: 2px;
+      margin-right: 0 !important;
     }
-
-    h1, h2, h3, h4, h5, b, strong {
-        color: white;
-    }
-
-    img {
-        max-width: 100%;
-    }
+  }
 
 
-    ul,
-    ol {
-        line-height: 20px;
-        margin-bottom: 1rem;
-    }
-
-    ul, ol {
-      margin-bottom: 40px;
-    }
-
-
-    ul ul,
-    ul ol,
-    ol ol,
-    ol ul {
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-
-    a {
-        font-weight: bold;
-        color: $link_color;
-    }
-
-    li + li {
-        margin-top: 20px;
-    }
-
-    .intro {
-      font-size: $font-size-lg;
-      line-height: 1.5rem !important;
-    }
-
-    p.detail {
-        font-size: $font-size-sm;
-        font-weight: 500;
-        line-height: 1.2rem !important;
-        padding: 4px 20px;
-    }
-
-    
-    li,
-    p,
-    td,
-    th {
-      font-size: $font-size-base;
-      line-height: 20px;
-    }
-
-    h2 {
-      text-align: left;
-      margin-bottom: 17px;
-      margin-top: 60px;
-    }
-
-    h3 {
-      font-weight: $fw-semi-bold;
-      font-family: $ff-texts;
-    }
-
-    h4 {
-      font-weight: $fw-semi-bold;
-      font-family: $ff-texts;
-    }
-
-    p+h3,
-    img+h3,
-    ol+h3,
-    ul+h3,
-    pre+h3,
-    .highlighter-rouge+h3 {
-      margin-top: 40px;
-    }
-
-    
-    td,
-    th {
-      padding: 10px;
-      border: $text_table_color 2px solid;
-      border-collapse: collapse;
-
-      > ul {
-        padding-inline-start: 20px;
-      }
-
-      > p:first-child, > ul:first-child {
-        margin-top: 0;
-      }
-  
-      > p:last-child, > ul:last-child {
-        margin-bottom: 0;
-      }
-
-
-    }
-
-    td {
-      vertical-align: top; // align text at the top of the cell
-    }
-
-    th {
-      background-color: $text_table_color;
-      color: white;
-    }
-
-    table {
-      margin-bottom: 20px;
-      border-collapse: collapse;
-    }
-
-    
-a[href*=":"]:not([href*="metalama.net"])::after {
-  content: "🡕";
-  margin-left: 2px;
-  margin-right: 2px;
-  text-decoration: none; 
-  display: inline-block;
-  color: $blue;
 }
-
- 
-}
-

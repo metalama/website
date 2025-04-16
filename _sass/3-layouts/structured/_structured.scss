@@ -140,12 +140,7 @@
 		a.expandable:not(.hidden) {
 			display: block !important;
 		}
-
 		
-		span.extern::after {
-			content: "🡕";
-			margin-left: 5px;
-		}
 	}
 
 	.left-nav {
