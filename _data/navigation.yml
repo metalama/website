@@ -98,7 +98,7 @@ nodes:
             description: "Take SOLID and DRY principles to the next level with aspects and code verification."
           - title: "Aspect-Oriented Programming"
             url: "/applications/aspect-oriented-programming"
-            description: "Experience the post-AOP revolution with Metalama’s next-generation aspect capabilities."            
+            description: "Metalama doesn't just improve on AOP — it reinvents it in a pragmatic approach tailored to modern C#."            
           - title: "Refactoring"
             url: "/applications/refactoring"
             premium: true
@@ -211,15 +211,12 @@ nodes:
       - url: "https://doc.metalama.net/conceptual/getting-started"
         title: "Getting Started"
         description: "Learn how to install Metalama and jumpstart your projects."
-        extern: true
       - url: "https://doc.metalama.net/conceptual"
         title: "Conceptual Documentation"
         description: "Deep dive into the principles and concepts behind Metalama."
-        extern: true
       - url: "https://doc.metalama.net/examples"
         title: "Commented Examples"
         description: "Explore a range of Metalama examples from basic to advanced."
-        extern: true
       - url: "https://github.com/metalama/Metalama/issues"
         title: "Issue Tracker"
         description: "Report bugs and feature requests on GitHub, and check their status."        
@@ -234,7 +231,7 @@ nodes:
     nodes:
       - url: "/marketplace"
         title: "Libraries & Extensions"
-        description: "Accelerate development with open-source extensions and ready-to-use aspects that let you avoid reinventing the wheel."
+        description: "Accelerate development with open-source extensions and ready-to-use aspects."
       - url: "/contributing"
         title: "Contributing"
         description: "Learn how to shape the future of Metalama with your contributions."

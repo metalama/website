@@ -1,6 +1,16 @@
 i.premium {
   &::before {
-    content: "✨";
+    content: ""; 
+    background-image: url("/assets/images/icons/gemstone.svg");
+    background-size: contain; /* Ensure the image fits properly */
+    background-repeat: no-repeat; /* Prevent tiling */
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: -2px;
+    display: inline-block;
+    vertical-align: middle; /* Align with text */
   }
   font-style: normal;
   position: relative;

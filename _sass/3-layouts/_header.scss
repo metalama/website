@@ -216,6 +216,11 @@ header {
 			color: #fff !important;
 		}
 	}
+
+	div.extern::after {
+		content: "🡕";
+		margin-left: 5px;
+	  }
 }
 
 section {

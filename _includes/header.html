@@ -216,7 +216,7 @@
 									{% for entry in item.nodes %}
 									<li>
 										<a href="{{ entry.url }}">
-											<div class="title">
+											<div class="title {% if entry.extern %}extern{% endif %}">
 											{{ entry.title }}
 											{% if entry.premium %}
 												<i class="premium no-tooltip"></i>
@@ -248,7 +248,7 @@
 												{% unless entry.hidden %}
 													<li>
 													<a href="{{ entry.url }}">
-														<div class="title">
+														<div class="title {% if entry.extern %}extern{% endif %}">
 															{{ entry.title }}
 															{% if entry.premium %}
 															<i class="premium no-tooltip"></i>

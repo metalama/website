@@ -15,6 +15,14 @@
 	h2 {
 		font-family: Monosten;
 		font-size: $font-size-h1;
+
+		@media (max-width: 767.98px) {
+				font-size: 26px !important;
+				&--br {
+					display: none;
+				}
+		}
+
 	}
 
 	.problemsSolved {
@@ -431,7 +439,7 @@
 					}
 
 					> td.yes {
-						color: #569cd6;
+						color: $blue;
 						font-weight: bold;
 						text-align: center;
 					}
@@ -820,6 +828,7 @@
 		& img {
 			top: 10%;
 		}
+		padding-bottom: 50px !important;
 	}
 	@media (max-width: 500px) {
 		& img {
@@ -877,11 +886,16 @@
 	display: flex;
 	gap: 50px;
 
+	@media (max-width: 1200px) {
+		flex-direction: column;
+	}
+
 	li {
 		background: url(/assets/images/tags/tag2.svg) no-repeat top left;
 		background-size: 67px 33px;
 		padding-left: 97px;
 		flex: 1;
+		max-width: 660px;
 	}
 
 	b {
@@ -1126,6 +1140,7 @@
 			//line-height: 93.75%; /* 15/16 */
 			margin: 0;
 		}
+
 	}
 	&__list {
 		display: grid;
@@ -1203,7 +1218,7 @@
 		scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
 
 		@media (max-width: 888px) {
-			gap: 200px;
+			gap: 100px;
 		}
 	}
 	// .section-code__row
@@ -1479,7 +1494,7 @@
 	// .section-result__title
 	&__title {
 		max-width: 1100px;
-		margin: 20px auto 0 auto;
+		margin: 20px auto 40px auto;
 		text-align: center;
 		color: #fff;
 		line-height: 115%;
@@ -1703,7 +1718,7 @@
 		text-align: center;
 		&::before{
 			content:'#';
-			color: $purple
+			color: $blue
 			
 		}
 	}
@@ -1808,14 +1823,7 @@
 
 // Approach Section End ========================================================================================================================================================
 
-@media (max-width: 767.98px) {
-	.mob-title {
-		font-size: 26px !important;
-		&--br {
-			display: none;
-		}
-	}
-}
+
 
 .line2 {
 	display: flex;
@@ -1849,16 +1857,18 @@
 	left: 50%;
 	transform: translateX(-50%);
 	background: transparent;
-	color: $purple;
+	color: white;
 	border: none;
 	padding: 0.5rem 1rem;
 	cursor: pointer;
 	transition: opacity 0.3s ease;
 	z-index: 1;
+	font-size: 20px;
+	opacity: 0.5;
 
 	&.disabled {
 		cursor: default;
-		opacity: 0.2;
+		opacity: 0.05;
 	}
   }
   
