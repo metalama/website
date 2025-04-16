@@ -9,6 +9,8 @@ import revRewrite from 'gulp-rev-rewrite';
 import terser from 'gulp-terser';
 import { readFileSync } from 'node:fs';
 import connect from 'gulp-connect';
+import { resolve } from 'path';
+import { existsSync } from 'fs';
 
 gulp.task('svg-to-png', function () {
     return gulp
@@ -102,6 +104,24 @@ gulp.task('serve', gulp.series('default', function () {
     connect.server({
         root: '_cdn',
         port: 8080,
-        https: false
+        https: false,
+        middleware: function () {
+            return [
+                function (req, res, next) {
+                    const url = req.url;
+                    const root = '_cdn';
+                    if (!url.includes('.')) {
+                        const htmlPath = resolve(root, `.${url}.html`);
+                        const indexPath = resolve(root, `.${url}/index.html`);
+                        if (existsSync(htmlPath)) {
+                            req.url += '.html';
+                        } else if (existsSync(indexPath)) {
+                            req.url += '/index.html';
+                        }
+                    }
+                    next();
+                }
+            ];
+        }
     });
 }));
