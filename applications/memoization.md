@@ -62,6 +62,6 @@ public class ExpensiveResourceViewModel : DependencyObject
 
 * Reference documentation: [Memoization](https://doc.metalama.net/patterns/memoization).
 * Source
-  code: [Metalama.Patterns.Memoization](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Memoization).
+  code: [Metalama.Patterns.Memoization](https://github.com/metalama/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Memoization).
 * NuGet package: [Metalama.Patterns.Memoization](https://www.nuget.org/packages/Metalama.Patterns.Memoization).
 

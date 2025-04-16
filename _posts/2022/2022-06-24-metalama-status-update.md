@@ -15,7 +15,7 @@ It's time for another status update. The big announcement of this month is that 
 
 ## Dependency Injection
 
-In June, we have focused on the support for **dependency injection**. It is now possible for an aspect to use a dependency without knowing which dependency injection framework is used in the project using the aspect. The implementation of this feature is [open source](https://github.com/postsharp/Metalama.Framework.Extensions). It consists in a highly extensible abstraction, as well as two first implementations: one for the standard injection patterns of .NET Core (i.e. `Microsoft.Extension.DependencyInjection`), the second for a classic service locator pattern (a good fit for objects that are not instantiated by the container).
+In June, we have focused on the support for **dependency injection**. It is now possible for an aspect to use a dependency without knowing which dependency injection framework is used in the project using the aspect. The implementation of this feature is [open source](https://github.com/metalama/Metalama.Framework.Extensions). It consists in a highly extensible abstraction, as well as two first implementations: one for the standard injection patterns of .NET Core (i.e. `Microsoft.Extension.DependencyInjection`), the second for a classic service locator pattern (a good fit for objects that are not instantiated by the container).
 
 Here is an example where a `LogAttribute` aspect pulls a dependency of type `IMessageWriter` you can see that the aspect code is very simple and does not know anything about the dependency injection pattern.
 

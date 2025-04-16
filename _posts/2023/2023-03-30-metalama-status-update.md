@@ -33,7 +33,7 @@ With the `metalama divorce` command, the code usually generated in the backgroun
 
 ## Other fixes and improvements
 
-We fixed around 30 bugs in March 2023, with lower and lower severity. It seems that there is no longer any release blocker. You can see the complete list of bug fixes in the release announcements on our [GitHub discussion board](https://github.com/postsharp/Metalama/discussions/categories/announcements). 
+We fixed around 30 bugs in March 2023, with lower and lower severity. It seems that there is no longer any release blocker. You can see the complete list of bug fixes in the release announcements on our [GitHub discussion board](https://github.com/metalama/Metalama/discussions/categories/announcements). 
 
 We also added support for Roslyn 4.5, the latest version of the .NET compiler platform. It seems that it only contained bug fixes.
 

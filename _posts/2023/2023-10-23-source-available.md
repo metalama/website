@@ -13,7 +13,7 @@ tag: featured
 summary: "The source code of Metalama.Framework is now publicly accessible on GitHub under a proprietary source-available license. This move aims to enhance transparency, support a superior developer experience, and foster greater trust."
 ---
 
-We recently announced the [open-sourcing of Metalama.Compiler](https://metalama.net/blog/open-sourcing-metalama-compiler), our Roslyn fork. Today, we are excited to announce that the source code of Metalama.Framework is now publicly accessible on [GitHub](https://github.com/postsharp/Metalama.Framework) under a proprietary source-available license. Additionally, all extensions and aspects built on top of Metalama.Framework have been open-sourced since their inception.
+We recently announced the [open-sourcing of Metalama.Compiler](https://metalama.net/blog/open-sourcing-metalama-compiler), our Roslyn fork. Today, we are excited to announce that the source code of Metalama.Framework is now publicly accessible on [GitHub](https://github.com/metalama/Metalama.Framework) under a proprietary source-available license. Additionally, all extensions and aspects built on top of Metalama.Framework have been open-sourced since their inception.
 
 It is important to note that "source-available" does not equate to "open source" as defined by the Open Source Initiative (OSI). If you need more features than those provided by Metalama Free, you will still need to acquire a license for Metalama.
 

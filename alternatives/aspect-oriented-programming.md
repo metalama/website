@@ -12,7 +12,7 @@ Today's aspect-oriented frameworks all rely on one of the following approaches:
 
 * **Roslyn-based** frameworks interact directly with the compiler without requiring an additional process. They are
   based on official Roslyn extension points such as analyzers and code generators, plus unofficial extension points
-  added by [Metalama.Compiler](https://github.com/postsharp/Metalama.Compiler), an open-source fork of Roslyn, allowing
+  added by [Metalama.Compiler](https://github.com/metalama/Metalama.Compiler), an open-source fork of Roslyn, allowing
   arbitrary code transformations. [Metalama](/metalama) is the only framework in this category at the moment.
   Roslyn-based frameworks can give you real-time feedback as you are typing, while MSIL-based ones require you to
   rebuild.

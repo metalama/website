@@ -35,7 +35,7 @@ Let’s build something powerful.
 
 4. **Build and maintain a community-driven aspect library or extension.**
 
-    If you can invest more time in your contribution, consider integrating it into the [Metalama.Community](https://github.com/postsharp/Metalama.Community) repository. You can also improve and maintain contributions from other community members.
+    If you can invest more time in your contribution, consider integrating it into the [Metalama.Community](https://github.com/metalama/Metalama.Community) repository. You can also improve and maintain contributions from other community members.
 
     For details, see [how to contribute code](contribute-code).
 

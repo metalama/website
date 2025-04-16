@@ -149,6 +149,16 @@
       border-collapse: collapse;
     }
 
+    
+a[href*=":"]:not([href*="metalama.net"])::after {
+  content: "🡕";
+  margin-left: 2px;
+  margin-right: 2px;
+  text-decoration: none; 
+  display: inline-block;
+  color: $blue;
+}
+
  
 }
 

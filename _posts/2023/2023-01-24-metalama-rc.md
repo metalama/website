@@ -39,7 +39,7 @@ In addition to the release of Metalama, we're also unveiling a new pricing model
 
 If you have been following the monthly status updates, here is what's new since our last report.
 
-Since December 1st, we have addressed approximately 100 bug fixes or small enhancements. For details, see the [change log of individual builds](https://github.com/postsharp/Metalama/discussions/categories/announcements). We have also completed minor user stories like:
+Since December 1st, we have addressed approximately 100 bug fixes or small enhancements. For details, see the [change log of individual builds](https://github.com/metalama/Metalama/discussions/categories/announcements). We have also completed minor user stories like:
 
 * Handling of `[CallerMemberName]` custom attributes.
 * Moving `Metalama.LinqPad` to its own repository and made it open source.
@@ -50,7 +50,7 @@ Since December 1st, we have addressed approximately 100 bug fixes or small enhan
 * Adding limited support for introducing generic interfaces from aspects.
 * Allowing customization of the appearance of the aspect in the IDE code refactoring menu with the `[EditorExperience]` custom attribute.
 
-The only big addition of the last 2 months is the long-awaited  **Architecture Validation** component, released under an MIT license in the [Metamama.Extensions](https://github.com/postsharp/Metalama.Extensions/tree/master/src/Metalama.Extensions.Architecture) repo. The documentation for this component is still being written. In summary, there are two ways to use this package:
+The only big addition of the last 2 months is the long-awaited  **Architecture Validation** component, released under an MIT license in the [Metamama.Extensions](https://github.com/metalama/Metalama.Extensions/tree/master/src/Metalama.Extensions.Architecture) repo. The documentation for this component is still being written. In summary, there are two ways to use this package:
 
 
 1. By adding to your code one of the following architecture custom attributes from the `Metalama.Extensions.Architecture.Aspects` namespace:
@@ -83,7 +83,7 @@ The only big addition of the last 2 months is the long-awaited  **Architecture V
 
 ## What's Next
 
-Before announcing General Availability, we will continue to fix bugs and complete the documentation and the product website, in preparation for the commercial launch of the product. We will continue to provide support in our [Slack community](https://www.postsharp.net/slack) or on [GitHub](https://github.com/postsharp/Metalama/issues) and swiftly fix any reported bug. We will no longer accept enlarging the scope of this version.
+Before announcing General Availability, we will continue to fix bugs and complete the documentation and the product website, in preparation for the commercial launch of the product. We will continue to provide support in our [Slack community](https://www.postsharp.net/slack) or on [GitHub](https://github.com/metalama/Metalama/issues) and swiftly fix any reported bug. We will no longer accept enlarging the scope of this version.
 
 ## Summary
 

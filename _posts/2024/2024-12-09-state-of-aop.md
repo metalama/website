@@ -13,7 +13,7 @@ keywords:
 - ".net"
 image: /assets/images/2024/2024-12-state-of-aop/aop-dark.svg
 thumbnail: /assets/images/2024/2024-12-state-of-aop/aop-light.svg
-source_url: https://github.com/postsharp/Metalama.Samples/blob/HEAD/examples/caching/caching-1
+source_url: https://github.com/metalama/Metalama.Samples/blob/HEAD/examples/caching/caching-1
 ---
 
 Aspect-oriented programming (AOP) was invented in the early 2000s and enjoyed a few years of hype. Althought it has been implemented in many languages, it seems to have faded in the background. Even Metalama, the most comprehensive AOP framework for .NET, does not primarily market itself as an AOP framework. What ever happened to AOP, and what is its status in the .NET world today?
@@ -212,7 +212,7 @@ Today's aspect-oriented frameworks all rely on one of the following approaches:
 
 * [MSIL Rewriting](https://www.postsharp.net/solutions/msil-rewriting) is the process of modifying the binary assembly during the build process. An additional step is added to this process just after the C# compiler. This approach was pioneered by PostSharp when the C# compiler was a black box. It is now considered obsolete, but many tools still rely on it.
 
-* **Roslyn-based** frameworks interact directly with the compiler without requiring an additional process. They are based on official Roslyn extension points such as analyzers and code generators, plus unofficial extension points added by [Metalama.Compiler](https://github.com/postsharp/Metalama.Compiler), an open-source Roslyn fork, which allows arbitrary code transformations. [Metalama](https://www.postsharp.net/metalama) is currently the only framework in this category. Roslyn-based frameworks can give you real-time feedback as you are typing, while MSIL-based ones require you to rebuild.
+* **Roslyn-based** frameworks interact directly with the compiler without requiring an additional process. They are based on official Roslyn extension points such as analyzers and code generators, plus unofficial extension points added by [Metalama.Compiler](https://github.com/metalama/Metalama.Compiler), an open-source Roslyn fork, which allows arbitrary code transformations. [Metalama](https://www.postsharp.net/metalama) is currently the only framework in this category. Roslyn-based frameworks can give you real-time feedback as you are typing, while MSIL-based ones require you to rebuild.
 
 * [Middleware-based frameworks](https://www.postsharp.net/solutions/middleware) generally rely on a dependency injection framework and generate dynamic proxies at runtime. They are limited to intercepting interface methods and adding new interfaces to types.
 

@@ -36,7 +36,7 @@ We envision a community rich in diverse contributions:
 
 All community-led open-source projects are eligible for a free, namespace-bound license key, which you can check into your source code in your `Directory.Build.props` file.
 
-To contribute, please contact us on [Slack](https://www.postsharp.net/slack) or via email. Alternatively, you can submit a PR to the [Metalama.Marketplace](https://github.com/postsharp/Metalama.Marketplace/tree/master/entries) repository with your data.
+To contribute, please contact us on [Slack](https://www.postsharp.net/slack) or via email. Alternatively, you can submit a PR to the [Metalama.Marketplace](https://github.com/metalama/Metalama.Marketplace/tree/master/entries) repository with your data.
 
 ## Ensuring Quality
 

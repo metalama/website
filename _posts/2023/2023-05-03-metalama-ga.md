@@ -146,7 +146,7 @@ If you're ready to transform the way you write code, get started in these three 
 
 2. Install the [Metalama Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.metalama). It's optional, but we recommend it, especially if you're just starting.
  
-3. Clone the [Metalama.Samples](https://github.com/postsharp/Metalama.Samples) repo, and start exploring!
+3. Clone the [Metalama.Samples](https://github.com/metalama/Metalama.Samples) repo, and start exploring!
 
 ## Special Promotion
 

@@ -81,7 +81,7 @@ internal class Fabric : ProjectFabric
 ## Resources
 
 * Reference documentation: [Code Contracts](https://doc.metalama.net/patterns/contracts).
-* Source code: [Metalama.Patterns.Contracts](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Contracts).
+* Source code: [Metalama.Patterns.Contracts](https://github.com/metalama/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Contracts).
 * NuGet package: [Metalama.Patterns.Contracts](https://www.nuget.org/packages/Metalama.Patterns.Wpf).
 
 

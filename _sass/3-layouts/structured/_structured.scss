@@ -202,13 +202,14 @@
 
 	div.row {
 		background-color: #1e1e1e;
+		padding: 0 10px;
 		display: flex;
 		flex-direction: row;
 		> * {
 			flex: 1; // Ensure all columns have equal width
 		}
 
-		h4 {
+		h3, h4 {
 			text-align: center;
 		}
 	}

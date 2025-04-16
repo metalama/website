@@ -117,6 +117,10 @@ header {
 				margin-top: 10px;
 				z-index: 10000002;
 
+				// Enable scrolling on small screens (typically tablets in landscape mode).
+				max-height: calc(100vh - 60px);
+				overflow-y: auto;
+
 				ul {
 					display: grid;
 					grid-auto-flow: column; /* fills down then adds new columns */

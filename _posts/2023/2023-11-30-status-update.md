@@ -21,7 +21,7 @@ We released the first stable version of Metalama 2023.4, which features a versat
 
 ## Metalama 2024.0 Previews
 
-We have released two previews of Metalama 2024.0, focusing on .NET 8.0 and C# 12 support. We have merged Roslyn 4.8 into [Metalama.Compiler](https://github.com/postsharp/Metalama.Compiler), now open-source.
+We have released two previews of Metalama 2024.0, focusing on .NET 8.0 and C# 12 support. We have merged Roslyn 4.8 into [Metalama.Compiler](https://github.com/metalama/Metalama.Compiler), now open-source.
 
 We are working on supporting C# 12 features. Here is the current status:
 
@@ -45,7 +45,7 @@ For more details about this branch, see the changelogs:
 - [2024.0.2-preview](https://github.com/orgs/metalama/discussions/241)
 - [2024.0.1-preview](https://github.com/orgs/metalama/discussions/238)
 
-Real enthusiasts can also look at the list of [unpublished commits](https://github.com/postsharp/Metalama.Framework/compare/release/2024.0...develop/2024.0).
+Real enthusiasts can also look at the list of [unpublished commits](https://github.com/metalama/Metalama.Framework/compare/release/2024.0...develop/2024.0).
 
 ## PostSharp 2024.0 Preview
 
@@ -67,7 +67,7 @@ We will also dedicate several weeks to performance optimizations of Metalama.
 
 Another lower-priority objective is to complete several user stories around advising constructors.
 
-We're also considering finishing the work with the [observability](https://github.com/postsharp/Metalama.Patterns/tree/release/2024.0/src/Metalama.Patterns.Observability) and [XAML](https://github.com/postsharp/Metalama.Patterns/tree/release/2024.0/src/Metalama.Patterns.Xaml) aspects.
+We're also considering finishing the work with the [observability](https://github.com/metalama/Metalama.Patterns/tree/release/2024.0/src/Metalama.Patterns.Observability) and [XAML](https://github.com/metalama/Metalama.Patterns/tree/release/2024.0/src/Metalama.Patterns.Xaml) aspects.
 
 ## Summary
 

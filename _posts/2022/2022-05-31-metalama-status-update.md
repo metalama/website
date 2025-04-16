@@ -30,9 +30,9 @@ It has been another month since our [last update](https://metalama.net/blog/meta
 * **Extensibility examples**. We fixed several bugs around the extensibility of Metalama using the Roslyn API. We are not completely finished with this use case, but you can already look at the following examples:
 
   
-  * [Metalama.Open.Virtuosity](https://github.com/postsharp/Metalama.Open.Virtuosity): makes all possible methods in a project `virtual`.
-  * [Metalama.Open.AutoCancellationToken](https://github.com/postsharp/Metalama.Open.AutoCancellationToken): automatically propagates `CancellationToken` parameter.
-  * [Metalama.Open.DependencyEmbedder](https://github.com/postsharp/Metalama.Open.DependencyEmbedder): bundles .NET Framework applications into a single executable file.
+  * [Metalama.Open.Virtuosity](https://github.com/metalama/Metalama.Open.Virtuosity): makes all possible methods in a project `virtual`.
+  * [Metalama.Open.AutoCancellationToken](https://github.com/metalama/Metalama.Open.AutoCancellationToken): automatically propagates `CancellationToken` parameter.
+  * [Metalama.Open.DependencyEmbedder](https://github.com/metalama/Metalama.Open.DependencyEmbedder): bundles .NET Framework applications into a single executable file.
 
 * **Documentation**. We have completed chapters the following articles:
   * [Aspect Inheritance](https://doc.metalama.net/aspects/aspect-inheritance)

@@ -40,7 +40,7 @@ separately from Fody itself.
 
 ## Fody alternatives
 
-- [Metalama.Compiler](https://github.com/postsharp/Metalama.Compiler) is a fork of Roslyn that adds an extension point
+- [Metalama.Compiler](https://github.com/metalama/Metalama.Compiler) is a fork of Roslyn that adds an extension point
   allowing for arbitrary code modifications using the Roslyn code model instead of MSIL instructions.
 
 - [Aspect-oriented frameworks](aspect-oriented-programming) for .NET are generally more powerful and simpler to
@@ -49,5 +49,5 @@ separately from Fody itself.
 - [Metalama](/) is the simplest and most powerful AOP framework for .NET. It can be extended
   using [Metalama.Framework.Sdk](https://doc.metalama.net/conceptual/sdk) to support code transformations
   using the Roslyn code
-  model. [Metalama.Community.Costura](https://github.com/postsharp/Metalama.Community/tree/release/2024.2/src/Metalama.Community.Costura)
+  model. [Metalama.Community.Costura](https://github.com/metalama/Metalama.Community/tree/release/2024.2/src/Metalama.Community.Costura)
   is a port of the popular `Costura.Fody` weaver built with `Metalama.Framework.Sdk`.

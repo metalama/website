@@ -13,7 +13,7 @@ The main difference between a core project and a community-driven project lies i
 
 - For _core repositories_, PostSharp Technologies takes on the maintenance responsibility and provides full support to enterprise customers. These repositories include [Metalama](https://github.com/metalama/Metalama), [Metalama.Compiler](https://github.com/metalama/Metalama.Compiler), [Metalama.Samples](https://github.com/metalama/Metalama.Samples), and [Metalama.Documentation](https://github.com/metalama/Metalama.Documentation). Due to their extended guarantees, contributions to core repositories undergo higher scrutiny and must meet stricter quality standards. Note that contributing to core repositories requires signing the [Contributor License Agreement](cla).
 
-- For _community repositories_, such as [Metalama.Community](https://github.com/postsharp/Metalama.Community), PostSharp Technologies assumes no responsibility and offers no guarantees or support. However, unlike personal projects, their maintenance responsibility is shared by the entire community rather than a single person. By contributing to a community repository, you enable other community members to build upon your work.
+- For _community repositories_, such as [Metalama.Community](https://github.com/metalama/Metalama.Community), PostSharp Technologies assumes no responsibility and offers no guarantees or support. However, unlike personal projects, their maintenance responsibility is shared by the entire community rather than a single person. By contributing to a community repository, you enable other community members to build upon your work.
 
 Check out our [branching strategy](branching) for more details.
 

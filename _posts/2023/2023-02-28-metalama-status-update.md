@@ -64,7 +64,7 @@ We've focused more on improving our documentation this month. We've added a new 
 
 In February, we made significant improvements to our API, fixed bugs, integrated a customer's code into our continuous integration pipeline, added a new CLI command to analyze the use of licensing credits, and worked on improving our documentation. We're pleased with the progress we've made, and we're happy to announce that Metalama is now technically ready for GA. However, before we release the product, we'd like to see a couple of weeks without regressions. Our next milestone is to complete the documentation and product website, after which we'll be fully prepared for the launch!
 
- As always, we're committed to providing the best possible experience for developers, and we encourage you to reach out to us on [GitHub forum](https://github.com/postsharp/Metalama/discussions) or our [Slack community](https://www.postsharp.net/slack) with any questions or feedback you may have. Thank you for your support, and happy meta-programming with Metalama!
+ As always, we're committed to providing the best possible experience for developers, and we encourage you to reach out to us on [GitHub forum](https://github.com/metalama/Metalama/discussions) or our [Slack community](https://www.postsharp.net/slack) with any questions or feedback you may have. Thank you for your support, and happy meta-programming with Metalama!
 
 -gael
 

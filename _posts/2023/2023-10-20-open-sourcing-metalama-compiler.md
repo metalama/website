@@ -13,7 +13,7 @@ tag: featured
 summary: "PostSharp Technologies has open-sourced their Metalama Compiler, a Roslyn fork used by Metalama to modify code during compilation. The compiler aims to simplify meta-programming for developers and improve productivity."
 ---
 
-We are excited to announce the open-sourcing of [Metalama.Compiler](https://github.com/postsharp/Metalama.Compiler), the Roslyn fork used by [Metalama](https://www.postsharp.net/metalama) to modify code dynamically during compilation. `Metalama.Compiler` enables anyone to build arbitrary source transformers. 
+We are excited to announce the open-sourcing of [Metalama.Compiler](https://github.com/metalama/Metalama.Compiler), the Roslyn fork used by [Metalama](https://www.postsharp.net/metalama) to modify code dynamically during compilation. `Metalama.Compiler` enables anyone to build arbitrary source transformers. 
 
 The Metalama Compiler forms the foundation of Metalama, our high-level meta-programming framework that assists C# developers in reducing boilerplate using [aspect-oriented programming](https://www.postsharp.net/solutions/aspect-oriented-programming) and combating architecture erosion with architecture-as-code. The Metalama Compiler, representing several months of work, is a mature project that has seen no significant changes in the last 12 months, except minor bug fixes. By open-sourcing `Metalama.Compiler`, we aim to make it the preferred platform for Roslyn enthusiasts and `SyntaxNode` aficionados who want genuine source code generation capabilities. For _application_ developers, building aspects based on `Metalama.Framework` is significantly simpler -- not to mention that they can rely on a library of ready-made aspects on the [Metalama Marketplace](https://www.postsharp.net/metalama/marketplace).
 
@@ -106,7 +106,7 @@ Metalama.Microsoft.CodeAnalysis["`_forked_
 
 Please note that `Metalama.Compiler` only works for C#. There is no plan to support Visual Basic.
 
-For further details, see the [project home](https://github.com/postsharp/Metalama.Compiler) on GitHub and the [API documentation](https://doc.metalama.net/api/metalama_compiler).
+For further details, see the [project home](https://github.com/metalama/Metalama.Compiler) on GitHub and the [API documentation](https://doc.metalama.net/api/metalama_compiler).
 
 ## Who Should Use Metalama Compiler?
 
@@ -122,7 +122,7 @@ However, if you wish to construct another aspect-oriented framework, you can cer
 
 ## Contributing
 
-You can contribute by reporting bugs, submitting feature requests to the [project's issue tracker](https://github.com/postsharp/Metalama.Compiler/issues), or by proposing pull requests. Both pull requests and feature requests should align closely with the mission of `Metalama.Compiler`, which is to make the compiler open for code modification in an extensible way. The primary objective of this project is _not_ to serve as a universal fork for all changes rejected by the Roslyn team.    
+You can contribute by reporting bugs, submitting feature requests to the [project's issue tracker](https://github.com/metalama/Metalama.Compiler/issues), or by proposing pull requests. Both pull requests and feature requests should align closely with the mission of `Metalama.Compiler`, which is to make the compiler open for code modification in an extensible way. The primary objective of this project is _not_ to serve as a universal fork for all changes rejected by the Roslyn team.    
 
 ## Wrapping Up
 

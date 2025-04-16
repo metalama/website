@@ -164,4 +164,4 @@ public static class MetricRegistrations
 
 ## Resources
 
-- Example: [Metalama.Samples.Metrics](https://github.com/postsharp/Metalama.Samples/tree/develop/2025.0/examples/metrics)
+- Example: [Metalama.Samples.Metrics](https://github.com/metalama/Metalama.Samples/tree/develop/2025.0/examples/metrics)

@@ -29,7 +29,7 @@ We published the first RC of Metalama 2023.4, which features a versatile [option
 
 ## Metalama 2024.0 WIP
 
-Further open-source work is in progress in the [Metalama.Patterns](https://github.com/postsharp/Metalama.Patterns/tree/develop/2024.0) repo where we are building aspects for XAML commands and dependency properties. A preview of these new libraries will likely be available in 2024.0.
+Further open-source work is in progress in the [Metalama.Patterns](https://github.com/metalama/Metalama.Patterns/tree/develop/2024.0) repo where we are building aspects for XAML commands and dependency properties. A preview of these new libraries will likely be available in 2024.0.
 
 However, the most important focus for Metalama 2024.0 will be support for .NET 8 and C# 12. We aim to publish an RC within days after Microsoft's own GA release.
 

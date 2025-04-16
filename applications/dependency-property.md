@@ -53,6 +53,6 @@ public partial class FancyTextBlock : UserControl
 * Reference
   documentation: [WPF Dependency Properties](https://doc.metalama.net/patterns/wpf/dependency-property).
 * Source
-  code: [Metalama.Patterns.Wpf](https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Wpf).
+  code: [Metalama.Patterns.Wpf](https://github.com/metalama/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Wpf).
 * NuGet package: [Metalama.Patterns.Wpf](https://www.nuget.org/packages/Metalama.Patterns.Wpf).
 
