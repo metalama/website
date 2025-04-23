@@ -28,9 +28,6 @@ form > div {
 </script>
 
 
-
-🎉 **Welcome to Metalama!**
-
 We're absolutely thrilled to have you here.
 
 Metalama opens the door to advanced and efficient meta-programming, excelling in code generation and validation. Think of it as a modern reinvention of aspect-oriented programming for .NET. Our motto: _If it's repetitive, it can be automated._ Say goodbye to tedious tasks and cumbersome boilerplate. Welcome to clean, maintainable, and DRY code.
@@ -40,6 +37,31 @@ Metalama opens the door to advanced and efficient meta-programming, excelling in
 Don't miss out on the latest updates, tips, and tricks! Subscribe to our newsletter today:
 
 <script async data-uid="9dd40aa45d" src="https://postsharp.kit.com/9dd40aa45d/index.js"></script>
+
+
+## 🧰 Install Visual Studio Tools for Metalama
+
+Enhance your development experience with the **Visual Studio Tools for Metalama**. These tools are designed to streamline your workflow and provide powerful insights into your code:
+
+- **CodeLens Integration**  
+  Effortlessly identify applied aspects directly in the editor, even when they are not visible in the source code.
+
+- **Metalama Diff**  
+  Instantly compare source and transformed code within Visual Studio, making it easier to understand the impact of your aspects.
+
+- **Syntax Highlighting**  
+  Clearly distinguish meta-code with T# syntax highlighting, ensuring better readability and maintainability.
+
+- **Aspect Explorer**  
+  Explore all aspects in your solution and see how they influence the source code, providing a comprehensive view of your project.
+
+These tools are available as a premium feature and are free for individuals, non-commercial use, open-source development, and companies with up to 3 users.
+
+<div class="buttons">
+    <a class="btn btn--md" style="width: 160px;" href="/marketplace">Download</a>
+    <a class="btn btn--md" style="width: 160px;" href="/features/tooling">Learn More</a>
+</div>
+
 
 ## 🚀 Getting Started with Metalama
 
