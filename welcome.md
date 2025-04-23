@@ -3,11 +3,31 @@ title: Welcome to Metalama!
 layout: plain
 ---
 
+<style>
+form {
+background-color: white;
+border-radius: 5px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+form > div {
+padding: 20px !important;
+}
+</style>
+
 🎉 **Welcome to Metalama!**
 
 We're absolutely thrilled to have you here.
 
 Metalama opens the door to advanced and efficient meta-programming, excelling in code generation and validation. Think of it as a modern reinvention of aspect-oriented programming for .NET. Our motto: _If it's repetitive, it can be automated._ Say goodbye to tedious tasks and cumbersome boilerplate. Welcome to clean, maintainable, and DRY code.
+
+## Stay Tuned
+
+Don't miss out on the latest updates, tips, and tricks! Subscribe to our newsletter today:
+
+<script async data-uid="9dd40aa45d" src="https://postsharp.kit.com/9dd40aa45d/index.js"></script>
+
+## Getting Started
 
 Let's get you started on this exciting journey:
 
