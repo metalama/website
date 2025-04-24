@@ -86,7 +86,7 @@ gulp.task("rev-rewrite", function () {
 // Copy files that are not renamed.
 gulp.task('copy-html', function () {
     return gulp
-        .src('_site/**/*.html}')
+        .src('_site/**/*.html') 
         .pipe(gulp.dest('_cdn'));
 });
 
