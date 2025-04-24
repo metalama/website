@@ -50,7 +50,9 @@ var swiper = new Swiper('.swiper-container', {
 	window["FLS"] = true;
 	menuInit();
 })();
-$(document).ready(function () {
+
+
+function initializeHeader() {
 	var lastScrollTop = 0;
 	var $header = $('header');
 	var $spacer = $('.header-spacer');
@@ -205,8 +207,12 @@ $(document).ready(function () {
 			setHeaderBg($(window).scrollTop());
 		}
 	});
+}
 
+$(document).ready(function () {	
+	initializeHeader();
 });
+
 
 // Track the active section in the right nav.
 $(document).ready(function () {
