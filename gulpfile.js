@@ -118,11 +118,11 @@ gulp.task('generate-redirects', function (done) {
     if (existsSync(staticWebAppConfigSource)) {
         const configContent = JSON.parse(readFileSync(staticWebAppConfigSource, 'utf-8'));
 
-        // Add redirects to the routes array
+        // Prepend redirects to the routes array
         if (!Array.isArray(configContent.routes)) {
             configContent.routes = [];
         }
-        configContent.routes.push(...redirects);
+        configContent.routes = [...redirects, ...configContent.routes];
 
         writeFileSync(staticWebAppConfigDest, JSON.stringify(configContent, null, 2), 'utf-8');
         console.log(`Static Web App configuration updated and written to: ${staticWebAppConfigDest}`);
