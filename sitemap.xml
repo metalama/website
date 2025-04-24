@@ -20,7 +20,7 @@ layout: null
         {% assign two_months_ago = today | minus: 5259487 %}
         {% assign changefreq = post_date >= one_week_ago ? "daily" : post_date >= two_months_ago ? "weekly" : "monthly" %}
 
-        <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
+        <loc>{{ post.url | prepend: site.base_path | prepend: site.url }}</loc>
         <lastmod>{{ lastmod }}</lastmod>
         <changefreq>{{ changefreq }}</changefreq>
 
@@ -34,7 +34,7 @@ layout: null
     {% for item1 in site.data.navigation.nodes %}
       {% if item1.url and item1.extern != true %}
       <url>
-        <loc>{{ item1.url | prepend: site.baseurl | prepend: site.url }}</loc>
+        <loc>{{ item1.url | prepend: site.base_path | prepend: site.url }}</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
       </url>
@@ -42,7 +42,7 @@ layout: null
       {% for item2 in item1.nodes %}
         {% if item2.url and item2.extern != true %}
         <url>
-          <loc>{{ item2.url | prepend: site.baseurl | prepend: site.url }}</loc>
+          <loc>{{ item2.url | prepend: site.base_path | prepend: site.url }}</loc>
           <changefreq>monthly</changefreq>
           <priority>0.8</priority>
         </url>
@@ -50,7 +50,7 @@ layout: null
         {% for item3 in item2.nodes %}
           {% if item3.url and item3.extern != true %}
           <url>
-            <loc>{{ item3.url | prepend: site.baseurl | prepend: site.url }}</loc>
+            <loc>{{ item3.url | prepend: site.base_path | prepend: site.url }}</loc>
             <changefreq>monthly</changefreq>
             <priority>0.8</priority>
           </url>
@@ -58,7 +58,7 @@ layout: null
           {% for item4 in item3.nodes %}
             {% if item4.url and item4.extern != true %}
             <url>
-              <loc>{{ item4.url | prepend: site.baseurl | prepend: site.url }}</loc>
+              <loc>{{ item4.url | prepend: site.base_path | prepend: site.url }}</loc>
               <changefreq>monthly</changefreq>
               <priority>0.8</priority>
             </url>

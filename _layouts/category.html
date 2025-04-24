@@ -19,12 +19,12 @@
             {% for post in site.categories[page.tag] %}
 
 
-            <a class="blog_item" href="{{site.baseurl}}{{ post.url }}">
+            <a class="blog_item" href="{{site.base_path}}{{ post.url }}">
                 <figure>
                     {% if post.image %}
                     <img src="{{ post.thumbnail | default: post.image }}" alt="{{ post.title }}">
                     {% else %}
-                    <img src="{{site.baseurl}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{ post.title }}">
+                    <img src="{{site.base_path}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{ post.title }}">
                     {% endif %}
                 </figure>
                 <div class="item_details_container">

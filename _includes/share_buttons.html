@@ -1,17 +1,17 @@
 {% if include.isPage %} {%
-assign sharableURL = site.url | append:site.baseurl | append:page.url
+assign sharableURL = site.url | append:site.base_path | append:page.url
 assign sharableTitle = page.title
 %} {% else %} {%
-assign sharableURL = site.url | append:site.baseurl | append:post.url
+assign sharableURL = site.url | append:site.base_path | append:post.url
 assign sharableTitle = post.title
 %}
 {% endif %}
 
 <ul>
     <li><a href="https://www.linkedin.com/company/postsharp" target="_blank" title="Follow on LinkedIn"><img
-                src="{{site.baseurl}}/assets/images/icons/linkedin_p.svg" alt="LinkedIn"></a></li>
-    <li><a href="{{site.baseurl}}/feed.xml" target="_blank" title="RSS feed"><img
-                src="{{site.baseurl}}/assets/images/icons/rss.svg" alt="RSS"></a></li>
+                src="{{site.base_path}}/assets/images/icons/linkedin_p.svg" alt="LinkedIn"></a></li>
+    <li><a href="{{site.base_path}}/feed.xml" target="_blank" title="RSS feed"><img
+                src="{{site.base_path}}/assets/images/icons/rss.svg" alt="RSS"></a></li>
     <li><a href="https://www.postsharp.net/slack" target="_blank" title="Join us on Slack"><img
-                src="{{site.baseurl}}/assets/images/icons/slack.svg" alt="Slack"></a></li>
+                src="{{site.base_path}}/assets/images/icons/slack.svg" alt="Slack"></a></li>
 </ul>

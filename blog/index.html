@@ -10,16 +10,16 @@ layout: min
 				<div class="swiper-slide">
 					<div class="post_data">
 						<figure>
-							<a href="{{site.baseurl}}{{ post.url }}">
+							<a href="{{site.base_path}}{{ post.url }}">
 								{% if post.image %}
 								<img src="{{post.image}}" alt="{{post.title}}">
 								{% else %}
-								<img src="{{site.baseurl}}/assets/images/blog/ps-no-featimg-16x9.jpg"
+								<img src="{{site.base_path}}/assets/images/blog/ps-no-featimg-16x9.jpg"
 									alt="{{ post.title }}">
 								{% endif %}
 							</a>
 						</figure>
-						<h3><a href="{{site.baseurl}}{{ post.url }}">{{post.short_title | default: post.title |
+						<h3><a href="{{site.base_path}}{{ post.url }}">{{post.short_title | default: post.title |
 								strip_html | strip_newlines |
 								truncate: 150}}</a></h3>
 
@@ -37,8 +37,8 @@ layout: min
 								{% comment %}
 								{% for category in post.categories %}
 								<div class="post_category">
-									<a href="{{site.baseurl}}/archive#{{category | downcase | replace: ' ', '-' }}">
-										<img src="{{site.baseurl}}/assets/images/icons/tag_white.svg" alt="" />
+									<a href="{{site.base_path}}/archive#{{category | downcase | replace: ' ', '-' }}">
+										<img src="{{site.base_path}}/assets/images/icons/tag_white.svg" alt="" />
 										<span>{{category}}</span>
 									</a>
 								</div>
@@ -52,7 +52,7 @@ layout: min
 
 						<div class="pagination_and_read_button">
 							<div class="swiper-pagination in-pagination"></div>
-							<a class="read_button" href="{{site.baseurl}}{{ post.url }}">READ</a>
+							<a class="read_button" href="{{site.base_path}}{{ post.url }}">READ</a>
 						</div>
 
 					</div>
@@ -68,12 +68,12 @@ layout: min
 		<h2>Featured Posts</h2>
 		<div class="posts">
 			{% for post in site.tags.featured limit:3 %}
-			<a class="blog_item" href="{{site.baseurl}}{{ post.url }}">
+			<a class="blog_item" href="{{site.base_path}}{{ post.url }}">
 				<figure>
 					{% if post.image %}
 					<img src="{{ post.thumbnail | default: post.image }}" alt="{{ post.title }}">
 					{% else %}
-					<img src="{{site.baseurl}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{ post.title }}">
+					<img src="{{site.base_path}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{ post.title }}">
 					{% endif %}
 				</figure>
 				<div class="item_details_container">
@@ -96,7 +96,7 @@ layout: min
 		<h2>Categories</h2>
 		<ul>
 			{% for category in site.categories %}
-			<li><a href="{{site.baseurl}}/blog/archive#{{category[0] | downcase}}">{{ category[0] }}</a></li>
+			<li><a href="{{site.base_path}}/blog/archive#{{category[0] | downcase}}">{{ category[0] }}</a></li>
 			{% endfor %}
 		</ul>
 	</section>
@@ -107,12 +107,12 @@ layout: min
 			{% for post in site.posts %}
 			{% if post.categories contains 'The Timeless .NET Engineer' %}
 			{% assign countTimeless = countTimeless | plus: 1 %}
-			{% if countTimeless <= 5 %} <a class="blog_item" href="{{site.baseurl}}{{ post.url }}">
+			{% if countTimeless <= 5 %} <a class="blog_item" href="{{site.base_path}}{{ post.url }}">
 				<figure>
 					{% if post.image %}
 					<img src="{{ post.thumbnail | default: post.image }}" alt="{{ post.title }}">
 					{% else %}
-					<img src="{{site.baseurl}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{ post.title }}">
+					<img src="{{site.base_path}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{ post.title }}">
 					{% endif %}
 				</figure>
 				<div class="item_details_container">
@@ -149,12 +149,12 @@ layout: min
 			{% for post in site.posts %}
 			{% unless post.categories contains 'The Timeless .NET Engineer' %}
 			{% assign countOthers = countOthers | plus: 1 %}
-			{% if countOthers <= 5 %} <a class="blog_item" href="{{site.baseurl}}{{ post.url }}">
+			{% if countOthers <= 5 %} <a class="blog_item" href="{{site.base_path}}{{ post.url }}">
 				<figure>
 					{% if post.image %}
 					<img src="{{ post.thumbnail | default: post.image }}" alt="{{ post.title }}">
 					{% else %}
-					<img src="{{site.baseurl}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{ post.title }}">
+					<img src="{{site.base_path}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{ post.title }}">
 					{% endif %}
 				</figure>
 				<div class="item_details_container">
@@ -184,7 +184,7 @@ layout: min
 				<h2>Categories</h2>
 				<ul>
 					{% for category in site.categories %}
-					<li><a href="{{site.baseurl}}/blog/archive#{{category[0] | downcase}}">{{ category[0] }}</a></li>
+					<li><a href="{{site.base_path}}/blog/archive#{{category[0] | downcase}}">{{ category[0] }}</a></li>
 					{% endfor %}
 				</ul>
 			</div>

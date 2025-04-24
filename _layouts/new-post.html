@@ -8,7 +8,7 @@
             <div class="post_title">
                 <figure class="featured">
                     {% if page.image == nil %}
-                    <img src="{{site.baseurl}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{page.title}}">
+                    <img src="{{site.base_path}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{page.title}}">
                     {% else %}
                     <img src="{{page.image}}" alt="{{page.title}}">
                     {% endif %}
@@ -106,7 +106,7 @@
                             This article was first published on a <a
                                 href="https://metalama.net/blog">https://metalama.net/blog</a>
                             under the title <a
-                                href="{{ page.permalink | prepend: site.baseurl | prepend: site.url }}">{{
+                                href="{{ page.permalink | prepend: site.base_path | prepend: site.url }}">{{
                                 page.title | xml_escape }}</a>.
                         </div>
 

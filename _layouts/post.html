@@ -16,7 +16,7 @@
             {% if page.image %}
             <img src="{{page.image}}" alt="{{post.title}}">
             {% else %}
-            <img src="{{site.baseurl}}/assets/images/blog/ps-no-featimg-1x1.jpg" alt="{{ post.title }}">
+            <img src="{{site.base_path}}/assets/images/blog/ps-no-featimg-1x1.jpg" alt="{{ post.title }}">
             {% endif %}
         </figure>
         <h1>{{page.title | strip_html | strip_newlines | truncate: 150}}</h3>
@@ -30,8 +30,8 @@
                     </div>
                     {% for category in page.categories %}
                     <div class="post_category">
-                        <a href="{{site.baseurl}}/blog/archive#{{category | downcase | replace: ' ', '-'}}">
-                            <img src="{{site.baseurl}}/assets/images/icons/tag_white.svg" alt="" />
+                        <a href="{{site.base_path}}/blog/archive#{{category | downcase | replace: ' ', '-'}}">
+                            <img src="{{site.base_path}}/assets/images/icons/tag_white.svg" alt="" />
                             <span>{{category}}</span>
                         </a>
                     </div>

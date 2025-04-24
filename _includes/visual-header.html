@@ -1,7 +1,7 @@
 <header>
     <div class="wrapper-large">
-        <a href="/" class="logo" title="Go To Home Page">
-            <img src="/assets/images/metalama-logo.svg" width="200" alt="Metalama Logo" />
+        <a href="{{ site.url }}/" class="logo" title="Go To Home Page">
+            <img src="{{ site.url }}/assets/images/metalama-logo.svg" width="200" alt="Metalama Logo" />
         </a>
         <nav>
         <div class="menu__body">
@@ -45,7 +45,7 @@
                     {% endif %}
 
                     <li class="menu__item {% if item.drop_down_menu %}has-dropdownmenu{% endif %} {% unless item.url %}has-mobile-dropdownmenu{% endunless %}">
-                        <a href="{{ item.url | default: '#' }}"
+                        <a href="{% if item.url contains 'http://' or item.url contains 'https://' %}{{ item.url }}{% else %}{{ site.url }}{{ item.url | default: '#' }}{% endif %}"
                             {% unless item.drop_down_menu %}title="{{ item.description }}"{% endunless %}
                             {% if item.drop_down_menu %}data-submenu="dropdown{{ itemId }}"{% endif %}
                             class="{% if isItemActive %}active{% endif %}">
@@ -60,7 +60,7 @@
                             <ul class="dropdown-wrapper">
                                 {% for entry in item.nodes %}
                                 <li>
-                                    <a href="{{ entry.url }}">
+                                    <a href="{% if entry.url contains 'http://' or entry.url contains 'https://' %}{{ entry.url }}{% else %}{{ site.url }}{{ entry.url }}{% endif %}">
                                         <div class="title {% if entry.extern %}extern{% endif %}">
                                         {{ entry.title }}
                                         {% if entry.premium %}
@@ -83,7 +83,7 @@
                                     <div class="column">
                                         <div class="column-title">
                                         {% if column.url %}
-                                            <a href="{{ column.url }}">{{ column.title }}</a>
+                                            <a href="{% if column.url contains 'http://' or column.url contains 'https://' %}{{ column.url }}{% else %}{{ site.url }}{{ column.url }}{% endif %}">{{ column.title }}</a>
                                         {% else %}
                                             <span>{{ column.title }}</span>
                                         {% endif %}
@@ -92,7 +92,7 @@
                                         {% for entry in column.nodes %}
                                             {% unless entry.hidden %}
                                                 <li>
-                                                <a href="{{ entry.url }}">
+                                                <a href="{% if entry.url contains 'http://' or entry.url contains 'https://' %}{{ entry.url }}{% else %}{{ site.url }}{{ entry.url }}{% endif %}">
                                                     <div class="title {% if entry.extern %}extern{% endif %}">
                                                         {{ entry.title }}
                                                         {% if entry.premium %}
@@ -125,23 +125,23 @@
                     data-submenu=""
                     class="btn--github"
                     title="Access the source code on GitHub.">
-                <img src="/assets/images/icons/github.svg" alt="Open Source" />
+                <img src="{{ site.url }}/assets/images/icons/github.svg" alt="Open Source" />
                 </a>
             </li>
             <li role="menuitem">
-                <a href="/get"
+                <a href="{{ site.url }}/get"
                     data-submenu=""
                     title="Add Metalama to your projects and install the IDE tooling."
                     class="btn--download">
-                <img src="/assets/images/icons/download-white.svg" alt="Download" />
+                <img src="{{ site.url }}/assets/images/icons/download-white.svg" alt="Download" />
                 </a>
             </li>
             <li role="menuitem">
-                <a href="/search"
+                <a href="{{ site.url }}/search"
                     data-submenu=""
                     title="Search Metalama."
                     class="btn--download">
-                <img src="/assets/images/icons/search-white.svg" alt="Download" />
+                <img src="{{ site.url }}/assets/images/icons/search-white.svg" alt="Download" />
                 </a>
             </li>
         </ul>

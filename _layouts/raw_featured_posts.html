@@ -1,6 +1,6 @@
 <style>
 	.blog_tile.more_posts {
-		background-image: url("{{site.url}}{{site.baseurl}}/assets/images/morePosts.svg");
+		background-image: url("{{site.url}}{{site.base_path}}/assets/images/morePosts.svg");
 		background-size: cover;
 	}
 </style>
@@ -8,12 +8,12 @@
 {% for post in site.posts %}
 {% unless post.categories contains 'The Timeless .NET Engineer' %}
 {% assign countOthers = countOthers | plus: 1 %}
-{% if countOthers <= 5 %} <a class="blog_tile item{{countOthers}}" href="{{site.url}}{{site.baseurl}}{{ post.url }}">
+{% if countOthers <= 5 %} <a class="blog_tile item{{countOthers}}" href="{{site.url}}{{site.base_path}}{{ post.url }}">
 	<figure>
 		{% if post.image %}
-		<img src="{{site.url}}{{site.baseurl}}{{post.image}}" alt="{{post.title}}">
+		<img src="{{site.url}}{{site.base_path}}{{post.image}}" alt="{{post.title}}">
 		{% else %}
-		<img src="{{site.url}}{{site.baseurl}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{ post.title }}">
+		<img src="{{site.url}}{{site.base_path}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{ post.title }}">
 		{% endif %}
 	</figure>
 	<div class="item_details_container">
@@ -24,7 +24,7 @@
 	{% endif %}
 	{% endunless %}
 	{% endfor %}
-	<a class="blog_tile more_posts" href="{{site.url}}{{site.baseurl}}/blog/archive">
+	<a class="blog_tile more_posts" href="{{site.url}}{{site.base_path}}/blog/archive">
 		<figure></figure>
 		<div class="item_details_container">
 			<h3>More Products &amp; Community News...</h3>
