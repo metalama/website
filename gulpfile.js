@@ -7,7 +7,7 @@ import htmlmin from 'gulp-htmlmin';
 import rev from 'gulp-rev';
 import revRewrite from 'gulp-rev-rewrite';
 import terser from 'gulp-terser';
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import connect from 'gulp-connect';
 import { resolve } from 'path';
 import { existsSync } from 'fs';
@@ -84,17 +84,61 @@ gulp.task("rev-rewrite", function () {
 });
 
 // Copy files that are not renamed.
-gulp.task('copy-other', function () {
+gulp.task('copy-html', function () {
     return gulp
-        .src('_site/**/*.{html,json}')
+        .src('_site/**/*.html}')
         .pipe(gulp.dest('_cdn'));
+});
+
+gulp.task('generate-redirects', function (done) {
+    const manifestPath = '_cdn/assets/rev-manifest.json';
+    const staticWebAppConfigSource = 'staticwebapp.config.json';
+    const staticWebAppConfigDest = '_cdn/staticwebapp.config.json';
+
+    // Check if the manifest file exists
+    if (!existsSync(manifestPath)) {
+        console.error(`Manifest file not found: ${manifestPath}`);
+        done();
+        return;
+    }
+
+    // Read and parse the manifest file
+    const manifest = JSON.parse(readFileSync(manifestPath, 'utf-8'));
+
+    // Generate redirection rules for .css and .js files only
+    const redirects = Object.entries(manifest)
+        .filter(([original]) => original.endsWith('.css') || original.endsWith('.js'))
+        .map(([original, hashed]) => ({
+            route: `/${original}`,
+            redirect: `/${hashed}`,
+            statusCode: 301
+        }));
+
+    // Copy and modify the staticwebapp.config.json file
+    if (existsSync(staticWebAppConfigSource)) {
+        const configContent = JSON.parse(readFileSync(staticWebAppConfigSource, 'utf-8'));
+
+        // Add redirects to the routes array
+        if (!Array.isArray(configContent.routes)) {
+            configContent.routes = [];
+        }
+        configContent.routes.push(...redirects);
+
+        writeFileSync(staticWebAppConfigDest, JSON.stringify(configContent, null, 2), 'utf-8');
+        console.log(`Static Web App configuration updated and written to: ${staticWebAppConfigDest}`);
+    } else {
+        console.error(`Static Web App configuration source file not found: ${staticWebAppConfigSource}`);
+    }
+
+    done();
 });
 
 gulp.task('default', gulp.series(
     'htmlmin',
     'rev-assets', 
-    'copy-other',
+    'copy-html',
     'rev-rewrite',
+    'generate-redirects', 
     'jsmin',
     gulp.parallel('brotli', 'gzip', 'svg-to-png')
 ));
