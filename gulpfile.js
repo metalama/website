@@ -109,8 +109,8 @@ gulp.task('generate-redirects', function (done) {
     const redirects = Object.entries(manifest)
         .filter(([original]) => original.endsWith('.css') || original.endsWith('.js'))
         .map(([original, hashed]) => ({
-            route: `/${original}`,
-            redirect: `/${hashed}`,
+            route: `/assets/${original}`,
+            redirect: `/assets/${hashed}`,
             statusCode: 301
         }));
 
