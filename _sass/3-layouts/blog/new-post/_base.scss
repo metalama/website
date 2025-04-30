@@ -1,5 +1,10 @@
 .new_post_page {
 
+
+  article {
+    max-width: 900px;
+  }
+  
   @media (max-width: 1200px) {
 
     .featured {
