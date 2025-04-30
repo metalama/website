@@ -317,7 +317,8 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-  // Add a top banner if not dismissed
+  // This is how to add a banner, if enabled.
+  /*
   if (!localStorage.getItem('bannerDismissed')) {
     const banner = $(`
       <div id="preview-banner" style="background: #ffcc00; color: #000; padding: 10px; text-align: center; width: 100%; position: fixed; bottom: 0; z-index: 1000;">
@@ -334,6 +335,7 @@ $(document).ready(function () {
       localStorage.setItem('bannerDismissed', 'true');
     });
   }
+	*/
 
   // Handle the 'show-more' magic.
   $('p.show-more').each(function () {
