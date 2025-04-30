@@ -47,7 +47,7 @@ jobs:
         run: npx gulp 
 
       - name: Copy robots.txt
-        run: cp robots.draft.txt _cdn/robots.txt        
+        run: cp robots.txt _cdn/robots.txt        
 
       - name: Deploy to Azure Static Web App
         uses: Azure/static-web-apps-deploy@v1
