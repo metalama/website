@@ -41,7 +41,7 @@ jobs:
         run: bundle install
           
       - name: Build Jekyll Site
-        run: bundle exec jekyll build --destination _site
+        run: bundle exec jekyll build --destination _site --config _config.yml,_config.draft.yml 
 
       - name: Run Gulp Tasks
         run: npx gulp 
