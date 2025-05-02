@@ -1,4 +1,4 @@
-html {
+html.metalama-website {
     font-size: $fs-base-mobile;
     scroll-behavior: smooth;
     
@@ -7,6 +7,7 @@ html {
     }
 }
 
+.metalama-website {
 body {
     font-family: LatoLatinWeb;
     color: $text_color;
@@ -136,4 +137,6 @@ html {
 
 .important:before {
     content: "\26a0\a0\a0IMPORTANT"
+}
+
 }

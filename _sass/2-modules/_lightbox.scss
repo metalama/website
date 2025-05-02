@@ -1,4 +1,5 @@
-ul.lightboxSource {
+.metalama-website {
+  ul.lightboxSource {
 
     display: flex;
     flex-wrap: wrap;
@@ -49,6 +50,7 @@ ul.lightboxSource {
         //height: 220px !important;
       }
     }
+
     /*
     @media(max-width: 1500px) {
         gap: 20px;
@@ -66,10 +68,11 @@ ul.lightboxSource {
   }
 
 
-.lightboxSource li, #lightboxCarousel li {
+  .lightboxSource li,
+  #lightboxCarousel li {
     cursor: zoom-in;
-}
-  
+  }
+
   #lightbox {
     display: none;
     position: fixed;
@@ -82,11 +85,11 @@ ul.lightboxSource {
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
     color-scheme: dark;
-  
+
     p {
       line-height: normal;
     }
-  
+
     #lightboxFrame {
       position: relative;
       background-color: #2a2a2a;
@@ -95,20 +98,20 @@ ul.lightboxSource {
       width: 90%;
       max-width: 1200px;
     }
-  
+
     #lightboxContent {
       text-align: center;
       height: 680px;
       padding-bottom: 80px;
       line-height: normal;
-  
-  
+
+
       img {
         width: 900px;
         height: 600px;
         padding-bottom: 40px;
       }
-  
+
       p {
         margin: 0 auto;
         width: 800px;
@@ -117,7 +120,7 @@ ul.lightboxSource {
         opacity: 0.9;
       }
     }
-  
+
     /* The Close Button */
     .close {
       color: white;
@@ -127,14 +130,14 @@ ul.lightboxSource {
       font-size: $font-size-h4;
       font-weight: bold;
     }
-  
+
     .close:hover,
     .close:focus {
       color: #999;
       text-decoration: none;
       cursor: pointer;
     }
-  
+
     /* Next & previous buttons */
     .prev,
     .next {
@@ -152,19 +155,19 @@ ul.lightboxSource {
       user-select: none;
       -webkit-user-select: none;
     }
-  
+
     /* Position the "next button" to the right */
     .next {
       right: 80px;
       border-radius: 3px 0 0 3px;
     }
-  
+
     /* On hover, add a black background color with a little bit see-through */
     .prev:hover,
     .next:hover {
       background-color: rgba(0, 0, 0, 0.8);
     }
-  
+
     /* Caption text */
     .caption-container {
       text-align: center;
@@ -172,38 +175,41 @@ ul.lightboxSource {
       padding: 2px 16px;
       color: white;
     }
-  
+
     img.hover-shadow {
       transition: 0.3s;
     }
-  
+
     .hover-shadow:hover {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
-  
+
     #lightboxCarousel {
       display: flex;
       gap: 40px;
       overflow: auto;
       list-style-type: none;
-  
+
       li {
         opacity: 0.6;
-  
+
         img {
           width: 150px;
           height: 100px;
           padding-bottom: 20px;
         }
-  
+
         p {
           font-size: $font-size-base;
           line-height: normal;
         }
       }
-  
-      li.active, li:hover {
+
+      li.active,
+      li:hover {
         opacity: 1;
       }
     }
   }
+
+}

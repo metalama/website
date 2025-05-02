@@ -1,3 +1,4 @@
+
 $page_space_from_top_mobile: 75px;
 $mobile_side_margins: 37px;
 $desktop_side_margins: 15px;
@@ -20,6 +21,7 @@ $font-size-h4: $font-size-base * 1.563 !default;
 $font-size-h5: $font-size-base * 1.25 !default;
 $font-size-h6: $font-size-base !default;
 
+.metalama-website {
 body {
     font-size: $font-size-base;
 }
@@ -57,6 +59,7 @@ h6 {
 
 .min_height {
     min-height: calc(100vh - $header_height - $footer_height - 5px);
+}
 }
 
 // Bootstrap-like media breakpoints mixins
