@@ -83,6 +83,10 @@ html {
     padding: 1em;
     margin-top: 20px;
     margin-bottom: 20px;
+
+    // Cancel blockquote margins.
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .note,
@@ -90,7 +94,7 @@ html {
     background-color: #01343d;
     color: white;
 
-    a {
+    a, strong, b {
         color: white !important;
     }
 }

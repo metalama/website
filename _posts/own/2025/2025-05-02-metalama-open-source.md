@@ -18,6 +18,13 @@ Over 85% of the codebase is now open source, with only its IDE tooling and selec
 
 We believe this is a big deal not just for our team, but for the entire .NET ecosystem. Departing from the legacy of IL-based tools, Metalama leverages Roslyn to bring advanced meta-programming capabilities directly to the C# language—while remaining 100% syntax-compatible with C# and all editors.
 
+{: .note }
+> This article is part of a 3-post series announcing the launch of our 2025.1 versions:
+> - **Metalama Is Now Open Source – Adding Full Meta-Programming Capabilities to C#**.
+> - [Announcing Metalama 2025.1](https://blog.postsharp.net/metalama-2025-1): changes in licensing and support terms for Metalama.
+> - [Announcing PostSharp 2025.1](https://blog.postsharp.net//postsharp-2025-1): changes in licensing and support terms for PostSharp.
+
+
 ## How Big Is Metalama? A Reality Check
 
 Metalama’s open-source release follows nearly five years of dedicated development, resulting in a robust codebase and an (almost) feature-complete product. The core repository includes over **400,000 lines of code** and spans more than **17,000 commits**, representing approximately **ten man-years** (20,000 hours) of work by seasoned .NET compiler experts.
