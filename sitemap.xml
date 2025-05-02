@@ -11,14 +11,24 @@ layout: null
       <url>
         {% comment %} Calculate the last change date. {% endcomment %}
         {% assign post_lastmod = post.last_modified_at | default: post.date | date: "%Y-%m-%dT%H:%M:%S%:z" %}
-        {% assign lastmod = post_lastmod < min_date ? min_date : post_lastmod %}
+        {% if post_lastmod < min_date %}
+          {% assign lastmod = min_date %}
+        {% else %}
+          {% assign lastmod = post_lastmod %}
+        {% endif %}
 
         {% comment %} Calculate the change frequency based on post creation date. {% endcomment %}
         {% assign post_date = post.date | date: "%s" | plus: 0 %}
         {% assign today = "now" | date: "%s" | plus: 0 %}
         {% assign one_week_ago = today | minus: 604800 %}
         {% assign two_months_ago = today | minus: 5259487 %}
-        {% assign changefreq = post_date >= one_week_ago ? "daily" : post_date >= two_months_ago ? "weekly" : "monthly" %}
+        {% if post_date >= one_week_ago %}
+          {% assign changefreq = "daily" %}
+        {% elsif post_date >= two_months_ago %}
+          {% assign changefreq = "weekly" %}
+        {% else %}
+          {% assign changefreq = "monthly" %}
+        {% endif %}
 
         <loc>{{ post.url | prepend: site.base_path | prepend: site.url }}</loc>
         <lastmod>{{ lastmod }}</lastmod>
@@ -26,7 +36,13 @@ layout: null
 
         {% comment %} Determine the priority. {% endcomment %}
         {% assign post_year = post.date | date: "%Y" | plus: 0 %}
-        {% assign priority = post_year < 2018 ? "0.1" : post_year >= 2024 ? "0.8" : "0.6" %}
+        {% if post_year < 2018 %}
+          {% assign priority = "0.1" %}
+        {% elsif post_year >= 2024 %}
+          {% assign priority = "0.8" %}
+        {% else %}
+          {% assign priority = "0.6" %}
+        {% endif %}
         <priority>{{ priority }}</priority>
       </url>
     {% endfor %}

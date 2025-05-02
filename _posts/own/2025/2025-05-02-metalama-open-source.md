@@ -1,12 +1,12 @@
 ---
 layout: new-post
 comments: false
-title: "Metalama Is Now Open Source – Adding Full Meta-Programming Capabilities to C#"
+title: "Metalama Is Now Open Source, Adding Full Meta-Programming to C#"
 date: 2025-04-04 08:00:01 +01:00
 categories: [Metalama]
 permalink: /blog/metalama-open-source
 author: "Gael Fraiteur"
-image: /assets/images/2025/2025-01-announcement/metalama.svg
+image: /assets/images/2025/2025-05-announcement/april-dark.svg
 tag: featured
 summary: "Metalama, the leading meta-programming framework for C#, is now open source under the MIT license, empowering developers with advanced tools for code generation, architecture validation, and aspect-oriented programming."
 ---
@@ -20,13 +20,14 @@ We believe this is a big deal not just for our team, but for the entire .NET eco
 
 ## How Big Is Metalama? A Reality Check
 
-Metalama’s open-source release follows nearly five years of dedicated development, resulting in a robust codebase and an (almost) feature-complete product. The core repository includes over *400,000 lines of code* and spans more than *17,000 commits*, representing approximately ten *man-years* (20,000 hours) of work by seasoned .NET compiler experts.
+Metalama’s open-source release follows nearly five years of dedicated development, resulting in a robust codebase and an (almost) feature-complete product. The core repository includes over **400,000 lines of code** and spans more than **17,000 commits**, representing approximately **ten man-years** (20,000 hours) of work by seasoned .NET compiler experts.
 
 While Metalama isn’t the largest .NET project—Roslyn or Mono are still larger by an order of magnitude—it is undoubtedly one of the most substantial non-Microsoft projects. For context:
 
 - Metalama has more commits than the combined top three .NET Foundation projects over the past five years, according to [dnfprojects.org](https://dnfprojects.org/).
 - Its codebase is roughly twice the combined size of projects like AwesomeAssertions, AutoMapper, and MediatR—three projects that recently transitioned from open source to commercial.
 - It surpasses the combined size of Cecil and Fody, including all its add-ins, by approximately 40%.
+- Metalama is 53% the size of Avalonia, one of the largest .NET vendor-led open-source projects, which counts 750 KLOC.
 
 ## What Exactly Is Metalama?
 
@@ -144,7 +145,7 @@ We offer a support model tailored to meet the diverse needs of our users:
 - **Basic Professional Support**: Subscribers of Metalama Professional gain access to basic email support for private tickets.
 - **Enterprise Support**: For organizations needing high-touch support, Metalama Enterprise offers priority assistance, escalation, video consultations, advanced diagnostics, and consultancy services. This plan is designed for teams with critical projects that demand a higher level of engagement and expertise.
 
-Details about support offerings, response times, and SLA commitments can be found at [postsharp-web-dev.azurewebsites.net/support/policies](postsharp-web-dev.azurewebsites.net/support/policies).
+Details about support offerings, response times, and SLA commitments can be found at [https://www.postsharp.net/support/policies](https://www.postsharp.net/support/policies).
 
 Only the current version (`YYYY.N`) will be maintained under open-source terms. Previous versions (`YYYY.N-1`) will be supported exclusively under the enterprise license for customers with long-term support agreements.
 

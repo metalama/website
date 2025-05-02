@@ -58,7 +58,7 @@ Enhance your development experience with the **Visual Studio Tools for Metalama*
 These tools are available as a premium feature and are free for individuals, non-commercial use, open-source development, and companies with up to 3 users.
 
 <div class="buttons">
-    <a class="btn btn--md" style="width: 160px;" href="/marketplace">Download</a>
+    <a class="btn btn--md" style="width: 160px;" href="https://marketplace.visualstudio.com/items?itemName=PostSharpTechnologies.PostSharp">Download</a>
     <a class="btn btn--md" style="width: 160px;" href="/features/tooling">Learn More</a>
 </div>
 

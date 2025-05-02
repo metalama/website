@@ -100,50 +100,11 @@ layout: min
 			{% endfor %}
 		</ul>
 	</section>
-	<section class="older_posts">
-		<h2>From the Timeless .NET Engineer Newsletter</h2>
-		<div class="posts">
-			{% assign countTimeless = 0 %}
-			{% for post in site.posts %}
-			{% if post.categories contains 'The Timeless .NET Engineer' %}
-			{% assign countTimeless = countTimeless | plus: 1 %}
-			{% if countTimeless <= 5 %} <a class="blog_item" href="{{site.base_path}}{{ post.url }}">
-				<figure>
-					{% if post.image %}
-					<img src="{{ post.thumbnail | default: post.image }}" alt="{{ post.title }}">
-					{% else %}
-					<img src="{{site.base_path}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{ post.title }}">
-					{% endif %}
-				</figure>
-				<div class="item_details_container">
-					<h3>{{post.short_title | default: post.title}}</h3>
-					<div class="post_details">
-						{% if post.author %}
-						<span>{{post.author}}</span> |
-						{% endif %}
-						{{ post.date | date_to_string }}
-					</div>
-				</div>
-				</a>
-				{% endif %}
-				{% endif %}
-				{% endfor %}
-
-				<a class="blog_item more_posts" href="/timeless">
-					<div class="post_details">
-						<figure></figure>
-
-						<h3>More posts from the Timeless .NET Engineer Newsletter...</h3>
-					</div>
-				</a>
-		</div>
-		<div class="sidebar_left"></div>
-		<div class="sidebar_right">
-		</div>
+	
 	</section>
 
 	<section class="older_posts">
-		<h2>Product &amp; Community News</h2>
+		<h2>Metalama News</h2>
 		<div class="posts">
 			{% assign countOthers = 0 %}
 			{% for post in site.posts %}
@@ -190,5 +151,46 @@ layout: min
 			</div>
 		</div>
 	</section>
+
+	<section class="older_posts">
+		<h2>From the Timeless .NET Engineer Newsletter</h2>
+		<div class="posts">
+			{% assign countTimeless = 0 %}
+			{% for post in site.posts %}
+			{% if post.categories contains 'The Timeless .NET Engineer' %}
+			{% assign countTimeless = countTimeless | plus: 1 %}
+			{% if countTimeless <= 5 %} <a class="blog_item" href="{{site.base_path}}{{ post.url }}">
+				<figure>
+					{% if post.image %}
+					<img src="{{ post.thumbnail | default: post.image }}" alt="{{ post.title }}">
+					{% else %}
+					<img src="{{site.base_path}}/assets/images/blog/ps-no-featimg-16x9.jpg" alt="{{ post.title }}">
+					{% endif %}
+				</figure>
+				<div class="item_details_container">
+					<h3>{{post.short_title | default: post.title}}</h3>
+					<div class="post_details">
+						{% if post.author %}
+						<span>{{post.author}}</span> |
+						{% endif %}
+						{{ post.date | date_to_string }}
+					</div>
+				</div>
+				</a>
+				{% endif %}
+				{% endif %}
+				{% endfor %}
+
+				<a class="blog_item more_posts" href="/timeless">
+					<div class="post_details">
+						<figure></figure>
+
+						<h3>More posts from the Timeless .NET Engineer Newsletter...</h3>
+					</div>
+				</a>
+		</div>
+		<div class="sidebar_left"></div>
+		<div class="sidebar_right">
+		</div>
 </div>
 {% include newsletter.html %}
