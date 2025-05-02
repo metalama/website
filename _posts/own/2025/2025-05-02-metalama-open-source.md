@@ -281,7 +281,8 @@ Whether you’re a solo developer looking to eliminate boilerplate or part of a 
 If you’re excited about the potential of meta-programming in C#, now is the perfect time to get started:
 
 - Visit the website at [metalama.net](https://metalama.net) and explore [use cases](https://metalama.net/applications).
-- Read the [documentation](https://doc.metalama.net), expecially [commented examples](https://doc.metalama.net/examples)
+- Read the [documentation](https://doc.metalama.net), expecially [commented examples](https://doc.metalama.net/examples).
+- Explore [Metalama Marketplace](/marketplace) and find ready-made aspects and examples. Don't reinvent the wheel!
 - Study the source code on [GitHub](https://github.com/metalama/Metalama) and see how it works.
 
 We’ve laid the foundation, but the real momentum will come from the community. Together, we can push the boundaries of what C# can achieve.
