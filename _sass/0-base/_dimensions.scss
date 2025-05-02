@@ -1,9 +1,8 @@
-
 $page_space_from_top_mobile: 75px;
 $mobile_side_margins: 37px;
 $desktop_side_margins: 15px;
 $desktop_wide_width: 1620px;
-$desktop_boxed_width: calc( $desktop_wide_width - ( 2 *  $desktop_side_margins ) );
+$desktop_boxed_width: calc($desktop_wide_width - (2 * $desktop_side_margins ));
 
 $mobile_breakpoint: 768px;
 $homepage_mobile_breakpoint: 650px;
@@ -22,103 +21,177 @@ $font-size-h5: $font-size-base * 1.25 !default;
 $font-size-h6: $font-size-base !default;
 
 .metalama-website {
-body {
+  body {
     font-size: $font-size-base;
-}
+  }
 
-h1 {
+  h1 {
     font-size: $font-size-h1;
-}
+  }
 
-h2 {
+  h2 {
     font-size: $font-size-h2;
-}
+  }
 
-h3 {
+  h3 {
     font-size: $font-size-h3;
-}
+  }
 
-h4 {
+  h4 {
     font-size: $font-size-h4;
-}
+  }
 
-h5 {
+  h5 {
     font-size: $font-size-h5;
-}
+  }
 
-h6 {
+  h6 {
     font-size: $font-size-h6;
-}
+  }
 
-.desktop_box {
-  max-width: 1620px !important;
-	padding-left: 15px !important;
-	padding-right: 15px !important;
-	margin: 0 auto;
-}
+  .desktop_box {
+    max-width: 1620px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin: 0 auto;
+  }
 
-.min_height {
+  .min_height {
     min-height: calc(100vh - $header_height - $footer_height - 5px);
-}
+  }
 }
 
 // Bootstrap-like media breakpoints mixins
 @mixin media-breakpoint-up($name) {
-  @if $name == xs {
-    @media (min-width: 0) { @content; }
-  } @else if $name == sm {
-    @media (min-width: 576px) { @content; }
-  } @else if $name == md {
-    @media (min-width: 768px) { @content; }
-  } @else if $name == lg {
-    @media (min-width: 992px) { @content; }
-  } @else if $name == xl {
-    @media (min-width: 1200px) { @content; }
+  @if $name ==xs {
+    @media (min-width: 0) {
+      @content;
+    }
+  }
+
+  @else if $name ==sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+
+  @else if $name ==md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $name ==lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $name ==xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
   }
 }
 
 @mixin media-breakpoint-down($name) {
-  @if $name == xs {
-    @media (max-width: 575.98px) { @content; }
-  } @else if $name == sm {
-    @media (max-width: 767.98px) { @content; }
-  } @else if $name == md {
-    @media (max-width: 991.98px) { @content; }
-  } @else if $name == lg {
-    @media (max-width: 1199.98px) { @content; }
-  } @else if $name == xl {
-    @media (max-width: 1599.98px) { @content; }
+  @if $name ==xs {
+    @media (max-width: 575.98px) {
+      @content;
+    }
+  }
+
+  @else if $name ==sm {
+    @media (max-width: 767.98px) {
+      @content;
+    }
+  }
+
+  @else if $name ==md {
+    @media (max-width: 991.98px) {
+      @content;
+    }
+  }
+
+  @else if $name ==lg {
+    @media (max-width: 1199.98px) {
+      @content;
+    }
+  }
+
+  @else if $name ==xl {
+    @media (max-width: 1599.98px) {
+      @content;
+    }
   }
 }
 
 @mixin media-breakpoint-between($lower, $upper) {
-  @if $lower == xs {
-    @if $upper == sm {
-      @media (min-width: 0) and (max-width: 575.98px) { @content; }
-    } @else if $upper == md {
-      @media (min-width: 0) and (max-width: 767.98px) { @content; }
-    } @else if $upper == lg {
-      @media (min-width: 0) and (max-width: 991.98px) { @content; }
-    } @else if $upper == xl {
-      @media (min-width: 0) and (max-width: 1199.98px) { @content; }
+  @if $lower ==xs {
+    @if $upper ==sm {
+      @media (min-width: 0) and (max-width: 575.98px) {
+        @content;
+      }
     }
-  } @else if $lower == sm {
-    @if $upper == md {
-      @media (min-width: 576px) and (max-width: 767.98px) { @content; }
-    } @else if $upper == lg {
-      @media (min-width: 576px) and (max-width: 991.98px) { @content; }
-    } @else if $upper == xl {
-      @media (min-width: 576px) and (max-width: 1199.98px) { @content; }
+
+    @else if $upper ==md {
+      @media (min-width: 0) and (max-width: 767.98px) {
+        @content;
+      }
     }
-  } @else if $lower == md {
-    @if $upper == lg {
-      @media (min-width: 768px) and (max-width: 991.98px) { @content; }
-    } @else if $upper == xl {
-      @media (min-width: 768px) and (max-width: 1199.98px) { @content; }
+
+    @else if $upper ==lg {
+      @media (min-width: 0) and (max-width: 991.98px) {
+        @content;
+      }
     }
-  } @else if $lower == lg {
-    @if $upper == xl {
-      @media (min-width: 992px) and (max-width: 1199.98px) { @content; }
+
+    @else if $upper ==xl {
+      @media (min-width: 0) and (max-width: 1199.98px) {
+        @content;
+      }
+    }
+  }
+
+  @else if $lower ==sm {
+    @if $upper ==md {
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        @content;
+      }
+    }
+
+    @else if $upper ==lg {
+      @media (min-width: 576px) and (max-width: 991.98px) {
+        @content;
+      }
+    }
+
+    @else if $upper ==xl {
+      @media (min-width: 576px) and (max-width: 1199.98px) {
+        @content;
+      }
+    }
+  }
+
+  @else if $lower ==md {
+    @if $upper ==lg {
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        @content;
+      }
+    }
+
+    @else if $upper ==xl {
+      @media (min-width: 768px) and (max-width: 1199.98px) {
+        @content;
+      }
+    }
+  }
+
+  @else if $lower ==lg {
+    @if $upper ==xl {
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        @content;
+      }
     }
   }
 }
