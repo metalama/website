@@ -67,15 +67,102 @@ Metalama includes a rich collection of open-source aspect libraries to tackle co
 
 ## How Metalama Works
 
-Meta-programming in Metalama is based on two kinds of *meta-classes* that execute during compilation:
+Meta-programming in Metalama is based on two types of *meta-classes* that execute during compilation:
 
-- **Aspects** encapsulate reusable code generation and transformation patterns like logging, observability, or the Memento design pattern. They act as intelligent attributes that can generate, transform, or validate code in place.
-- **Fabrics** serve as centralized compile-time entry points, allowing you to apply aspects in bulk across your codebase using a LINQ-style API—no need to annotate every element manually.
+- **Aspects** encapsulate reusable code generation and transformation patterns, such as logging, observability, or the Memento design pattern. They act as intelligent attributes that can generate, transform, or validate code in place.
+- **Fabrics** serve as centralized compile-time entry points, allowing you to apply aspects in bulk across your codebase using a LINQ-style API—eliminating the need to annotate every element manually.
 
-Metalama rewrites the syntax tree dynamically during compilation. Your source code remains clean and focused, while the compiled assembly includes all the generated logic.
+Metalama dynamically rewrites the syntax tree during compilation. Your source code remains clean and focused, while the compiled assembly includes all the generated logic.
 
+### Aspect
 
-TODO - example
+Here is a classic "hello, world" example: a logging aspect.
+
+```c#
+using Metalama.Framework.Aspects;
+
+public class LogAttribute : OverrideMethodAspect
+{
+    public override dynamic? OverrideMethod()
+    {
+        Console.WriteLine( $"{meta.Target.Method} started." );
+
+        try
+        {
+            var result = meta.Proceed();
+
+            Console.WriteLine( $"{meta.Target.Method} succeeded." );
+
+            return result;
+        }
+        catch ( Exception e )
+        {
+            Console.WriteLine( $"{meta.Target.Method} failed: {e.Message}." );
+
+            throw;
+        }
+    }
+}
+```
+
+The `OverrideMethod` is a _template_. Parts of the code to the left of the `meta` pseudo-keyword are evaluated at compile time. The rest is runtime code. `meta.Proceed()` invokes the overridden method (it is replaced by the original method body in this case).
+
+You can now apply the aspect to a method as a custom attribute:
+
+```c#
+internal static class Calculator
+{
+    [Log]
+    public static double Add( double a, double b ) => a + b;
+}
+```
+
+This transforms the code into the following:
+
+```c#
+using System;
+
+internal static class Calculator
+{
+    [Log]
+    public static double Add( double a, double b ) { Console.WriteLine("Calculator.Add(double, double) started.");
+        try
+        {
+            double result;
+            result = a + b;
+            Console.WriteLine("Calculator.Add(double, double) succeeded.");
+            return (double)result;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Calculator.Add(double, double) failed: {e.Message}.");
+            throw;
+        }
+    }
+}
+```
+
+### Fabric
+
+If you want to log thousands of methods, it would not be practical to annotate every single method with the `[Log]` attribute. That’s why we invented the concept of a _fabric_, a compile-time entry point to your project that lets you add any aspect to anything using LINQ-like code.
+
+The following code snippet adds logging to all public methods of all public types:
+
+```c#
+public class Fabric : ProjectFabric
+{
+    public override void AmendProject( IProjectAmender amender )
+    {
+        amender
+            .SelectTypes()
+            .Where( t => t.Accessibility == Accessibility.Public )
+            .SelectMany( t => t.Methods )
+            .Where( m => t.Accessibility == Accessibility.Public )
+            .AddAspectIfEligible<LogAttribute>();
+    }
+}
+```
+
 
 ## Why Vendor-Led Open Source Matters
 
