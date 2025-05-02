@@ -105,9 +105,10 @@ gulp.task('generate-redirects', function (done) {
     // Read and parse the manifest file
     const manifest = JSON.parse(readFileSync(manifestPath, 'utf-8'));
 
-    // Generate redirection rules for .css and .js files only
+    // Generate redirection rules:
+    // - css/js are needed because of the doc-header.html imported from doc.metalama.net
+    // - images are needed because articles are imported into blog.postsharp.net
     const redirects = Object.entries(manifest)
-        .filter(([original]) => original.endsWith('.css') || original.endsWith('.js'))
         .map(([original, hashed]) => ({
             route: `/assets/${original}`,
             redirect: `/assets/${hashed}`,
