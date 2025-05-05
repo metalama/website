@@ -30,7 +30,7 @@ gulp.task('svg-to-png', function () {
 
 // Task to create Brotli-compressed assets and pages.
 gulp.task('brotli', function () {
-    return gulp.src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json', './_cdn/**/*.html' ])
+    return gulp.src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json', './_cdn/**/*.html',  './_cdn/**/*.xml' ])
         .pipe(brotli.compress({
             extension: 'br',
             quality: 11
@@ -43,7 +43,7 @@ gulp.task('brotli', function () {
 // Task to create Gzip-compressed assets and pages.
 gulp.task('gzip', function () {
     return gulp
-        .src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json', './_cdn/**/*.html' ])
+        .src(['./_cdn/assets/images/**/*.svg', './_cdn/assets/**/*.json', './_cdn/**/*.html',  './_cdn/**/*.xml' ])
         .pipe(gzip())
         .pipe(gulp.dest(function (file) {
             return file.base;
