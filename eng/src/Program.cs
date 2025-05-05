@@ -10,17 +10,16 @@ const string docPackageFileName = "PostSharp.Doc.zip";
 
 var product = new Product( PostSharpDocumentationDependencies.PostSharpDocumentation )
 {
-    AddDefaultCommands = false,
+  //  AddDefaultCommands = false,
     Extensions =
     [
         // Run `b generate-scripts` after changing these parameters.
         new UpdateSearchProductExtension(
             "https://0fpg9nu41dat6boep.a1.typesense.net",
             "metalamaweb",
-            "https://gray-meadow-0b191ef03.4.azurestaticapps.net/sitemap.xml",
+            "https://metalama.net/sitemap.xml",
             () => new PlainDocumentParser( ["//main"] ),
-            ["Metalama"],
-            true ) 
+            ["Metalama"] ) 
     ]
 };
 

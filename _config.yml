@@ -30,7 +30,7 @@ plugins:
   - jekyll-toc
 # - jekyll-last-modified-at
   
-exclude: ["*.ps1", "README.md", "package.json", "package-lock.json", "gulpfile.js"]
+exclude: ["*.ps1", "README.md", "package.json", "package-lock.json", "gulpfile.js", "eng/**"]
 include: ["solutions/*.md"]
 
 sass:
