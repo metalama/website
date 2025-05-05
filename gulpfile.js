@@ -50,10 +50,10 @@ gulp.task('gzip', function () {
         }));
 });
 
-// Task to minify HTML files produced by Jekyll
+// Task to minify HTML and XML files produced by Jekyll
 gulp.task('htmlmin', () => {
     return gulp
-      .src('_site/**/*.html')
+      .src('_site/**/*.{html,xml}')
       .pipe(htmlmin({ collapseWhitespace: true }))
       .pipe(gulp.dest('_site'));
 });
@@ -86,7 +86,7 @@ gulp.task("rev-rewrite", function () {
 // Copy files that are not renamed.
 gulp.task('copy-html', function () {
     return gulp
-        .src('_site/**/*.html') 
+        .src('_site/**/*.{html,xml}') 
         .pipe(gulp.dest('_cdn'));
 });
 
