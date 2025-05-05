@@ -107,7 +107,7 @@ gulp.task('generate-redirects', function (done) {
 
     // Generate redirection rules for .css and .js files only
     const redirects = Object.entries(manifest)
-        .filter(([original]) => original.endsWith('.css') || original.endsWith('.js'))
+        .filter(([original]) => original.endsWith('.css') || original.endsWith('.js') || original.endsWith('.woff') || original.endsWith('.woff2'))
         .map(([original, hashed]) => ({
             route: `/assets/${original}`,
             redirect: `/assets/${hashed}`,
