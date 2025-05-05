@@ -60,10 +60,10 @@ Unlike legacy IL-weaving tools like Fody, which operate on compiled assemblies, 
 
 Metalama includes a rich collection of open-source aspect libraries to tackle common software scenarios. Examples include:
 
-- **Design Patterns**: Singleton, Factory, Builder, Decorator, Proxy, and more.
-- **UI and MVVM Patterns**: `[Observable]` to implement `INotifyPropertyChanged`, dependency properties, commands, undo/redo.
+- **Design Patterns**: [Singleton](/applications/modern-singleton), [Factory](/applications/factory), [Builder](/applications/builder), [Decorator](/applications/decorator), [Proxy](/applications/proxy), and more.
+- **UI and MVVM Patterns**: [Observable](/applications/inotifypropertychanged) to implement `INotifyPropertyChanged`, [dependency properties](/applications/dependency-property), [commands](/applications/command), undo/redo.
 - **Object Services**: Auto-generated `ToString`, deep cloning, equality, and comparison.
-- **DevOps**: Logging, tracing, metrics, caching, retry/fault-handling logic, and more.
+- **DevOps**: [Logging and tracing](/applications/logging), [metrics](https://metalama.net/applications/metrics), [caching](https://metalama.net/applications/caching), [retry/fault-handling logic](https://metalama.net/applications/exception-handling), and more.
 
 ## How Metalama Works
 
@@ -203,7 +203,7 @@ We acknowledge that the proprietary status of these components may seem at odds 
 
 ## Free IDE Tooling for Individuals and Small Teams
 
-While Metalama's compiler integration and core framework are fully open source, our Visual Studio tooling remains proprietary. These tools aren't required to use Metalama, but they do offer a significant productivity boost:
+While Metalama's compiler integration and core framework are fully open source, our [Visual Studio tooling](/features/tooling) remains proprietary. These tools aren't required to use Metalama, but they do offer a significant productivity boost:
 
 - **Aspect Diff** – Compare original and transformed code using Visual Studio's diff viewer.
 - **CodeLens Integration** – Instantly see which aspects affect your code, right from the editor.
