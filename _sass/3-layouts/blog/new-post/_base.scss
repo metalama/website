@@ -471,6 +471,20 @@
     border-radius: 10px;
   }
 
+  .note {
+    background-color: #ebf3fc;
+    color: black;
+    border: #115ea3 solid 1px;
+
+    a, strong {
+      color: black !important;
+    }
+
+    &::before {
+      color: #115ea3 !important;
+    }
+  }
+
   /* small screens */
   @media (max-width: 768px) {
 
