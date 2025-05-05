@@ -76,6 +76,7 @@ function initializeHeader() {
 	// Check the background immediately on load
 	setHeaderBg($(window).scrollTop());
 
+	// Pin the header when scrolling up, unpin when scrolling down.
 	$(window).scroll(function () {
 		var scrollTop = $(this).scrollTop();
 
@@ -211,6 +212,27 @@ function initializeHeader() {
 
 $(document).ready(function () {	
 	initializeHeader();
+
+
+	// Manage the pinned status of toc_nav in the blog.
+	var isLeftTocPinned = false;
+
+	function adjustPinned() {    
+	  var scrollPosition = $(window).scrollTop();
+	  if (scrollPosition > 600 && !isLeftTocPinned ) {
+		  $('.toc_nav').addClass('pinned');
+		  isLeftTocPinned = true;
+	  } else if (scrollPosition < 200 && isLeftTocPinned ) {
+		  $('.toc_nav').removeClass('pinned');
+		  isLeftTocPinned = false;
+	  }
+	}
+
+	adjustPinned();
+	$(window).scroll(function() {
+	  adjustPinned();    
+	});
+	
 });
 
 

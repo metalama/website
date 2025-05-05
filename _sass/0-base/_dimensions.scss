@@ -10,7 +10,7 @@ $homepage_mobile_breakpoint: 650px;
 $header_height: 85px;
 $footer_height: 85px;
 
-$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base: 16px !default;
 $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-sm: $font-size-base * .8 !default;
 $font-size-h1: $font-size-base * 3.052 !default;
