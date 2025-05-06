@@ -111,7 +111,7 @@ gulp.task('generate-redirects', function (done) {
         .map(([original, hashed]) => ({
             route: `/assets/${original}`,
             redirect: `/assets/${hashed}`,
-            statusCode: 307 // Temporary redirect
+            statusCode: 302 //  Found (Moved Temporarily)
         }));
 
     // Copy and modify the staticwebapp.config.json file
