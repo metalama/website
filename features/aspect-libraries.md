@@ -60,7 +60,7 @@ Implement `INotifyPropertyChanged` without any boilerplate code. Never miss a no
 
 Transform C# automatic properties into WPF dependency properties and methods into WPF commands without redundant code.
 
-[Learn more](http://localhost:8080/applications/ui/dependency-property)
+[Learn more](/applications/ui/dependency-property)
 
 </div>
 </div>
