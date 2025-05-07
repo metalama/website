@@ -12,10 +12,6 @@
       "headers": {
         "cache-control": "public, max-age=3600"
       }
-    },
-    {
-      "route": "/doc/(.*)",
-      "rewrite": "https://doc.metalama.net/$1"
     }
   ],
   "globalHeaders": {
