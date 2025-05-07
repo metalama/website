@@ -53,7 +53,6 @@ date: 2024-04-23 08:00:01 +01:00
 categories:
     - The Timeless .NET Engineer
 permalink: /blog/memorycache
-origin: https://blog.postsharp.net/memorycache
 author: "Metalama Team"
 image: /assets/images/2024/2024-05-memorycache/memorycache.svg
 thumbnail: /assets/images/2024/2024-05-memorycache/memorycache.light.svg

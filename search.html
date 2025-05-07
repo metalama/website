@@ -125,6 +125,8 @@ summary: "Search Metalama website and documentation."
 
         const originalSearchClient = typesenseInstantSearchAdapter.searchClient;
 
+        let matomoTrackingTimeout;
+
         const searchClient = {
             ...originalSearchClient,
             search: async (requests) => {
@@ -177,14 +179,18 @@ summary: "Search Metalama website and documentation."
                 // Merge all results into searchResults[0]
                 searchResults[0].results[0].hits = hits;
 
-                searchResults[0].results[0].nbHits = hits.length;
+                const totalHits = searchResults.reduce((sum, result) => sum + result.results[0].nbHits, 0);
+                searchResults[0].results[0].nbHits = totalHits;
                 searchResults[0].results[0].nbPages = Math.ceil(hits.length / searchResults[0].results[0].hitsPerPage);
 
-                // Matomo search tracking
+                // Matomo search tracking with 2-second pause
                 if (typeof _paq !== 'undefined') {
+                    clearTimeout(matomoTrackingTimeout);
                     const query = requests[0].params.query;
-                    const totalHits = hits.length;
-                    _paq.push(['trackSiteSearch', query, false, totalHits]);
+                    matomoTrackingTimeout = setTimeout(() => {
+                        console.log("Tracking site search: " + query + ", " + totalHits + " hits.")
+                        _paq.push(['trackSiteSearch', query, false, totalHits]);
+                    }, 2000);
                 }
 
                 return searchResults[0];
@@ -205,9 +211,9 @@ summary: "Search Metalama website and documentation."
                 container: '#searchbox',
                 showSubmit: false,
                 showReset: false,
-                placeholder: 'Type some keyword and press [Enter]...',
+                placeholder: 'Type some keyword...',
                 autofocus: true,
-                searchAsYouType: false,
+                searchAsYouType: true,
                 cssClasses: {
                     input: '',
                     loadingIcon: 'stroke-primary',
