@@ -4,7 +4,7 @@
     {
       "route": "/assets/*",
       "headers": {
-        "cache-control": "public, max-age=14400"
+        "cache-control": "public, max-age=7776000"
       }
     },
     {
@@ -12,6 +12,10 @@
       "headers": {
         "cache-control": "public, max-age=3600"
       }
+    },
+    {
+      "route": "/doc/(.*)",
+      "rewrite": "https://doc.metalama.net/$1"
     }
   ],
   "globalHeaders": {
