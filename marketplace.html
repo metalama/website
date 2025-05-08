@@ -194,6 +194,16 @@ summary: "Search for ready-made aspects, extensions and examples for Metalama."
                     checkbox: '',
                 },
             }),
+            instantsearch.widgets.refinementList({
+                container: '#licenses-list',
+                attribute: 'license',
+                cssClasses: {
+                    list: '',
+                    count: 'count',
+                    label: 'label',
+                    checkbox: '',
+                },
+            }),
 
             instantsearch.widgets.searchBox({
                 container: '#searchbox',
@@ -327,6 +337,10 @@ summary: "Search for ready-made aspects, extensions and examples for Metalama."
                     <div>
 						<h5>Quality</h5>
 						<div id="qualities-list"></div>
+					</div>
+                    <div>
+						<h5>License</h5>
+						<div id="licenses-list"></div>
 					</div>
                     <div id="clear-refinements"></div>
                 </div>

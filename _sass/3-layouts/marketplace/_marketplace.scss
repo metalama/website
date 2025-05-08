@@ -195,7 +195,7 @@
 				content: "\E228";
 			}
 
-			.quality.certified::before {
+			.quality.supported::before {
 				content: "\E727";
 			}
 
@@ -288,8 +288,11 @@
 
 	.ais-ClearRefinements-button {
 		margin-top: 40px;
-		padding: 0;
-		color: var(--bs-link-color);
+		padding: 10px;
+		color: white;
+		background-color: $purple;
+		box-shadow: none;
+		border: none;
 	}
 
 	.ais-ClearRefinements-button:disabled {
