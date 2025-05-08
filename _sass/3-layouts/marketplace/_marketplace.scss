@@ -269,6 +269,9 @@
 	.ais-RefinementList {
 		input {
 			margin-right: 10px;
+			&:checked {
+				accent-color: $purple;
+			}
 		}
 
 		h5 {
