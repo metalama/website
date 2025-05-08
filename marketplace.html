@@ -58,7 +58,31 @@ summary: "Search for ready-made aspects, extensions and examples for Metalama."
             },
         });
 
-        const searchClient = typesenseInstantSearchAdapter.searchClient;
+        const originalSearchClient = typesenseInstantSearchAdapter.searchClient;
+
+        const searchClient = {
+            ...originalSearchClient,
+            search: async (requests) => {
+                const searchResults = await originalSearchClient.search(requests);
+                const totalHits = searchResults.results[0].nbHits;
+
+                // Matomo search tracking with 2-second pause
+                if (typeof _paq !== 'undefined') {
+                    const query = requests[0].params.query;
+
+                    if (searchClient._trackingTimeout) {
+                        clearTimeout(searchClient._trackingTimeout);
+                    }
+
+                    searchClient._trackingTimeout = setTimeout(() => {
+                        console.log("Tracking site search: " + query);
+                        _paq.push(['trackSiteSearch', query, false, totalHits]);
+                    }, 2000);
+                }
+
+                return searchResults;
+            },
+        };
 
         const search = instantsearch({
             searchClient,
