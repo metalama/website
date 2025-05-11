@@ -53,11 +53,6 @@ defaults:
     values:
       site_title: "Metalama Applications"
   - scope:
-      path: "premium" 
-      type: "pages" 
-    values:
-       site_title: "Metalama Premium"  
-  - scope:
       path: "alternatives" 
       type: "pages" 
     values:
