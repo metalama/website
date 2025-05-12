@@ -1,0 +1,53 @@
+<script>
+    async function fetchNews() {
+        try {
+            const externalFeedUrl = 'https://metalama.micro.blog/feed.json';
+            const localFeedUrl = '{{ site.site_url }}/feed.json';
+
+            const [externalResponse, localResponse] = await Promise.all([
+                fetch(externalFeedUrl),
+                fetch(localFeedUrl)
+            ]);
+
+            const [externalData, localData] = await Promise.all([
+                externalResponse.json(),
+                localResponse.json()
+            ]);
+
+            // Assign mention to each item
+            externalData.items.forEach(item => item.mention = "Brief");
+            localData.items.forEach(item => item.mention = "Blog Post");
+
+            const allItems = [...externalData.items, ...localData.items];
+
+            allItems.sort((a, b) => new Date(b.date_published) - new Date(a.date_published));
+
+            const topItems = allItems.slice(0, {{include.max_count}}); 
+
+            const container = document.getElementById('shorts-container');
+            const firstChildOfContainer = container.firstChild;
+
+            topItems.forEach(item => {
+                const article = document.createElement('article');
+                article.className = 'item'; 
+                article.innerHTML = `
+                    <a href="${item.url}">
+                        <div class="date">${new Date(item.date_published).toLocaleDateString()} · ${item.mention}</div>
+                        <div class="title">${item.title}</div>
+                        {% if include.include_content %}<div class="content">${item.content_html}</div>{% endif %}
+                        <div class="decor-1"></div>
+                        <div class="decor-2"></div>
+                    </a>
+                `;
+
+                container.insertBefore(article, firstChildOfContainer); // Insert at the top
+            });
+        } catch (error) {
+            document.getElementById('news-container').innerHTML = '<p>Failed to load news. Please try again later.</p>';
+            console.error('Error fetching news:', error);
+        }
+    }
+
+    fetchNews();
+</script>
+

@@ -1,0 +1,54 @@
+---
+title: Short News
+layout: min
+---
+
+<style>
+    a {
+        color: cyan;
+    }
+    .item {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .item h4 {
+        margin: 0 0 10px;
+    }
+    .item p {
+        margin: 5px 0;
+    }
+
+    .item a {
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+
+    .item a::after {
+        display: none;
+    }
+</style>
+
+{% include fetch-shorts.html include_content=true max_count=20 %}
+
+
+<main>
+    <div class="container container-m">
+
+        <h1>Short News</h1>
+
+        <p>
+            You can subscribe for Metalama's short news with <a href="https://metalama.micro.blog/feed.xml">RSS</a>
+            or <a href="https://metalama.micro.blog/feed.json">JSON Feed</a>.
+        </p>
+
+        <div id="shorts-container">
+
+        </div>
+
+    </div>
+</main>
+
