@@ -8,8 +8,7 @@
 # Site settings
 title: Metalama
 email: hello@postsharp.net
-description: > # this means to ignore newlines until "base_path:"
-  Announcements, opinions, tips and tricks from PostSharp Technologies.
+description: News from the Metalama project.
 base_path: "" # the subpath of your site, e.g. /blog
 url: "https://metalama.net" # the base hostname & protocol for your site
 twitter_username: postsharp
@@ -28,6 +27,7 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-toc
+  - jekyll-regex-replace
 # - jekyll-last-modified-at
   
 exclude: ["*.ps1", "README.md", "package.json", "package-lock.json", "gulpfile.js", "eng/**"]
