@@ -14,8 +14,10 @@ layout: min
         border-radius: 5px;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
-    .item h4 {
-        margin: 0 0 10px;
+    .item .title {
+        margin: 10px 0 10px 0;
+        font-weight: bold;
+        font-size: 24px;
     }
     .item p {
         margin: 5px 0;
@@ -27,6 +29,12 @@ layout: min
         display: block;
     }
 
+    .item .more {
+        margin-top: 10px;
+        font-weight: bold;
+        text-align: right;
+    }
+
     .item a::after {
         display: none;
     }
@@ -36,12 +44,12 @@ layout: min
 
 
 <main>
-    <div class="container container-m">
+    <div class="container container-m min_height">
 
-        <h1>Short News</h1>
+        <h1>Briefs</h1>
 
         <p>
-            You can subscribe for Metalama's short news with <a href="https://metalama.micro.blog/feed.xml">RSS</a>
+            You can subscribe for Metalama's briefs with <a href="https://metalama.micro.blog/feed.xml">RSS</a>
             or <a href="https://metalama.micro.blog/feed.json">JSON Feed</a>.
         </p>
 

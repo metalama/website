@@ -15,8 +15,8 @@
             ]);
 
             // Assign mention to each item
-            externalData.items.forEach(item => item.mention = "Brief");
-            localData.items.forEach(item => item.mention = "Blog Post");
+            externalData.items.forEach(item => {item.mention = "Brief"; item.isLong=false});
+            localData.items.forEach(item => {item.mention = "Blog Post"; item.isLong=true});
 
             const allItems = [...externalData.items, ...localData.items];
 
@@ -34,7 +34,10 @@
                     <a href="${item.url}">
                         <div class="date">${new Date(item.date_published).toLocaleDateString()} · ${item.mention}</div>
                         <div class="title">${item.title}</div>
-                        {% if include.include_content %}<div class="content">${item.content_html}</div>{% endif %}
+                        {% if include.include_content %}
+                            <div class="content">${ item.isLong ? item.summary : item.content_html}</div>
+                            ${item.isLong ? `<div class="more">Read Article</div>` : `` }
+                            {% endif %}
                         <div class="decor-1"></div>
                         <div class="decor-2"></div>
                     </a>

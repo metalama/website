@@ -53,7 +53,7 @@ gulp.task('gzip', function () {
 // Task to minify HTML and XML files produced by Jekyll
 gulp.task('htmlmin', () => {
     return gulp
-      .src('_site/**/*.{html,xml}')
+      .src('_site/**/*.html')
       .pipe(htmlmin({ collapseWhitespace: true }))
       .pipe(gulp.dest('_site'));
 });
