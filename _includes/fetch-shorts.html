@@ -15,34 +15,61 @@
             ]);
 
             // Assign mention to each item
-            externalData.items.forEach(item => {item.mention = "Brief"; item.isLong=false});
-            localData.items.forEach(item => {item.mention = "Blog Post"; item.isLong=true});
+            externalData.items.forEach(item => { item.mention = "Brief"; item.isLong = false });
+            localData.items.forEach(item => { item.mention = "Blog Post"; item.isLong = true });
 
             const allItems = [...externalData.items, ...localData.items];
 
             allItems.sort((a, b) => new Date(b.date_published) - new Date(a.date_published));
 
-            const topItems = allItems.slice(0, {{include.max_count}}); 
+            const topItems = allItems.slice(0, {{include.max_count}});
 
             const container = document.getElementById('shorts-container');
             const firstChildOfContainer = container.firstChild;
 
             topItems.forEach(item => {
                 const article = document.createElement('article');
-                article.className = 'item'; 
-                article.innerHTML = `
-                    <a href="${item.url}">
-                        <div class="date">${new Date(item.date_published).toLocaleDateString()} · ${item.mention}</div>
-                        <div class="title">${item.title}</div>
-                        {% if include.include_content %}
-                            <div class="content">${ item.isLong ? item.summary : item.content_html}</div>
-                            ${item.isLong ? `<div class="more">Read Article</div>` : `` }
-                            {% endif %}
-                        <div class="decor-1"></div>
-                        <div class="decor-2"></div>
-                    </a>
-                `;
+                article.className = 'item';
 
+                const link = document.createElement('a');
+                link.href = item.url;
+
+                const dateDiv = document.createElement('div');
+                dateDiv.className = 'date';
+                dateDiv.textContent = `${new Date(item.date_published).toLocaleDateString()} · ${item.mention}`;
+
+                const titleDiv = document.createElement('div');
+                titleDiv.className = 'title';
+                titleDiv.textContent = item.title;
+
+                link.appendChild(dateDiv);
+                link.appendChild(titleDiv);
+
+                if ({{include.include_content}}) {
+                    const contentDiv = document.createElement('div');
+                    contentDiv.className = 'content';
+                    contentDiv.innerHTML = item.isLong ? item.summary : item.content_html;
+
+                    link.appendChild(contentDiv);
+
+                    if (item.isLong) {
+                        const moreDiv = document.createElement('div');
+                        moreDiv.className = 'more';
+                        moreDiv.textContent = 'Read Article';
+                        link.appendChild(moreDiv);
+                    }
+                }
+
+                const decor1 = document.createElement('div');
+                decor1.className = 'decor-1';
+
+                const decor2 = document.createElement('div');
+                decor2.className = 'decor-2';
+
+                link.appendChild(decor1);
+                link.appendChild(decor2);
+
+                article.appendChild(link);
                 container.insertBefore(article, firstChildOfContainer); // Insert at the top
             });
         } catch (error) {
