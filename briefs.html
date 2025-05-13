@@ -48,8 +48,6 @@ layout: min
     }
 </style>
 
-{% include fetch-shorts.html include_content=true max_count=20 %}
-
 
 <main>
     <div class="container container-m min_height">
@@ -62,6 +60,10 @@ layout: min
         </p>
 
         <div id="shorts-container">
+
+            {% include shorts.html include_content=true max_count=20 %}
+
+
 
         </div>
 

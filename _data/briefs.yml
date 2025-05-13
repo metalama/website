@@ -1,0 +1,16 @@
+briefs:
+  - date: 2025-05-12
+    title: We're now publishing briefs
+    description: |
+      Lorem ipsum dolor [sit amet](https://metalama.net), consectetur adipiscing elit. 
+      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      
+  - date: 2025-05-12
+    title: Hello, world.
+    description: |
+      That's another post!
+
+      New line
+
+      That should work.
