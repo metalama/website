@@ -1,6 +1,18 @@
 {
   "trailingSlash": "never",
   "routes": [
+     {
+      "route": "/",
+      "headers": {
+        "cache-control": "public, max-age=300"
+      }
+    },
+    {
+      "route": "/briefs*",
+      "headers": {
+        "cache-control": "public, max-age=300"
+      }
+    },
     {
       "route": "/assets/*",
       "headers": {
