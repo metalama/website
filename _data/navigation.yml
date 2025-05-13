@@ -222,42 +222,51 @@ nodes:
         premium: true
 
   - title: "Community"
-    drop_down_menu: "List"
+    drop_down_menu: "Columns"
     nodes:
-      - url: "/marketplace"
-        title: "Libraries & Extensions"
-        description: "Accelerate development with open-source extensions and ready-to-use aspects."
-      - url: "/contributing"
-        title: "Contributing"
-        description: "Learn how to shape the future of Metalama with your contributions."
-        is_left_nav_root: true
+      - title: "Build"
         nodes:
-          - url: "/contributing/file-an-issue"
-            title: "How to File an Issue"
-          - url: "/contributing/build-from-source"
-            title: "How to Build from Source"
-          - url: "/contributing/contribute-code"
-            title: "How to Contribute Code"
-          - url: "/contributing/contribute-docs"
-            title: "How to Contribute Docs"
-          - url: "/contributing/branching"
-            title: "Branching Strategy"
-          - url: "/contributing/cla"
-            title: "Contributor License Agreement"
-          - url: "/contributing/guidelines"
-            title: "Community Guidelines"
+        - url: "/marketplace"
+          title: "Libraries & Extensions"
+          description: "Accelerate development with open-source extensions and ready-to-use aspects."
+        - url: "/contributing"
+          title: "Contributing"
+          description: "Learn how to shape the future of Metalama with your contributions."
+          is_left_nav_root: true
+          nodes:
+            - url: "/contributing/file-an-issue"
+              title: "How to File an Issue"
+            - url: "/contributing/build-from-source"
+              title: "How to Build from Source"
+            - url: "/contributing/contribute-code"
+              title: "How to Contribute Code"
+            - url: "/contributing/contribute-docs"
+              title: "How to Contribute Docs"
+            - url: "/contributing/branching"
+              title: "Branching Strategy"
+            - url: "/contributing/cla"
+              title: "Contributor License Agreement"
+            - url: "/contributing/guidelines"
+              title: "Community Guidelines"
+   
+        - url: "https://github.com/orgs/metalama/discussions"
+          title: "GitHub Forums"
+          description: "Ask anything and showcase your aspects on GitHub Discussions."          
+          extern: true      
 
-      - url: "/blog"
-        title: "Blog"
-        description: "Official announcements, opinions, showcases, and tips from the Metalama team and contributors."
-      - url: "/newsletter"
-        title: "Newsletter"
-        description: "Receive important announcements and monthly updates straight to your inbox."
-      - url: "https://github.com/orgs/metalama/discussions"
-        title: "GitHub Forums"
-        description: "Ask anything and showcase your aspects on GitHub Discussions."          
-        extern: true      
 
+      - title: "Stay Tuned"
+        nodes:
+        - url: "/blog"
+          title: "Blog"
+          description: "Official announcements, opinions, showcases, and tips from the Metalama team and contributors."
+        - url: "/briefs"
+          title: "Brief Updates"
+          description: "Announcing builds and other brief news that don't deserve a full article."
+        - url: "/newsletter"
+          title: "Newsletter"
+          description: "Receive important announcements and monthly updates straight to your inbox."
+   
 
   - url: "/premium"
     title: "Premium"

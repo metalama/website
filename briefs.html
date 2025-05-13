@@ -13,6 +13,13 @@ layout: min
         margin: 10px 0;
         border-radius: 5px;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #222; 
+        transition: background-color 0.5s ease, border-width 0.5s ease, border-color 0.5s ease; 
+    }
+    .item.highlight {
+        background-color: #444; /* Highlighted background color */
+        border-width: 3px;
+        border-color: hsl(269, 97%, 61%);
     }
     .item .title {
         margin: 10px 0 10px 0;
@@ -25,22 +32,20 @@ layout: min
     }
 
     .item a {
-        
         color: white;
     }
 
     .item > a {
         text-decoration: none;
-                display: block;
-                color:rgb(189, 189, 189);
-
+        display: block;
+        color: rgb(189, 189, 189);
     }
 
     .item .more {
         margin-top: 10px;
         font-weight: bold;
         text-align: right;
-        color:white;
+        color: white;
     }
 
     .item a::after {
@@ -55,13 +60,42 @@ layout: min
         <h1>Briefs</h1>
 
         <p>
-            You can subscribe for Metalama's briefs with <a href="https://metalama.micro.blog/feed.xml">RSS</a>
-            or <a href="https://metalama.micro.blog/feed.json">JSON Feed</a>.
+            You can subscribe for Metalama's briefs with <a href="{{site.url}}/briefs.xml">RSS</a>.
         </p>
 
         <div id="shorts-container">
 
-            {% include shorts.html include_content=true max_count=20 %}
+           {% assign all_briefs = site.posts | concat: site.data.briefs.briefs %}
+            {% assign all_briefs = all_briefs | sort: "date" | reverse %}
+            {% assign top_briefs = all_briefs | slice: 0, 20 %}
+
+{% for brief in top_briefs %}
+    {% assign brief_slug = brief.title | prepend: "-" | prepend: brief.date | slugify %}
+<article class="item" id="{{brief_slug}}">
+    {% if brief.url %}
+    <a href="{{ brief.url | prepend: site.baseurl }}">
+    {% endif %}
+        <div class="date">
+            {{ brief.date | date: "%m/%d/%Y" }} · 
+            {% if brief.collection == "posts" %}Blog Post{% else %}Brief{% endif %}
+        </div>
+        <div class="title">{{ brief.title | escape }}</div>
+        {% if brief.collection == "posts" %}
+            {{ brief.excerpt | strip_html | escape }}
+        {% else %}
+            {{ brief.description | markdownify }}
+        {% endif %}
+        {% if brief.collection == "posts" %}
+        <div class="more">Read Article</div>
+        {% endif %}
+        <div class="decor-1"></div>
+        <div class="decor-2"></div>
+        {% if brief.url %}
+    </a>
+        {% endif %}
+</article>
+{% endfor %}
+
 
 
 
@@ -69,4 +103,31 @@ layout: min
 
     </div>
 </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const highlightArticle = () => {
+            // Remove highlight from all articles
+            document.querySelectorAll('.item.highlight').forEach(item => {
+                item.classList.remove('highlight');
+            });
+
+            // Get the current hash
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                // Find the article with the matching ID and add the highlight class
+                const article = document.getElementById(hash);
+                if (article) {
+                    article.classList.add('highlight');
+                }
+            }
+        };
+
+        // Highlight the article on page load
+        highlightArticle();
+
+        // Highlight the article when the hash changes
+        window.addEventListener('hashchange', highlightArticle);
+    });
+</script>
 

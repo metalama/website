@@ -61,23 +61,38 @@ summary: "Metalama is an open-source meta-programming framework for C# projects,
 
     <section class="section section--shorts">
         <div class="container container-m">
-              <h2 class="costs-title">Latest Project Briefs
-                </h2>
+              <h2 class="costs-title">Latest Project Briefs</h2>
                 
 <div id="shorts-container">
 
-      {% include shorts.html max_count=4 %}
-      
-      
-    <article class="item subscribe">
+    {% assign all_briefs = site.posts | concat: site.data.briefs.briefs %}
+    {% assign all_briefs = all_briefs | sort: "date" | reverse %}
+    {% assign top_briefs = all_briefs | slice: 0, 4 %}
 
-        
+    {% for brief in top_briefs %}
+    <article class="item">
+          {% assign brief_slug = brief.title | prepend: "-" | prepend: brief.date | slugify %}
+          {% assign brief_slug_url = brief_slug |  prepend: "/briefs#"  %}
+
+        <a href="{{ brief.url | default: brief_slug_url | prepend: site.baseurl }}" data-slug="{{brief_slug}}">
+            <div class="date">
+                {{ brief.date | date: "%m/%d/%Y" }} · 
+                {% if brief.collection == "posts" %}Blog Post{% else %}Brief{% endif %}
+            </div>
+            <div class="title">{{ brief.title | escape }}</div>
+            <div class="decor-1"></div>
+            <div class="decor-2"></div>
+        </a>
+    </article>
+    {% endfor %}
+
+    <article class="item subscribe">
         <a href="/briefs">
-                            <div class="more">See More Project Briefs &amp; Subscribe</div>
-                            <div class="decor-1"></div>
-                            <div class="decor-2"></div>
-                        </a>  
-                    </article>  
+            <div class="more">See More Project Briefs &amp; Subscribe</div>
+            <div class="decor-1"></div>
+            <div class="decor-2"></div>
+        </a>  
+    </article>  
 </div>
 
             
