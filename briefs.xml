@@ -13,7 +13,7 @@ layout: null
     <generator>Jekyll v{{ jekyll.version }}</generator>
       {% assign all_briefs = site.posts | concat: site.data.briefs.briefs %}
     {% assign all_briefs = all_briefs | sort: "date" | reverse %}
-    {% assign top_briefs = all_briefs | slice: 0, 4 %}
+    {% assign top_briefs = all_briefs | slice: 0, 20 %}
 
     {% for brief in top_briefs %}
     <item>
