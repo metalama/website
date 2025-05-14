@@ -26,7 +26,7 @@ Before you start coding, you'll need to [check out and build](build-from-source)
 {: .note}
 We strongly recommend _building_ the entire repository (`./Build.ps1 build`) before you open any project in the IDE. This ensures that all dependencies of your projects are built. It can be tricky otherwise.
 
-Once that's done, go ahead and implement the feature.
+Once the repository is built and ready, proceed to implement your feature while adhering to our [coding standard](coding-standard).
 
 ## 3. Write tests
 

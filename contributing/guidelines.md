@@ -17,11 +17,13 @@ We, as members, contributors, and maintainers, commit to upholding high standard
 - Ensure long-term economic sustainability of the products.
 - Advance technical knowledge through open, principled contribution.
 
-## Decision-Making
+## Decision-Making 
 
 This community operates as a meritocracy. Authority is earned through meaningful, sustained contributions—technical, organizational, or financial. High-impact contributors have greater decision-making influence. Financial backers who support the project’s sustainability are granted proportional influence, reflecting their commitment to the project’s future.
 
 Project leaders make final decisions based on technical merit, project goals, and long-term viability. Consensus is preferred but not mandatory. Disagreements must remain professional.
+
+See also [leadership & governance](governance).
 
 ## Core Values
 
