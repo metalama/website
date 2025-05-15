@@ -1,4 +1,11 @@
 briefs:
+  - date: 2025-05-15
+    title: Metalama now has the OpenSSF Best Practices Badge.
+    description: |
+      Metalama has earned the OpenSSF Best Practices Badge, demonstrating adherence to key open-source security and quality standards.
+      For a detailed breakdown of the criteria met, visit our [badge page](https://www.bestpractices.dev/en/projects/10558).
+
+
   - date: 2025-05-12
     title: We're now publishing brief updates.
     description: |

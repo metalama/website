@@ -6,9 +6,9 @@ keywords: "governance, leadership, open source, project management, community gu
 
 ## Leadership and Governance
 
-The project leadership is managed by SharpCrafters s.r.o., operating as [PostSharp Technologies](https://www.postsharp.net/contact), a company registered in the Czech Republic.
+The project leadership is managed by [SharpCrafters s.r.o.](https://www.postsharp.net/contact), a company operating as **PostSharp Technologies** and registered in the Czech Republic.
 
-The company oversees all aspects of the project, ensuring its success and sustainability. Below is a comprehensive list of responsibilities categorized by role:
+The company oversees all aspects of the project, ensuring its success and sustainability. This includes the following responsibilities:
 
 ### Technical Leadership
 
