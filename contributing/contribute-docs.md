@@ -10,7 +10,7 @@ Metalama uses [DocFx](https://dotnet.github.io/docfx/index.html) to build its do
 ## 1. Clone the repo
 
 ```powershell
-git clone https://github.com/metalama/Metalama.Documentation
+git clone --config core.symlinks=true https://github.com/metalama/Metalama.Documentation
 ```
 
 ## 2. Build the project
