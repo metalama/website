@@ -1,5 +1,10 @@
 briefs:
+
   - date: 2025-05-15
+    title: Metalama 2025.1.6 released
+    description: We've released Metalama 2025.1.6, with minor improvements and important bug fixes. See the [CHANGELOG](https://github.com/orgs/metalama/discussions/437).
+
+  - date: 2025-05-14
     title: Metalama now has the OpenSSF Best Practices Badge.
     description: |
       Metalama has earned the OpenSSF Best Practices Badge, demonstrating adherence to key open-source security and quality standards.
