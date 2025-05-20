@@ -269,6 +269,15 @@ section {
 	.logo img {
 		width: 160px;
 	}
+
+	
+}
+
+@media (max-width: 550px) {
+	
+	.menuitem--get, .menuitem--github {
+		display: none;
+	}
 }
 @media (max-width: 374px) {
 	.logo {
@@ -277,6 +286,7 @@ section {
 	.logo img {
 		width: 130px;
 	}
+
 }
 
 .menu-open {
@@ -289,7 +299,7 @@ section {
 	}
 	// .menu__body
 	&__body {
-		@media (max-width: 991.98px) {
+		@media (max-width: 1080px) {
 			background-color: rgba(0, 0, 0, 0.96);
 			position: fixed;
 			z-index: 2;
@@ -321,7 +331,7 @@ section {
 	}
 	// .menu__list
 	&__list {
-		@media (max-width: 991.98px) {
+		@media (max-width: 1080px) {
 			flex-direction: column;
 		}
 	}
@@ -331,7 +341,7 @@ section {
 			position: relative;
 			color: #fff !important;
 		}
-		@media (max-width: 991.98px) {
+		@media (max-width: 1080px) {
 			font-size: 45px;
 			text-align: center;
 			a[data-submenu="dropdown1"]::after,
@@ -366,7 +376,7 @@ section {
 	}
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1080px) {
 	.has-dropdownmenu.submenu-open > a {
 		&::after {
 			transform: translateY(-50%) rotate(180deg) !important;
@@ -389,7 +399,7 @@ section {
 	margin-top: 15px;
 	margin-left: 15px;
 	cursor: pointer;
-	@media (max-width: 991.98px) {
+	@media (max-width: 1080px) {
 		display: block;
 		position: relative;
 		flex: 0 0 30px;
@@ -453,7 +463,7 @@ section {
 	}
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1080px) {
 	.menu__item {
 		text-align: right;
 	}
@@ -481,7 +491,7 @@ section {
 	}
 }
 
-@media (min-width: 991.98px) {
+@media (min-width: 1080px) {
 	.column > ul > li,
 	.dropdownmenu > ul > li {
 		padding: 10px;
@@ -504,12 +514,12 @@ section {
 }
 
 /* Можно в main.css или в <style> */
-@media (max-width: 991.98px) {
+@media (max-width: 1080px) {
 	body {
 		--is-mobile: 1;
 	}
 }
-@media (min-width: 992px) {
+@media (min-width: 1080.02x) {
 	body {
 		--is-mobile: 0;
 	}
